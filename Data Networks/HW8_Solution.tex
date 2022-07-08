@@ -1,0 +1,125 @@
+\documentclass[10pt,letterpaper]{article}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=false,colorlinks,linkcolor=black,citecolor=magenta]{hyperref}
+\RequirePackage{MnSymbol}
+\newcommand{\eqn}[2]{
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+}
+%%%%%%%%%%%%%
+
+%       \eqn{
+%       x=x^2
+%       }{label}
+
+%%%%%%%%%%%%%
+\newcommand{\feqn}[2]{
+\begin{tcolorbox}[width=7in, colback=white]
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+\end{tcolorbox}
+}
+%%%%%%%%%%%%%%%
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[1]{
+\begin{center}
+\includegraphics[width=130mm]{#1}
+\end{center}
+}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\begin{document}
+\Large
+\begin{center}
+The solution of assignment \#8 of the \textbf{ComNet} course
+\end{center}
+1) a. Since there may be more than one host actively sending, we need to create a protocol to avoid collisions as much as possible and recover the packets once they are lost.
+
+b. In random access schemes, each node stops transmitting packets for a random amount of delay. It is beneficial in a sense that the probability of collision between two nodes is reduced.
+\newline\newline
+Q2) As in the textbook, the probability that a user sends a packet successfully, is $np(1-p)^{n-1}$ in slotted ALOHA where $n$ is the number of users and $p$ is the probability of transmission for each user. By defining $q\triangleq np(1-p)^{n-1}$, the probability that a user sends a packet, unsuccessfully $k-1$ times and succeeds at its $k$-th transmission is 
+$$(1-q)^{k-1}q$$
+hence the expected value of the number of transmission becomes 
+\eqn{
+E&=\sum_{k=1}^{\infty}k(1-q)^{k-1}q
+\\&=q\sum_{k=1}^{\infty}k(1-q)^{k-1}
+\\&=q{d\over dq}\sum_{k=1}^{\infty}-(1-q)^{k}
+\\&=q{d\over dq} -{1-q\over q}
+\\&=q{1\over q^2}={1\over q}
+\\&={1\over np(1-p)^{n-1}}
+}{}
+Q3) The bandwidth required for each user in FDMA with 10 users is $R\over 10$, while this amount can be increased to $\left({1}-{1\over 10}\right)^{9}R\approx 0.3874 R$ in slotted ALOHA which shows an approximately 4 times improvement.
+\newline\newline
+Q4) Once the packet is in EE department, its destination IP address is that in the CS department and its destination MAC address is set to that of the first-hop router. The source IP and MAC addresses are se to the EE host. The router observes that the frame is headed for it, pulls out the datagram and observes that the destination exists in the CS department. Hence, changes the source MAC address to that of itself, preserves the source IP address (for further addressing or responsing from destination to source), changes the destination MAC address of the frame to that of the destination and preserves the destination IP address.
+\newline\newline
+Q5)
+a.
+
+Switch 1 finds out that the MAC address AA:AA:AA:AA:AA:AA is available on port \#1.
+
+Switch 2 finds out that the MAC address AA:AA:AA:AA:AA:AA is available on port \#2.
+
+Switch 3 finds out that the MAC address AA:AA:AA:AA:AA:AA is available on port \#1.
+
+Switch 4 finds out that the MAC address AA:AA:AA:AA:AA:AA is available on port \#3.
+
+b. Since it does not know over which port is H6 available, it forwards the upstream packet to all of its outgoing interfaces.
+\newline\newline
+Q6) Define 
+\eqn{
+&A=10101010
+\\&B=10101011
+\\&q=(1-p)^7p
+}{}
+a. The preamble sent to the receiver is $AAAAAAAB$. The only case where the error is not declared is where the bytes $A$ and $B$ are altered to each other, otherwise the packet is dropped. Hence the following possible errors are hidden from the receiver
+\eqn{
+&B\times\times\times\times\times\times\times
+\\&AB\times\times\times\times\times\times
+\\&AAB\times\times\times\times\times
+\\&AAAB\times\times\times\times
+\\&AAAAB\times\times\times
+\\&AAAAAB\times\times
+\\&AAAAAAB\times
+}{}
+where $\times$ denotes that the corresponding byte can be altered to any other byte (because it is uninfluential in the declaration of the error).
+
+The probabilites of error in order, are
+\eqn{
+&P_e=q
+\\&P_e=(1-q)q
+\\&P_e=(1-q)^2q
+\\&P_e=(1-q)^3q
+\\&P_e=(1-q)^4q
+\\&P_e=(1-q)^5q
+\\&P_e=(1-q)^6q
+}{}
+therefore the total probability of error, becomes the summation of all above which is
+$$
+P_{e,tot}=1-(1-q)^7\approx 7q=7(1-p)^7p
+$$
+b. In case of using a parity check, we must have even number of bytes $A$ or $B$, altered  to one another. Hence the probability of error becomes
+\eqn{
+P_{e,tot}&=\sum_{k=2,4,6,8}\binom{8}{k}q^k(1-q)^{8-k}
+}{}
+which is less than
+\eqn{
+P_{e,tot}&\approx7q
+}{}
+by at least two order of magnitude for small amounts of $q$.
+\end{document}

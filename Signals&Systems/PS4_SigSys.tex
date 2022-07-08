@@ -1,0 +1,142 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\Q}[1]{\textbf{
+سوال #1)
+}}
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری چهارم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q1
+
+کانولوشن را برای هر یک از جفت سیگنال های (پیوسته یا گسسته‌ی) زیر به صورت نموداری (به کمک شیفت های متوالی نمودار سیگنال ها) به دست آورید.
+
+الف) 
+\[
+\includegraphics[width=60mm]{PS4_Q1_a_1.eps}
+%\longrightarrow
+\includegraphics[width=60mm]{PS4_Q1_a_2.eps}
+\]
+
+ب) 
+\[
+\includegraphics[width=60mm]{PS4_Q1_b_1.eps}
+%\longrightarrow
+\includegraphics[width=60mm]{PS4_Q1_b_2.eps}
+\]
+پ) 
+\[
+\includegraphics[width=60mm]{PS4_Q2_b_1.eps}
+%\longrightarrow
+\includegraphics[width=60mm]{PS4_Q2_b_2.eps}
+\]
+
+ت) (
+$x(t)$
+ یک دوره‌ی تناوب از سیگنال 
+$\sin \pi t$
+ است
+)
+\[
+\includegraphics[width=60mm]{PS4_Q2_a_1.eps}
+%\longrightarrow
+\includegraphics[width=60mm]{PS4_Q2_a_2.eps}
+\]
+\nl
+\Q3
+
+سیستم زمان گسسته‌ی زیر را در نظر بگیرید:
+
+$$
+y[n]+2y[n-1]=x[n]
+$$
+
+فرض کنید این سیستم در شرایط اولیه‌ی صفر قرار دارد. در این صورت پاسخ آن را به ورودی زیر
+\[
+\includegraphics[width=60mm]{PS4_Q3.eps}
+\]
+با حل معادله تفاضلی فوق به صورت بازگشتی ترسیم کنید.
+\nl
+\Q4
+
+یک سیستم زمان گسسته با پاسخ ضربه‌ی 
+$$
+h[n]=(n+1)\alpha^nu[n]
+$$
+را در نظر بگیرید که در آن 
+$
+|\alpha|<1
+$
+. نشان دهید که پاسخ پله‌ی آن به صورت 
+$$
+s[n]=\left[{1\over (\alpha-1)^2}-{\alpha^{n+1}\over (\alpha-1)^2}+{(n+1)\alpha^{n+1}\over \alpha-1}\right]u[n]
+$$
+ است.
+
+(راهنمایی:
+$
+\sum_{k=0}^{N} (k+1)\alpha^k={d\over d\alpha}\sum_{k=0}^{N+1} \alpha^k
+$
+)
+\nl
+\Q5
+\textbf{
+(امتیازی)
+}
+
+فرض کنید 
+$$
+u_1[n]=\delta[n]-\delta[n-1]
+$$
+الف) سیستم گسسته با پاسخ ضربه $u_1[n]$ معادل چه عملی را در یک سیستم پیوسته انجام می دهد؟ (در شکل 3-24 از کتاب اوپنهایم می‌توان نمونه ای از کارکرد این سیستم ها را بر روی تصاویر مشاهده کرد. به لبه‌های تصاویر ورودی و خروجی سیستم دقت کنید.)
+\nl
+ب) اکنون تعریف کنید
+$$
+u_k[n]=\underbrace{u_1[n]*u_1[n]*\cdots *u_1[n]}_{\text{\rl{ بار}} k}
+$$
+به عبارت دیگر سیگنال $u_k[n]$ را از $k$ با کانولوشن سیگنال $u_1[n]$ با خودش تولید کرده‌ایم که در آن $k$ یک عدد طبیعی است. نشان دهید
+$$
+u_k[n]={(-1)^n k!\over n! (k-n)!}\Big(u[n]-u[n-k-1]\Big)
+$$
+که در آن $u[n]$، سیگنال پله است.
+
+
+(راهنمایی: از استقرا استفاده کنید؛ یعنی ابتدا نشان دهید این رابطه برای $k=2$ صحیح است. می‌توانید برای نشان دادن آن، $u_2[n]$ را ترسیم کنید. سپس فرض کنید این رابطه‌ی برای $k$ صحیح است و تلاش کنید از روی آن، به
+ $u_{k+1}[n]$
+ برسید؛ به عبارت دیگر نشان دهید 
+$
+u_{k+1}[n]=u_k[n]*u_1[n]
+$)
+\nl
+پ) سیستم گسسته با پاسخ ضربه $u_k[n]$ معادل چه عملی را در یک سیستم پیوسته انجام می دهد؟
+%\newpage
+
+%\qn{
+%s[n]&=\sum_{k=-\infty}^n h[k]
+%\\&=\sum_{k=-\infty}^n (k+1)\alpha^ku[k]
+%\\&=u[n]\sum_{k=0}^n (k+1)\alpha^k
+%\\&=u[n]\sum_{k=0}^n {d\over d\alpha}\alpha^{k+1}
+%\\&=u[n]{d\over d\alpha}\sum_{k=0}^n\alpha^{k+1}
+%\\&=u[n]{d\over d\alpha}{\alpha-1+1-\alpha^{n+2}\over 1-\alpha}
+%}
+\end{document}

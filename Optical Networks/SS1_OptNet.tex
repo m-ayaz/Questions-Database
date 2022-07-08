@@ -1,0 +1,354 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+\usepackage{listings}
+\lstset{language=Python}
+%\lstset{frame=lines}
+%\lstset{caption={Insert code directly in your document}}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\Span}{\text{Span}}
+\newcommand{\NF}{\text{NF}}
+\newcommand{\EDFA}{\text{EDFA}}
+\newcommand{\ASE}{\text{ASE}}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\large
+\begin{center}
+In the name of beauty
+
+The $1^\text{st}$ simulation assignment of Optical Networks course
+\hl
+\end{center}
+\section{Introduction}
+In this simulation project, we would implement SSFM as a mathematical tool for approximate solution of the NLSE. As we know, NLSE is not solvable in its most general form (i.e. when all fiber impairments participate in transmission). SSFM has found its place as an effective way for solving NLSE in a recursive manner. In this method, a full description of transmitter, optical transmission media (which is simply an optical link in this project) and receiver are implemented and physical signals are produced. The recursive scheme of SSFM in addition to constructing signals, makes it time-consuming, however because of its very good accuracy in predicting non-linear properties of optical fibers, other mathematical models are often compared to SSFM from accuracy point of view. We will cover a description of transmitter, optical transmission media and receiver for better insight in the next section.
+
+%
+%
+%All of these models accept span and link parameters (such as $\alpha$, $\beta_2$, $\beta_3$, $\gamma$, span amplifier noise figure, a set of occupied WDM channels and transmitted power which will be clarified, and more parameters which will be discussed when they matter) and obtain a real value representing non-linear noise PSD
+%\footnote{
+%Power Spectral Density
+%}
+%in one of the WDM channels of our interest, to which we sometimes refer as COI
+%\footnote{
+%Channel Of Interest
+%}
+%or CUT
+%\footnote{
+%Channel Under Test
+%}
+%.
+
+\section{Transmitter}
+
+Based on previous discussions about WDM (which is essentially the same FDM) in the course, we know that the total spectrum of an optical fiber (over which the midband signals are transmitted) can be divided to distinct channels. Each of these channels possess a portion of the spectrum up to a value of \textbf{channel bandwidth} and are assigned a center frequency which is used to convert a baseband signal to an equivalent midband signal to make it ready for transmission over the fiber. This conversion from baseband to midband is performed by transceivers deployed at nodes and allocated to certain users. In a point-to-point transmission, only two nodes are involved, where one of them operates as source node that multiplexes various signals from various users onto one signal and sends it over the media. The other node, receives the (noisy) signal and distributes it among different user transceivers for data detection.
+
+We assume each user to have a channel with frequency $\nu_\lambda$ and a symbol sequence $(b_{x,\lambda,n},b_{y,\lambda,n})$, where the x and y subscripts stand for polarizations. Hence, $b_{x,\lambda,n}$ is the $n$-th symbol sent on the $\lambda$-th channel on polarization x and same is true about $b_{x,\lambda,n}$. It is concluded that the dual-polarized midband signal of a single user would be
+\begin{equation}\begin{split}
+&
+a_{x,\lambda}(t)=\sum_{n=-\infty}^\infty b_{x,\lambda,n}s(t-nT_s) e^{j2\pi \nu_\lambda t},
+\\&
+a_{y,\lambda}(t)=\sum_{n=-\infty}^\infty b_{y,\lambda,n}s(t-nT_s) e^{j2\pi \nu_\lambda t},
+\end{split}\end{equation}
+where, $s(t)$ is the root-raised-cosine shaping pulse and $T_s$ is its symbol period defined as the reciprocal of symbol rate. The total dual-polarized WDM signal at the output of the transmitter (or the input of the transmission media) would be
+\begin{equation}\begin{split}
+&
+a_x(t)=\sum_{\lambda\in\Lambda}a_{x,\lambda}(t)
+\\&
+a_y(t)=\sum_{\lambda\in\Lambda}a_{y,\lambda}(t)
+,
+\label{baseband}
+\end{split}\end{equation}
+where $\Lambda$ denotes the set of all the wavelengths with active transmission. We will henceforth pack up the dual-polarized components of an entity within a single symbol and drop the polarization index. Therefore, \eqref{baseband} would be simply refered to as $a(t)$ which is equal to $(a_x(t),a_y(t))$. Any action performed on $a(t)$ (such as sampling) would be distinctly performed on each component.
+
+WDM grid may be \textit{flexible}, in a sense that the channel bandwidths are not or loosely restricted to any rule as they can take on every value. In contrast, \text{fixed WDM grid} or just simply \text{fixed-grid} are terms used to refer that all channel bandwidths must be equal to some fixed constant. In this simulation, we assume a fixed-grid scenario and the channel frequencies are integer multiples of $W$, which is the channel bandwidth. We further assume that each user sends a same modulation scheme in both polarizations and the launch power of the $\lambda$-th user, $P_\lambda$, is defined as the summation of power transmitted in both polarizations x and y, i.e.
+$$
+P_\lambda\triangleq2\mathbb{E}\{|b_{x,\lambda,n}|^2\},
+$$
+since $\mathbb{E}\{|b_{x,\lambda,n}|^2\}=\mathbb{E}\{|b_{y,\lambda,n}|^2\}$ and the symbol transmissions are i.i.d. per user.
+\section{Optical Underlying System}
+The optical transmission system is simply a link consisting of equal spans, into which the transmitter output is directly injected. With multiple concurrent transmissions on an optical fiber, non-linear impairment may occur due to SPM, XPM and FWM which we care about when they occur in COI. SPM is the non-linear effect (crosstalk) of COI on itself, XPM is the non-linear effect of COI and another channel on COI, and finally, FWM is the non-linear crosstalk of three channels, whether or not COI is included. All of the non-linear effects become more significant as the injected power into the fiber increases (because of the non-linear 3rd-order term, $\gamma P.E$, in the Manakov's equation).
+
+The non-linear effects described above translate to noise commonly refered to as \textit{NLI
+\footnote{
+Non-Linear and Interference
+}
+ noise power}, which, alongside the ASE noise of lumped elements and amplifiers, is added to main transmitted signal and degrade \textit{Signal to Noise and Interference Ratio} accordingly. This simulation project dedicates to account for both the NLI+ASE and approximately calculate the NLI+ASE power spectral density and consequently, the total noise power. A variety of scenarios are considered on a single link by their differences in symbol rate, channel bandwidth, roll-off factor, launch power of each channel, number of channels, number of spans and span lengths.
+\section{Receiver}
+When the noisy, dispersed signal passes through the optical media and received at the destination node, the data should be extracted for each user after passing through filters and compensators which will be clarified.
+\subsection{Electronic Dispersion Compensation (EDC)}
+The EDC module is responsible for removing accumulated dispersion from the received signal. Typically, it is implemented at each transceiver after separating the corresponding channel of the user, but in this simulation, we deploy it as the first compensation block. This block acts as an all-pass filter with the following impulse response:
+$$
+H(f)=\exp(-j2\pi^2\beta_2LN_sf^2)
+$$
+\subsection{Analog Low-Pass Filter}
+After removing dispersion from the received WDM signal, each user splits its own channel for symbol detection, first by multiplying the whole signal in an exponential of the same frequency of the user and then by filtering it in baseband. The input-output description is as follows in the frequency-domain
+$$
+Y(f)=X(f+\nu_\lambda)H_\text{LPF}(f),
+$$
+where $X(f)$ and $Y(f)$ are the Fourier transforms of input and output of this module respectively.
+\subsection{Matched Filter, Sampling and Non-linear Phase Shift Mitigation}
+Each user has obtained its noisy transmitted signal, which should be passed through the matched filter and sampled at periods of $T_s$ (symbol period). The detected symbols are shifted by a constant phase with respect to the transmitted symbols. Non-linear phase compensation is generally a complicated procedure, however the simple approach we follow here is that we find an optimum value for phase rotation such that applying this phase shift to received symbols, turn them ``as close as possible'' to their transmitted counterparts. This means that if $b_n$ and $\hat b_n$ are transmitted and received symbols and $\phi$ denotes the phase added to the received symbols, we would like to minimize
+$$
+\sum_{n=1}^{N}|\hat b_ne^{j\phi}-b_n|^2,
+$$
+giving the optimum value of $\phi$ as
+$$
+\hat\phi=\arg\left[\sum_{n=1}^{N}b_n\hat b_n^*\right].
+$$
+The non-linear interference variance can be measured from the detected and transmitted symbols as
+$$
+\sigma^2=\text{var}(b_{x,n}-\hat b_{x,n})+\text{var}(b_{y,n}-\hat b_{y,n}),
+$$
+where the x and y subscripts denote polarizations.
+\section{The EGN Model}
+The EGN model is an effective and efficient method for describing the non-linear interference (NLI) of optical fibers under certain circumstances. We will not delve into the details of this model, as it will be discussed in the course. All you need to know, is that the EGN model takes in the system parameters such as span length, attenuation, dispersion and non-linear effect coefficient with amplifier noise figure and gain, number of spans per link and parameters of transmission such as occupied wavelengths on links and launch powers per each, modulation type and yields the NLI noise (NLIN) power spectral density (PSD), from which, the NLIN variance can be calculated by integrating over the suitable frequency interval. The NLIN PSD, $G_\text{NLI}(f)$, is given by
+\begin{equation}
+\begin{split}
+       G_\text{NLI}(f)&=
+	\!\!\!\!\!\!
+        \sum_{
+        \lambda_1,\lambda_2,\lambda_3\in \Lambda
+        }
+       \!\!\!\!\!\!
+        P_{\lambda_1}P_{\lambda_2}P_{\lambda_3}
+        \Big[
+        D_{\lambda_1,\lambda_2,\lambda_3}(f)+
+        \delta_{\lambda_2-\lambda_3}\Phi_{\lambda_2}E_{\lambda_1,\lambda_2,\lambda_3}(f)
+\\&+
+        \delta_{\lambda_1-\lambda_2}\Phi_{\lambda_1}F_{\lambda_1,\lambda_2,\lambda_3}(f)+
+        \delta_{\lambda_2-\lambda_3}
+        \delta_{\lambda_1-\lambda_2}
+        \Psi_{\lambda_1}G_{\lambda_1,\lambda_2,\lambda_3}(f)
+        \Big],
+	\label{gnli.main}
+\end{split}
+\end{equation}
+in which
+\eqn{
+&D_{\lambda_1,\lambda_2,\lambda_3}(f)=
+\frac{16}{27}R^3
+                \iint
+|S(f_1)|^2|S(f_1+f_2-f+\Omega)|^2|S(f_2)|^2
+\\&
+                \Upsilon_k(
+                f_1+\lambda_1R,
+                f_2+\lambda_2R,
+                f
+                )
+                \Upsilon_{k'}^*(
+                f_1+\lambda_1R,
+                f_2+\lambda_2R,
+                f
+                )
+        df_1df_2
+%,
+%}{}
+%\eqn{
+\\&        E_{\lambda_1,\lambda_2,\lambda_3}(f)=\frac{80}{81}
+                R^2
+                \iiint
+            |S(f_1)|^2
+            S(f_2)S^*(f_1+f_2-f+\Omega)
+            S^*(f_2')S(f_1+f_2'-f+\Omega)
+\\&
+                \Upsilon_k(f_1+\lambda_1R,f_2+\lambda_2R,f)
+                \Upsilon^*_{k'}(f_1+\lambda_1R,f_2'+\lambda_2R,f)
+            df_1df_2df_2'
+%,
+%}{}
+%\eqn{
+\\&F_{\lambda_1,\lambda_2,\lambda_3}(f)=\frac{16}{81}
+            R^2
+            \iiint
+            |S(f_1+f_2-f+\Omega)|^2
+            S(f_1)S(f_2)
+            S^*(f_1')S^*(f_1+f_2-f_1')
+\\&
+            \Upsilon_{k}(f_1+\lambda_1R,f_2+\lambda_2R,f)
+            \Upsilon_{k'}^*(f_1'+\lambda_1R,f_1+f_2-f_1'+\lambda_2R,f)
+            df_1df_2df_1'
+%}{}
+%and
+%\eqn{
+\\&
+G_{\lambda_1,\lambda_2,\lambda_3}(f)=\frac{16}{81}
+            R
+            \iiiint
+            S(f_1)S(f_2)
+            S^*(f_1+f_2-f+\lambda_1R)
+            S^*(f_1'+f_2'-f+\lambda_1R)
+\\&
+            S(f_1')S(f_2')
+            \Upsilon_k(f_1+\lambda_1R,f_2+\lambda_1R,f)
+            \Upsilon_k(f_1'+\lambda_1R,f_2'+\lambda_1R,f)
+            df_1df_2
+            df_1'df_2'
+,
+}{nli.terms}
+where
+\eqn{
+\Upsilon_k(f_1,f_2,f)&=\gamma
+            \frac{1-\exp[-\alpha L_s+\imath 4\pi^2\beta_2L_s(f_1-f)(f_2-f)]}{\alpha -\imath 4\pi^2\beta_2(f_1-f)(f_2-f)}
+\\&
+\frac{\exp[j4\pi^2\beta_2 N_sL_s(f_1-f)(f_2-f)]-1}{\exp[j4\pi^2\beta_2 L_s(f_1-f)(f_2-f)]-1}.
+}{ups}
+The parameters in \eqref{nli.terms} and \eqref{ups} are as follows
+\begin{itemize}
+\item
+$\alpha$: span attenuation coefficient
+\item
+$\beta_2$: span 2nd-order dispersion coefficient
+\item
+$\gamma$: span non-linear coefficient
+\item
+$L_s$: span length
+\item
+$N_s$: number of spans per link
+\item
+$R$: symbol rate of the shaping pulse
+\item
+$\lambda$: wavelength
+\item
+$\Lambda$: set of all wavelengths inside the link
+\item
+$P_\lambda$: launch power in wavelength $\lambda$
+\item
+$\Phi_\lambda$ and $\Psi_\lambda$: modulation-specific parameters defined as
+\eqn{
+\Phi_\lambda=\frac{\mathbb{E}\{|b_{x,\lambda}|^4\}}{\mathbb{E}^2\{|b_{x,\lambda}|^2\}}-2
+\quad,\quad
+\Psi_\lambda=\frac{\mathbb{E}\{|b_{x,\lambda}|^6\}}{\mathbb{E}^3\{|b_{x,\lambda}|^2\}}-9\frac{\mathbb{E}\{|b_{x,\lambda}|^4\}}{\mathbb{E}^2\{|b_{x,\lambda}|^2\}}+12,
+}{}
+in which, $b_{x,\lambda}$ is the modulation symbol sent in wavelength $\lambda$ and polarization x.
+\item
+$S(f)$: which is the Fourier transform of $s(t)$ as equal to
+\eqn{
+S(f)=\begin{cases}
+\frac{1}{R}&,\quad |f|<(1-\xi)\frac{R}{2}\\
+\frac{1}{R}{\cos(\frac{\pi}{2\xi R}[|f|-(1-\xi)\frac{R}{2}])}&,\quad (1-\xi)\frac{R}{2}\le|f|<(1+\xi)\frac{R}{2}\\
+0&,\quad\text{elsewhere}
+\end{cases}
+}{}
+\item
+$\delta_{\lambda_1-\lambda_2}$: denoting the Kronecker delta function defined as
+\eqn{
+\delta_{\lambda_1-\lambda_2}=\begin{cases}
+1&,\quad {\lambda_1=\lambda_2}\\
+0&,\quad\text{elsewhere}
+\end{cases}
+,
+}{}
+in which, $\xi$ is the roll-off factor of the RRC pulse.
+\end{itemize}
+
+\section{Programming Outline and Scenarios}
+In the Python script given to you, the receiver code block for SSFM is written and you are supposed to write the NLSE solver and the transmitter side on your own by taking help from an attached .m file that simulates the NLSE solver in MATLAB. Also the complete EGN code is written and ready-to-use, except a little deliberate bug that needs your help to be fixed!. After completing the whole code of SSFM and EGN, you can start simulating them to obtain SNR values by passing the transmitter output signal to the link NLSE solver and perform data detection process at receiver to obtain the transmitted symbols. The modulation format is QPSK.
+
+\subsection{Parameters}
+Assume $N_\text{ch}$ users transmits data over a channel with center frequencies of $W,2W,\cdots, N_\text{ch}W$ where $W$ is the channel bandwidth. The transmission takes place within a link consisting $N_{\Span}$ spans, each of which containing an optical fiber followed by an EDFA. The optical fibers and EDFAs have the following typical parameters:
+\begin{enumerate}
+\item
+$\alpha_{\text{dB}}=0.2 $ dB/km
+\item
+$D=16.7$ ps/(nm.km)
+\item
+$\gamma=1.3 W^{-1}\cdot km^{-1}$
+\item
+$L_\Span=100$ km
+\item
+$\NF_{\EDFA}=5$ dB
+\item
+$\lambda_\text{opt}=1550nm$
+\end{enumerate}
+In the following questions, you are assigned to run the \texttt{SNR\_SSFM} function using proper inputs to obtain SNR values. 
+
+\Q (roll-off factor of $0.02$, approximately rectangular pulse) 
+
+Assume $\gamma=0$ for all optical fibers in spans (i.e. the optical fiber has no non-linear impairment) and $N_\text{ch}=1$. All the fiber and amplifier parameters are given above. The single user deploys QPSK modulation format with sinc shaping pulse (root-raised-cosine with roll-off factor of 0).
+\begin{enumerate}[label=\alph*-]
+\item
+Find $\alpha$ and $\beta_2$ from $\alpha_{\text{dB}}$ and $D$ by using the following formulas:
+$$
+\alpha_{\text{dB}}=\alpha\times 10^4\log_{10}e
+$$
+$$
+D=-{2\pi c\over\lambda^2}\beta_2
+$$
+\item
+Calculate the dual-polarized ASE noise variance from the following formula:
+$$
+\sigma^2_{\ASE}=h\nu N_{\Span} FGW
+$$
+for four values of $N_\Span=1,5,10,15$.
+The parameters $h$, $\nu$, $F$, $G$ and $W$ are Planck's constant, optical frequency$\frac{c}{\lambda_\text{opt}}$, EDFA's noise figure in linear scale, EDFA power amplification gain which is equal to $e^{\alpha L}$ with $\alpha$ and $L$ being the optical fiber attenuation and total length and channel bandwidth, respectively.
+\item
+Sketch four plots for SNR in dB scales versus launch power in dBm for $N_\Span=1,5,10,15$. Interpret your results.
+\end{enumerate}
+
+\Q
+
+Now let $\gamma=1.3\times 10^{-3}$ and all the parameters have their typical values. Sketch four plots for SNR in dB scales versus launch power in dBm for $N_\Span=1,5,10,15$. Interpret the differences between results of this part and that of part c of the previous question.
+
+\Q
+
+With $\gamma=1.3\times 10^{-3}$ and $N_\text{ch}=3$ (three concurrent users in frequencies $R,2R,3R$), plot the SNRs of EGN and SSFM for the middle channel with center frequency $2R$. How does the SNR plot differ from that of part c of question 1? Support your answer with a comparison of NLIN variances. Sketch four plots for SNR in dB scales versus launch power in dBm for $N_\Span=1,5,10,15$. Interpret the differences between results of this part and that of part c of the previous question. Sketch the SNR plot in dB scale with launch power varying from -5dBm to 5dBm with steps 1dB and $N_\Span=1,5,10,25$ for both SSFM and EGN. Compare the plot with that you obtained in part d of quesion 1 and mention the major differences with reasons.
+
+\Q
+
+Let the roll-off factor be $0.2$. To avoid data corruption due to unwanted interference,  set the symbol rate on $32$G and channel spacing on $38.5$G.
+
+\begin{enumerate}[label=\alph*-]
+\item
+For $\gamma=0$ and $N_\text{ch}=1$, sketch the SNR plots of EGN and SSFM for $N_\text{span}=1,5,10,15$. Compare your answer to that of part c of question 1 and justify it (you may need to do some mathematical calculations!).
+\item
+With $\gamma=1.3\times 10^{-3}$ and $N_\text{ch}=1$, sketch the SNR plots of EGN and SSFM for $N_\text{span}=1,5,10,15$. Compare your answer to that of question 2 and justify it.
+\item
+For $\gamma=1.3\times 10^{-3}$ and $N_\text{ch}=3$, sketch four plots for SNRs of EGN and SSFM and compare your result to that of question 3.
+\end{enumerate}
+
+\Q (Appendix)
+
+%\begin{enumerate}[label=\alph*-]
+%\item
+As accumulated dispersion appears in the received signal, an EDC block is considered to remove it totally, yielding a dispersion-free signal. The received symbols can then be obtained by regularly resampling the signal and the QPSK constellation can be observed in the receiver. By removing EDC, we expect the received constellation to be messy with undistinguishable symbols. To test this theory, obtain scatter plots of transmitted and received symbols removing the EDC block from detection process (by passing beta2=0 to its function) for $N_\text{span}=10$, launch power = 0 dBm, single channel scenario and no-NLI regime ($\gamma=0$). Compare the received constellation in this case with that obtained from part c of question 1 and mention the major differences.
+%\end{enumerate}
+
+\Q
+
+Add a section to your report concluding all of the observations you made from the previous questions. Explanations are highly encouraged, so do your best!
+\end{document}

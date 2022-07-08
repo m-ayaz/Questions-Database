@@ -1,0 +1,166 @@
+\documentclass[50pt]{article}
+\RequirePackage{pdfpages}
+\renewcommand{\baselinestretch}{1.4}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage{color}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\RequirePackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\RequirePackage{xepersian}
+\RequirePackage{MnSymbol}
+\RequirePackage{graphicx}
+\newcommand{\wid}{1.8in}
+\newtheorem{theorem}{Theorem}
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\newenvironment{amatrix}[1]{%
+\left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+\end{array}\right]
+}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+
+\begin{document}
+\setLTR 
+
+
+
+
+\begin{RTL}
+\Large{
+
+
+
+
+
+
+
+
+\begin{center}
+به نام خدا
+
+پاسخ سوالات 1 و 2 تمرینات سری اول درس سیگنالها و سیستمها
+
+دکتر لطف الله بیگی
+\end{center}
+
+\hl
+
+1)
+
+الف)
+
+%\begin{latin}
+\[
+\begin{split}
+\text{\rl{انرژی}}&=\int_{-\infty}^\infty |x(t)|^2dt\\&=\int_0^\infty e^{-2t}\sin^2 tdt\\&={1\over 2}\int_0^\infty e^{-2t}(1-\cos 2t)dt\\&={1\over 4}-{1\over 2}\int_0^\infty e^{-2t}\cos 2tdt
+\end{split}
+\]
+%\end{latin}
+
+
+همچنین برای محاسبه ی $\int_0^\infty e^{-2t}\cos 2tdt$ از رابطه ی 
+$\cos u={e^{ju}+e^{-ju}\over 2}$
+جایگذاری می کنیم و خواهیم داشت:
+
+\[
+\begin{split}
+\int_0^\infty e^{-2t}\cos 2tdt&={1\over 2}\int_{0}^\infty e^{(-2+2j)t}+e^{(-2-2j)t}dt\\&=-{1\over 2}\left({{1\over -2+2j}+{1\over -2-2j}}\right)\\&=-{1\over 2}\cdot{-4\over 8}\\&={1\over 4}
+\end{split}
+\]
+بنابراین کل انرژی سیگنال برابر $1\over 8$ خواهد بود. چون انرژی سیگنال محدود است، لذا توان آن برابر  صفر است.
+
+ب)
+
+برای سیگنال های متناوب $x[n]$ با دوره تناوب $N$، توان از رابطه ی زیر به دست می آید:
+
+\[
+P={1\over N}\sum_{n=0}^{N-1}|x[n]|^2
+\]
+
+از طرفی سیگنال $x[n]=\cos{\pi \over 4} n^2$ با دوره ی $4$ متناوب است؛ بنابراین در این حالت خواهیم داشت:
+
+\[
+\begin{split}
+P&={1\over 4}\Big(x^2[0]+x^2[1]+x^2[2]+x^2[3]\Big)\\&={1\over 4}\Big(1+{1\over 2}+1+{1\over 2}\Big)\\&={3\over 4}
+\end{split}
+\]
+
+چون توان سیگنال عددی مثبت است لذا انرژی آن بینهایت است.
+
+
+پ)
+ 
+از آنجا که این سیگنال دارای بینهایت نمونه ی برابر $1$ است، انرژی آن نامحدود ($\infty$) است که این از تعریف انرژی سیگنال مستقیما نتیجه می شود. از طرفی طبق تعریف توان سیگنال:
+\[
+\begin{split}
+P&=\lim_{N\to \infty}{1\over 2N+1}\sum_{n=-N}^{N}|x[n]|^2\\
+\end{split}
+\]
+با جایگذاری 
+$N={k(k+1)\over 2}$
+در رابطه‌ی حد بالا نتیجه می گیریم:
+
+\[
+\begin{split}
+P&=\lim_{{k(k+1)\over 2}\to \infty}{1\over 2N+1}\sum_{n=-N}^{N}|x[n]|^2\\&=\lim_{k\to \infty}{k\over k^2+k+1}\\&=0
+\end{split}
+\]
+ این نتیجه قابل انتظار است؛ زیرا فاصله‌ی نمونه‌های غیر صفر سیگنال با افزایش $n$ دائما افزایش می یابد (به نوعی میزان اطلاعات با ارزش سیگنال با گذشت زمان کم می شود).
+
+این مثال سیگنالی را نشان می دهد که انرژی آن بینهایت و توان آن صفر است.
+
+
+
+\hl
+2) سیگنال 
+$x[n]=\cos {\pi \over 8} n^k$
+  به ازای $k<0$ و برای $n$ های بزرگ به طور مجانبی به سمت $1$ میل می‌کند و لذا متناوب نیست. برای $k=0$ ،  سیگنال مقدار ثابت  $\cos{\pi\over 8}$ را داراست و لذا با دوره ی $1 $ متناوب است. همچنین برای $k>0$ فرض کنیم سیگنال با دوره تناوب $N$ متناوب باشد. در اینصورت 
+\[
+x[n+N]=\cos{\pi \over 8}(n+N)^k
+\]
+با استفاده از رابطه‌ی بسط دوجمله ای:
+\[
+\cos{\pi \over 8}(n+N)^k=\cos{\pi \over 8}(n^k+k\cdot n^{k-1}\cdot N+\cdots +N^k)
+\]
+برای $k$ های فرد دوره تناوب برابر $16$ است (به جمله‌ی $k\cdot n^{k-1}\cdot N$ دقت کنید) و برای $k$ زوج حالت های زیر را داریم:
+
+\[
+\begin{split}
+&k=8l\quad,\quad l\in\Bbb N\Longrightarrow N=2\\&
+k=8l+4\quad,\quad l\in\Bbb N\Longrightarrow N=4\\&
+k=4l+2\quad,\quad l\in\Bbb N\Longrightarrow N=8\\
+\end{split}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+\end{RTL}
+
+
+
+\end{document}
+
+

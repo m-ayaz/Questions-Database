@@ -1,0 +1,84 @@
+\documentclass{article}
+
+
+\usepackage{amsmath,amssymb,graphicx,xcolor,xepersian}
+
+\newcommand{\qn}[1]{
+\[
+\begin{split}
+#1
+\end{split}
+\]
+}
+
+\begin{document}
+
+%{
+%\centering
+%به نام زیبایی
+%
+%کوئیز 2 درس سیگنال ها و سیستم ها
+%}
+
+\large
+
+{{\color{red}سوال باید با بهره گیری از خواص تبدیل فوریه حل شود؛ بنابراین اگر دانشجویی با خواص حل نکرد و مستقیم تبدیل فوریه را حساب کرد، لطفا کسر نمره جزئی منظور فرمایید.
+}}
+
+الف)
+
+\qn{
+\int_{-\infty}^\infty |X(j\omega)|^2d\omega
+&=2\pi\int_{-\infty}^\infty |x(t)|^2dt
+\\&=2\pi\int_{-\infty}^\infty |x(t)|^2dt
+\\&=2\pi\int_{-\infty}^\infty |x(t+5)|^2dt
+\\&=4\pi\int_{0}^2 |x(t+5)|^2dt
+\\&=4\pi\int_{0}^2 (4-t)^2dt
+\\&=4\pi\frac{(t-4)^3}{3}\Big|_0^2
+\\&=\frac{224\pi}{3}
+}
+
+ب) سیگنال حول $t=-5$ تقارن زوج دارد؛ پس فاز آن
+$
+-\omega(-5)=5\omega
+$
+است.
+
+پ) تبدیل فوریه‌ی 
+$
+x(t)*x(t)
+$
+برابر 
+$
+X^2(j\omega)
+$
+است؛ پس،
+\qn{
+\int_{-\infty}^\infty X^2(j\omega)d\omega
+&=2\pi x(t)*x(t)\Big|_{t=0}
+\\&=2\pi \int_{-\infty}^\infty x(t)x(-t)dt=0
+}
+
+
+ت) می دانیم تبدیل فوریه‌ی 
+$
+x'(t)
+$
+برابر 
+$
+j\omega X(j\omega)
+$
+است؛ پس تبدیل فوریه‌ی 
+$
+x'(t-6)
+$
+برابر 
+$
+j\omega X(j\omega) \exp(-j6\omega)
+$
+خواهد بود.
+\qn{
+\int_{-\infty}^\infty \omega X(j\omega) \exp(-j6\omega)
+&=\frac{1}{j}x'(t-6)\Big|_{t=0}=\frac{1}{j}x'(-6)=-j
+}
+\end{document}

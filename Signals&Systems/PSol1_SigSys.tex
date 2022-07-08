@@ -1,0 +1,159 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\Q}[1]{\textbf{
+سوال #1)
+}}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+پاسخ تمرینات سری اول سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q1
+
+ابتدا به رابطه‌ی توان متوسل می شویم؛ در این صورت:
+
+\qn{
+P_y&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} |y(t)|^2dt
+\\&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} y(t)y^*(t)dt
+\\&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} \sum_m\sum_n x(t-mT)x^*(t-nT)dt
+\\&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} \sum_{m,n} x(t-mT)x^*(t-nT)dt
+\\&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} \sum_{\substack{m,n\\m=n}} x(t-mT)x^*(t-nT)dt
+\\&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} \sum_n x(t-nT)x^*(t-nT)dt
+\\&=\lim_{L\to \infty}{1\over L}\int_{-{L\over 2}}^{L\over 2} \sum_n |x(t-nT)|^2dt
+\\&=\lim_{k\to \infty}{1\over kT}\int_{-{kT\over 2}}^{kT\over 2} \sum_n |x(t-nT)|^2dt
+\\&=\lim_{k\to \infty}{1\over T}\int_{-{T\over 2}}^{T\over 2} \sum_n |x(t-nT)|^2dt
+\\&=\lim_{k\to \infty}{1\over T}\int_{-{T\over 2}}^{T\over 2} |x(t)|^2dt
+\\&={1\over T}\int_{-{T\over 2}}^{T\over 2} |x(t)|^2dt
+\\&={E_{x(t)}\over T}
+}{}
+ب) بدیهی است جز در حالت های خاص (شامل ضربه یا صفر بودن سیگنال)، سیگنال $x(t)$ از نوع انرژی و سیگنال $y(t)$ از نوع توان خواهد بود.
+% فرض کنید سیگنال $x(t)$، سیگنال زمان محدودی باشد؛ به گونه ای که
+%$$
+%x(t)=0\quad,\quad |t|>T
+%$$
+%و
+%$$
+%y(t)=\sum_{n=-\infty}^{\infty}x(t-nT)
+%$$
+%در این صورت:
+%
+%الف) توان $y(t)$ را بیابید.
+%
+%ب) هر یک از سیگنال های $x(t)$ و $y(t)$ را از نقطه نظر سیگنال توان یا انرژی بودن یا نبودن طبقه‌بندی کنید.
+\nl
+\Q2
+%کدام یک از سیگنال های زیر متناوب اند و در صورت متناوب بودن، دوره‌ی تناوب اساسی آنها را محاسبه کنید.
+الف) متناوب نیست؛ زیرا اگر $T>0$ چنان موجود باشد که:
+$$
+x(t+T)=\cos {\pi\over 7}(t+T)^2=\cos {\pi\over 7}t^2=x(t)
+$$
+آنگاه
+$$
+(t+T)^2=14k\pm t^2\quad,\quad k\in\Bbb Z
+$$
+که هیچ یک از شاخه های جواب های فوق، $T$ مستقل از زمانی نمی دهد.
+\nl
+ب) متناوب با دوره‌ی $N=7$ است. به طریقی مشابه بالا:
+$$
+(n+N)^2=14k\pm n^2\quad,\quad k\in\Bbb Z
+$$
+از شاخه‌ی 
+$
+(n+N)^2=14k+ n^2\quad,\quad k\in\Bbb Z
+$
+ خواهیم داشت:
+$$
+N^2+2nN=14k
+$$
+که به ازای هر $n$ فقط زمانی درست است که $N=14$.
+\nl
+پ) متناوب نیست؛ زیرا $\sin n=0$ تنها یک ریشه در اعداد صحیح دارد و آن $n=0$ است؛ بنابراین
+$$
+x[n]=\delta[\sin n]=\delta[n]
+$$
+\nl
+ت) از آنجا که $\sin {\pi\over 3}n$ با دوره‌ی تناوب اساسی 
+$
+{2\pi\over{\pi\over 3}}=6
+$
+ متناوب است، در نتیجه
+$$
+x[n+6]=\delta[\sin {\pi\over 3}(n+6)]=\delta[\sin {\pi\over 3}n]=x[n]
+$$
+\nl
+ث) داخل آرگومان بیرونی ترین $\cos$، تابع 
+$
+{\pi\over 3}n+\cos{\pi\over 2}n
+$
+ وجود دارد که نه زوج است و نه فرد. از آنجا که $\cos{\pi\over 2}n$ با دوره‌ی اساسی 4 متناوب است، در نتیجه باید دوره تناوب سیگنال مضربی از 4 باشد. از طرفی از آنجا که جمله‌ی ${\pi\over 3}n$ نیز در این آرگومان وجود دارد، باید دوره‌ی تناوب سیگنال مضربی از 6 نیز باشد؛ بنابراین دوره تناوب برابر 12 است.
+\qn{
+x[n+12]&=\cos\left\{{\pi\over 3}(n+12)+\cos{\pi\over 2}(n+12)\right\}
+\\&=\cos\left\{{\pi\over 3}n+4\pi+\cos\left({\pi\over 2}n+6\pi\right)\right\}
+\\&=\cos\left\{{\pi\over 3}n+\cos\left({\pi\over 2}n\right)\right\}
+\\&=x[n]
+}{}
+
+ج) متناوب نیست؛ زیرا جمع دو سیگنال متناوب یکی با تناوب 2 و یکی $2\pi$ است و این دو عدد مضرب مشترک صحیح ندارند.
+%$
+%x(t)=\sin t+\sin \pi t
+%$
+\nl
+\Q3
+الف، ب، پ و ت) 
+\lr{
+\begin{figure}[htb]
+\begin{subfigure}{0.5\textwidth}
+\pic{PSol1_Q3_a_1}{75mm}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\pic{PSol1_Q3_a_2}{75mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_b_1}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_b_2}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_b_3}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_c_1}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_c_2}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_c_3}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_d_1}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_d_2}{50mm}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\pic{PSol1_Q3_d_3}{50mm}
+\end{subfigure}
+\end{figure}
+}
+\end{document}

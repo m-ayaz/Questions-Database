@@ -1,0 +1,339 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\wid}{40mm}
+%\newcommand
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+پاسخ تمرینات سری نهم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+\textbf{راه اول:}
+کانولوشن دایروی عبارتست از
+$$
+y[n]=\sum_{k=<N>}x[k]h[n-k]
+$$
+از آنجا که در کانولوشن دایره ای باید دوره‌ی تناوب هر دو سیگنال برابر باشد، تناوب هر دو سیگنال را برابر 12 می گیریم؛ در این صورت:
+$$
+y[n]=\sum_{k=<12>}x[k]h[n-k]
+$$
+اکنون می خواهیم ارتباط کانولوشن دایروی را با خطی پیدا کنیم. به طور مثال برای محاسبه‌ی 
+$
+y[0]
+$
+ می‌توان نوشت:
+$$
+y[0]=\sum_{k=<12>}x[k]h[-k]=\sum_{k=<12>}x[k]h[12-k]
+$$
+این مانند این است که کانولوشن خطی یک دوره‌ی تناوب از $x[n]$ را با یک دوره‌ی تناوب از $h[n]$ در نقطه‌ی 0 (یا 12 به دلیل متناوب بودن هر دو سیگنال با دوره‌ی 12 و طبق تساوی بالا) محاسبه کنیم؛ به عبارت دیگر، دو سیگنال شکل زیر را در هم ضرب کرده و سپس جمع نمونه های حاصل را محاسبه کنیم:
+\begin{figure}[h!]
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol9_Q1_2.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol9_Q1_1.eps}
+\end{subfigure}
+\end{figure}
+در اینصورت 
+$
+y[0]=4
+$
+.
+
+اگر بخواهیم $y[1]$ را محاسبه کنیم، باید تساوی زیر را در نظر بگیریم:
+$$
+y[0]=\sum_{k=<12>}x[k]h[1-k]=\sum_{k=<12>}x[k]h[13-k]
+$$
+به عبارت دیگر، سیگنالهای زیر را در هم ضرب کرده ایم:
+\newpage
+\begin{figure}[h!]
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol9_Q1_3.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol9_Q1_1.eps}
+\end{subfigure}
+\end{figure}
+دیده می شود که سیگنال $h[1-n]$ از روی $h[-n]$ به این ترتیب ساخته شده است که 1 واحد به راست شیفت دایره ای خورده است؛ یعنی نمونه‌ی 11 ام سیگنال $h[-n]$ به جایگاه 0 منتقل شده و سایر قسمت های سیگنال $h[-n]$ نیز 1 واحد به راست رفته اند. با محاسبه‌ی مجموع فوق دوباره داریم
+$$
+y[1]=4
+$$
+به همین ترتیب سایر نمونه های $y[n]$ نیز برابر 4 محاسبه می شوند و می توان نوشت:
+$$
+y[n]=4
+$$
+\textbf{راه دوم:}
+با توجه به رابطه‌ی 
+$$
+y[n]=\sum_{k=<N>}x[k]h[n-k]
+$$
+اگر $h[n]$ با دوره‌ی $N_1$ متناوب باشد که 
+$
+N_1|12
+$
+ ، آنگاه
+$$
+y[n+N_1]=\sum_{k=<N>}x[k]h[n+N_1-k]=\sum_{k=<N>}x[k]h[n-k]=y[n]
+$$
+یعنی $y[n]$ نیز با دوره‌ی $N_1$ متناوب است. از طرف با تعویض جای $h$ و $x$، با فرض آنکه $x[n]$ با دوره‌ی $N_2$ متناوب باشد، $y[n]$ نیز با دوره‌ی $N_2$ متناوب است. پس $y[n]$ باید با دوره‌ی 
+$
+\gcd(N_1,N_2)
+$
+ متناوب باشد که در اینجا چون 
+$
+\gcd(N_1,N_2)=1
+$
+ در نتیجه سیگنال $y[n]$ ثابت است. مقدار ثابت را به راحتی می توان به دست آورد.
+
+\textbf{راه سوم:}
+با محاسبه‌ی سری فوریه‌ی دو سیگنال، به غیر از مضارب 12 در مکانهایی که 
+$
+a_k
+$
+ غیر صفر است، 
+$
+b_k
+$
+ صفر است و بالعکس. پس حاصل ضرب 
+$
+a_kb_k
+$
+ فقط در مضارب 12 غیر صفر می شود که معادل با سیگنال ثابت است.
+\nl
+\Q
+
+$h[n]$
+ شامل سه ضربه در زمان است؛ بنابراین
+$$
+y[n]=x[n+1]-x[n]+x[n-1]
+$$
+\begin{figure}[h!]
+\centering
+\includegraphics[width=80mm]{PSol9_Q2.eps}
+\end{figure}
+\Q
+
+الف)
+
+از شرط اول طبق خواص سری فوریه خواهیم داشت:
+$$
+x[n]=-x[n](-1)^n
+$$
+که نشان می دهد نمونه های زوج $x[n]$ برابر صفرند؛ پس سیگنال $x[n]$ در یک دوره تناوب مانند زیر است:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=80mm]{PSol9_Q3_1.eps}
+\end{figure}
+\nl
+ب) ضرایب سری فوریه‌ی 
+$
+x[n-1]
+$
+ برابر است با:
+$$
+a_ke^{-jk{\pi\over 4}}
+$$
+بنابراین اگر ضرایب فوریه‌ی $y[n]$ را $b_k$ بنامیم، آنگاه:
+\qn{
+b_k&={1\over 2}[a_ke^{-jk{\pi\over 4}}+a_{k-4}e^{-j(k-4){\pi\over 4}}]
+\\&={1\over 2}[a_ke^{-jk{\pi\over 4}}-a_{k}(-1)^ke^{-jk{\pi\over 4}}]
+}{}
+بنابراین
+$$
+f[k]=
+{1\over 2}e^{-jk{\pi\over 4}}[1-(-1)^k]
+$$
+\Q
+
+الف) طبق خواص می توان نوشت:
+$$
+b_k=a_k[1-(-1)^k]
+$$
+ب) اگر ضرایب سری فوریه‌ی این سیگنال را $b_k$ بنامیم، در این صورت $b_k$ با دوره‌ی $N/2$ متناوب است. در اینصورت
+\qn{
+b_k={2\over N}\sum_{n=0}^{{N\over 2}-1}\{x[n]+x[n+N/2]\}e^{-j{4\pi\over N}kn}
+}{}
+ چنانچه بخواهیم ضرایب فوریه‌ی این سیگنال را با در نظر گرفتن دوره‌ی تناوب $N$ محاسبه و آن را $c_k$ نام گذاری کنیم، در این صورت:
+\qn{
+c_k={1\over N}\sum_{n=0}^{{N}-1}\{x[n]+x[n+N/2]\}e^{-j{2\pi\over N}kn}
+}{}
+پرواضح است که 
+$
+c_{2k}=b_k
+$
+ و 
+$
+c_{2k+1}=0
+$
+. 
+از طرفی
+$$
+c_k=a_k[1+(-1)^k]=\begin{cases}2a_k&,\quad \text{k زوج}
+\\
+0&,\quad \text{k فرد}
+\end{cases}
+$$
+در این صورت:
+$$
+b_k=2a_{2k}
+$$
+پ) بر طبق خواص
+$$
+b_k=a_{k-{N\over 2}}
+$$
+ت) اگر ضرایب $x[n]$ را با $a_k$ نشان دهیم، $a_k$ با دوره‌ی $N$ متناوب است. اکنون فرض کنید ضرایب $x[n]$ را با دوره‌ی تناوب $2N$ محاسبه کرده و آن را $c_k$ نامیده ایم. در این صورت:
+\qn{
+&a_k={1\over N}\sum_{n=0}^{{N}-1}x[n]e^{-j{2\pi\over N}kn}
+\\&c_k={1\over 2N}\sum_{n=0}^{{2N}-1}x[n]e^{-j{\pi\over N}kn}
+}{}
+بنابراین
+$
+c_{2k}=a_k
+$
+و 
+$
+c_{2k+1}=0
+$
+.
+از طرفی $(-1)^n$، شیفتی به اندازه‌ی نصف دوره تناوب یعنی 
+$
+{2N\over 2}=N
+$
+ در حوزه‌ی فوریه تحمیل می کند؛ پس:
+$$
+b_k=\begin{cases}
+0&,\quad \text{k زوج}
+\\
+a_{k-N\over 2}&,\quad \text{k فرد}
+\end{cases}
+$$
+\nl
+ث)
+$$
+y[n]=x[n]{1+(-1)^n\over 2}
+$$
+بنابراین طبق خواص اگر $N$ زوج باشد:
+$$
+b_k={a_k+a_{k-{N\over 2}}\over 2}
+$$
+و اگر $N$ فرد باشد:
+$$
+b_k=\begin{cases}
+a_k&,\quad \text{k زوج}
+\\
+{a_k+a_{k-N\over 2}\over 2}&,\quad \text{k فرد}
+\end{cases}
+$$
+\Q
+
+در هر خاصیت، ضرایب سری فوریه‌ی سیگنال را با $c_k$ نشان می دهیم.
+
+الف)
+\qn{
+c_k&={1\over N}\sum_{n=<N>}\sum_{r=<N>}x[r]y[n-r]e^{-jkn{2\pi\over N}}
+\\&={1\over N}\sum_{r=<N>}x[r]\sum_{n=<N>}y[n-r]e^{-jkn{2\pi\over N}}
+\\&={1\over N}\sum_{r=<N>}x[r]\sum_{n=<N>}y[n-r]e^{-jk(n-r){2\pi\over N}}e^{-jkr{2\pi\over N}}
+\\&={1\over N}\sum_{r=<N>}x[r]\sum_{m=<N>}y[m]e^{-jkm{2\pi\over N}}e^{-jkr{2\pi\over N}}
+\\&=\sum_{r=<N>}x[r]b_ke^{-jkr{2\pi\over N}}
+\\&=Na_kb_k
+}{}
+ب) 
+\qn{
+c_k&={1\over N}\sum_{n=<N>}x[n]y[n]e^{-jk{2\pi\over N}n}
+\\&={1\over N}\sum_{n=<N>}\sum_{p=<N>,q=<N>}a_pb_qe^{jk(p+q){2\pi\over N}n}e^{-jk{2\pi\over N}n}
+\\&={1\over N}\sum_{p=<N>,q=<N>}a_pb_q\sum_{n=<N>}e^{jk(p+q){2\pi\over N}n}e^{-jk{2\pi\over N}n}
+\\&=\sum_{p=<N>}a_pb_{k-p}
+}{}
+پ)
+
+از خواص سری فوریه فورا نتیجه می شود.
+\nl
+ت) با تعریف 
+$
+y[n]=\sum_{k=-\infty}^n x[k]
+$
+ خواهیم داشت:
+\qn{
+y[n]-y[n-1]=x[n]
+}{}
+در نتیجه
+$$
+b_k(1-e^{-jk{2\pi\over N}})=a_k
+$$
+به ازای $k=0$ باید الزاما داشته باشیم $
+a_0=0
+$
+ و به ازای 
+$
+k\ne 0
+$:
+$$
+b_k={a_k\over 1-e^{-jk{2\pi\over N}}}
+$$
+ث)
+$$
+x[n]=\sum_{n=<N>}a_ke^{jk{2\pi\over N}n}
+$$
+\qn{
+x^*[n]&=\sum_{n=<N>}a_k^*e^{-jk{2\pi\over N}n}
+\\&=\sum_{n=<N>}a_{-k}^*e^{jk{2\pi\over N}n}
+}{}
+در نتیجه
+$$
+x[n]=x^*[n]\iff a_k=a^*_{-k}
+$$
+از این گزاره، سایر گزاره ها نتیجه می شوند.
+\nl
+ج) می دانیم
+$$
+x[-n]\implies a_{-k}
+$$
+بنابراین به کمک تقارن هرمیتیک:
+\qn{
+&x_e[n]={x[n]+x[-n]\over 2}\implies {a_k+a_{-k}\over 2}={a_k+a^*_{k}\over 2}=\Re\{a_k\}
+\\&x_o[n]={x[n]-x[-n]\over 2}\implies {a_k-a_{-k}\over 2}={a_k-a^*_{k}\over 2}=j\Im\{a_k\}
+}{}
+\nl
+چ) طبق خاصیت قسمت ب، سیگنال 
+$
+x[n]x^*[n]
+$
+ دارای ضرایب سری فوریه‌ی 
+$
+\sum_{p=<N>}a_pa^*_{p-k}
+$
+است؛ از طرفی محاسبه کردن ضریب سری فوریه‌ی سیگنال در فرکانس صفر، معادل با 
+$
+1\over N
+$
+ حاصل جمع سیگنال روی یک دوره‌ی تناوب آن است؛ بنابراین با قرار دادن $k=0$ در ضرایب بالا و جمع بستن کل سیگنال خواهیم داشت:
+$$
+{1\over N}\sum_{n=<N>}|x[n]|^2={1\over N}\sum_{n=<N>}x[n]x^*[n]
+=\sum_{p=<N>}a_pa^*_{p}=\sum_{p=<N>}|a_p|^2
+$$
+\end{document}

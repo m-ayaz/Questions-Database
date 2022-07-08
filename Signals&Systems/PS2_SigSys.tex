@@ -1,0 +1,164 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\Q}[1]{\textbf{
+سوال #1)
+}}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری دوم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q1
+
+برای دو سیگنال $x(t)$ و $y(t)$، تابع همبستگی به صورت زیر تعریف می شود:
+$$
+\phi_{xy}(t)=\int_{-\infty}^\infty x(t+\tau) y^*(\tau)d\tau
+$$
+الف) چه رابطه‌ای بین 
+$
+\phi_{xy}(t)
+$
+ و
+ $
+\phi_{yx}(t)
+$
+ وجود دارد؟
+
+ب) اگر $x(t)$ و $y(t)$ هر دو متناوب با دوره‌ی تناوب اساسی به ترتیب $T_1$ و $T_2$ باشند، در چه شرایطی $\phi_{yx}(t)$ متناوب است و در این صورت دوره‌ی تناوب اساسی آن را بیابید.
+
+پ) اگر 
+$
+y(t)=x(t+T)
+$
+، رابطه‌ی بین 
+$
+\phi_{yy}(t)
+$
+ و 
+$
+\phi_{xy}(t)
+$
+ را با
+$
+\phi_{xx}(t)
+$
+ بیابید.
+
+ت) تابع همبستگی $
+\phi_{xy}(t)
+$
+ را به ازای سیگنال دلخواه $x(t)$ و 
+$
+y(t)=\delta(\sin \pi t)
+$
+ محاسبه کنید.
+\nl
+\Q2
+
+سیستم LTI زیر را در نظر بگیرید:
+$$
+y[n]-3y[n-1]+2y[n-2]=3x[n-4]+4x[n-5]
+$$
+الف) تحقق مستقیم نوع 1
+\footnote{
+\lr{
+Direct Form I realization
+}}
+ را برای سیستم های زیر ترسیم کنید.
+$$
+\begin{cases}
+S_1:
+y_1[n]=3y_1[n-1]-2y_1[n-2]+x_1[n]
+\\
+S_2:
+y_2[n]=3x_2[n-4]+4x_2[n-5]
+\end{cases}
+$$
+ب) تحقق مستقیم نوع 1 را به صورت ترکیب سری تحقق‌های مستقیم نوع 1 سیستم‌های $S_1$ و $S_2$ (ابتدا $S_1$ و سپس $S_2$) پیاده سازی کنید.
+
+پ) از روی تحقق مستقیم نوع 1 در قسمت ب، تحقق مستقیم نوع 2
+\footnote{
+\lr{
+Direct Form II realization
+}}
+ سیستم $S$ را پیاده سازی کنید.
+\nl
+\Q3
+
+گزاره های زیر را تعیین درستی کنید و در صورت نادرست بودن، مثال نقض بیاورید.
+
+الف) ترکیب سری یک سیستم ناپایدار و یک سیستم پایدار، همواره ناپایدار است.
+
+ب) ترکیب سری یک سیستم غیرعلی و یک سیستم علی، می‌تواند علی باشد.
+
+پ) ترکیب موازی یک سیستم ناپایدار و یک سیستم پایدار، همواره ناپایدار است.
+
+ت) ترکیب سری دو سیستم معکوس ناپذیر، همواره معکوس ناپذیر است.
+
+ث) ترکیب موازی دو سیستم معکوس ناپذیر، همواره معکوس ناپذیر است.
+\nl
+\Q4
+
+خواص علی بودن، پایدار بودن، خطی بودن، تغییر ناپذیر با زمان بودن و معکوس پذیر بودن را برای سیستم های زیر بررسی کنید.
+
+الف) 
+$
+y(t)=\int_{-\infty}^{t} x(\tau)-x(\tau-T)d\tau
+$
+
+ب) 
+$
+y(t)=\cos [x(t)]
+$
+
+پ) 
+$
+y(t)={d\over dt}x(t)
+$
+
+ت)
+$
+y[n]=\begin{cases}
+x^2[n]&,\quad x[n]<0
+\\
+x[n+2]&,\quad x[n]\ge 0
+\end{cases}
+$
+
+ث) 
+$
+y[n]=\begin{cases}
+x^2[n]&,\quad n<0
+\\
+x[n+2]&,\quad n\ge 0
+\end{cases}
+$
+
+ج)
+$
+y(t)=\begin{cases}
+x(t^2)&,\quad t<0
+\\
+x(t^3)&,\quad t\ge 0
+\end{cases}
+$
+\end{document}

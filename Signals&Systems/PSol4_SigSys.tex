@@ -1,0 +1,264 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\wid}{40mm}
+%\newcommand
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+پاسخ تمرینات سری چهارم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+در محاسبه‌ی کانولوشن به روش ترسیمی، باید یک سیگنال را حفظ کرده و سیگنال دیگر را قرینه و شیفت زمانی بدهیم. سپس جمع نمونه های ضرب شده ی دو سیگنال را در یکدیگر به ازای شیفت های مختلف محاسبه کنیم تا خروجی به دست آید.
+\nl
+الف) سیگنال $h[n]$ را حفظ کرده و $x[n]$ را قرینه و شیفت زمانی می دهیم. در این صورت سیگنال $x[-n]$ از $-4$ تا 0 و سیگنال $x[n_0-n]$ از $n_0-4$ تا $n_0$ مقدار خواهد داشت. از آنجا که نمونه های $x[n_0-n]$ حداکثر تا $n_0$ وجود دارند، این سیگنال با سیگنال $h[n]$ به ازای $n_0<2$ نمونه ی مشترک ندارد و در نتیجه کانولوشن برابر صفر خواهد بود. شکل 7، مراحل این کانولوشن را نشان می دهد.
+\pic{PSol4_Q1_a.eps}{90mm}{
+نتیجه ی کانولوشن دو سیگنال $x[n]$ و $h[n]$
+}
+
+ب)
+
+\pic{PSol4_Q1_b.eps}{90mm}{
+نتیجه ی کانولوشن دو سیگنال $x[n]$ و $h[n]$
+}
+
+\newpage
+پ) 
+
+\pic{PSol4_Q1_c.eps}{90mm}{
+کانولوشن دو سیگنال $x[n]$ و $h[n]$
+}
+
+ت)
+
+\pic{PSol4_Q1_d.eps}{90mm}{
+کانولوشن دو سیگنال $x[n]$ و $h[n]$
+}
+\Q
+ (!)
+%\nl
+\newpage
+\Q
+
+از آنجا که سیستم در شرایط اولیه ی صفر قرار دارد، خروجی همواره همزمان یا بعد از ورودی شروع می‌شود. در این حالت، چون ورودی تا لحظه ی $t=-3$ برابر صفر است، خروجی نیز در لحظات $-3$ و ماقبل آن صفر خواهد بود و برای لحظات بعد از آن خواهیم داشت:
+\qn{
+&y[-2]+2y[-3]=x[-2]=1\implies y[-2]=1
+\\&y[-1]+2y[-2]=x[-1]=2\implies y[-1]=0
+\\&y[0]+2y[-1]=x[0]=3\implies y[0]=3
+\\&y[1]+2y[0]=x[1]=2\implies y[1]=-4
+\\&y[2]+2y[1]=x[2]=2\implies y[2]=10
+\\&y[3]+2y[2]=x[3]=1\implies y[3]=-19
+\\&y[4]+2y[3]=x[4]=1\implies y[3]=38
+}{}
+پس از لحظه ی 4، خروجی هر بار $-2$ برابر می شود؛ زیرا ورودی برابر صفر است.
+\pic{PSol4_Q3.eps}{100mm}{
+سیگنال $y[n]$
+}
+
+\Q
+
+از آنجا که رابطه ی سیگنال ضربه با پله به صورت زیر است:
+$$
+u[n]=\sum_{k=-\infty}^n \delta[k]
+$$
+رابطه ی پاسخ ضربه نیز با پاسخ پله به صورت زیر خواهد بود:
+$$
+s[n]=\sum_{k=-\infty}^n h[k]
+$$
+بنابراین
+\qn{
+s[n]
+&=\sum_{k=-\infty}^n (k+1)\alpha^ku[k]
+\\&=u[n]\sum_{k=0}^n (k+1)\alpha^k
+\\&=u[n]{d\over d\alpha}\sum_{k=0}^n \alpha^{k+1}
+\\&=u[n]{d\over d\alpha}\sum_{k=1}^{n+1} \alpha^{k}
+\\&=u[n]{d\over d\alpha}\sum_{k=0}^{n+1} \alpha^{k}
+\\&=u[n]{d\over d\alpha}{1-\alpha^{n+2}\over 1-\alpha}
+\\&=u[n]\left[{1\over (1-\alpha)^2}-{d\over d\alpha}{\alpha^{n+2}\over 1-\alpha}\right]
+\\&=u[n]\left[{1\over (1-\alpha)^2}-{(n+2)\alpha^{n+1}(1-\alpha)+\alpha^{n+2}\over (1-\alpha)^2}\right]
+\\&=u[n]\left[{1\over (1-\alpha)^2}+{(n+2)\alpha^{n+1}\over \alpha-1}-{\alpha^{n+2}\over (1-\alpha)^2}\right]
+\\&=u[n]\left[{1\over (1-\alpha)^2}+{(n+1)\alpha^{n+1}\over \alpha-1}+{\alpha^{n+1}\over \alpha-1}-{\alpha^{n+2}\over (1-\alpha)^2}\right]
+\\&=u[n]\left[{1\over (1-\alpha)^2}+{(n+1)\alpha^{n+1}\over \alpha-1}-{\alpha^{n+1}\over (\alpha-1)^2}\right]
+%\\&=u[n]\left[{1\over (1-\alpha)^2}-{(n+2)\alpha^{n+1}-(n+2)\alpha^{n+2}+\alpha^{n+2}\over (1-\alpha)^2}\right]
+}{}
+\Q
+
+الف) این سیستم، سیگنال را یک واحد به راست شیفت می دهد و از خود سیگنال کم می کند؛ در واقع معادل مشتق گیر در حوزه ی پیوسته است.
+
+ب) می توان نوشت:
+\qn{
+u_2[n]&=u_1[n]*u_1[n]=\{\delta[n]-\delta[n-1]\}\\&=\{\delta[n]-\delta[n-1]\}
+=\delta[n]-2\delta[n-1]+\delta[n-2]
+}{}
+هردوی این سیگنال ها مانند شکل 6 هستند؛ بنابراین پایه ی استقرا ثابت است.
+\pic{PSol4_Q5.eps}{100mm}{
+سیگنال $u_2[n]$
+}
+برای اثبات حکم به ازای $k+1$، فرض می کنیم  حکم برای $k$ صادق است. بنابراین کافی است نشان دهیم
+$$
+u_k[n]*u_1[n]={(-1)^n (k+1)!\over n! (k+1-n)!}\Big(u[n]-u[n-k-2]\Big)
+$$
+برای اثبات تساوی قبل، رابطه ی $u_k[n]$ را جایگذاری می کنیم:
+\qn{
+u_k[n]*u_1[n]&=
+\left\{{(-1)^n k!\over n! (k-n)!}\Big(u[n]-u[n-k-1]\Big)\right\}*\{\delta[n]-\delta[n-1]\}
+\\&=
+\left\{{(-1)^n k!\over n! (k-n)!}\Big(u[n]-u[n-k-1]\Big)\right\}
+\\&-
+\left\{{(-1)^{n-1} k!\over (n-1)! (k-n+1)!}\Big(u[n-1]-u[n-k-2]\Big)\right\}
+\\&=
+\left\{{(-1)^n (k-n+1) k!\over n! (k-n+1)!}\Big(u[n]-u[n-k-1]\Big)\right\}
+\\&+
+\left\{{(-1)^{n} k!\over (n-1)! (k-n+1)!}\Big(u[n-1]-u[n-k-2]\Big)\right\}
+}{}
+مقدار این سیگنال در لحظات $0$ و $k+1$ برابر است با:
+$$
+u_k[n]*u_1[n]\Big|_{n=0}=1
+$$
+$$
+u_k[n]*u_1[n]\Big|_{n=k+1}={(-1)^{k+1}}
+$$
+همچنین در لحظات 
+$
+1\le n\le k+1
+$
+ خواهیم داشت
+\qn{
+u_k[n]*u_1[n]&=
+{(-1)^n (k-n+1) k!\over n! (k-n+1)!}+{(-1)^{n} k!\over (n-1)! (k-n+1)!}
+\\&=
+{(-1)^nk!\over n! (k-n+1)!}(k-n+1+n)
+\\&=
+{(-1)^n(k+1)!\over n! (k-n+1)!}
+}{}
+همچنین مقدار این سیگنال در سایر لحظات برابر 0 است. ملاحظه می شود که این سیگنال در تمام لحظات، با سیگنال ${(-1)^n (k+1)!\over n! (k+1-n)!}\Big(u[n]-u[n-k-2]\Big)$ برابر است و در نتیجه حکم ثابت است 
+$
+\blacksquare
+$
+
+\lr{
+\begin{figure}[htb]
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_0.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_1.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_2.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_3.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_4.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_5.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_6.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_7.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_8.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_9.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_10.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_11.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_12.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_13.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_14.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_15.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_16.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_17.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_18.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_19.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_20.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_21.eps}
+\end{subfigure}
+%
+\begin{subfigure}{0.24\textwidth}
+\includegraphics[width=\wid]{PSol4_Q1_22.eps}
+\end{subfigure}
+%
+\rl{
+\caption{
+سیگنال های $x[n_0-n]$ و $h[n]$ از سوال 1 قسمت الف، به ترتیب به رنگ آبی و سبز هستند.
+}
+}
+\end{figure}
+}
+\end{document}

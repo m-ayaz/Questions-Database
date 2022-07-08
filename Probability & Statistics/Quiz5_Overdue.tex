@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry}
+\usepackage{xepersian}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\[\begin{split}
+#1
+\end{split}\]
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+\settextfont{IranNastaliq}
+
+به نام زیبایی
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+کوئیزها
+
+\end{center}
+\hrulefill
+\large
+
+
+کوئیز 2)
+
+یک عدد دو رقمی را به این صورت می سازیم که هر رقم آن، به صورت تصادفی از بین ارقام 1 تا 9 انتخاب شده باشد. با چه احتمالی، عدد ساخته شده بر 9 بخش پذیر است؟
+
+کوئیز 5)
+
+سه جعبه داریم که هر یک شامل 10 توپ هستند. در جعبه اول، 3 توپ آبی و 7 توپ قرمز، در جعبه دوم، 3 توپ سفید و 5 توپ آبی و در جعبه سوم، 1 توپ قرمز و 9 توپ سفید هستند. ابتدا یکی از جعبه ها را به تصادف انتخاب کرده و سپس توپی از آن جعبه بیرون می‌کشیم. اگر توپ مورد نظر سفید باشد، با چه احتمالی از جعبه دوم \underline{نیست}؟
+
+\end{document}

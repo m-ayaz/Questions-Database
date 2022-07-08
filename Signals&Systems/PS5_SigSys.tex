@@ -1,0 +1,241 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+%\usepackage{enumitem}
+%\setlist[enumerate,1]{label=(\arabic*)}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری پنجم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+ضرایب سری فوریه‌ی پیوسته‌ی هر یک از سیگنال های زیر را به دست آورید.
+\nl
+الف)
+\pic{PS5_Q1_1.eps}{80mm}
+
+ب)
+
+\pic{PS5_Q1_2.eps}{80mm}
+
+پ)
+$
+x(t)=e^{j2\pi{m\over n}t}
+$
+ که $m$ و $n$ دو عدد طبیعی و نسبت به هم اول هستند.
+\nl
+ت) 
+$
+x(t)
+$
+ با دوره‌ی 4 متناوب است و داریم
+$$
+x(t)=\begin{cases}
+\sin \pi t&,\quad 0\le t\le 2
+\\
+0&,\quad 2< t\le 4
+\end{cases}
+$$
+\nl
+ث) 
+$
+{d\over dt}x(t)
+$
+ که 
+$
+x(t)
+$
+ سیگنال قسمت ب) است.
+\nl
+\Q
+
+یک سیستم پیوسته و علی، دارای معادله‌ی دیفرانسیل ورودی-خروجی زیر است:
+$$
+{d\over dt}y(t)+4y(t)=x(t)
+$$
+ضرایب سری فوریه‌ی خروجی را برای ورودی های زیر به دست آورید.
+
+الف)
+ $
+x(t)=\cos 2\pi t
+$
+
+ب)
+$
+x(t)=\sin 4\pi t+\cos\left(6\pi t+{\pi\over 4}\right)
+$
+\nl
+آیا برای محاسبه‌ی خروجی از روی ورودی، شرایط اولیه مورد نیاز است؟
+\nl
+\Q
+
+یک سیستم LTI دارای پاسخ ضربه‌ی 
+$
+h(t)=e^{-|t|}
+$
+ است. ضرایب سری فوریه‌ی خروجی را با اعمال ورودی های زیر به دست آورید.
+
+الف) 
+$
+x(t)=\sum_{n=-\infty}^{\infty} \delta(t-n)
+$
+
+ب)
+ $
+x(t)=\sum_{n=-\infty}^{\infty} (-1)^n\delta(t-n)
+$
+\nl
+\Q
+
+فرض کنید اطلاعات زیر برای یک سیگنال پیوسته‌ی $x(t)$ و متناوب با دوره‌ی 3 داده شده است:
+\begin{enumerate}
+\item
+$a_k=a_{k+2}$
+\item
+$a_k=a_{-k}$
+\item
+$\int_{-0.5}^{0.5}x(t)dt=1$
+\item
+$\int_{1}^{2}x(t)dt=2$
+\end{enumerate}
+در این صورت $x(t)$ را بیابید.
+\nl
+\Q
+
+خواص معروف سری فوریه‌ی پیوسته را اثبات کنید!
+
+نشان دهید اگر $x(t)$ دارای دوره تناوب $T$ و ضرایب سری فوریه $a_k$ باشد، در اینصورت
+\nl
+%الف) $x(\alpha t)$ دارای ضرایب $a_k$ برای $\alpha>0$ و $a_{-k}$ برای $\alpha<0$ است.
+%\nl
+%ب) 
+%$
+%x(t)e^{jM{2\pi\over T}t}
+%$
+% دارای ضرایب 
+%$
+%a_{k-M}
+%$
+% است که $M$ عدد صحیحی است.
+%\nl
+الف) 
+$
+{d\over dt}x(t)
+$
+ دارای ضرایب 
+$
+j{2\pi\over T}ka_k
+$
+ است
+\nl
+ب) 
+$
+\int_{-\infty}^t x(\tau)d\tau
+$
+ دارای ضرایب 
+$
+{T\over j2\pi}\cdot{a_k\over k}
+$
+ است با این شرط که انتگرال، محدود باشد و $a_0=0$. (چرا شرط $a_0=0$ مهم است؟)
+\nl
+پ) چنانچه $x(t)$ حقیقی باشد، آنگاه داریم
+\qn{
+&a_k=a^*_{-k}
+\\&
+\Re(a_k)=\Re(a_{-k})
+\\&
+\Im(a_k)=-\Im(a_{-k})
+\\&
+|a_k|=|a_{-k}|
+\\&
+\angle a_k=-\angle a_{-k}
+}
+عملگرهای $\Re$ و $\Im$، به ترتیب قسمت های حقیقی و موهومی یک عدد مختلط را به دست می دهند.
+\nl
+ت) چنانچه $x(t)$ حقیقی باشد، آنگاه $x_e(t)$ و $x_o(t)$ به ترتیب دارای ضرایب فوریه‌ی 
+$
+\Re (a_k)
+$
+ و 
+$
+j\Im (a_k)
+$
+ هستند.
+\nl
+(راهنمایی: برای اثبات هر یک از خواص فوق، ابتدا $x(t)$ را به صورت حاصل جمع نمایی هایی با ضرایب سری فوریه اش بنویسید. در هر مورد، سیگنال داده شده را بر حسب $x(t)$ ابتدا به دست آورده، تاثیر آن را بر روی ضرایب سری فوریه‌ی سیگنال بررسی کنید.)
+\nl
+\Q
+\textbf{(امتیازی)}
+
+نشان دهید اگر برای دو سیگنال متناوب 
+$
+x(t)
+$
+ و 
+$
+y(t)
+$
+ با دوره‌ی $T$ داشته باشیم
+$$
+\int_{0}^T x(t)y^*(t)dt=0
+$$
+آنگاه
+$$
+\sum_{n=-\infty}^{\infty} a_kb_k^*=0
+$$
+که $a_k$ ضرایب سری فوریه‌ی $x(t)$ و $b_k$ ضرایب سری فوریه‌ی $y(t)$ است.
+\nl
+(راهنمایی: رابطه‌ی هر یک از سیگنال های فوق را بر حسب ضرایب آن بنویسید و در انتگرال جایگذاری کنید. تابع تحت انتگرال به صورت حاصلضرب دو $\sum$ ظاهر می شود که با ساده کردن آن، می توانید اثبات را کامل کنید.)
+%\nl
+%\Q
+% \textbf{
+%(امتیازی ویژه)
+%}
+%
+%نشان دهید ضرایب سری فوریه، بهینه ترین ضرایب برای تخمین سیگنال متناوب $x(t)$ هستند.
+%\nl
+%فرض کنید $x(t)$ دارای تناوب $T$ باشد. سیگنال جدید $\hat x(t)$ را به صورت زیر می سازیم:
+%$$
+%\hat x(t)=\sum_{k=-\infty}^\infty a_ke^{jk{2\pi\over T}t}
+%$$
+%هدف آن است که ضرایب $a_k$ را به گونه ای بیابیم که خطا به مفهوم زیر
+%$$
+%\fa{خطا}=\int_{-\infty}^{\infty} |x(t)-\hat x(t)|^2dt
+%$$
+%مینیمم گردد. ابتدا با جایگذاری خواهیم داشت:
+%\qn
+%\fa{خطا}&=\int_{-\infty}^{\infty} \left|x(t)-\sum_{k=-\infty}^\infty a_ke^{jk{2\pi\over T}t}\right|^2dt
+%\\&=
+%\int_{-\infty}^{\infty} \left|x(t)-\sum_{k=-\infty}^\infty a_ke^{jk{2\pi\over T}t}\right|^2dt
+%}
+\end{document}

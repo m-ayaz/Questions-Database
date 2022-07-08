@@ -1,0 +1,393 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+%\usepackage{enumitem}
+%\setlist[enumerate,1]{label=(\arabic*)}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+
+\usepackage{amsmath}
+\usepackage{accents}
+\newlength{\dhatheight}
+\newcommand{\doublehat}[1]{%
+    \settoheight{\dhatheight}{\ensuremath{\hat{#1}}}%
+    \addtolength{\dhatheight}{-0.35ex}%
+    \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+    \smash{\hat{#1}}}}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری هفتم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+تبدیل فوریه‌ی پیوسته ی هریک از سیگنال های زیر را به دست آورید.
+
+الف)
+$
+e^{\alpha t}\cos \omega_0t u(t)
+$
+ که در آن $\alpha<0$. 
+
+ب) 
+$
+te^{\alpha t}\cos \omega_0t u(t)
+$
+
+پ) 
+$
+{\sin\pi t\over \pi t}\cdot {\sin\pi (t-1)\over \pi (t-1)}
+$
+
+ت) 
+$
+\sum_{n=-\infty}^{\infty}e^{-|t-2n|}
+$
+
+ث) 
+\picnocapt{PS6_Q1_4}{80mm}
+
+
+\Q
+
+عکس تبدیل فوریه ی هر یک از موارد زیر را به دست آورید.
+
+الف) 
+$
+X(\omega)=\cos\left(4\omega+{\pi\over 3}\right)
+$
+
+ب) 
+$
+X(\omega)=2[\delta(\omega-1)-\delta(\omega+1)]
++
+3[\delta(\omega-2\pi)+\delta(\omega+2\pi)]
+$
+
+پ) 
+$
+X(\omega)={2\sin 3(\omega-2\pi)\over \omega-2\pi}
+$
+
+ت)
+\picnocapt{PS6_Q2_4}{80mm}
+\newpage
+\Q
+
+فرض کنید 
+$
+X(j\omega)
+$
+ تبدیل فوریه ی سیگنال 
+$
+x(t)
+$
+و به شکل زیر باشد. 
+\picnocapt{PS6_Q3_4}{80mm}
+
+در این صورت موارد زیر را محاسبه کنید.
+
+الف) 
+$
+\measuredangle X(j\omega) 
+$
+
+ب) 
+$
+X(j0)
+$
+
+پ) 
+$
+\int_{-\infty}^\infty X(j\omega) d\omega
+$
+
+ت)
+$
+\int_{-\infty}^\infty X(j\omega) {2\sin\omega\over \omega}e^{j2\omega}d\omega
+$
+
+ث)
+$
+\int_{-\infty}^\infty |X(j\omega)|^2 d\omega
+$
+
+ج) تبدیل فوریه معکوس
+$
+\Re\left\{X(j\omega)\right\}
+$
+
+(دقت کنید که تمام موارد بالا را باید بدون محاسبه مستقیم $X(j\omega)$ انجام دهید)
+\nl
+\Q
+
+الف) سه سیستم با پاسخ ضربه‌ی زیر داده شده اند.
+\qn{
+&h_1(t)=u(t)
+\\& h_2(t)=-2\delta(t)+5e^{-2t}u(t)
+\\& h_3(t)=2te^{-t}u(t)
+}{}
+به کمک تبدیل فوریه، نشان دهید هر سه ی این سیستم ها به ورودی
+$
+x(t)=\cos t
+$
+، خروجی یکسان می دهند.
+
+ب) سیستم دیگری را بیابید که پاسخ یکسانی مانند سه سیستم قبل به ورودی 
+$
+x(t)=\cos t
+$
+ بدهد.
+
+\textit{
+از این تمرین می توان نتیجه گرفت که نمیتوان از روی ورودی تک فرکانس، مشخصه ی سیستم LTI را به طور یکتا یافت.
+}
+\nl
+\Q
+
+فرض کنید یک سیستم LTI با معادله دیفرانسیل زیر داده شده باشد:
+$$
+{d^2y(t)\over dt^2}+6{dy(t)\over dt}+8y(t)=2x(t)
+$$
+الف) پاسخ ضربه ی این سیستم را بیابید.
+
+ب) پاسخ این سیستم به ورودی 
+$
+x(t)=te^{-2t}u(t)
+$
+ چیست؟
+\nl
+\Q
+
+سیستمی را با پاسخ فرکانسی زیر در نظر بگیرید:
+$$
+H(j\omega)={a-j\omega\over a+j\omega}
+$$
+الف) نمودار دامنه و فاز این پاسخ فرکانسی را رسم کنید و پاسخ ضربه ی این سیستم را به دست آورید.
+
+ب) به ازای $a=1$، پاسخ این سیستم را به ورودی
+$
+x(t)=\cos{t\over \sqrt 3}+\cos{t}+\cos{t\sqrt 3}
+$
+ به دست آورید و به طور تقریبی، هردوی ورودی و خروجی را ترسیم کنید.
+
+\textit{
+به چنین سیستمی، فیلتر تمام گذر می گویند؛ زیرا دامنه‌ی تمام فرکانس های ورودی با خروجی یکسان است.
+}
+\nl
+\Q
+
+الف) نمودار بلوکی سیستم زیر را با ورودی
+$
+x(t)
+$
+ و خروجی
+ $
+y(t)
+$
+ در نظر بگیرید. فرض کنید 
+$
+\omega_1>\omega_0
+$
+.
+\picnocapt{PS7_Q7_b1}{130mm}
+
+اگر نمودار
+$
+X(j\omega)
+$
+ و 
+$
+H(j\omega)
+$
+ به شکل زیر باشد، نمودار 
+$
+Z_1(j\omega)
+$
+،
+$
+Z_2(j\omega)
+$
+ و 
+$
+Y(j\omega)
+$
+ را رسم‌کنید.
+\begin{figure}[htb]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=70mm]{PS7_Q7_1}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=70mm]{PS7_Q7_2}
+\end{subfigure}
+\end{figure}
+\newpage
+ب) نمودار بلوکی سیستم زیر را با دو ورودی 
+$
+x_1(t)
+$
+ و 
+$
+x_2(t)
+$
+ و دو خروجی
+ $
+y_1(t)
+$
+ و 
+$
+y_2(t)
+$
+ در نظر بگیرید. فرض کنید 
+$
+\omega_1>\omega_0
+$
+.
+\picnocapt{PS7_Q7_b2}{130mm}
+
+اگر نمودارهای 
+$
+X_1(j\omega)
+$
+ و 
+ $
+X_2(j\omega)
+$
+ به شکل زیر باشد، قسمت حقیقی و موهومی 
+$
+Z_1(j\omega)
+$
+، 
+$
+Z_2(j\omega)
+$
+، 
+$
+Z_3(j\omega)
+$
+، 
+$
+Y_1(j\omega)
+$
+ و 
+$
+Y_2(j\omega)
+$
+ را رسم کنید.
+\begin{figure}[htb]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=70mm]{PS7_Q7_3}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=70mm]{PS7_Q7_4}
+\end{subfigure}
+\end{figure}
+نمودار $H(j\omega)$ مانند قسمت قبل است.
+\nl
+\Q
+
+فرض کنید ورودی یک سیستم LTI با پاسخ فرکانسی $H(j\omega)$، برابر $x(t)$، متناوب با دوره ی $T$ و دارای ضرایب سری فوریه ی $a_k$ باشد.
+
+الف) نشان دهید خروجی $y(t)$ این سیستم متناوب است و دوره تناوب آن را بیابید.
+
+ب) نشان دهید اگر ضرایب سری فوریه ی $y(t)$ برابر $b_k$ باشد، آنگاه:
+$$
+b_k=a_kH(jk\omega_0)
+$$
+که در آن 
+$
+\omega_0={2\pi\over T}
+$
+.
+
+(راهنمایی: ابتدا سیگنال $y(t)$ را بر حسب $h(t)$ و $x(t)$ نوشته و سپس ضرایب سری فوریه ی $x(t)$ را در حاصل جای گذاری کنید. با ساده سازی، می توانید رابطه ی مورد نظر را اثبات کنید.)
+%\nl
+\newpage
+\Q
+
+سیستم LTI ای با معادله ورودی-خروجی زیر توصیف می شود:
+$$
+y(t)={1\over \pi}\int_{-\infty}^{\infty} {x(\tau)\over t-\tau}d\tau
+$$
+الف) پاسخ ضربه‌ی این سیستم را به دست آورید.
+
+ب) نشان دهید 
+$$
+H(j\omega)=\begin{cases}
+-j&,\quad \omega>0\\
+j&,\quad \omega<0
+\end{cases}
+$$
+
+پ) در چنین سیستمی، اصطلاحأ گفته می شود که $y(t)$ تبدیل هیلبرت $x(t)$ است. بسیاری از اوقات نیز نماد زیر استفاده می شود:
+$$
+y(t)=\hat x(t)
+$$
+تبدیل هیلبرت $\cos 3t$ چیست؟
+
+ت) (امتیازی) نشان دهید 
+$$
+\doublehat x(t)=-x(t)
+$$
+به عبارت دیگر، با دو بار تبدیل هیلبرت گرفتن از یک سیگنال، به قرینه ی آن می رسیم.
+\Q
+
+نشان دهید اگر برای دو سیگنال $x(t)$ و $y(t)$ داشته باشیم:
+$$
+\int_{-\infty}^\infty x(t)y^*(t)dt=0
+$$
+در این صورت
+$$
+\int_{-\infty}^\infty X(j\omega)Y^*(j\omega)d\omega=0
+$$
+(راهنمایی: مشابه سری فوریه، تبدیل فوریه ی دو سیگنال $x(t)$ و $y(t)$ را در رابطه ی انتگرالی حاصلضرب آنها جایگذاری کرده و نتیجه را ساده کنید.)
+\nl
+\Q
+
+الف) نشان دهید تبدیل فوریه ی 
+$
+e^{-at}u(t)
+$
+ برابر 
+$
+1\over a+j\omega
+$
+ است.
+
+ب) به کمک دوگانی و با استفاده از خواص تبدیل فوریه، تبدیل فوریه ی 
+$$
+x(t)={1\over (a+jt)^n}
+$$
+ را بیابید.
+
+(راهنمایی: می توانید از جدول 4-2 در کتاب اوپنهایم استفاده کنید.)
+%\nl
+%\Q
+\end{document}

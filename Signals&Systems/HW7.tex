@@ -1,0 +1,89 @@
+\documentclass[50pt]{article}
+\RequirePackage{pdfpages}
+\renewcommand{\baselinestretch}{1.4}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage{color}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\RequirePackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\RequirePackage{xepersian}
+\RequirePackage{MnSymbol}
+\RequirePackage{graphicx}
+\newcommand{\wid}{1.8in}
+\newtheorem{theorem}{Theorem}
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\newenvironment{amatrix}[1]{%
+\left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+\end{array}\right]
+}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+
+\begin{document}
+\setLTR 
+
+
+
+
+\begin{RTL}
+\Large{
+
+
+
+
+
+
+
+
+\begin{center}
+به نام خدا
+
+تمرینات سری هفتم درس سیگنالها و سیستمها
+
+دکتر لطف الله بیگی
+
+مهلت تحویل: 98/2/22
+\end{center}
+
+\hl
+\begin{latin}
+Chapter 9:
+
+$21\_\{b,c,d,g,i\} , 22\_\{b,c,e,g\} , 23 ,25, 26 ,27,29,30, 44 $
+\end{latin}
+(1) عکس تبدیل لاپلاس 
+$$H(s)={1\over s^n+1}$$
+را به ازای $n$ های طبیعی به دست آورید.
+
+(2) (امتیازی) فرض کنید تبدیل لاپلاس سیگنال $x(t)$ برابر 
+$X(s)$ 
+باشد به گونه ای که 
+$$x(t)=0\quad,\quad |t|>{T\over 2}$$
+سیگنال $y(t)$ را با متناوب کردن $x(t)$ با دوره تناوب $T$ می سازیم؛ به عبارت دیگر:
+$$
+y(t)=\sum_{n=-\infty}^{\infty}x(t-nT)
+$$
+تبدیل لاپلاس $y(t)$ را بر حسب $X(s)$ به دست آورید.
+
+(3) (امتیازی) عکس تبدیل لاپلاس 
+$\sin {1\over s+1}$ 
+را از روی سری تیلور $\sin(\cdot)$ به دست آورید.
+
+
+
+}
+
+
+
+
+
+\end{RTL}
+
+
+
+\end{document}
+
+

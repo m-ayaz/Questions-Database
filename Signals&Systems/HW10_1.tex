@@ -1,0 +1,63 @@
+\documentclass[50pt]{article}
+\RequirePackage{pdfpages}
+\renewcommand{\baselinestretch}{1.4}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage{color}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\RequirePackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\RequirePackage{xepersian}
+\RequirePackage{MnSymbol}
+\RequirePackage{graphicx}
+\newcommand{\wid}{1.8in}
+\newtheorem{theorem}{Theorem}
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\newenvironment{amatrix}[1]{%
+\left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+\end{array}\right]
+}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+
+\begin{document}
+\setLTR 
+
+
+
+
+\begin{RTL}
+\Large{
+سوال 1)
+$$
+x[n]=\cos \omega_0 n={1\over 2}\left(e^{j\omega_0 n}+e^{-j\omega_0 n}\right)
+$$
+\[
+\implies X(e^{j\omega})=\pi\sum_{n=-\infty}^{\infty}\delta(\omega-\omega_0+2n\pi)+
+\delta(\omega+\omega_0+2n\pi)
+\]
+همان گونه که از شکل پاسخ فرکانسی دیده می شود، با قرار دادن $\omega_0+2\pi$ به جای $\omega_0$، پاسخ فرکانسی و در نتیجه پاسخ حوزه‌ی زمان تغییر نمی کند.
+\hl
+سوال 2)
+\[
+X(e^{j\omega})=2\pi\sum_{n=-\infty}^{\infty}\delta(\omega-2\pi{r\over N}-2\pi n)
+\]
+
+
+
+
+}
+
+
+
+
+
+\end{RTL}
+
+
+
+\end{document}
+
+

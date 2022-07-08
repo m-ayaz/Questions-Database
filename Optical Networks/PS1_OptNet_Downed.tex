@@ -1,0 +1,45 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\Q}[1]{\textbf{Question #1)}}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 1st problem set of Optical Networks course
+\hl
+\end{center}
+\Q1 Calculate the transmission distance over which the optical power will attenuate by a factor of 10 for three fibers with losses of 0.2, 20 and 2000 dB/km. Assuming that the optical power decreases as $e^{-\alpha L}$, calculate $\alpha$ for three fibers.
+\nl
+\Q2 An analog voice signal that can vary over the range 0 - 50 mA is digitized by sampling it as 8kHz. The first four sample values are 10, 21, 34 and 16 mA. Write down the corresponding digital signal (a string consisting 1s and 0s as bits) by using a 4-bit representation for each sample.
+\nl
+\Q3 A high performance silica-fiber has a minimum attenuation of 0.2 dB/km at 1.55$\mu$m.
+
+\begin{enumerate}
+\item[(a)]
+If 1 mW of optical power is launched into the fiber, how much power is left after 45 km?
+\item[(b)]
+How much power is left if the same amount of power is launched into the fiber at 0.85 $\mu$m wavelength, where the minimum attenuation is 2 dB/km?
+\end{enumerate}
+\Q4 A 1.3 $\mu$m lightwave system uses a 50 km fiber link and requires at least 0.3 $\mu$W at the receiver. The fiber is spliced every 5 km, has two connectors of 1 dB loss at both ends and its loss is 0.5 dB/km. The splice loss is only 0.2 dB. Determine the minimum power that must be launched into the fiber.
+\nl
+\Q5 A multimode fiber with a 50 $\mu$m core diameter is designed to limit the intermodal dispersion to 10 ns/km. What is the numerical aperture of this fiber? What is the limiting bit rate for transmission over 10 km at 0.88 $\mu$ m? Use $1.45$ for the refractive index of the cladding.
+\nl
+\Q6 If 16 channels, each operating at 2.5 Gbps, need to be multiplexed using time-division multiplexing, how short should each optical pulse be?
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+\usepackage{xepersian}
+\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\mA}{\lr{mA}}
+\newcommand{\mB}{\lr{mB}}
+\newcommand{\mC}{\lr{mC}}
+\newcommand{\mD}{\lr{mD}}
+\newcommand{\mE}{\lr{mE}}
+\newcommand{\mF}{\lr{mF}}
+\begin{document}
+\Large
+\hl
+سوال 6) در مراحل رمزنگاری زیر، فرض کنید بلوک دایره، اتصال دو رشته به هم را نمایش می دهد. هم چنین 
+$
+K^+_A
+$
+، 
+$
+K^-_A
+$
+، 
+$
+K^+_B
+$
+ و  
+$
+K^-_B
+$
+ به ترتیب کلیدهای عمومی و خصوصی آلیس و کلیدهای عمومی و خصوصی باب باشند. همچنین بلوک تابع چکیده ساز (\lr{Hash}) در شکل نشان داده شده است:
+\pic{Q6_1}{110mm}
+فرض کنید آلیس جهت ارسال پیام $m$ به باب، یک کلید تصادفی $S$ تولید و از آن هم در تابع چکیده ساز و هم در اتصال دو رشته (مطابق شکل) استفاده می کند.
+
+الف) بلوک دیاگرام لازم را برای رمزگشایی کردن پیام ارسالی ترسیم کنید.
+
+ب) در این شکل، کدام یک از موارد محرمانگی، اصالت پیام و تمامیت پیام (\lr{Message Integrity}) حفظ می شوند؟
+
+پ) تغییری (حداقلی) در بلوک دیاگرام ایجاد کنید به گونه ای که مواردی که در ب) حفظ نشده اند، رعایت شوند (پاسخ ممکن است یکتا نباشد؛ ولی تلاش کنید با کمترین اصلاحات ممکن به پاسخ برسید!)
+\end{document}

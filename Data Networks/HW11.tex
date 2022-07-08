@@ -1,0 +1,66 @@
+\documentclass[10pt,letterpaper]{article}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=false,colorlinks,linkcolor=black,citecolor=magenta]{hyperref}
+\RequirePackage{MnSymbol}
+\newcommand{\eqn}[2]{
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+}
+%%%%%%%%%%%%%
+
+%       \eqn{
+%       x=x^2
+%       }{label}
+
+%%%%%%%%%%%%%
+\newcommand{\feqn}[2]{
+\begin{tcolorbox}[width=7in, colback=white]
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+\end{tcolorbox}
+}
+%%%%%%%%%%%%%%%
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[1]{
+\begin{center}
+\includegraphics[width=130mm]{#1}
+\end{center}
+}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\begin{document}
+\Large
+\begin{center}
+The assignment \#11 of the \textbf{ComNet} course
+\hl
+\end{center}
+Q1) a. At which layer is SSL implemented and why?
+
+b. Why does sequence numbering prevent an intruder from re-ordering segments? What happens if the sequence numbers are not encrypted by hash (i.e. only the data and the MAC key are included in hash calculations)?
+\newline\newline
+Q2) a. For what reason, is network-layer security said to provide “blanket coverage” and what does that mean anyway?
+
+b. What is Security Policy Database (SPD) and what does it stand for?
+\newline\newline
+Q3) a. What problem can be caused when a duplicate key is used in WEP?
+
+b. Since MK is a shared key between the client and the authentication server, how can we generate a shared key between the client and the access point?
+\newline\newline
+Q4) Assume that an attacker wants to perform a DoS (Denial of Service) attack by sending TCP ACK segments to an internal network. A solution is to configure the internal firewall to block (i.e. drop) all the incoming TCP ACK segments. What problem does this solution make and how to bypass it?
+\end{document}

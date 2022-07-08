@@ -1,0 +1,80 @@
+\documentclass[10pt,letterpaper]{article}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=false,colorlinks,linkcolor=black,citecolor=magenta]{hyperref}
+\RequirePackage{MnSymbol}
+\newcommand{\eqn}[2]{
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+}
+%%%%%%%%%%%%%
+
+%       \eqn{
+%       x=x^2
+%       }{label}
+
+%%%%%%%%%%%%%
+\newcommand{\feqn}[2]{
+\begin{tcolorbox}[width=7in, colback=white]
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+\end{tcolorbox}
+}
+%%%%%%%%%%%%%%%
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[1]{
+\begin{center}
+\includegraphics[width=130mm]{#1}
+\end{center}
+}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\begin{document}
+\Large
+\begin{center}
+The assignment \#6 of the \textbf{ComNet} course
+\end{center}
+1) 
+
+a. Fully describe, at each step of allocating IP address to an anonymous, newly arrived host (i.e. DHCP discover, offer, request and ACK message), that why is the destination IP address always 255.255.255.255 at all the four  messages dealt between the DHCP server and the host.
+\nl
+b. In the following network, all of the nodes are numbered from $1$ to $10$ (which is assumed to be their IP addresses as well, for simplicity!). Also the link interfaces have IP addresses annotated right above them:
+\pic{Q1_B_HW6.pdf}
+the node $4$ sends to messages. The first one has dest. IP address $11$ and is headed for node $10$ with $\text{TTL}=9$. The second has dest. IP address $1$ and $\text{TTL}=2$. What ICMP messages echo back to node $4$ and where are they originated from?
+\nl
+2) Consider the following scheme:
+\pic{Q2_HW6.pdf}
+a. assume that there are exactly $254$ ports available for NAT. If the subnet mask for the subnet shown in the scheme is $192.168.2.0/24$, how many users can connect to the Internet through NAT? (Hint: the subnet also contains a standalone DHCP server)
+\nl
+b. assume the probability that $N$ users come to network for internet demand is $p^N(1-p)$ where $0<p<1$ and $N\ge 0$. If the router is capable of translating at most $5$ IP addresses simultaneously (i.e. can insert at most $5$ translation IDs in its NAT table), determine $p$ for having the blocking probability of at least $1$ user fallen below $2\times 10^{-5}$.
+\nl
+3) In the following sub-network, assume all the link costs to be $1$.
+\pic{Q3_HW6.pdf}
+a. How much does it take in total for all nodes $1$ to $4$ to recognize all the intra-AS graph (with both nodes and links)? (assume that the propagation delay over a single link is $0.5$ msec and the ping message does not take long to be processed at each node, so that it is echoed back right after it was received at each node. Also take the transmission delay as $0$)
+\nl
+b. Obtain the table for OSPF with source node $2$. (Hint: what is at the heart of OSPF?)
+\nl
+Q4)
+Consider the network fragment shown below. x has only two attached neighbors, w and y. w has a minimum-cost path to destination u (not shown) of 5, and y has a minimum-cost path to u of 6. The complete paths from w and y to u (and between w and y) are not shown. All link costs in the network have strictly positive integer values.
+\pic{Q4_HW6.pdf}
+a. Give x's distance vector for destinations w, y, and u.
+\nl
+b. Give a link-cost change for either c(x,w) or c(x,y) such that x will inform its neighbors of a new minimum-cost path to u as a result of executing the distance-vector algorithm.
+\nl
+c. Give a link-cost change for either c(x,w) or c(x,y) such that x will not inform its neighbors of a new minimum-cost path to u as a result of executing the distance-vector algorithm.
+\end{document}

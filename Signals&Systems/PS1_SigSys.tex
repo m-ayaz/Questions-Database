@@ -1,0 +1,103 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\Q}[1]{\textbf{
+سوال #1)
+}}
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری اول سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q1
+
+فرض کنید سیگنال $x(t)$، سیگنال زمان محدودی باشد؛ به گونه ای که
+$$
+x(t)=0\quad,\quad |t|>T
+$$
+و
+$$
+y(t)=\sum_{n=-\infty}^{\infty} x(t-nT)
+$$
+در این صورت
+
+الف) توان $y(t)$ را بیابید.
+
+ب) هر یک از سیگنال های $x(t)$ و $y(t)$ را از نقطه نظر سیگنال توان یا انرژی بودن یا نبودن دسته‌بندی کنید.
+\nl
+\Q2
+
+کدام یک از سیگنال های زیر متناوب اند و در صورت متناوب بودن، دوره‌ی تناوب اساسی آنها را بیابید.
+
+الف) 
+$
+x(t)=\cos{\pi\over 7}t^2
+$
+
+ب) 
+$
+x[n]=\cos{\pi\over 7}n^2
+$
+
+پ)
+$
+x[n]=\delta[\sin n]
+$
+
+ت)
+$
+x[n]=\delta\left[\sin {\pi\over 3}n\right]
+$
+
+ث)
+$
+x[n]=\cos\left[{\pi\over 3}n+\cos {\pi\over 2}n\right]
+$
+
+ج)
+$
+x(t)=\sin t+\sin\pi t
+$
+\nl
+\Q3
+
+اگر سیگنال $x(t)$ مطابق شکل زیر باشد، هر یک از سیگنال های بندهای الف) تا ت) را ترسیم کنید.
+\pic{PS1_Q3.eps}{70mm}
+الف) 
+$
+x(2t-1)
+$
+
+ب) 
+$
+x\left(-{t\over 2}-3\right)
+$
+
+پ)
+$
+-2x\left({t+3\over 2}\right)
+$
+
+ت)
+$
+x\left({2-t\over 3}\right)
+$
+\end{document}

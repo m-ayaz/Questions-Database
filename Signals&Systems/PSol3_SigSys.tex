@@ -1,0 +1,225 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+پاسخ تمرینات سری سوم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+با مشتق گیری از سیگنال ورودی خواهیم داشت:
+\qn{
+{d\over dt}x(t)&=-5e^{-5t}u(t-2)+e^{-5t}\delta(t-2)
+\\&=-5e^{-5t}u(t-2)+e^{-10}\delta(t-2)
+}
+از آنجا که سیستم LTI است، پاسخ آن به ورودی فوق برابر است با
+$$
+-5y(t)+e^{-10}h(t-2)
+$$
+که $h(t)$ پاسخ ضربه است. از طرفی
+$$
+-5y(t)+e^{-10}h(t-2)=-5y(t)+{1\over 1+t^2}u(t)
+$$
+درنتیجه
+$$
+h(t)={e^{10}\over 1+(t+2)^2}u(t+2)
+$$
+\Q
+
+برای حل این دسته از سوالات، یک راه حل مناسب ساختن ورودی دوم از روی ورودی اول به کمک شیفت های متوالی و مقیاس های دامنه است. از آنجا که سیستم LTI است، این دو عمل به همان ترتیب، روی خروجی نیز اعمال می شوند.
+
+همچنین می توان ورودی اول را از روی ورودی دوم به کمک شیفت های متوالی و مقیاس های دامنه ساخت و همان عملیات را روی خروجی اعمال کرد. در این سوال، با کمی دقت دیده می شود
+$$
+x_1(t)=x_2(t)+x_2(t-1)
+$$
+به دلیل LTI بودن سیستم
+$$
+y_1(t)=y_2(t)+y_2(t-1)
+$$
+باید شکل سیگنالی یافت که جمع آن با شیفت یافته اش، خروجی اول را بدهد. می توان شکل سیگنال زیر را در نظر گرفت:
+\pic{PSol3_Q2.eps}{80mm}
+که جمع شیفت یافته‌ی آن با خودش، $y_1(t)$ را می دهد.
+\nl
+\Q
+
+الف)
+
+با مشتق گیری از 
+$
+u(f(t))
+$
+ به کمک قاعده‌ی زنجیری خواهیم داشت :
+\qn{
+{d\over dt}u(f(t))&=f'(t)\delta(f(t))
+}
+در نزدیکی هر ریشه‌ی $r_i$ از $f(t)$، طبق قضیه‌ی تیلور می توان تابع $f(t)$ را به صورت زیر نوشت:
+$$
+f(t)=f'(r_i)(t-r_i)
+$$
+بنابراین در نزدیکی این ریشه:
+$$
+\delta(f(t))=\delta(f'(r_i)(t-r_i))={1\over |f'(r_i)|}\delta(t-r_i)
+$$
+چون تعداد $n$ ریشه به این ترتیب موجود است، در نهایت می توان نوشت:
+\qn{
+\delta(f(t))=\sum_{i=1}^{n}{1\over |f'(r_i)|}\delta(t-r_i)
+}
+%از طرفی در نزدیکی این ریشه، تابع $u(f(t))$ بین دو مقدار 0 و 1 تغییر می کند. اگر   $f(t)$ در اطراف $r_i$ نزولی باشد، این تغییر از 1 به 0 و اگر صعودی باشد، از 0 به 1 خواهد بود. بنا
+ب) 
+\begin{enumerate}[label=(\roman*)]
+\item
+برای این انتگرال، 0 ریشه‌ی مضاعف $t^2$ است. بنابراین از رابطه‌ی فوق نمی توان بهره گرفت. با این حال، به کمک تعریف $\delta$:
+$$
+\delta_\Delta(t)=\begin{cases}
+{1\over 2\Delta}&,\quad -\Delta<t<\Delta\\
+0&,\quad \fa{در غیر این صورت}
+\end{cases}
+$$
+بنابراین
+\qn{
+\delta_\Delta(t^2)&=\begin{cases}
+{1\over 2\Delta}&,\quad -\Delta<t^2<\Delta\\
+0&,\quad \fa{در غیر این صورت}
+\end{cases}
+\\&=\begin{cases}
+{1\over 2\Delta}&,\quad -\sqrt\Delta<t<\sqrt\Delta\\
+0&,\quad \fa{در غیر این صورت}
+\end{cases}
+\\&={1\over \sqrt\Delta}\delta_{\sqrt\Delta}(t)
+}
+از آنجا که 
+$
+\lim_{\Delta\to 0^+}\delta_{\sqrt\Delta}(t)\to\delta(t)
+$
+، در این صورت 
+$
+{1\over \sqrt\Delta}\delta_{\sqrt\Delta}(t)
+$
+ به ضربه ای با سطح زیر $\infty$ میل می کند و حاصل انتگرال، $\infty$ است.
+\item
+ریشه های ساده‌ی $\sin{1\over t}$ در $[0,\infty)$ عبارتند از:
+$$
+r_k={1\over k\pi}\quad,\quad k\in\Bbb N
+$$
+در این صورت
+\qn{
+\delta\left(\sin{1\over t}\right)&=\sum_{k=1}^\infty {r_k^2\over |\cos{1\over r_k}|}\delta\left(t-{1\over k\pi}\right)
+\\&=\sum_{k=1}^\infty {1\over k^2\pi^2}\delta\left(t-{1\over k\pi}\right)
+}
+\qn{
+\int_0^\infty\delta\left(\sin{1\over t}\right)dt&=\int_0^\infty\sum_{k=1}^\infty {1\over k^2\pi^2}\delta\left(t-{1\over k\pi}\right)dt
+\\&=\sum_{k=1}^\infty {1\over k^2\pi^2}\int_0^\infty\delta\left(t-{1\over k\pi}\right)dt
+\\&=\sum_{k=1}^\infty {1\over k^2\pi^2}
+\\&={1\over 6}
+}
+\item
+\qn{
+\delta(t^2-t)=\delta(t)+\delta(t-1)\implies
+}
+\qn{
+\int_{-1}^3\sin \pi t\delta(t^2-t) dt &=
+\int_{-1}^3\sin \pi t[\delta(t)+\delta(t-1)] dt\\&=
+\int_{-1}^3\sin \pi t\delta(t) dt+\int_{-1}^3\sin \pi t\delta(t-1) dt\\&=
+\int_{-1}^3\sin 0\pi \delta(t) dt+\int_{-1}^3\sin 1\pi \delta(t-1) dt\\&=0
+}
+\item
+برای تحلیل $\delta^2(t)$، از 
+$
+\delta_\Delta(t)
+$
+ کمک می گیریم. در این صورت:
+$$
+\delta^2_\Delta(t)=\begin{cases}
+{1\over 4\Delta^2}&,\quad -\Delta<t<\Delta\\
+0&,\quad \fa{در غیر این صورت}
+\end{cases}
+=
+{1\over 2\Delta}\delta_\Delta(t)
+$$
+که به سمت ضربه ای با مساحت $\infty$ میل می کند و حاصل انتگرال، $\infty$ است.
+\end{enumerate}
+%\nl
+\Q
+
+الف)
+\begin{enumerate}[label=(\roman*)]
+\item
+نادرست. سیستم 
+$
+y(t)=x(t-1)
+$
+، LTI و علی است؛ ولی معکوس آن
+$
+y(t)=x(t+1)
+$
+ علی نیست.
+\item
+درست. شرط پایداری سیستم LTI با پاسخ ضربه‌ی $h[n]$، 
+$
+\sum_{n} |h[n]|<\infty
+$
+ است که اگر تعداد نقاط پاسخ ضربه محدود باشد، جمع فوق همواره محدود است. به چنین سیستمی 
+FIR\footnote{
+\en{Finite Impulse Response}
+}
+ می‌گویند.
+\end{enumerate}
+ب) 
+
+می توان نوشت
+\qn{
+\sum_n |h[n]|&=\sum_{h[n]\ge0} h[n]+\sum_{h[n]<0} -h[n]
+\\&=\sum_n x[-n]h[n]
+}
+که در آن 
+$$
+x[-n]=\begin{cases}
+1&,\quad h[n]\ge0\\
+-1&,\quad h[n]<0
+\end{cases}
+$$
+در این صورت
+$$
+x[n]=\begin{cases}
+1&,\quad h[-n]\ge0\\
+-1&,\quad h[-n]<0
+\end{cases}
+$$
+از طرفی می توان جمع فوق را برابر خروجی سیستم LTI با پاسخ ضربه‌ی $h[n]$ به ورودی $x[n]$ در لحظه ی 0 دانست؛ زیرا:
+\qn{
+y[n]=\sum_{k}h[k]x[n-k]
+}
+بنابراین
+\qn{
+y[0]=\sum_{k}h[k]x[-k]
+}
+که طبق استدلال بالا، مقدار آن برابر $\sum_n |h[n]|$ و نامحدود است؛ بنابراین سیستم ناپایدار است.
+\end{document}

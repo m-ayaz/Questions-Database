@@ -1,0 +1,176 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,graphicx,geometry,enumitem,caption,subcaption}
+\usepackage{xepersian}
+
+\newcounter{qnumber}
+\setcounter{qnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \theqnumber)}
+\stepcounter{qnumber}
+}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\settextfont{XB Niloofar}
+
+\begin{document}
+
+\begin{center}
+\large
+
+به نام او
+
+آزمون پایان ترم سیگنال ها و سیستم ها
+
+120 دقیقه
+\end{center}
+
+\hrulefill
+
+\large
+
+\Q
+اطلاعات زیر در خصوص یک سیگنال متناوب گسسته‌ی 
+$
+x[n]
+$
+با ضرایب سری فوریه‌ی $a_k$ و دوره تناوب 4 داده شده است:
+\begin{itemize}
+\item
+$
+\sum_{n=0}^3(-1)^nx[n]=4
+$
+\item
+$
+a_3=0
+$
+\item
+$
+x[2]=2\cdot x[0]=4
+$
+\end{itemize}
+ سیگنال $x[n]$ را بیابید.
+
+\Q
+سیگنال 
+$
+x[n]
+$
+به ورودی بلوک دیاگرام زیر داده می‌شود:
+\begin{center}
+\includegraphics[width=90mm]{block.pdf}
+\end{center}
+که در آن، 
+$
+H(e^{j\omega})
+$
+در یک دوره تناوب به صورت زیر است:
+
+\begin{center}
+\includegraphics[width=70mm]{final_h}
+\end{center}
+
+رابطه‌ی تبدیل فوریه‌های ورودی و خروجی این سیستم را بیابید.
+
+\Q
+برای سیگنال پیوسته‌ی
+$
+x(t)
+$
+با تبدیل فوریه‌ی زیر،
+
+\begin{center}
+\includegraphics[width=63mm]{X(jw).eps}
+\end{center}
+
+(محور افقی، نشان دهنده‌ی فرکانس زاویه ای $\omega$ است.)
+
+الف) مقدار نرخ نایکوئیست را تعیین کنید و آن را با $F_s$ نشان دهید. سپس طیف سیگنال نمونه برداری شده با نرخ $2F_s$ را رسم کنید.
+
+ب) فرض کنید سیگنال $x(t)$ را با نرخ 
+$
+\frac{3F_s}{4}
+$
+نمونه برداری کرده و آن را 
+$
+\hat x[n]
+$
+نامیده ایم. به عبارت دیگر
+$$
+\hat x[n]=x(\frac{t}{3F_s/4})
+$$
+
+اگر با بهره گیری از نمونه های 
+$
+\hat x[n]
+$
+، سیگنال پیوسته‌ی $y(t)$ را با نرخ نمونه برداری 
+$
+\frac{3F_s}{4}
+$
+بسازیم، آیا 
+$
+x(t)
+$
+با 
+$
+y(t)
+$
+برابر است؟
+
+ج) (امتیازی) جزئیات ریاضی محاسبه‌ی $y(t)$ را انجام دهید.
+
+% سیگنال پیوسته‌ی $y(t)$ را به گونه ای بیابید که دارای دو خاصیت زیر باشد
+%$$
+%|Y(j\omega)|=0\quad,\quad |\omega|>\pi \frac{F_s}{2}
+%$$
+%$$
+%\hat y[n]=y(\frac{t}{F_s/2})=\hat x[n]
+%$$
+
+\Q
+یک سیستم گسسته، حقیقی و پایدار دارای خواص زیر است:
+\begin{itemize}
+\item
+تابع انتقال سیستم ($H(z)$) دارای 4 قطب است و صفر ندارد.
+\item
+پاسخ ضربه زوج است.
+\item
+یکی از قطب های تابع انتقال در 
+$
+z=\frac{1}{2}e^{j\frac{\pi}{4}}
+$
+قرار دارد.
+\end{itemize}
+
+پاسخ این سیستم به ورودی 
+$
+x[n]=2^nu[-n-1]
+$
+ را در حوزه زمان بیابید.
+
+\Q
+ورودی متناوب 
+$
+x[n]=\sum_{k=-\infty}^\infty \delta[n-3k]-\sum_{k=-\infty}^\infty 2\delta[n-2k]
+$
+به سیستمی با پاسخ فرکانسی زیر داده شده است:
+\begin{center}
+\includegraphics[width=63mm]{final_h2.eps}
+\end{center}
+
+پاسخ زمانی خروجی این سیستم را بیابید.
+
+\Q
+تابع انتقال یک سیستم گسسته و LTI ، دارای نمودار صفر-قطب به صورت زیر است:
+
+\begin{center}
+\includegraphics[width=80mm]{final_inv.eps}
+\end{center}
+
+الف) اگر سیستم علی باشد، رابطه‌ی زمانی پاسخ ضربه را بیابید.
+
+ب) اگر سیستم پایدار و دارای وارون پایدار باشد، رابطه‌ی زمانی پاسخ ضربه‌ی سیستم معکوس را بیابید.
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[10pt,letterpaper]{article}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=false,colorlinks,linkcolor=black,citecolor=magenta]{hyperref}
+\RequirePackage{MnSymbol}
+\newcommand{\eqn}[2]{
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+}
+%%%%%%%%%%%%%
+
+%       \eqn{
+%       x=x^2
+%       }{label}
+
+%%%%%%%%%%%%%
+\newcommand{\feqn}[2]{
+\begin{tcolorbox}[width=7in, colback=white]
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+\end{tcolorbox}
+}
+%%%%%%%%%%%%%%%
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[1]{
+\begin{center}
+\includegraphics[width=130mm]{#1}
+\end{center}
+}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\begin{document}
+\Large
+\begin{center}
+The solution of assignment \#7 of the \textbf{ComNet} course
+\end{center}
+1) Since the network contains no loop, all the answers are equal to $5$Mbytes.
+
+The tree is built in this way: 
+
+first, node 1 joins and connects directly to node 2.
+
+Second, node 3 joins to the tree through node 1.
+
+Third, node 4 joins to the tree through node 1.
+
+Fourth, node 5 joins to the tree through node 4.
+
+Fifth, node 6 joins to the tree through node 4.
+\newline\newline
+Q2) a. Actually like ICMP, IGMP messages carry information related to layer 3 above of it i.e. they sit in the payload of a datagram.
+
+b. The router periodically sends the \texttt{membership\_query} message to all of its attached hosts. If a specific host does not respond to this message anymore, the router considers that host as left the group.
+\newline\newline
+Q3) If uncontrolled flooding is used, at time $1$, the three attached hosts to the source, receive the packet. At time $2$, each of those attached hosts, can duplicate and send the packet to two other nodes (recall that it does not send the duplicate to the node where it has received from), leading to a total of $3\times 2$. At time $3$, the number of copies becomes $3\times 2^2$ and similarly, at time $t$, we have a total of $3\times 2^{t-1}$ copies.
+\newline\newline
+Q4) a. Once the $6$-bit string is sent over the channel, any of its bits may or may not suffer inversion (i.e. $0$ alters to $1$ or $1$ alters to 0). Hence, we can assume that the channel, adds a $6$-bit string of error to the message and delivers it to the receiver (e.g. if all the bits are received errorneous, we can assume that the channel, has added 111111 as error string to the message). Once received, the string must be divisible by $7=(111)_2$, otherwise an error is declared, but if the string is divisible by $7$ and an error as a multiple of $7$ has occured to it, the error is not declared until the packet delivery to the application layer (where the data is not understood). Since the original message is divisible by $7$, so must be the error. Hence the possible undeclared errors are $7$, 14, 21, 28, 35, 42, 49, 56 and 63 (i.e. all the multiple of 7 less than $2^6$). All of those multiples, have 3 bits of 1 and 3 bits of 0, except 63 which has all of its bits equal to 1. Therefore, probability of error becomes
+$$
+P_e=8p^3(1-p)^3+p^6\approx 7.76\times 10^{-6}
+$$
+
+b. By simply using a parity check, the error must happen in an even number of bits (so that it remains undeclared). The probability of error is
+$$
+P_e=\binom{4}{2}p^2(1-p)^2+\binom{4}{4}p^4(1-p)^0\approx 5\times 10^{-4}
+$$
+
+c. It can be observed that we have added more redundancy in CRC w.r.t. the parity check scheme to reduce the probability of error.
+\end{document}

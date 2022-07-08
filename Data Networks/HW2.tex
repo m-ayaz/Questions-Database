@@ -1,0 +1,221 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{tools}
+\usepackage{enumitem}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parskip}{3mm}
+\setlength{\parindent}{0mm}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+2nd problem set of ComNet course
+\hl
+\end{center}
+Q1)
+
+Determine the following statements as true or false with enough reasons.
+\begin{enumerate}[label=\alph*-]
+\item
+The UDP's freedom on imposing no congestion control is always an advantage compared to TCP as it offers more effective throughput for communicating processes.
+\item
+Peer-to peer applications work more efficiently and successfully if users are persuaded to volunteer bandwidth, storage, and computation resources to the applications.
+\item
+In a peer-to-peer architecture, no client and no server can be defined in contrast to the client-server architecture.
+\item
+The process initiated at the client has to only refer to the IP address of the server for sending packets.
+\item
+Cookies are used to keep track of user IDs in a stateless HTTP server.
+%\item
+%Link-layer switches are typically capable of processing the packets up to the layer 3.
+%\item
+%SMTP and FTP are examples of layer 1 protocols while TCP is a transport layer protocol.
+%\item
+%API is a set of rules 
+%\item
+%For economical reasons, exploiting optical fibers is not recommended in long-haul network
+\end{enumerate}
+
+Q2)
+
+How does the DNS server perform load distribution among replicated servers, such as replicated Web servers? What is the motivation?
+
+Q3)
+
+Assume a client sends an HTTP request message to retrieve an HTML webpage containing 5 image URLs. The HTML webpage itself has negligible amount of data while each image is 1Kbytes. Considering the end-to-end throughput to be 100Kbps and the RTT be 1msec, how much time would it take for the client to fully download the webpage and all the images if
+\begin{enumerate}[label=\alph*-]
+\item
+non-persistent connection is used
+\item
+persistent connection is used
+\end{enumerate}
+assuming that HTTP runs on top of TCP? Compare the two schemes and explain differences.
+
+Q4)
+
+In the following network topology, two users want to independently request data from the Internet. User 1 has a request rate of $15{\text{requests}\over \text{sec}}$ and the request rate of user 2 obeys a uniform distribution between $8{\text{requests}\over \text{sec}}$ and $12{\text{requests}\over \text{sec}}$. Each request is 1Mbytes long and the request and response messages are exchanged between the users and the internet through a link with total capacity of 1Mbps.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=110mm]{HW2_Q.pdf}
+\end{figure}
+
+\begin{enumerate}[label=\alph*-]
+\item
+What would the total average delay be for both the users?
+\item
+Assuming that a proxy server can on average fulfill 40 percent of all the requests (from both user 1 and 2) and the interconnecting link (between users and the proxy server) has a total capacity of 10Mbps, how much would the total average delay decrease? (Refer to the following topology)
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=120mm]{HW2_Q_.pdf}
+\end{figure}
+
+Q5)
+
+Consider distributing a file of $F$ = 15 Gbits to $N$ peers. The server has an upload
+rate of $u_s$ = 30 Mbps, and each peer has a download rate of $d_i$ = 2 Mbps and an
+upload rate of $u$. For $N$ = 10, 100, and 1,000 and $u$ = 300 Kbps, 700 Kbps, and
+2 Mbps, prepare a chart giving the minimum distribution time for each of
+the combinations of $N$ and $u$ for both client-server distribution and P2P
+distribution.
+
+(Hint: The distribution time is the time it takes to get a copy of the file to all $N$ peers. At the beginning of the distribution in P2P file sharing, only the server has the file. To get this file
+into the community of peers, the server must send each bit of the file at least once
+into its access link.)
+
+%Consider the following network in which node A wants to send packets to node B through a router and two links:
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=140mm]{p2p}
+%\end{figure}
+%Assume the transmission rate of the links 1 and 2 to be 100Mbits/sec and 50Mbits/sec, respectively and both of the links be 10km long. The speed of light is $2\times 10^8$m/s in the links.
+%\begin{enumerate}[label=\alph*-]
+%\item
+%What is the end-to-end propagation delay?
+%\item
+%Assume node A wishes to transmit 4 consecutive, 12.5Kbytes packets, each of which being sent at a single 1ms time slot, that is, packet 1 is sent in the first time slot, packet 2 is sent in the second time slot and so on. If the router does not impose processing delay on packets, how much buffer capacity would it need for storing incoming packets in the 4th time slot due to the queuing delay of the previously received packets?
+%\item
+%Is there any bottleneck link and if so, which one and why?
+%\end{enumerate}
+%
+%Q4) In the following network topology, each link is vulnerable to be brought down with a probability of $p$ independent of the other ones. What is the probability that there exists a path between nodes A and H with a throughput of $2R$? (The total throughput of a path is defined as the maximum rate at which bits can be sent over the path)
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=140mm]{Q5}
+%\end{figure}
+%
+%Q5)
+%
+%In the following network sketch, node A can send packets arbitrarily over each of the three paths to routers R1, R2 and R3 and node B can receive packets arbitrarily too. If each link fails to transmit data with a probability of $p$ independent of the other ones.
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=140mm]{p2p_multi}
+%\end{figure}
+%\begin{enumerate}[label=\alph*-]
+%\item
+%What is the probability that a packet initiated at node A, finally reaches its destination at node B?
+%\item
+%If each link has a throughput of $R$, what would be the effective throughput between nodes A and B? (i.e. the throughput that node A actually exploits and senses in transmission to node B; you need to do some probability calculations to obtain the answer!)
+%\end{enumerate}
+%%\noindent
+%%سوال 1) درستی یا نادرستی گزاره های زیر را با بیان دلایل کافی تحقیق کنید.
+%%
+%%1. برای شدت ترافیک نزدیک به $1$، تاخیر صف
+%%\footnote{
+%%\lr{Queuing delay}
+%%}
+%% بسته ها به سمت صفر میل می کند.
+%%
+%%2. داده برای انتقال از یک هاست
+%%\footnote{
+%%\lr{Host}
+%%}
+%% به هاست دیگر، فقط از مجموعه ای از لینک ها می گذرد.
+%%
+%%3. \lr{API} 
+%%مجموعه‌ی قوانینی است که برنامه‌ی سمت فرستنده باید پیروی کند تا اینترنت قادر به انتقال داده به برنامه‌ی مقصد باشد.
+%%
+%%4. \lr{Packet Switching}
+%% پیاده سازی پیچیده تر و پر هزینه تری نسبت به \lr{Circuit Switching} ایجاب می کند؛ ولی در مقابل برای کاربردهای بلادرنگ
+%%\footnote{
+%%\lr{Real-time}
+%%}
+%% مناسب تر است.
+%%
+%%5. یک پروتکل، فرمت و ترتیب پیامهای جابجاشده بین دو واحد مخابراتی را مشخص می کند و به اعمال انجام شده در ارسال و یا دریافت پیام نظارتی ندارد.
+%%
+%%6. در سمت کاربر، \lr{DSLAM} وظیفه ی جداسازی سیگنال های تلفنی و دیتای اینترنتی را در \lr{cable Internet access} بر عهده دارد.
+%%
+%%7. در معماری \lr{PON} همه ی بسته های ارسال شده از \lr{OLT} به سمت \lr{Splitter}، در \lr{Splitter} تکثیر می شوند.
+%%
+%%8. به دلایل اقتصادی، از فیبر نوری نمی توان در شبکه های \lr{long-haul} استفاده کرد.
+%%
+%%9. لایه‌ی پروتکل فقط در نرم افزار پیاده سازی می‌شود.
+%%
+%%10. تنها یک پروتکل \lr{IP} وجود دارد و تمام اجزای اینترنت که یک لایه‌ی شبکه دارند، باید از این پروتکل تبعیت کنند.
+%%
+%%\noindent
+%%سوال 2) تفاوت ویروس (\lr{Virus}) و کرم (\lr{Worm}) چیست؟
+%%
+%%\noindent
+%% سوال 3) در یک روتر، بسته
+%%\footnote{
+%%\lr{Packet}
+%%}
+%% هایی با طول 8 بیت به ورودی آن ارسال می شوند و نرخ دریافت بسته ها در ورودی از توزیع زیر پیروی می کند:
+%%\eqn{
+%%f_A(a)={(3.35)^a\cdot e^{-3.35}\over a!}
+%%}{}
+%%نرخ خروجی بیت در روتر نیز دارای توزیع زیر است:
+%%\eqn{
+%%R\sim \mathcal{U}(35,40)
+%%}{}
+%%\indent
+%%الف) متوسط شدت ترافیک
+%%\footnote{
+%%\lr{Traffic Intensity}
+%%}
+%% را در این روتر محاسبه کنید.
+%%
+%%\indent
+%%ب) اگر چهار بسته به صورت پشت سر هم وارد این روتر شوند، متوسط تاخیر ارسال
+%%\footnote{
+%%\lr{Transmission delay}
+%%}
+%% بسته‌ی چهارم چه 
+%%\indent
+%%میزان خواهد بود؟ (تاخیر ارسال بسته‌ی اول را صفر در نظر بگیرید)
+%%\noindent
+%%سوال 4) در شبکه ی زیر، اگر احتمال خرابی هر لینک مستقل از سایرین برابر $p$ باشد، احتمال صحت کل مسیر را از $A$ تا $B$ به دست آورید.
+%%\begin{center}
+%%\includegraphics[width=100mm]{Q4}
+%%\end{center}
+%%سوال 5) در شبکه ای با توپولوژی زیر، در چه صورت و با کدام احتمال حداکثر \lr{throughput} برای مسیر $A-H$ برابر $2R$ می باشد؟ (احتمال خرابی هر لینک مستقل از سایرین برابر $p$ می باشد)
+%%\begin{center}
+%%\includegraphics[width=100mm]{Q5}
+%%\end{center}
+%%\noindent
+%%سوال 6) در شبکه‌ی زیر، فرض کنید نرخ ورود بیت به روتر برابر 
+%%$1\text{\lr{Mbps}}$
+%%، حجم هر بسته برابر 
+%%$1\text{\lr{kbytes}}$
+%%، تاخیر پردازش هر بسته برابر 
+%%$12\text{\lr{msec}}$
+%%، طول لینک برابر 200 متر و سرعت انتشار در لینک برابر 
+%%$2\times 10^8 \text{\lr{m/s}}$
+%% است. همچنین  نرخ خروج بیت از روتر را بینهایت بگیرید.
+%%
+%%الف) تاخیر ارسال را برای بسته‌ی دهم محاسبه کنید.
+%%
+%%ب) تاخیر کلی ای را که بسته‌ی دوم در ارسال از \lr{A} به \lr{B} تجربه می کند محاسبه کنید.
+%%
+%%ج) به مدت چند میلی ثانیه و برای اولین بار، حجم اشغال شده‌ی بافر برابر 
+%%$2\text{\lr{kbytes}}$
+%% خواهد بود؟ (حالتی که یک بسته بلافاصله وارد بافر می‌شود و تنها بسته‌ی کنونی بافر بلافاصله از آن خارج می‌شود، $1\text{\lr{kbytes}}$ از حجم بافر را اشغال می‌کند. به عبارت دیگر باید مدت زمان غیرصفری محاسبه شود که دو بسته همزمان در بافر حضور داشته باشند)
+%%\begin{center}
+%%\includegraphics[width=100mm]{Q6.jpg}
+%%\end{center}
+\end{document}

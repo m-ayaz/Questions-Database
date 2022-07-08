@@ -1,0 +1,9 @@
+clear
+clc
+n=10;
+p=0.7;
+k=7;
+m=n*p;
+ex1=exp(-m)*m^k/factorial(k)
+ex2=nchoosek(n,k)*p^k*(1-p)^(n-k)
+err=1-ex1/ex2

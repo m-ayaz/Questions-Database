@@ -1,0 +1,405 @@
+\documentclass[10pt,letterpaper]{article} 
+%\usepackage{tikz}
+\usepackage{amsmath,amssymb,geometry}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+%\usepackage{enumitem}
+%\setlist[enumerate,1]{label=(\arabic*)}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\setlength{\parskip}{1em}
+
+\usepackage{amsmath}
+\usepackage{accents}
+\newlength{\dhatheight}
+\newcommand{\doublehat}[1]{%
+    \settoheight{\dhatheight}{\ensuremath{\hat{#1}}}%
+    \addtolength{\dhatheight}{-0.35ex}%
+    \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+    \smash{\hat{#1}}}}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+
+\newcommand{\fig}[3]{
+\begin{figure}[h!]
+#1
+\caption{#2}
+\label{#3}
+\end{figure}
+}
+
+\newcommand{\subfig}[3]{
+\begin{subfigure}{#3}
+#1
+\caption{#2}
+\end{subfigure}
+}
+
+
+\newcommand{\qn}[1]{
+\[
+\begin{split}
+#1
+\end{split}
+\]
+}
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+پاسخ تمرینات سری دهم سیگنال ها و سیستم ها
+
+\hrulefill
+\end{center}
+%\Q
+%
+%تبدیل فوریه‌ی سیگنال های زمان گسسته‌ی زیر را به دست آورید.
+%
+%الف)
+%$
+%x[n]=u[n]-u[n-5]
+%$
+%
+%ب)
+%$
+%x[n]=({1\over 3})^nu[n]
+%$
+%
+%پ)
+%$
+%x[n]=-({1\over 3})^nu[-n-1]
+%$
+%
+%ت)
+%$
+%x[n]=\sin{\pi\over 2}n+\cos n
+%$
+%
+%ث) 
+%$
+%x[n]=n({1\over 3})^nu[n]
+%$
+%
+%\Q
+%
+%عکس تبدیل فوریه‌ی سیگنال های زیر را به دست آورید.
+%
+%الف)
+%$
+%X(e^{j\omega})=\sum_{k=-\infty}^{\infty}(-1)^k\delta(\omega-{\pi\over 2}k)
+%$
+%
+%ب)
+%$
+%X(e^{j\omega})={1-{1\over 3}e^{-j\omega}\over 1-{1\over 4}e^{-j\omega}-{1\over 8}e^{-2j\omega}}
+%$
+%
+%پ) 
+%$
+%X(e^{j\omega})={1\over 1-e^{-4j\omega}}
+%$
+
+\large
+
+\Q
+
+الف)
+\qn{
+&x[n-1]\iff X(e^{j\omega})e^{-j\omega}
+\\&
+x[n+1]\iff X(e^{j\omega})e^{j\omega}
+}
+بنابراین
+\qn{
+&x[-n-1]\iff X(e^{-j\omega})e^{j\omega}
+\\&
+x[-n+1]\iff X(e^{-j\omega})e^{-j\omega}
+}
+و
+$$
+y[n]\iff X(e^{-j\omega})\cos \omega
+$$
+
+ب)
+$$
+x^*[-n]\iff X^*(e^{j\omega})
+$$
+بنابراین
+$$
+y[n]\iff \frac{X(e^{j\omega})+X^*(e^{j\omega})}{2}=\Re\left\{X^*(e^{j\omega})\right\}
+$$
+
+پ)
+$
+y[n]=(n^2-2n+1)x[n]
+$
+در نتیجه
+\qn{
+Y(e^{j\omega})&=
+j^2\frac{d^2}{d\omega^2}X(e^{j\omega})
+-2j\frac{d}{d\omega}X(e^{j\omega})
++X(e^{j\omega})
+\\&=
+-\frac{d^2}{d\omega^2}X(e^{j\omega})
+-2j\frac{d}{d\omega}X(e^{j\omega})
++X(e^{j\omega})
+}
+
+
+\Q
+
+الف) سیگنال $x[n]$ حول $n=2$ تقارن فرد دارد؛ در نتیجه فاز آن برابر است با
+$
+-2\omega\pm\frac{\pi}{2}
+$
+.
+
+ب)
+$$
+\int_{-\pi}^{\pi} X(e^{j\omega})d\omega=2\pi x[0]=6\pi
+$$
+
+پ)
+$$
+X(e^{j\pi})=\sum_n (-1)^nx[n]=0
+$$
+
+ت)
+$$
+\int_{-\pi}^{\pi} \left|{dX(e^{j\omega})\over d\omega}\right|^2d\omega
+=2\pi\sum_n n^2x^2[n]=516\pi
+$$
+
+%چ) سیگنالی که تبدیل فوریه‌ی آن 
+%$
+%\Re\{X(e^{j\omega})\}
+%$
+% باشد.
+
+
+\Q
+
+از گزاره‌ی اول نتیجه می شود که 
+$
+g[n]=a+b\delta[n-1]
+$
+به ازای مقادیری از $a,b$. بنابراین پاسخ فرکانسی به فرم زیر است:
+\qn{
+H(e^{j\omega})=\frac{Y(e^{j\omega})}{X(e^{j\omega})}=\frac{a+be^{-j\omega}}{\frac{1}{1-\frac{1}{4}e^{-j\omega}}}
+=(a+be^{-j\omega})(1-\frac{1}{4}e^{-j\omega})
+=a-\frac{b}{4}e^{-2j\omega}+(b-\frac{a}{4})e^{-j\omega}
+}
+از گزاره‌ی سوم نتیجه می‌شود که باید ضریب $e^{-j\omega}$ صفر باشد؛ زیرا تنها این جمله با دوره‌ی $\pi$ متناوب نیست. بنابراین:
+$$
+a=4b\implies 
+H(e^{j\omega})=4b-\frac{b}{4}e^{-2j\omega}
+$$
+از طرفی 
+$$
+H(e^{j{\pi\over 2}})=1
+$$
+بنابراین
+$$
+b=\frac{4}{17}\implies a=\frac{16}{17}\implies h[n]=\frac{16}{17}+\frac{4}{17}\delta[n-1]
+$$
+
+\Q
+
+الف) به ازای 
+$
+\omega\ge 0
+$
+، پاسخ فرکانسی دارای اندازه‌ی 
+$
+\omega
+$
+ و فاز 
+$
+0
+$
+ و به ازای 
+$
+\omega< 0
+$
+، پاسخ فرکانسی دارای اندازه‌ی 
+$
+-\omega
+$
+ و فاز 
+$
+\pi
+$
+است؛ بنابراین
+$$
+H(e^{j\omega})=\omega\quad ,\quad -\pi<\omega\le \pi
+$$
+ب)
+$$
+h[n]={1\over 2\pi}\int_{-\pi}^{\pi} \omega e^{j\omega n}d\omega=\begin{cases}
+{2\pi\over jn}(-1)^n&,\quad n\ne0\\
+0&,\quad n=0
+\end{cases}
+$$
+\Q
+
+الف)
+$$
+X(e^{j\omega})=X(e^{j(\omega-1)})\implies x[n]=x[n]e^{jn}
+$$
+از آنجا که جز در $n=0$ مقدار 
+$
+e^{jn}
+$
+ هیچگاه 1 نمی شود، در نتیجه داریم:
+$$
+x[n]=0\quad,\quad n\ne 0
+$$
+ و این گزاره درست است.
+
+ب)
+$$
+X(e^{j\omega})=X(e^{j(\omega-\pi)})\implies x[n]=x[n]e^{j\pi n}=x[n](-1)^n
+$$
+از آنجا که در 
+$
+n=2k
+$
+ مقدار 
+$
+(-1)^n
+$
+ برابر 1 می شود، در نتیجه این گزاره نادرست است.
+
+پ) از این تساوی نتیجه می شود که چون
+$
+X(e^{j\omega})
+$
+به دوره‌ی 
+$
+2\pi
+$
+ متناوب است، در نتیجه
+$
+X(e^{j{\omega\over 2}})
+$
+ نیز با دوره‌ی 
+$
+2\pi
+$
+متناوب بوده و داریم:
+$$
+X(e^{j{\omega+2\pi\over 2}})=X(e^{j({\omega\over 2}+\pi)})=X(e^{j{\omega\over 2}})=X(e^{j\omega})
+$$
+بنابراین
+$$
+{1\over2}X(e^{j({\omega\over 2})})+{1\over2}X(e^{j({\omega\over 2}+\pi)})=X(e^{j\omega})
+$$
+از طرفی می دانیم
+\qn{
+&x[2n]\iff {1\over2}X(e^{j({\omega\over 2})})+{1\over2}X(e^{j({\omega\over 2}+\pi)})
+\\&x[2n+1]\iff {1\over2}e^{-j\omega}(X(e^{j({\omega\over 2})})-X(e^{j({\omega\over 2}+\pi)}))
+}{}
+بنابراین
+\qn{
+&x[n]=x[2n]
+\\&x[2n+1]=0
+}{}
+که نتیجه می دهد 
+$$
+x[n]=0\quad,\quad n\ne 0
+$$
+و این گزاره درست است.
+
+ت) می دانیم
+\qn{
+\begin{cases}
+x[n/2]&,\quad n \text{زوج} \\
+0&,\quad n \text{فرد} 
+\end{cases}
+\iff X(e^{2j\omega})
+}{}
+بنابراین
+$$
+x[n]=\begin{cases}
+x[n/2]&,\quad n \text{زوج} \\
+0&,\quad n \text{فرد} 
+\end{cases}
+$$
+که مشابه همان قسمت قبل است؛ یعنی نمونه های فرد سیگنال صفر هستند و برای نمونه های زوج
+$$
+x[n]=x[2n]
+$$
+و به همین دلیل این گزاره نیز درست است.
+
+\Q
+
+الف-1) این سیستم خطی است زیرا عملیات های 
+$
+e^{-j\omega}X(e^{j\omega})
+$
+ و
+$
+{d\over d\omega}X(e^{j\omega})
+$
+  به ترتیب معادل با 
+$
+x[n-1]
+$
+و
+$
+-jnx[n]
+$
+ هستند که هر دو خطی اند؛ ولی چون عملیات 
+$
+-jnx[n]
+$
+تغییر پذیر با زمان است، در نتیجه کل سیستم خطی و تغییرپذیر با زمان می شود.
+
+الف-2) به وضوح
+$
+X(e^{j\omega})=1
+$
+ بنابراین
+$$
+Y(e^{j\omega})=2+e^{-j\omega}
+$$
+و
+$$
+y[n]=2+\delta[n-1]
+$$
+ب) می توان نوشت:
+$$
+Y(e^{j\omega})=\int_{\omega-{\pi\over 4}}^{\omega+{\pi\over 4}}X(e^{j\omega})d\omega=\int_{-\pi}^{\pi}X(e^{j\theta})H(e^{j(\omega-\theta)})d\theta=
+$$
+که در آن:
+$$
+H(e^{j\omega})=\begin{cases}
+1&,\quad |\omega|<{\pi\over 4}\\
+0&,\quad {\pi\over 4}\le|\omega|\le \pi
+\end{cases}
+$$
+بنابراین طبق خواص:
+$$
+y[n]=2 x[n]{\sin{\pi\over 4}n\over n}
+$$
+\end{document}

@@ -1,0 +1,92 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\Q}[1]{\textbf{Question #1)}}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 1st problem set solution of Optical Networks course
+\hl
+\end{center}
+\Q1
+
+\begin{enumerate}
+\item
+As moving closer to the edge of an optical network, the cost is reduced by reduction in end users. To this reason, the access networks are the most cost-sensitive among all. However, backbone networks are less cost sensitive and more expensive in design, and a new technology first finds its place in backbone networks and then gradually spreads toward the edge of network.
+\item
+Since different tiers of an optical network deal with different types of traffics (whether in scale or number), a unified technology cannot be used in all tiers. For example, with respect to WDM technology, backbone networks
+generally have 80-160 wavelengths per fiber, regional networks have roughly
+40-80 wavelengths per fiber, metro-core WDM networks have anywhere from
+8-40 wavelengths per fiber, and access networks typically have no more than 8
+wavelengths.
+\item
+\textit{protocol and format
+transparency} is a term reserved when application layer services directly access the optical network. An advantage is obtained when large amount of data is about to transmit. Since no electronic layer is bypassed, no particular protocol is imposed on the data. However, this type of direct access requires much care as well as having not materialized in a major way.
+\end{enumerate}
+\Q2
+\begin{enumerate}
+\item
+OTN stands for \textit{Optical Transport Network} and is a successor to SDH/SONET with the basic transport
+frame called the Optical channel Transport Unit (OTU). The bit rate of the OTU
+hierarchy is slightly higher than that of SONET/SDH to account for additional overhead and it is likely that the OTN hierarchy eventually will be
+extended beyond OTU4 to support higher line rates as they become standardized
+\item
+The data plane is directly responsible for the
+forwarding of data, whereas the control plane (alongside management plane) is responsible
+for network operations. The difference between control plane and  management plane is that The latter generally operates in a centralized
+manner; the control plane implements just a subset of the network operations functionality,
+typically in a more distributed manner.
+\item
+Network enginnering refers the problem of resource allocation which is assigning enough or additional capacity to reduce congestion. Since the time scale can be of order months or weeks, this process is generally treated as semi-static. In Traffic engineering, in contrast, the services are about to be routed and allocated sufficient bandwidth. The decision-making time astoundingly decreases to order of milliseconds and the problem is treated as dynamic.
+\end{enumerate}
+\Q3
+\begin{enumerate}
+\item
+The lines interconnecting the nodes in a network are referred to as links. While the links are depicted
+with just a single line, they typically are populated by one or more fiber pairs,
+where each fiber in a pair carries traffic in just one direction. The portion of a
+link that runs between two amplifier sites, or between a node and an amplifier site,
+is called a span.
+\item
+\textit{Services} are requests for connections that require a specific bandwidth portion and run between two nodes. 
+
+The \textit{traffic} in the network is the collection of services that must be carried.
+
+The term \textit{demand} is used to represent an individual traffic request between two nodes (i.e. capable of housing a lot of services)
+\item
+\textit{Multiplexing} refers to the operation of bundling wavelengths in the endpoints of a connection whereas \textit{Grooming} increases flexibility by spreading the ability of traffic bundling among intermediate nodes, thereby increasing efficiency.
+\end{enumerate}
+\Q4
+Both AWG and WSS are used to decompose a WDM signal to its constituent individual wavelengths. The difference is, that AWG is colorful. Once a specific wavelength is assigned to any of its output terminals during manufacturing, it cannot be unchanged. However, WSSs allow for such a flexibility and adjustibility. Their disadvantage is the production cost anyway.
+\nl
+\Q5
+\begin{enumerate}
+\item
+Tables 1 and 3 cannot represent a WSS while table 2 could.
+
+In Table 1, the wavelength 2 is output on output 2 when input on input 1 and 3.
+
+In Table 1, the wavelength 2 is output on output 4 when input on input 1 and 2.
+
+2.
+
+\picnocapt{p1}{40mm}
+
+3.
+
+\picnocapt{p2}{60mm}
+\end{enumerate}
+\end{document}

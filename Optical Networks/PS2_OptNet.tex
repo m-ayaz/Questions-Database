@@ -1,0 +1,108 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcommand{\Q}[1]{\textbf{Question #1)}}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 2nd problem set of Optical Networks course
+\hl
+\end{center}
+\Q1 \textbf{\Bns}
+\begin{enumerate}[label=\alph*)]
+\item
+Does {\bns} support multicast? How?
+\item
+As seen in the subsection 2.8.1 and sketched in Fig 2.12 of the main textbook, in a {\bns}, a signal added by a transmitter in a node, can be dropped off right away from any arbitrary receiver at the same node without experiencing transmission through the links. Though such an insight may look impractical (since a signal is added and immediately dropped inside a node), how can a network engineer take advantage of such a means?
+\item
+In a \bns, the passive splitter does not distribute power evenly on all of its outgoing ports. Instead, it contributes less power to add/drop modules (say, about 10\%) with more power contributed over network fibers. Why is this scheme considered as efficient?
+%
+%b. Mention some different technology implementations in tiers of an optical network and enrich your answer with enough explanations.
+\item
+What are the pros and cons of \textit{protocol and format transparency}?
+\end{enumerate}
+%\nl
+\Q2 \textbf{\Rns}
+\begin{enumerate}[label=\alph*)]
+\item
+Does {\rns} support multicast? Why or why not?
+\item
+Why do we replace passive splitters in \bns with WSSs in \rns? What benefits and drawbacks lie in this operation?
+\item
+In a hybrid \textit{route-and-select/broadcast-and-select} architecture, the $1\times6$ WSSs on the add ports, are replaced by $1\times6$ passive splitters. Is multicast supported, at least to some extent, in this architecture? What are the advantages and disadvantages of such a structure? 
+\end{enumerate}
+%\nl
+\Q3
+
+Compare the architectures of Fig 2.12, 2.13 and 2.14 of the main textbook from the viewpoints of directionlessness and contentionlessness.
+%a. What is the difference between [link and span] and [demand and service]?
+%
+%b. Is conversion between client-side and network-side signals performed \textit{all optically}? Why or why not?
+%
+%c. Based on the difference between grooming and multiplexing, which one gives rise to more efficiency and why?
+\nl
+\Q4
+
+Define the nodal drop ratio as:
+\[
+\text{Number of Wavelengths that Drop At Node}\over
+\text{
+Number of Wavelengths that Enter Node}
+\]
+In the following networks, assume that there is one wavelength of traffic in
+both directions between every pair of nodes. Assume that all nodes support
+optical bypass and that no regeneration is required. Assume shortest-path routing.
+
+What is the nodal drop ratio for:
+\begin{enumerate}[label=\alph*)]
+\item
+Each node of an $N$-node ring, with $N$ odd?
+\item
+The center node of a linear chain of $N$ nodes, with $N$ odd?
+\item
+The center node of an $N\times N$ grid, with $N$ odd? In the $N\times N$ grid, assume that routing is along a row and then a column; note that bidirectional traffic may follow different paths in the two directions.
+\end{enumerate}
+\Q5
+
+Consider a dynamic network, where connection requests (each one requiring a full wavelength) arrive at a degree-two node equipped with a ROADM according to a Poisson process of 20 Erlangs. Assume that the connections are randomly routed on either of the two network links at the node, with equal probability. Assume that no regeneration occurs at the node.
+\begin{enumerate}[label=\alph*)]
+\item
+First, assume that the ROADM is not directionless. How many transponders must be pre-deployed on the add/drop ports to yield a blocking probability (due to no available transponders) of less than $10^{-4}$?
+\item
+Second, assume that the ROADM is directionless. How many total transponder cards must be pre-deployed at the node to yield a blocking probability (due to no available transponders) of less than $10^{-4}$?
+\end{enumerate}
+
+[Hint: in either cases of a) and b), you have a number of connection requests that can take on any positive integer randomly from a Poisson distribution with higher values being less probable. You can take the maximum number of connection requests sufficiently large to make sure that almost all ($=1-10^{-4}$ based on the question context) connection requests can be routed without blocking, provided that enough transponders are deployed. In a non-directionless scenario in this question, keep in mind that an added wavelength, must be routed mandatorily over only one of the two outgoing fibers.]
+%What are the advantages and shortcomings of using Wavelength-Selective Switch (WSS) in place of Array Wave-guide Grating (AWG)?
+%\nl
+%\Q5
+%
+%\{Question 2.1 of the main textbook\}
+%\nl
+%\Q5 
+\end{document}

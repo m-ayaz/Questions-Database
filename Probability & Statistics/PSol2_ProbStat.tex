@@ -1,0 +1,163 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry}
+\usepackage{xepersian}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\[\begin{split}
+#1
+\end{split}\]
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+\settextfont{IranNastaliq}
+
+به نام زیبایی
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+پاسخ تمرینات سری دوم درس احتمال مهندسی
+
+\end{center}
+\hrulefill
+\large
+
+\Q
+
+اگر پیشامدهای ابتلا به کرونا و آنفلوآنزا را به ترتیب با 
+$
+A
+$
+و
+$
+B
+$
+نشان دهیم، طبق فرض مسئله داریم
+\eqn{
+&P(A)=0.07,
+\\&P(B)=0.19,
+\\&P(A\cup B)=0.2
+.
+}
+در این صورت
+
+الف) خواسته‌ی مسئله، 
+$
+P(A\cap B)
+$
+است که برابر است با
+$$
+P(A\cap B)=P(A)+P(B)-P(A\cup B)=0.07+0.19-0.2=0.06
+$$
+
+ب) مطلوبست 
+$
+P(A-B)
+$
+. در این صورت
+$$
+P(A-B)=P(A)-P(A\cap B)=0.07-0.06=0.01.
+$$
+
+\Q
+
+الف)
+$$
+P(A)=P(2)+P(3)+P(5)+P(7)=0.1+0.1+0.1+0.1=0.4
+$$
+
+ب)
+\eqn{
+&A-B=\{2\}
+\\&A\cap B=\{3,5,7\}
+\\&\implies
+\\&P(A-B)=0.1
+\\&P(A\cap B)=0.3
+}
+
+پ) داریم
+\eqn{
+&P(A-B)=0.1
+\\&P(A)=0.4
+\\&P(A\cap B)=0.3
+}
+بنابراین درستی رابطه‎‌ی زیر مشاهده می‌شود:
+\eqn{
+P(A-B)=P(A)-P(A\cap B).
+}
+علت درستی این رابطه آن است که دو مجموعه‌ی 
+$
+A-B
+$
+و
+$
+A\cap B
+$
+ناسازگارند؛ در نتیجه طبق اصل سوم کولموگروف
+$$
+P(A\cap B)+P(A-B)=P([A\cap B]\cup[A-B])=P(A).
+$$
+
+\Q
+نامساوی سمت راست به سادگی از 
+$$
+P(A\cap B)=P(A)+P(B)-P(A\cup B)
+$$
+و 
+$
+P(A\cap B)\ge 0
+$
+نتیجه می‌شود. برای نامساوی سمت چپ باید اثبات کنیم
+\eqn{
+P(A\cap B)\le\frac{1}{4\max\{1-P(A),1-P(B)\}}
+}
+به دلیل تقارن مسئله، فرض می‌کنیم
+$
+P(A)\ge P(B)
+$.
+در نتیجه
+\eqn{
+P(A\cap B)\le\frac{1}{4[1-P(B)]}.
+}
+از طرفی
+\eqn{
+&(\frac{1}{2}-P(B))^2\ge0\implies
+\\&
+4P^2(B)-4P(B)+1\ge0\implies
+\\&
+1\ge 4P(B)-4P^2(B)\implies
+\\&
+1\ge 4P(B)[1-P(B)]\implies
+\\&
+P(B)\le\frac{1}{4[1-P(B)]}.
+}
+همچنین می دانیم 
+$
+A\cap B\ \ \ \subseteq\ \ \  B
+$
+. در نتیجه
+\eqn{
+P(A\cap B)\le P(B)\le\frac{1}{4[1-P(B)]}
+}
+و اثبات کامل می شود
+$
+\blacksquare
+$
+
+\end{document}

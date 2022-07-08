@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry,enumitem,graphicx}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\[\begin{split}
+#1
+\end{split}\]
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+
+In the name of beauty
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+13th Problem Set of Computer Networks
+
+\end{center}
+\hrulefill
+\Large
+
+\Q
+
+\begin{enumerate}[label=\alph*)]
+\item
+At which layer is SSL implemented and why?
+\item
+Why does sequence numbering prevent an intruder from re-ordering seg-
+ments? What happens if the sequence numbers are not encrypted by hash
+(i.e. only the data and the MAC key are included in hash calculations)?
+\end{enumerate}
+
+\Q
+
+\begin{enumerate}[label=\alph*)]
+\item
+For what reason, is network-layer security said to provide blanket coverage and what does that mean anyway?
+\item
+What is Security Policy Database (SPD) and what does it stand for?
+\end{enumerate}
+
+\Q
+
+\begin{enumerate}[label=\alph*)]
+\item
+What problem can be caused when a duplicate key is used in WEP?
+\item
+Since MK is a shared key between the client and the authentication server, how can we generate a shared key between the client and the access point?
+\end{enumerate}
+
+\Q
+
+Assume that an attacker wants to perform a DoS (Denial of Service) attack by sending TCP ACK segments to an internal network. A possible solution is to configure the internal firewall to block (i.e. drop) all the incoming TCP ACK segments. What problem does this solution make and how to bypass it?
+
+\end{document}

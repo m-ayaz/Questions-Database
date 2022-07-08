@@ -1,0 +1,74 @@
+\documentclass[10pt,letterpaper]{article}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=false,colorlinks,linkcolor=black,citecolor=magenta]{hyperref}
+\RequirePackage{MnSymbol}
+\newcommand{\eqn}[2]{
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+}
+%%%%%%%%%%%%%
+
+%       \eqn{
+%       x=x^2
+%       }{label}
+
+%%%%%%%%%%%%%
+\newcommand{\feqn}[2]{
+\begin{tcolorbox}[width=7in, colback=white]
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+\end{tcolorbox}
+}
+%%%%%%%%%%%%%%%
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[1]{
+\begin{center}
+\includegraphics[width=130mm]{#1}
+\end{center}
+}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\begin{document}
+\Large
+\begin{center}
+The assignment \#9 of the \textbf{ComNet} course
+\hl
+\end{center}
+Q1) 
+
+a. Why does not a base station as a part of wireless networks have a counterpart in wired networks? What is it responsible for?
+
+b. Why does 802.11 use a a link-layer acknowledgment/retransmission (ARQ) scheme while Ethernet does not?
+\nl
+Q2)
+
+a) Under Ethernet's CSMA/CD, multiple access protocol, a station begins transmitting as soon as the channel is sensed idle. With 802.11 CSMA/CA, however, the station refrains from transmitting while counting down, even when it senses the channel to be idle.Why do CSMA/CD and CDMA/CA take such different approaches here?
+
+b) Consider the 802.11 CSMA/CA once again. Assume that two stations $A$ and $B$ want to send frames. If $A$ and $B$ have experienced $n_A$ and $n_B$ collisions respectively and both, simuletaneously execute the binary exponential back-off for a radom delay before retransmission, what is the probability that the stations $A$ and $B$ do not collide in transmission due to equally generated random delays?
+\nl
+Q3)
+
+Consider Figure 6.12. of the textbook. Assume that a host $H1$ broadcasts an RTS control frame to all the nodes, including an AP, to further send a DATA frame to another host, say $H2$. The AP, having received the RTS control frame, broadcasts a CTS control frame to $H1$
+ which is correctly received by \textbf{all other nodes} in the network, but lost on its way back to $H1$. The host $H1$ waits for a while, then retransmits the RTS control frame. The new RTS control frame is now errorneously detected as DATA in the AP. Explain what happens next.
+%\nl
+%Q4)
+%
+%Based on CDMA scheme, assume that the chipping rate is $M$ times faster than the bit rate and the channel reverts each of the $M$ bits of the encoded bit with probability $p$. The channel output is then multiplied in the code, is summed up in its digits and compared to 0-threshold, all at the receiver. The original bit is declared as 0 if the result falls below the 0-threshold and declared as $1$ if otherwise.
+%Assume that station $A$ wants to send frames to station $B$. The channel is idle with probability $p$ and the station $A$ senses the channel condition at each time slot with this ratio (i.e. at the $p$ fraction of a whole number of time slots, the channel is sensed idle by the station $A$). Each frame exactly fits each time slot (tightly!). If binary exponential back-off is used, and the probability that an ACK is successfully received by $A$ is $1\over 2$ when $A$ has sent a frame,
+\end{document}

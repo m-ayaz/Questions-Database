@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,graphicx,geometry,enumitem,caption,subcaption}
+\usepackage{xepersian}
+
+\newcounter{qnumber}
+\setcounter{qnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \theqnumber)}
+\stepcounter{qnumber}
+}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\settextfont{XB Niloofar}
+
+\begin{document}
+
+\begin{center}
+\large
+
+به نام او
+
+آزمون پایان ترم سیگنال ها و سیستم ها
+\end{center}
+
+\hrulefill
+
+\large
+
+
+اطلاعات زیر در خصوص یک سیگنال متناوب گسسته‌ی 
+$
+x[n]
+$
+با ضرایب سری فوریه‌ی $a_k$ و دوره تناوب 4 داده شده است:
+\begin{itemize}
+\item
+$
+\sum_{n=0}^3(-1)^nx[n]=4
+$
+\item
+$
+a_3=0
+$
+\item
+$
+x[2]=2\cdot x[0]=4
+$
+\end{itemize}
+ سیگنال $x[n]$ را بیابید.
+
+\end{document}

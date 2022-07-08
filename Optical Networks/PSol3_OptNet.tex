@@ -1,0 +1,263 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 3rd problem set solution of Optical Networks course
+\hl
+\end{center}
+\Q
+
+a. The numerial aperture is given by
+$$
+\text{NA}=\sqrt{n_1^2-n_2^2}
+$$
+with $n_1=1.5$ and $n_2=1.4950$, we obtain NA=0.12 .
+
+b.
+$$
+BL< {n_2\over n_1^2}{c\over \Delta}
+$$
+where 
+$$
+\Delta={\text{NA}^2\over 2n_1^2}
+$$
+Substituting yields
+$$
+L<6.23 \text{km}
+$$
+\nl
+\Q
+
+Note that
+$$
+D={\lambda\over c}{d^2n\over d\lambda^2}=-{2\pi c \over\lambda^2}\beta_2
+$$
+hence
+$$
+D=83 \text{ ps}/(\text{nm}\cdot\text{km})
+$$
+and 
+$$
+\beta_2=-28.29 \text{ ps}^2/\text{km}
+$$
+\Q
+
+a. The FT of the partial differential equation is 
+\eqn{
+{\partial A(z,\omega)\over \partial z}&=-{\alpha\over 2}A(z,\omega)+j{\beta_2\over 2}\omega^2A(z,\omega)
+\\&=[-{\alpha\over 2}+j{\beta_2\over 2}\omega^2]A(z,\omega)
+}{}
+which has the following solution
+\eqn{
+A(z,\omega)=C_1e^{-{\alpha\over 2}z+j{\beta_2\over 2}\omega^2z}
+=A(0,\omega)e^{-{\alpha\over 2}z+j{\beta_2\over 2}\omega^2z}
+}{}
+The chirped part of the exponent is not considered since it does not influence the amplitude, therefore we must have
+$$
+-{1\over 2}({t\over T_0})^2=-{1\over 2}\implies t=\pm T_0
+$$
+
+b. The FT of $A(0,t)$ can be written as:
+$$
+A(0,\omega)=\sqrt{2\pi T_0^2\over 1+iC}\exp\left(-{\omega^2T_0^2\over 2(1+iC)}\right)
+$$
+The $1\over e$-intensity condition yields:
+$$
+\left|\exp\left(-{\omega^2T_0^2\over 2(1+iC)}\right)\right|={1\over \sqrt e}
+$$
+since when the spectral intensity increases by a factor of $\alpha$, the amplitude of the original pulse increases by a factor of $\sqrt\alpha$. The latter equality gives us
+$$
+\Delta\omega_0={\sqrt{1+C^2}\over T_0}
+$$
+\Q
+
+At the end of the fiber we obtain:
+\eqn{
+A(z,\omega)&=A(0,\omega)e^{-{\alpha\over 2}z+j{\beta_2\over 2}\omega^2z}
+\\&=A_0e^{-{\omega^2T_0^2\over 2+2jC}}e^{-{\alpha\over 2}L+j{\beta_2\over 2}\omega^2L}
+\\&=
+A_0e^{-{\alpha\over 2}L}e^{-{\omega^2T_0^2\over 2+2jC}}e^{j{\beta_2\over 2}\omega^2L}
+\\&=
+A_0e^{-{\alpha\over 2}L}e^{-{\omega^2\over 2}({T_0^2\over 1+jC}-j\beta_2L)}
+\\&=
+A_0e^{-{\alpha\over 2}L}e^{-{\omega^2\over 2}
+{T_0^2-j\beta_2L+\beta_2CL\over 1+jC}
+}
+\\&=
+A_0e^{-{\alpha\over 2}L}e^{-{\omega^2\over 2}
+{(T_0^2+\beta_2CL)^2+(\beta_2L)^2\over (1+jC)(T_0^2+j\beta_2L+\beta_2CL)}
+}
+\\&=
+A_0e^{-{\alpha\over 2}L}e^{-{\omega^2\over 2}
+{(T_0^2+\beta_2CL)^2+(\beta_2L)^2\over T_0^2(1+jC_1)}
+}
+}{}
+hence 
+$$
+T_1=T_0\sqrt{\left(1+{\beta_2CL\over T_0^2}\right)^2+\left({\beta_2L\over T_0^2}\right)^2}
+$$
+and 
+$$
+C_1=C+{\beta_2 L\over T_0^2}(1+C^2)
+$$
+\Q
+
+The compression factor is
+$$
+\sqrt{\left(1+{\beta_2CL\over T_0^2}\right)^2+\left({\beta_2L\over T_0^2}\right)^2}
+=
+\sqrt{1+{2\beta_2CL\over T_0^2}+{(\beta_2C)^2L^2+\beta_2^2L^2\over T_0^4}}
+$$
+Since $|\beta_2C|<<1$ and $\left|{\beta_2C\over T_0^2}\right|<<1$, the term ${2\beta_2CL\over T_0^2}$ becomes dominant. Hence
+$$
+{T_1\over T_0}\approx \sqrt{1+{2\beta_2CL\over T_0^2}}
+$$
+which is greater than $1$ for $\beta_2 C>0$ and less than 1 for $\beta_2C<0$.
+
+For finding the optimum length at which the width is minimized, we must differentiate the compressing factor w.r.t. $L$ as the fiber length. The zero-derivation equation is:
+$$
+C\left(1+{\beta_2CL\over T_0^2}\right)+\left({\beta_2L\over T_0^2}\right)=0
+$$
+which yields
+$$
+L_\text{opt}=-{T_0^2C\over \beta_2 (1+C^2)}
+$$
+which is valid for $\beta_2 C<0$. The minimum width is then derived as
+$$
+T_{1,\min}=T_0{1\over \sqrt {1+C^2}}
+$$
+\nl
+\Q
+
+Based on the equation 3.2.8 of the Agrawal's textbook, we have 
+$$
+T_\text{FWHM}=2\sqrt{\ln 2}T_0
+$$
+hence
+\qn{
+&T_0=30\text{ps}
+\\& L=50 \text{km}
+\\&\beta_2=-20.4 \text{ps}^2/\text{km}
+\\&C=0
+}
+and we obtain
+$$
+T_{1,\text{FWHM}}=73.03 \text{ps}
+$$
+%$$D={-2\pi c\over\lambda^2}\beta_2$$
+%$$
+%\beta_2=-2.04\times 10^{-26}
+%$$
+
+\Q
+
+\qn{
+& L=10\text{ km}
+\\&\sigma_\lambda=30\text{ nm}
+\\& D=-80 \text{ ps}/(\text{nm}\cdot\text{km})
+}
+therefore
+$$
+B_{\max}=10.42MHz
+$$
+
+\Q
+
+a.
+\qn{
+&\text{Fiber 1 : }\beta_2=-31.87 \text{ps}^2/\text{km}
+\\&\text{Fiber 2 : }\beta_3=0.0992 \text{ps}^3/\text{km}
+}
+
+\qn{
+&\text{Transmitter 1 , Fiber 1 : }L_\text{Dispersion}=19.9 \text{ km}
+\\&\text{Transmitter 1 , Fiber 2 : }L_\text{Dispersion}=17502 \text{ km}
+\\&\text{Transmitter 2 , Fiber 1 : }L_\text{Dispersion}=3486 \text{ km}
+\\&\text{Transmitter 2 , Fiber 2 : }L_\text{Dispersion}=812717419\text{ km}
+}
+
+b.
+
+\qn{
+&\text{Transmitter 1 , Fiber 1 : }L_\text{Attenuation}=95.24 \text{ km}
+\\&\text{Transmitter 1 , Fiber 2 : }L_\text{Attenuation}=86.96 \text{ km}
+\\&\text{Transmitter 2 , Fiber 1 : }L_\text{Attenuation}=95.24 \text{ km}
+\\&\text{Transmitter 2 , Fiber 2 : }L_\text{Attenuation}=86.96\text{ km}
+}
+
+c.
+
+The combinations
+\qn{
+&\text{Transmitter 1 , Fiber 2}
+\\&\text{Transmitter 2 , Fiber 2}
+}
+lead to maximum optical reach due to both attenuation and dispersion, i.e, when fiber 2 is used.
+\nl
+\Q
+
+a. The transmission length should be $95.24$ km, just like part c- of the previous question. Since we have
+$$
+25L=16L_{\text{DCF}}
+$$
+we obtain
+\qn{
+& L=37.17\text{ km}
+\\& L_\text{DCF}=58.07\text{ km}
+}
+b.
+
+If signal is dropped 20 dB due to total attenuation, we need an amplifier of gain 20 dB to fully compensate for the fiber loss. Hence:
+\qn{
+&G_\text{dB}=20\implies G=100
+\\&\text{NF}=5.5\implies F=3.55
+}
+By using the following relation for ASE noise power spectral density:
+$$
+\sigma^2_{\text{ASE,PSD}}={1\over 2}h\nu_\text{opt} GF
+$$
+where $\nu_\text{opt}={c\over \lambda}$, we finally calculate
+ $$
+\sigma^2_{\text{ASE,PSD}}=22.69 {\mu\text{W}\over\text{THz}}
+$$
+\Q
+
+The total splice loss is $1+1+0.2=2.2$ dB. Also, the total fiber loss can be given by $50 \text{km}\times 0.5{\text{dB}\over \text{km}}=25\text{dB}$. Since there are 9 intermediate splices, the total loss imposed on signal is
+$$
+\text{Loss}=9\times 2.2+25=44.8\text{dB}
+$$
+The minimum sensitivity power is $0.3\mu\text{W}\equiv -5.23\text{dBu}$, giving the least launch power as 
+$$
+P=-5.23 \text{dBu}+44.8\text{dB}=39.57\text{dBu}=9.57\text{dBm}\equiv 9.06 \text{mW}
+$$
+\end{document}

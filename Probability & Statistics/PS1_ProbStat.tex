@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry}
+\usepackage{xepersian}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+\settextfont{IranNastaliq}
+
+به نام زیبایی
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+تمرینات سری اول درس احتمال مهندسی
+
+\end{center}
+\hrulefill
+\large
+
+\Q
+
+موارد زیر را در یک مسئله‌ی احتمالاتی تعریف کنید:
+
+الف) فضای نمونه
+
+ب) پیشامد (واقعه)
+
+پ) پیشامد (واقعه‌ی) ساده
+
+\Q
+
+آیا فضای نمونه در یک مسئله‌ی احتمالاتی، تنها مجموعه با احتمال یک است؟ پاسخ را برای هر دو حالتی که فضای نمونه متناهی یا نامتناهی باشد شرح دهید و در صورت لزوم، مثال بزنید.
+
+\Q
+
+اگر $A$ فضای نمونه‌ی آزمایش پرتاب سکه با رخدادهای پشت و رو و $B$ فضای نمونه‌ی پرتاب تاس با اعداد طبیعی 1 تا 6 باشد:
+
+الف) حاصلضرب دکارتی $A$ و $B$ (
+$A\times B$
+)
+را به دست آورید. این مجموعه، فضای نمونه‌ی چه آزمایشی است؟
+
+ب) دو زیر مجموعه‌ی 3 عضوی از مجموعه‌ی 
+$
+A\times B
+$
+برگزینید که با یکدیگر ناسازگار باشند. آیا می‌توانید همین کار را برای زیرمجموعه‌های 7 عضوی تکرار کنید؟ چرا؟
+
+\Q
+
+با بهره گیری از جبر مجموعه ها و اصول کولموگروف احتمال، نشان دهید اگر $A$، $B$ و $C$ سه مجموعه‌ باشند به طوری که 
+$
+P(B\cap C)=0
+$
+، در این صورت
+$$
+P\left\{
+A\cap(B\cup C)
+\right\}
+=
+P\left\{
+A\cap B
+\right\}
++
+P\left\{
+A\cap C
+\right\}
+$$
+
+
+
+
+
+
+
+\end{document}

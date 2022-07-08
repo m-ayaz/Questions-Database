@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry}
+\usepackage{xepersian}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\[\begin{split}
+#1
+\end{split}\]
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+\settextfont{IranNastaliq}
+
+به نام زیبایی
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+کوئیز 1 درس احتمال مهندسی
+
+\end{center}
+\hrulefill
+\large
+
+\Q
+
+نشان دهید احتمال هر مجموعه، کمتر از یا مساوی 1 است.
+
+پاسخ:
+
+از اصل سوم احتمال، برای هر دو مجموعه‌ی ناسازگار 
+$
+A
+$
+و
+$
+B
+$
+داریم
+$$
+P(A\cup B)=P(A)+P(B).
+$$
+از آنجا که 
+$
+A
+$
+و
+$
+A'
+$
+طبق تعریف ناسازگارند، بنابراین
+$$
+P(A\cup A')=P(A)+P(A').
+$$
+از طرفی طبق تعریف،
+$$
+A\cup A'=S
+$$
+که $S$ فضای نمونه است. در نتیجه
+$$
+P(A)+P(A')=1.
+$$
+بر اساس اصل اول احتمال، احتمال هر مجموعه مقداری نامنفی است؛ در نتیجه
+$$
+P(A)=1-P(A')\le 1
+$$
+و اثبات کامل است
+$
+\blacksquare
+$
+
+\end{document}

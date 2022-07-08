@@ -1,0 +1,102 @@
+\documentclass[50pt]{article}
+\RequirePackage{pdfpages}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\renewcommand{\baselinestretch}{1.4}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage{color}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\RequirePackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\RequirePackage{xepersian}
+\RequirePackage{MnSymbol}
+\RequirePackage{graphicx}
+\newcommand{\wid}{1.8in}
+\newtheorem{theorem}{Theorem}
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\newenvironment{amatrix}[1]{%
+\left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+\end{array}\right]
+}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+
+\begin{document}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+
+
+
+\setLTR 
+
+
+
+
+\begin{RTL}
+\Large{
+
+
+
+
+
+
+
+
+\begin{center}
+به نام خدا
+
+
+\end{center}
+\hl
+پاسخ عبارتست از:
+$$
+Y(s)=X(s)\cdot\sum_{n=-\infty}^{\infty} e^{-nTs}
+$$
+
+\hl
+\color{red}{نکته: برخی از دوستان اشاره کرده بودند که تبدیل لاپلاس $Y(s)$ با رابطه‌ی فوق وجود نداره و همگرا نمیشه. اگر کسی این نکته رو هم متذکر شد، نمره‌ی کامل رو بهش بدید. با سپاس}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+\end{RTL}
+
+
+
+\end{document}
+
+

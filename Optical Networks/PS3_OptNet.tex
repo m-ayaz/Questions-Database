@@ -1,0 +1,284 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 3rd problem set of Optical Networks course
+\hl
+\end{center}
+\Q
+
+\begin{enumerate}[label=\alph*.]
+\item
+Determine the numerical aperture (NA) for a fiber with a core refractive index of $1.500$ and a cladding refractive index of $1.495$.
+\item
+How long can a pulse with bit rate equal to 10 Mbit/s propagate through this fiber without suffering modal dispersion?
+\end{enumerate}
+%\theQuestionNumber
+%\stepcounter{QuestionNumber}
+%\theQuestionNumber
+%\Q
+%
+%A fiber optical communication system employs a 1.3$\mu$m 1$n$GaAsP semiconductor as the transmitter. To minimize dispersion, a single-mode fiber is used.
+%\begin{enumerate}[label=\alph*.]
+%\item
+%Determine the largest possible core diameter for the fiber with a core refractive index of $1.500$ and a cladding refractive index of $1.495$.
+%\item
+%How many modes can propagate in the fiber if the transmitter is replaced with an AlGaAs semiconductor laser with an emission wavelength of 0.85 $\mu $m or a HeNe-laser with an emission wavelength of 0.63 $\mu$m?
+%\end{enumerate}
+%For waveguide dispersion, make the (realistic) assumption that the material dispersion can be neglected ($d n\over d\omega$=0).
+%\nl
+%\Q
+%
+%A $1$ km long polarization-maintaining single-mode fiber exhibits a birefringence of $\Delta n =6\times 10^{-4}$. Calculate the differential group delay (DGD) for this fiber at $1.55\mu m$ assuming that the average mode index $\bar n = 1.45$ and ${d\bar n\over d\lambda}=-0.01 \mu m^{-1}$ at this wavelength.
+%\nl
+\Q
+
+A single mode fiber is measured to have 
+$
+\lambda^2 {d^2 n\over d\lambda^2}=0.02
+$
+ at $0.8 \mu m$. Calculate the dispersion $\beta_2$ and $D$.
+\nl
+%\nl
+\Q
+
+Consider the following form of NLSE
+\footnote{
+Non-Linear Shr\o dinger equation
+}
+ with $\gamma=0$:
+$$
+{\partial A\over \partial z}+{\alpha\over 2}A+j{\beta_2\over 2}\cdot{\partial^2 A\over \partial t^2}=0
+$$
+
+\begin{enumerate}[label=\alph*.]
+\item
+Show that the general solution in frequency domain to this differential equation is
+$$
+A(z,\omega)=A(0,\omega)\exp\left(\left[-{\alpha\over 2}+j{\beta_2\over 2}\omega^2\right]z\right)
+$$
+(Hint: consider the frequency domain of the NLSE)
+\item
+Assume a chirped Gaussian input signal as 
+$$
+A(0,t)=A_0\exp\left[-{1\over 2}(1+jC)\left({t\over T_0}\right)^2\right]
+$$
+Find $1\over e$-intensity spectral half width $\Delta \omega_0$ ($\Delta \omega_0$ should be measured where the intensity of the frequency domain $A(0,\omega)$ reaches $1\over e$ of its maximum, hence first try to find the Fourier transform of $A(0,t)$).
+\end{enumerate}
+%\nl
+\Q
+
+Considering the previous question where $\gamma=0$ is assumed and the fiber length is $L$.
+\begin{enumerate}[label=\alph*.]
+\item
+Find the output of the optical fiber when the input is the chirped Gaussian signal given in part b of question 3 by using the general solution of part a. Show that the output is also Gaussian.
+
+\item
+Find $1\over e$-intensity spectral half width $\Delta \omega_0$ for the output Gaussian signal.
+%
+%\item
+%How much is the broadening ratio? (Divide the $1\over e$-intensity spectral half width of output to that to input). Find the optimum $T_{0,\text{opt}}$ for minimum broadening ratio.
+\end{enumerate}
+\Q
+
+Show that a chirped Gaussian pulse is initially compressed inside a single-mode fiber when $\beta_2 C<0$. Derive expressions for the minimum width and the fiber length at which the minimum occurs.
+\nl
+\Q
+
+A $1.55\mu m$ unchirped Gaussian pulse of $50ps$ width (FWHM) is launched into a single-mode fiber. Calculate the FWHM after $50km$ if the fiber has a dispersion of $D=16 ps/(km\cdot nm)$.
+\nl
+\Q
+
+A $0.88\mu m$ communications system transmits data over a $10km$ single-mode fiber by using $10ns$ (FWHM) Gaussian pulses. Determine the maximum bit rate if the light-emitting diode (LED) has a spectral FWHM of $30nm$ with Gaussian pulse shape. Use $D=-80 ps/(km\cdot nm)$.
+
+(The maximum bit rate can be obtained from:
+$$
+BL|D|\sigma_\lambda\le{1\over 4}
+$$
+where $L$ is the fiber length, $\sigma_\lambda$ is the LED spectral FWHM and $D$ is the dispersion parameter.)
+\nl
+\Q
+
+We have two transmitters and two types of fiber:
+
+\begin{itemize}
+\item
+Transmitter 1 : $\lambda=1.55\mu m$, Gaussian spectral shape, spectral width (RMS) $0.67 nm$, no chirp.
+
+\item
+Transmitter 2 : $\lambda=1.55\mu m$, negligible spectral width, no chirp.
+
+\item
+Fiber 1: $\alpha=0.21 \text{dB}/\text{km}$, $D=25 ps/(nm\cdot km)$
+
+\item
+Fiber 2: $\alpha=0.23 \text{dB}/\text{km}$, $D=0 ps/(nm\cdot km)$, $S=0.06 ps/(nm^2\cdot km)$
+\end{itemize}
+We are transmitting Gaussian pulses, $T_0=80 ps$, at a bit rate of $750$ Mbit/s.
+\begin{enumerate}[label=\alph*.]
+\item
+Calculate the dispersion-limited transmission length for all combination of fibers and transmitters.
+\item
+If the signal is allowed to drop $20\text{dB}$ before it is amplified, calculate the attenuation-limited transmission length.
+\item
+Which combination (of the 4 possible combinations) gives the maximum transmission length, without amplifiers (considering both attenuation and dispersion)?
+\end{enumerate}
+(Hint:
+ The dispersion parameter $D$ and dispersion slope $S$ are related to $\beta_2$ and $\beta_3$ as
+$$
+D=-\left({2\pi c\over \lambda^2}\right)\beta_2
+$$
+$$
+S=\left({2\pi c\over \lambda^2}\right)^2\beta_3+\left({4\pi c\over \lambda^3}\right)\beta_2
+$$
+and the bit rate-transmission length product limited inequalities for calculating dispersion-limited transmission length are
+$$
+BL|D|\sigma_\lambda\le{1\over 4}\quad,\quad D\ne 0
+$$
+$$
+BL|S|\sigma_\lambda^2\le{1\over \sqrt8}\quad,\quad D= 0
+$$
+for large spectral widths (of order $\sim nm$) and 
+$$
+B\sqrt{|\beta_2| L}\le{1\over 4}
+$$
+$$
+B\cdot(|\beta_3| L)^{1\over 3}\le{0.324}
+$$
+for negligible spectral widths. Clearly, if a system bears both attenuation and dispersion, the limited transmission length is the minimum of dispersion-limited transmission length and attenuation-limited transmission length.)
+\nl
+\Q
+
+Assume that we use a fiber with $D=25 ps/(nm\cdot km)$, length $L$ and  attenuation $\alpha_\text{DCF}=0.21$ dB/km for transmission. To compensate dispersion at receiver, we make use of a DCF
+\footnote{
+Dispersion-Compensating Fiber
+}
+ with dispersion parameter $D_\text{DCF}=16 ps/(nm\cdot km)$, attenuation $\alpha_\text{DCF}=0.21$ dB/km and length $L_\text{DCF}$ which is employed after fiber 1. The DCF compensates the dispersion completely, hence 
+$$
+D\cdot L+D_\text{DCF}\cdot L_\text{DCF}=0
+$$
+Once again, the signal is allowed to drop $20\text{dB}$ before it is amplified.
+\begin{enumerate}[label=\alph*.]
+\item
+Calculate the attenuation-limited transmission length, without amplifiers (this question can be solved in a similar manner to part c of the previous question. Note that the total length over which the signal is attenuated is $L_\text{tot}=L_\text{DCF}+L_\text{Fiber}$).
+\item
+Given the fiber lengths in part a, assume that we also use an EDFA
+\footnote{
+Erbium-Doped Fiber Amplifier
+}
+with noise factor 5.5 dB to fully compensate the total fiber attenuation. How much is the ASE
+\footnote{
+Amplified Spontaneous Emission
+}
+ noise power added to the signal by the EDFA?
+\nl
+\Q
+
+A $1.3 \mu m$ lightwave system uses a 50-km fiber link and requires at least $0.3 \mu W$
+at the receiver. The fiber loss is 0.5 dB/km. Fiber is spliced every 5 km and has
+two connectors of 1-dB loss at both ends. Splice loss is only 0.2 dB. Determine
+the minimum power that must be launched into the fiber.
+
+(Hint: splices and connectors only impose attenuation to the signal power and have no other impairments, so they can be treated in a similar manner to amplifiers without noise.)
+\end{enumerate}
+%%\nl
+%\Q
+%
+%\begin{enumerate}[label=\alph*.]
+%\item
+%Show that when $N$ pairwise distinct signal channels propagate through an optical fiber, the number of generated FWM frequencies follows the relation $$M={N^2(N-1)\over 2}$$
+%(Hint: Consider a triplet of frequencies $f_i,f_j,f_k$. Enumerate the FWM frequencies once for $i\ne k$, $j\ne k$ and $i\ne j$ and once again for $i=j\ne k$)
+%\item
+%Provide all the possible FWM frequencies given 
+%$\lambda_1=1551.72 nm$, $\lambda_2=1552.52 nm$ and $\lambda_3=1553.32 nm$ launched into an optical fiber.
+%\end{enumerate}
+%\Q
+%
+%Consider the following form of Manakov's equation with $\gamma=0$:
+%$$
+%{\partial A\over \partial z}+{\alpha\over 2}A-j\gamma P\cdot A=0
+%$$
+%where $A=\begin{bmatrix}A_x\\A_y\end{bmatrix}$ and $P=|A_x|^2+|A_y|^2$. 
+%
+%This equation can be splitted to two scalar equations:
+%$$
+%{\partial A_x\over \partial z}+{\alpha\over 2}A_x-j\gamma P\cdot A_x=0
+%$$
+%$$
+%{\partial A_y\over \partial z}+{\alpha\over 2}A_y-j\gamma P\cdot A_y=0
+%$$
+%\begin{enumerate}[label=\alph*.]
+%\item
+%Show that the total power $P$, follows from a 1st-order differential equation as
+%$$
+%{\partial P\over \partial z}=-\alpha P
+%$$
+%which has the following general solution:
+%$$
+%P=P(z,t)=P(0,t)e^{-\alpha z}
+%$$
+%(Hint: for this part, proceed  by multiplying the two scalar differential equations in $E_x$ and $E_y$, respectively. Consider the two resulted differential equations with their conjugates)
+%\item
+%By substituting the general solution of part a. in the Manakov's equation, the differential equation can be re-written as
+%$$
+%{\partial A\over \partial z}+{\alpha\over 2}A-j\gamma P(0,t)e^{-\alpha z} A=0
+%$$
+%which is a 1st-order differential equation. Show that the general solution to this equation at the end of a fiber of length $L$ (thereby substituting $z=L$ in the general solution) is
+%$$
+%A(z,t)=A(0,t)\exp\left[-{\alpha\over 2}L+j\gamma P(0,t)L_{\text{eff}}\right]
+%$$
+%where $L_{\text{eff}}={1-e^{-\alpha L}\over \alpha}$. The quantity $\gamma P(0,t)L_{\text{eff}}$ stands for the non-linear phase shift.
+%\end{enumerate}
+%\Q
+%Calculate the non-linear phase shift expression derived in part b of the preceding problem for an input continuous signal $A(0,t)=\sqrt{P_0}\ \text{sech}\left({t\over T_0}\right)$ after it has propagated through a $25$ km-long fiber. Assume $\alpha=0.2$ dB/km, $\gamma=2 \  W^{-1}/km)$ and 5 ps pulses (FWHM) with a $20$ mW peak power.
+%\nl
+%\Q
+%
+%\begin{enumerate}[label=\alph*.]
+%\item
+%Calculate the power launched into a 40-km-long single-mode fiber for which
+%the SPM-induced nonlinear phase shift becomes 180°. Assume $\lambda=1.55\mu m$,
+%$A_\text{eff} = 40 \mu m^2$, $\alpha = 0.2$ dB/km, and $\bar n_2 = 2.6 \times 10^{-20} m^2/W$.
+%\item
+%A 1.55-$\mu m$ continuous-wave signal with 6-dBm power is launched into a fiber with 50-$\mu m^2$ effective mode area ($A_\text{eff}$). After what fiber length would the nonlinear phase shift induced by SPM become $2\pi$? Assume $\bar n_2= 2.6 \times 10^{-20} m^2/W$ and neglect fiber losses.
+%\end{enumerate}
+%
+%(The nonlinear phase shift induced by SPM ($\phi_\text{NL}$) can be obtained from
+%$$
+%\phi_\text{NL}=\gamma P_\text{in}L_\text{eff}
+%$$
+%where
+%$$
+%\gamma={2\pi \bar n_2\over A_\text{eff}\cdot \lambda}
+%$$
+%)
+\end{document}

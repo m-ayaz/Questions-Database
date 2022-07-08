@@ -1,0 +1,123 @@
+\documentclass[50pt]{article}
+\RequirePackage{pdfpages}
+\renewcommand{\baselinestretch}{1.4}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage{color}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\RequirePackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\RequirePackage{xepersian}
+\RequirePackage{MnSymbol}
+\RequirePackage{graphicx}
+\newcommand{\wid}{1.8in}
+\newtheorem{theorem}{Theorem}
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\newenvironment{amatrix}[1]{%
+\left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+\end{array}\right]
+}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+
+\begin{document}
+\setLTR 
+
+
+
+
+\begin{RTL}
+\Large{
+
+
+
+
+
+
+
+
+\begin{center}
+به نام خدا
+
+پاسخ سوالات 1 و 2 تمرینات سری ششم درس سیگنالها و سیستمها
+
+دکتر لطف الله بیگی
+\end{center}
+
+\hl
+\textbf{(1) به کمک تساوی پارسوال، مقدار انتگرال 
+$\int_{-\infty}^{\infty}{\sin^2\pi x\over x^2}dx$
+ را  به دست آورید.}
+
+پاسخ) برای حل این سوال از رابطه‌ی زیر موسوم به اتحاد پارسوال استفاده می کنیم:
+$$
+\int_{-\infty}^{\infty}|x(t)|^2 dt={1\over 2\pi}\int_{-\infty}^{\infty}|X(j\omega)|^2 d\omega
+$$
+فرض کنیم 
+$x(t)={\sin \pi t\over \pi t}$. 
+می دانیم
+$$
+\Pi(t)\overset{F}{\iff}{\sin {\omega\over 2}\over {\omega\over 2}}
+$$
+در اینصورت
+$$
+{\sin {t\over 2}\over {t\over 2}}\overset{F}{\iff}2\pi\Pi(-\omega)=2\pi\Pi(\omega)
+$$
+به کمک خاصیت مقیاس در حوزه زمان تبدیل فوریه، می توان نوشت:
+$$
+{\sin {\pi t}\over {\pi t}}\overset{F}{\iff}\Pi({\omega\over 2\pi})
+$$
+اکنون با اعمال رابطه‌ی پارسوال می توان نوشت:
+\[
+\int_{-\infty}^{\infty}{\sin^2\pi x\over \pi^2x^2}dx={1\over 2\pi}\int_{-\infty}^{\infty}|\Pi({\omega\over 2\pi})|^2 d\omega={1\over 2\pi}\cdot 2\pi =1
+\]
+بنابراین:
+\[
+\int_{-\infty}^{\infty}{\sin^2\pi x\over x^2}dx=\pi^2
+\]
+
+
+
+
+
+
+\textbf{(2) به کمک رابطه ی دوگانی تبدیل فوریه و استفاده از کانولوشن فرکانسی، تبدیل فوریه ی سیگنال زیر را به دست آورید:
+}$$x(t)=e^{-t}\cdot{\sin \pi t\over \pi t}u(t)$$
+
+پاسخ) ابتدا $x(t)$ را به دو جزء $e^{-t}u(t)$ و ${\sin \pi t\over \pi t}$ می شکنیم؛ به عبارت دیگر:
+$$
+x(t)=e^{-t}\cdot{\sin \pi t\over \pi t}u(t)=e^{-t}u(t)\cdot {\sin \pi t\over \pi t}
+$$
+هم چنین:
+$$
+e^{-t}u(t)\overset{F}{\iff}{1\over 1+j\omega}
+$$
+$$
+{\sin \pi t\over \pi t}\overset{F}{\iff}\Pi({\omega\over 2\pi})
+$$
+در نتیجه:
+\[
+\begin{split}
+X(j\omega)&={1\over 2\pi}\cdot{1\over 1+j\omega}*\Pi({\omega\over 2\pi})
+\\&={1\over 2\pi}\int_{-\infty}^{\infty}{1\over 1+j(\omega-u)}\Pi({u\over 2\pi})du
+\\&={1\over 2\pi}\int_{-\pi}^{\pi}{1\over 1+j(\omega-u)}du
+\\&={j\over 2\pi}\ln({1+j\omega-ju})\Big|_{-\pi}^\pi
+\\&={j\over 2\pi}\ln\left({1+j(\omega-\pi)\over 1+j(\omega+\pi)}\right)
+\end{split}
+\]
+
+}
+
+
+
+
+
+\end{RTL}
+
+
+
+\end{document}
+
+

@@ -1,0 +1,95 @@
+\documentclass{article}
+
+
+
+\usepackage{amsmath,amssymb,graphicx,geometry,caption}
+\usepackage{xepersian}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+
+
+
+
+\begin{document}
+
+\large
+
+\begin{center}
+به نام او
+
+\hrulefill
+\end{center}
+
+سوال) سیگنال
+$
+x(t)=\alpha e^{-t}u(t)+\beta e^{t}u(-t)
+$،
+دارای تبدیل لاپلاس
+$
+X(s)=\frac{s}{s^2-1}
+$
+است. مقادیر
+$
+\alpha
+$
+و
+$
+\beta
+$
+و همچنین، ناحیه همگرایی تبدیل لاپلاس را بیابید.
+
+پاسخ) تبدیل لاپلاس سیگنال
+$
+e^{-t}u(t)
+$
+برابر
+$
+\frac{1}{s+1}
+$
+با ناحیه همگرایی
+$
+\Re\{s\}>-1
+$
+و تبدیل لاپلاس سیگنال
+$
+e^tu(-t)
+$
+برابر
+$
+-\frac{1}{s-1}
+$
+با ناحیه همگرایی
+$
+\Re\{s\}<1
+$
+است. بنابراین، سیگنال
+$
+x(t)=\alpha e^{-t}u(t)+\beta e^{t}u(-t)
+$
+دارای تبدیل لاپلاس 
+$
+\frac{\alpha}{s+1}-\frac{\beta}{s-1}
+$
+با ناحیه همگرایی
+$
+-1<\Re\{s\}<1
+$
+خواهد بود. از طرفی، این تبدیل لاپلاس باید برابر
+$
+\frac{s}{s^2-1}
+$
+باشد. پس:
+$$
+\frac{(\alpha-\beta) s-\alpha-\beta}{s^2-1}=\frac{s}{s^2-1}
+\iff
+\alpha=\frac{1}{2}
+\quad,\quad
+\beta=-\frac{1}{2}
+$$
+و ناحیه همگرایی تبدیل لاپلاس، برابر
+$
+-1<\Re\{s\}<1
+$
+خواهد بود.
+\end{document}

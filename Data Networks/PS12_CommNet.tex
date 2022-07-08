@@ -1,0 +1,122 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry,enumitem,graphicx}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\[\begin{split}
+#1
+\end{split}\]
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+
+In the name of beauty
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+12th Problem Set of Computer Networks
+
+\end{center}
+\hrulefill
+\Large
+
+\Q
+
+A block-cipher encryptor deploys encryption of long messages in 8-bits chunks. This encyption scheme, breaks any 8-bits chunk into two consecutive 4-bits-long strings and maps the strings according to the following randomly-generated mapping table:
+\begin{table}[h]
+\centering
+\Large
+\begin{tabular}{cc}
+plaintext&ciphertext\\\hline\hline
+0000&0011\\\hline
+0001&0100\\\hline
+0010&0001\\\hline
+0011&0010\\\hline
+0100&0111\\\hline
+0101&0101\\\hline
+0110&0110\\\hline
+0111&0000\\\hline
+\end{tabular}
+\begin{tabular}{cc}
+plaintext&ciphertext\\\hline\hline
+1000&1100\\\hline
+1001&1000\\\hline
+1010&1101\\\hline
+1011&1001\\\hline
+1100&1110\\\hline
+1101&1010\\\hline
+1110&1111\\\hline
+1111&1011\\\hline
+\end{tabular}
+\end{table}
+\begin{enumerate}[label=\alph*)]
+\item
+How likely is it for a nefarious intruder to break an arbitrarily-generated 8-bits ciphertext using a brute-force attack without any knowledge of the mapping table?
+\item
+How likely is it for a nefarious intruder to break an arbitrarily-generated 8-bits ciphertext using a brute-force attack having exposed exactly $k$ entries of the mapping table to him?
+\end{enumerate}
+
+\newpage
+
+\Q
+
+In the following encryption process, assume the circle blocks of + sign mean string concatenation. Also suppose that $K_A^+$, $K_A^-$, $K_B^+$, $K_B^-$ denote Alice's public and private key and Bob's public and private key. Also the Hash function block is denoted by $H(\cdot)$. Assume Alice generates a random key $S$ for using in both the Hash function and string concatenation (as indicated in the figure), before sending messages to Bob.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=110mm]{q6_1.pdf}
+\end{figure}
+\begin{enumerate}[label=\alph*)]
+\item
+Sketch the necessary block diagram of message decryption at receiver (Bob's side).
+\item
+Which of confidentiality, end-to-end authentication and message integrity have not been preserved?
+\item
+Make as minimal as possible changes in the sender's (Alice's) encryption block diagram to fulfil the options of part b that were not preserved.
+\end{enumerate}
+
+%\Q
+%
+%The following encryption process is implemented at sender:
+%
+%
+%\begin{enumerate}[label=\alph*)]
+%\item
+%Which one of confidentiality or message integrity (or both) is compromised in this structure? why?
+%\item
+%How can the problem of the structure be solved minimally?
+%\end{enumerate}
+%For guaranteeing message integrity between Alice and Bob, the following hash function is implemented at Alice side:
+%$$
+%H(\overline{a_0a_1a_2a_3a_4a_5})=
+%$$
+
+\newpage
+
+\Q
+
+Assume in a transmission system, that plaintexts can only be 8-digit numbers (each digit can be 0 to 9) and a mapping function maps these 8-digit plaintexts to 10-digits number $a_0a_1a_2\cdots a_9$ where $$a_i=\text{number of }i\text{s in the input}$$
+(e.g. 54756473 is mapped to 0001221200). If the 8-digit plain text is $33543612$, what is the probability that an intruder compromises the message having its mapping output?
+
+\Q
+
+Recall the discussion about RSA (page 684, Public Key Encryption). Assume Alice encrypts her message by a public key $(77,13)$ and Bob and Jake each use a private key of $(77,37)$ and $(77,97)$ for decryption, respectively. Show that if Alice encrypts the number $2$ and sends it on the channel, then both Bob and Jake can decrypt it uniquely by calculating the details of RSA.
+
+
+
+\end{document}

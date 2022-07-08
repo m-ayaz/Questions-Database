@@ -1,0 +1,576 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\wid}{40mm}
+%\newcommand
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+پاسخ تمرینات سری هفتم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+الف) 
+\qn{
+x(t)&=e^{\alpha t}\cos\omega_0 t u(t)
+\\&={1\over 2}(e^{(\alpha+j\omega_0) t}+e^{(\alpha-j\omega_0) t})u(t)
+}{}
+از طرفی
+\qn{
+\int_{-\infty}^\infty e^{(\alpha+j\omega) t} e^{-j\omega t}u(t)dt
+&=
+\int_{0}^\infty e^{(\alpha+j\omega_0-j\omega) t} dt
+\\&={1\over \alpha+j\omega_0-j\omega}e^{(\alpha+j\omega_0-j\omega) t}\Big|_0^\infty
+\\&={-1\over \alpha+j\omega_0-j\omega}
+}{}
+بنابراین، تبدیل فوریه برابر است با
+\qn{
+X(j\omega)={-{1\over 2}\over \alpha+j\omega_0-j\omega}
++{-{1\over 2}\over \alpha-j\omega_0-j\omega}
+}{}
+\nl
+ب) ضرب در $t$ در حوزه‌ی زمان، معادل با مشتق در حوزه‌ی فرکانس است؛ بنابراین کافی است از تبدیل فوریه ی بالا مشتق گرفته و در j ضرب کنیم. با این کار:
+\qn{
+X(j\omega)={{1\over 2}\over (\alpha+j\omega_0-j\omega)^2}
++{{1\over 2}\over (\alpha-j\omega_0-j\omega)^2}
+}{}
+\nl
+پ) 
+$
+\text{sinc}(t)
+$
+ دارای تبدیل فوریه ی 
+$
+\Pi({\omega\over 2\pi})
+$
+ و 
+$
+\text{sinc}(t)
+$
+ دارای تبدیل فوریه‌ی 
+$
+\Pi({\omega\over 2\pi})e^{-j\omega}
+$
+ است. از طرفی ضرب دو سیگنال در زمان، معادل با کانولوشن تبدیل های فوریه‌ی آنها در فرکانس است؛ بنابراین
+\qn{
+X(j\omega)&={1\over 2\pi}\Pi({\omega\over 2\pi})*\Pi({\omega\over 2\pi})e^{-j\omega}
+\\&={1\over 2\pi}\int_{-\infty}^\infty \Pi({\omega-u\over 2\pi})\Pi({u\over 2\pi})e^{-ju} du
+\\&={1\over 2\pi}\int_{-\pi}^\pi \Pi({\omega-u\over 2\pi})e^{-ju} du
+}{}
+تابع $\Pi({\omega-u\over 2\pi})$ در بازه ای که
+$
+\omega-\pi<u<\omega+\pi
+$
+ مقدار ثابت 1 دارد و در غیر این صورت برابر 0 است. به ازای 
+$
+0\le \omega\le \pi
+$
+
+\qn{
+X(j\omega)&={1\over 2\pi}\int_{-\pi}^\pi \Pi({\omega-u\over 2\pi})e^{-ju} du
+\\&={1\over 2\pi}\int_{\omega-\pi}^\pi e^{-ju} du
+\\&={j\over 2\pi} e^{-ju} \Big|_{\omega-\pi}^\pi
+\\&={j\over 2\pi}[e^{-j\omega}-1]
+}{}
+و به ازای 
+$
+-\pi\le \omega\le 0
+$
+
+\qn{
+X(j\omega)&={1\over 2\pi}\int_{-\pi}^\pi \Pi({\omega-u\over 2\pi})e^{-ju} du
+\\&={1\over 2\pi}\int_{-\pi}^{\omega+\pi} e^{-ju} du
+\\&={j\over 2\pi} e^{-ju} \Big|_{-\pi}^{\omega+\pi}
+\\&={j\over 2\pi}[1+e^{-j(\pi+\omega)}]
+\\&={j\over 2\pi}[1-e^{-j\omega}]
+}{}
+بنابراین
+\qn{
+X(j\omega)&=\begin{cases}
+{j\over 2\pi}[e^{-j\omega}-1]&,\quad 0\le\omega\le \pi
+\\
+{j\over 2\pi}[1-e^{-j\omega}]&,\quad -\pi\le\omega\le 0
+\end{cases}
+}{}
+ت) این سیگنال عبارت است از خروجی سیستمی با پاسخ ضربه‌ی 
+$
+e^{-|t|}
+$
+ و پاسخ فرکانسی
+$
+H(j\omega)={2\over 1+\omega^2}
+$
+ که ورودی متناوب
+$
+x(t)=\sum_{k=-\infty}^{\infty}\delta(t-2k)
+$
+ به آن اعمال شده است. ضرایب سری فوریه‌ی ورودی بسادگی برابر 
+$
+a_k={1\over 2}
+$
+است. پس از آنجا که خروجی نیز متناوب می شود، ضرایب سری فوریه‎ی آن عبارتست از (اثبات در سوال 8):
+$$
+b_k=a_kH(jk\omega_0)={1\over 2}H(jk\pi)={1\over 1+k^2\pi^2}
+$$
+در نتیجه تبدیل فوریه‌ی خروجی و در نتیجه سیگنال مورد نظر ما عبارتست از:
+$$
+Y(j\omega)=\sum_{k=-\infty}^{\infty}{2\pi\over 1+k^2\pi^2}\delta(\omega-k\pi)
+$$
+ث) سیگنال $x(t)$ فرد است؛ در نتیجه:
+\qn{
+X(j\omega)&=\int_{-\infty}^\infty x(t)e^{-j\omega t}dt
+\\&=\int_{-2}^2 x(t)e^{-j\omega t}dt
+\\&=\int_{-2}^2 x(t)[\cos\omega t-j\sin\omega t]dt
+\\&=-j\int_{-2}^2 x(t)\sin\omega tdt
+\\&=-2j\int_{0}^2 x(t)\sin\omega tdt
+\\&=-2j\int_{0}^1 x(t)\sin\omega tdt
+\\&-2j\int_{1}^2 x(t)\sin\omega tdt
+\\&=-2j\int_{0}^1 t\sin\omega tdt
+\\&-2j\int_{1}^2 \sin\omega tdt
+\\&=-2j{\sin\omega-\omega\cos2\omega\over\omega^2}
+}{}
+\Q
+
+الف)
+\qn{
+&\cos (4\omega+{\pi\over 3})={1\over 2}(e^{j4\omega+{j\pi\over 3}}+e^{-j4\omega-{j\pi\over 3}})\iff\\& {1\over 2}[e^{j{\pi\over 3}}\delta(t+4)
++e^{-j{\pi\over 3}}\delta(t-4)
+]
+}{}
+ب) 
+\qn{
+x(t)&={1\over \pi}(e^{jt}-e^{-jt})+{3\over 2\pi}(e^{j2\pi t}+e^{-j2\pi t})
+\\&={2j\over \pi}\sin t+{3\over \pi}\cos2\pi t
+}{}
+پ) می خواهیم عکس تبدیل فوریه‌ی 
+$
+6\text{sinc}({3\over \pi}(\omega-2\pi))
+$
+ را پیدا کنیم. برای حل این سوال، از مجموعه ای از خواص تبدیل فوریه استفاده می کنیم. از آنجا که
+$$
+\Pi(t)\iff \text{sinc}({\omega\over 2\pi})
+$$
+بنابراین
+\qn{
+&{1\over 6}\Pi({t\over 6})\iff\text{sinc}({3\omega\over \pi})
+\\&\Pi({t\over 6})\iff6\text{sinc}({3\omega\over \pi})
+\\&\Pi({t\over 6})e^{j2\pi t}\iff6\text{sinc}({3(\omega-2\pi)\over \pi})
+}{}
+پس سیگنال مورد نظر ما، 
+$
+\Pi({t\over 6})e^{j2\pi t}
+$
+ است.
+\nl
+ت) مشابه قسمت ث سوال پیش، $X(j\omega)$ فرد است؛ در نتیجه:
+\qn{
+x(t)&={1\over 2\pi}\int_{-\infty}^\infty X(j\omega)e^{j\omega t}d\omega
+\\&={1\over 2\pi}\int_{-3}^3 X(j\omega)e^{j\omega t}d\omega
+\\&={1\over 2\pi}\int_{-3}^3 X(j\omega)[\cos\omega t+j\sin\omega t]d\omega
+\\&={j\over 2\pi}\int_{-3}^3 X(j\omega)\sin\omega td\omega
+\\&={j\over \pi}\int_0^3 X(j\omega)\sin\omega td\omega
+\\&={j\over \pi}\int_1^2 X(j\omega)\sin\omega td\omega
+\\&+{j\over \pi}\int_2^3 X(j\omega)\sin\omega td\omega
+\\&={j\over \pi}\int_1^2 (\omega-1)\sin\omega td\omega
+\\&+{j\over \pi}\int_2^3 \sin\omega td\omega
+\\&={\sin 2t-\sin t -t\cos 3t\over t^2}
+}{}
+
+
+\Q
+
+الف) سیگنال $x(t)$، شیفت یافته‌ی یک سیگنال زوج به اندازه ی 1 واحد به راست است. از آنجا که تبدیل فوریه ی سیگنال حقیقی و زوج، خود حقیقی و زوج است، بنابراین دارای فاز صفر بوده و با شیفت 1 واحد به راست، تبدیل فوریه در عبارت 
+$
+e^{-j\omega}
+$
+ ضرب می شود که باعث می شود فاز خالص 
+$
+-\omega
+$
+ داشته باشیم.
+\nl
+ب)
+$$
+X(j0)=\int_{-\infty}^\infty x(t)dt=7
+$$
+پ)
+$$
+x(0)={1\over 2\pi} \int_{-\infty}^\infty X(j\omega)d\omega=2\implies
+\int_{-\infty}^\infty x(j\omega)d\omega=4\pi
+$$
+\nl
+ت) عکس تبدیل فوریه‌ی 
+$
+2{\sin\omega\over \omega}e^{2j\omega}
+$
+ برابر 
+$
+y(t)=\Pi\left({t\over 2}+1\right)
+$
+ است. طبق تساوی
+$$
+\int_{-\infty}^{\infty} x(t)y(-t)dt={1\over 2\pi}\int_{-\infty}^{\infty} X(j\omega)Y(j\omega)d\omega
+$$
+خواهیم داشت
+$$
+\int_{-\infty}^{\infty} X(j\omega)Y(j\omega)d\omega=7\pi
+$$
+ث) طبق اتحاد پارسوال:
+$$
+\int_{-\infty}^\infty |X(j\omega)|^2d\omega=
+2\pi\int_{-\infty}^\infty |x(t)|^2dt={76\pi\over 3}
+$$
+\nl
+ج)
+
+از آنجا که سیگنال حقیقی است، $
+\Re\{X(j\omega)\}
+$
+ برابر تبدیل فوریه ی قسمت زوج سیگنال است؛ یعنی
+$$
+\Re\{X(j\omega)\}\iff x_e(t)={x(t)+x(-t)\over 2}
+$$
+این سیگنال دارای شکل زیر است:
+\picnocapt{PSol7_Q3_f.eps}{120mm}
+\nl
+\Q
+
+پاسخ فرکانسی این سه سیستم برابر است با
+\qn{
+&H_1(j\omega)={1\over j\omega}+\pi\delta(\omega)
+\\&H_2(j\omega)=-2+{5\over 2+j\omega}
+\\&H_3(j\omega)={2\over (1+j\omega)^2}
+}{}
+از آنجا که سیستم LTI فرکانس جدیدی به سیستم اضافه نمی کند، پاسخ به یک سیگنال کسینوسی معادل با سیگنال کسینوسی ای با همان فرکانس است؛ پس با قرار دادن
+$
+\omega=1
+$
+ در تمام پاسخ فرکانسی ها بالا، به مقدار یکسان
+$$
+H_1(j1)=H_2(j1)=H_3(j1)=-j
+$$
+می رسیم که معادل با پاسخ 
+$
+\cos(t-{\pi\over 2})
+$
+است
+. 
+\nl
+ب) سیستمی با پاسخ فرکانسی
+$
+H(j\omega)=-j{a^2+1\over a^2+\omega^2}\omega
+$
+ نیز به ازای $a\ne 0$ دارای چنین خاصیتی است؛ زیرا:
+$$
+H(j1)=-j
+$$
+\Q
+
+برای این سیستم:
+$$
+[(j\omega)^2+6j\omega+8]Y(j\omega)=2X(j\omega)
+$$
+بنابراین
+$$
+H(j\omega)={Y(j\omega)\over X(j\omega)}={2\over (j\omega)^2+(j\omega)^2+8}
+={2\over (j\omega+2)(j\omega+4)}
+={1\over j\omega+2}-{1\over j\omega+4}
+$$
+که معادل با
+$$
+h(t)=(e^{-2t}-e^{-4t})u(t)
+$$
+%است (این سیستم ضد علی است). 
+
+ب) تبدیل فوریه‌ی ورودی عبارت است از:
+$$
+X(j\omega)=j{d\over d\omega}{1\over 2+j\omega}={1\over (2+j\omega)^2}
+$$
+بنابراین
+\qn{
+Y(j\omega)&=X(j\omega)H(j\omega)
+\\&={1\over (2+j\omega)^3}-{1\over (2+j\omega)^2(4+j\omega)}
+\\&={1\over (2+j\omega)^3}+{1/4\over 4+j\omega}
+-{1/4\over 2+j\omega}+{1/8\over (2+j\omega)^2}
+}{}
+و در نتیجه
+\qn{
+y(t)=\left[{1\over 2}t^2e^{-2t}-{1\over 4}e^{-2t}+
+{1\over 8}te^{-2t}+{1\over 4}e^{-4t}
+\right]u(t)
+}{}
+\Q
+
+بسادگی دیده می شود:
+$$
+|H(j\omega)|={\sqrt{a^2+\omega^2}\over \sqrt{a^2+\omega^2}}=1
+$$
+و
+$$
+\angle H(j\omega)=\tan^{-1}-{\omega\over a}-\tan^{-1}{\omega\over a}=-2\tan^{-1}{\omega\over a}
+$$
+\begin{figure}[h!]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=80mm]{PSol7_Q6_2.eps}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=80mm]{PSol7_Q6_1.eps}
+\end{subfigure}
+\end{figure}
+
+به ازای 
+$
+\omega={1\over \sqrt 3}
+$
+،
+$
+\omega=1
+$
+ و 
+$
+\omega=\sqrt 3
+$
+، فاز این سیستم برابر خواهد بود با
+$
+-{\pi\over 3}
+$
+،
+$
+-{\pi\over 2}
+$
+ و 
+$
+-{2\pi\over 3}
+$
+. در نتیجه
+$$
+y(t)=\cos({t\over \sqrt 3}-{\pi\over 3})+\cos(t-{\pi\over 2})
++\cos({t\sqrt 3}-{2\pi\over 3})
+$$
+شکل ورودی و خروجی به صورت زیر است:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=100mm]{PSol7_Q6_4.eps}
+\end{figure}
+%\newpage
+\nl
+\Q
+ الف)
+$$
+z_1(t)=x(t)\cos \omega_1 t\implies Z_1(j\omega)={X(j(\omega-\omega_1))+X(j(\omega+\omega_1))\over 2}
+$$
+\qn{
+&z_2(t)=2z_1(t)\cos \omega_1 t\implies
+\\&
+Z_2(j\omega)={Z_1(j(\omega-\omega_1))+Z_1(j(\omega+\omega_1))}
+\\&=X(j\omega)+{X(j(\omega-2\omega_1))+X(j(\omega+2\omega_1))\over 2}
+}{}
+$$
+Y(j\omega)=X(j\omega)
+$$
+\begin{figure}[h!]
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=50mm]{PSol7_Q7_3.eps}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=50mm]{PSol7_Q7_2.eps}
+\end{subfigure}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=50mm]{PSol7_Q7_1.eps}
+\end{subfigure}
+\end{figure}
+
+ب)
+\qn{
+Z_1(j\omega)&={1\over 2}[X_1(j(\omega-\omega_1))+X_1(j(\omega+\omega_1))]
+\\&+
+{1\over 2j}[X_2(j(\omega-\omega_1))-X_2(j(\omega+\omega_1))]
+}{}
+\qn{
+Z_2(j\omega)&=Z_1(j(\omega-\omega_1))+Z_1(j(\omega+\omega_1))
+\\&=
+{1\over 2}X_1(j(\omega-2\omega_1))+X_1(j\omega)+{1\over 2}X_1(j(\omega+2\omega_1))
+\\&+
+{1\over 2j}[X_2(j(\omega-2\omega_1))-X_2(j(\omega+2\omega_1))]
+}{}
+%%%%%%%%%
+\qn{
+Z_3(j\omega)&=-{1\over j}[Z_1(j(\omega-\omega_1))-Z_1(j(\omega+\omega_1))]
+\\&=
+-{1\over 2j}X_1(j(\omega-2\omega_1))-{1\over 2j}X_1(j(\omega+2\omega_1))
+\\&-
+{1\over 2}X_2(j(\omega-2\omega_1))-X_2(j\omega)-{1\over 2}X_2(j(\omega+2\omega_1))
+}{}
+بنابراین
+\qn{
+&Y_1(j\omega)=X_1(j\omega)
+\\&Y_2(j\omega)=X_2(j\omega)
+}{}
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_5.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_4.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_7.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_6.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_8.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_9.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_11.eps}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=80mm]{PSol7_Q7_10.eps}
+\end{subfigure}
+\end{figure}
+\Q
+
+الف) چون
+$$
+y(t)=x(t)*h(t)
+$$
+و 
+$$
+y(t+T)=x(t+T)*h(t)
+$$
+در نتیجه اگر دوره‌ی تناوب $x(t)$ برابر $T$ باشد، خواهیم داشت:
+$$
+x(t+T)=x(t)\implies y(t+T)=y(t)
+$$
+ب)
+\qn{
+y(t)&=x(t)*h(t)
+=\sum_{k=-\infty}^\infty a_ke^{jk\omega_0 t}*h(t)
+\\&\iff
+2\pi \sum_{k=-\infty}^\infty a_k\delta(\omega-k\omega_0)H(j\omega)
+\\&=
+2\pi \sum_{k=-\infty}^\infty a_kH(jk\omega_0)\delta(\omega-k\omega_0)
+}{}
+از آنجا که تبدیل فوریه ی $y(t)$ شامل ضربه هایی با اندازه‌ی $a_kH(jk\omega_0)$ است، پس ضرایب سری فوریه‌ی $y(t)$ برابر $a_kH(jk\omega_0)$ بوده و اثبات کامل است.
+\nl
+\Q
+
+الف)
+$$
+h(t)={1\over \pi t}
+$$
+ب)
+از آنجا که
+$$
+u(t)\iff {1\over j\omega}+\pi\delta(\omega)
+$$
+طبق دوگانی
+$$
+{1\over jt}+\pi\delta(t)\iff 2\pi u(-\omega)
+$$
+بنابراین
+$$
+{1\over jt}\iff 2\pi u(-\omega)-\pi
+$$
+$$
+{1\over \pi t}\iff 2j u(-\omega)-j
+$$
+که با شکستن آن روی مقادیر منفی و مثبت $\omega$ می توان به نتیجه دلخواه رسید.
+
+پ)
+$$
+\cos 3t\iff \pi[\delta(\omega-3)+\delta(\omega+3)]
+$$
+بنابراین تبدیل هیلبرت آن در حوزه‌ی فرکانس برابر است با
+$$
+\pi[-j\delta(\omega-3)+j\delta(\omega+3)]={\pi\over j}
+\pi[\delta(\omega-3)-\delta(\omega+3)]
+$$
+که معادل با سیگنال $\sin 3t$ است.
+\nl
+ت)
+$$
+h(t)*h(t)\iff H(j\omega)\times H(j\omega)=H^2(j\omega)=-1
+$$
+\Q
+
+تعریف کنید 
+$
+z(t)=x(t)y^*(t)
+$
+. در این صورت طبق خاصیت ضرب دو سیگنال در حوزه‌ی زمان
+$$
+x(t)y^*(t)\iff {1\over 2\pi}X(j\omega)*Y^*(-j\omega)
+$$
+از آنجا که
+$$
+Z(j0)=\int_{-\infty}^\infty z(t)dt
+$$
+در نتیجه
+\qn{
+\int_{-\infty}^\infty z(t)dt
+&=
+\int_{-\infty}^\infty x(t)y^*(t)dt
+\\&=
+{1\over 2\pi}\int_{-\infty}^\infty X(ju)Y^*(j[u-\omega])du\Bigg|_{\omega=0}
+\\&=
+{1\over 2\pi}\int_{-\infty}^\infty X(ju)Y^*(ju)du
+\\&=0
+}{}
+در نتیجه 
+$
+\int_{-\infty}^\infty X(ju)Y^*(ju)du=0
+$
+ و اثبات کامل است.
+\nl
+\Q
+
+الف) به ازای $a>0$
+\qn{
+X(j\omega)&=\int_{-\infty}^\infty e^{-at}e^{-j\omega t}u(t)dt
+\\&=\int_{0}^\infty e^{-at}e^{-j\omega t}dt
+\\&={1\over a+j\omega}
+}{}
+ب) با $n$ بار ضرب کردن سیگنال حوزه‌ی زمان فوق در $t$ خواهیم داشت:
+$$
+t^ne^{-at}u(t)\iff j^n {d^n\over d\omega^n}{1\over a+j\omega}
+={j^n\times j^n \times (-1)^n (n-1)!\over (a+j\omega)^n}
+={(n-1)!\over (a+j\omega)^n}
+$$
+در نتیجه طبق دوگانی
+$$
+(n-1)!{1\over (a+jt)^n}\iff 2\pi (-\omega)^n e^{a\omega} u(-\omega)
+$$
+ و خواهیم داشت
+$$
+{1\over (a+jt)^n}\iff {2\pi(-1)^n\over (n-1)!} \omega^n e^{a\omega} u(-\omega)
+$$
+\end{document}

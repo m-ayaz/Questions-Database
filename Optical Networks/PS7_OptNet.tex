@@ -1,0 +1,146 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem,caption}
+\usepackage{listings}
+\lstset{language=Python}
+%\lstset{frame=lines}
+%\lstset{caption={Insert code directly in your document}}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\Span}{\text{Span}}
+\newcommand{\NF}{\text{NF}}
+\newcommand{\EDFA}{\text{EDFA}}
+\newcommand{\ASE}{\text{ASE}}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\temp}{{\color{red}{temp}}}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\large
+\begin{center}
+In the name of beauty
+
+The 7th problem set of Optical Networks course
+\hl
+\end{center}
+
+\Q
+
+\begin{enumerate}[label=\alph*-]
+\item
+What are fiber birefringence and beat length?
+\item
+Explain the two concepts RMSA (routing, modulation level and spectrum assignment) and PLI-aware (physical-layer-impairment-aware) and their relations.
+\item
+Due to advances in signal processing, accumulated dispersion along transmission is now compensated totally at receiver, rather than frequent compensation in links. Why is the approach of dispersion compensation at receiver desired for non-linear mitigation of optical fiber? (Investigate how do dispersion and non-linear effects of optical fiber respond to signal power.)
+\end{enumerate}
+
+\Q
+
+\begin{enumerate}[label=\alph*-]
+\item
+In an optical system, all the links comprise spans of unity net gain, that is, amplifiers are set to full span attenuation compensation. In can then be implied that the signal power of a connection is equal at the input of the links. Each link can then be modelled as a communication channel with AWGN, such that the input $x(t)$ and the output $y(t)$ have the following relation
+$$
+y(t)=x(t)+n(t),
+$$
+where $n(t)$ is the additive noise process added to signal. Prove that the SNR of a connection undergoing $N_l$ links can be given by
+$$
+\frac{1}{\text{SNR}_\text{total}}=\sum_{i=1}^{N_l}
+\frac{1}{\text{SNR}_i},
+$$
+where $\text{SNR}_\text{total}$ and $\text{SNR}_i$ are the signal-to-noise ratios at receiver and at the end of the $i$-th link, respectively.
+\item
+A typical optical link is modelled as a media with unity gain and AWGN, similar to part a. An optical signal with power $P$ has been injected into this link and the AWGN has the following variance $$\sigma^2=\sigma^2_\text{ASE}+\eta_\text{NLI}P^3,$$ where $\sigma^2_\text{ASE}$ and $\eta_\text{NLI}$ are constant. Find the optimum power $P_\text{opt}$ at which SNR is maximized.
+\end{enumerate}
+
+\Q (Linear solution of Manakov equation)
+
+Wave propagation in an optical fiber can be modelled through the Manakov equation which is
+$$
+\frac{\partial A}{\partial z}
+=
+-\alpha A(z,t)
++
+j\frac{\beta_2}{2}\frac{\partial^2 A(z,t)}{\partial t^2}
+-
+j\frac{8}{9}\gamma |A(z,t)|^2A(z,t),
+$$
+where $A(z,t)=(A_x(z,t),A_y(z,t))$ is the dual-polarized electrical field inside the fiber and $|A|^2=|A_x(z,t)|^2+|A_y(z,t)|^2$.
+\begin{enumerate}[label=\alph*-]
+\item
+Find the frequency-domain equivalent of Manakov equation.
+
+(Hint: for writing the frequency-domain of $|A(z,t)|^2A(z,t)$, express it as $(A_x(z,t)A_x^*(z,t)+A_y(z,t)A_y^*(z,t))A(z,t)$. All your calculations must be performed polarization-wise, so, do not treat the terms $A(z,t)$ and $A(z,f)$ as scalars. Rather, split them into $A_x(z,t)$, $A_y(z,t)$, $A_x(z,f)$ and $A_y(z,f)$.)
+\item
+It can be assumed, in a variety of scenarios, that optical fibers work in pseudo-linear regime. In such a situation, the frequency-domain electrical field $A(z,f)$ can be written as 
+$$
+A(z,f)=A_\text{LIN}(z,f)+A_\text{NLI}(z,f)
+,
+$$
+where $A_\text{LIN}(z,f)$ is the solution to Manakov equation when $\gamma=0$. With $A_x(0,f)=A_\text{LIN}(0,f)=\sum_i c_{x,i}\delta(f-f_i)$ and $A_y(0,f)=A_\text{LIN}(0,f)=\sum_i c_{y,i}\delta(f-f_i)$, solve for $A_\text{LIN}(z,f)$ and show that it could be written as
+$$
+A_\text{LIN}(z,f)=\sum_i d_i(z)\delta(f-f_i)
+,
+$$
+where $d_i(z)=(d_{x,i}(z),d_{y,i}(z))$ is the dual-polarized coefficient of single frequency $f_i$.
+\end{enumerate}
+
+\Q (Non-linear solution of Manakov equation; perturbation approach)
+
+Based on perturbation approach, the electrical field in the non-linear part of Manakov equation can be substituted with \textbf{linear} electrical field, i.e.
+$$
+j\frac{8}{9}\gamma |A(z,t)|^2A(z,t)
+\approx
+j\frac{8}{9}\gamma |A_\text{LIN}(z,t)|^2A_\text{LIN}(z,t)
+$$
+\begin{enumerate}[label=\alph*-]
+\item
+By substituting $A_\text{LIN}(z,f)=\sum_i d_i(z)\delta(f-f_i)$, find the frequency-domain of the non-linear part of Manakov equation
+$
+\text{Frequency domain of }j\frac{8}{9}\gamma |A_\text{LIN}(z,t)|^2A_\text{LIN}(z,t)
+.
+$
+\item
+Using the result of part a-, prove that the non-linear electrical field $A_\text{NLI}(z,f)$ can be expressed as
+$$
+A_\text{NLI}(z,f)=\sum_{i,j,k} h_{i,j,k}(z)\delta(f-f_i+f_j-f_k)
+,
+$$
+where
+$h_{i,j,k}(z)=(h_{x,i,j,k}(z),h_{y,i,j,k}(z))$ is the dual-polarized coefficient of a frequency component $f_i-f_j+f_k$.
+%where
+%$$
+%h_{i,j,k}(z) 
+%.
+%$$
+It follows from this equation that the original frequency components $f_i$, lead to residual and interfered frequencies $f_i-f_j+f_k$. What phenomena is this called?
+
+(The details of $h_{i,j,k}(z)$ are not requested and are of least importance.)
+\end{enumerate}
+
+\end{document}

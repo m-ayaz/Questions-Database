@@ -1,0 +1,128 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry,enumitem}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\[\begin{split}
+#1
+\end{split}\]
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+
+In the name of beauty
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+9th Problem Set Solution of Computer Networks
+
+\end{center}
+\hrulefill
+\large
+
+\Q
+
+\begin{enumerate}[label=\alph*)]
+\item
+No. Routers require processing layers 1 and 2 in order to decapsulate the received data into its constituent layer-3 components.
+\item
+Yes. Determining the correct and efficient mapping at routers and switches for successful routing is a due obligation of control plane.
+\item
+No. However, fixing up this statement can be performed in an efficient way through substituting phrases ``MAC address'' and ``IP address''!
+\item
+Yes. A forwarding table is the memory part of routers for such a mapping.
+\item
+Forwarding refers to the concept of redirecting a packet from a router interface to another. In contrast, routing refers to the process of redirecting a packet among routers as a whole.
+\end{enumerate}
+
+\Q
+
+A possible mask assignment is 142.116.242.0/25 for subnet B and 142.116.242.128/26 for subnet A.
+
+\begin{enumerate}[label=\alph*)]
+\item
+Subnets are local, and so are their masks. However, the IP addresses must be public to be accessible from the both sides of the router. If private IP addresses were to be used, a NAT-like technique should have been deployed.
+\item
+The address spaces of subnets A and B can provide 62 and 126 total clients on demand (excluding the broadcast and mask IP addresses).
+\item
+142.116.242.128/26
+\item
+142.116.242.191
+\item
+142.116.242.128
+\item
+142.116.242.191
+\item
+142.116.242.0/25
+\item
+142.116.242.127
+\item
+142.116.242.0
+\item
+142.116.242.127
+\end{enumerate}
+
+\Q
+
+\begin{enumerate}[label=\alph*)]
+\item
+Interface 5
+\item
+Interface 2
+\item
+Interface 2
+\end{enumerate}
+
+\Q
+
+
+
+\Q
+
+$<$ 404 Not Found $>$
+
+\Q
+
+\begin{enumerate}[label=\alph*)]
+\item
+Even though the proposed IP addresses are declared in the discovery and offer steps prior to the request step, there is still a chance of having multiple requesting clients, as well as multiple DHCP servers. Hence, an IP address proposed by a specific DHCP server has to guarantee to be accepted by a specific user. Same is true when a client chooses the proposed IP address and pings an ACK back to the DHCP servers.
+\item
+
+\end{enumerate}
+
+\Q
+
+The reason 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

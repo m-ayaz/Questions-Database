@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,graphicx,geometry,enumitem,caption,subcaption}
+\usepackage{xepersian}
+
+\newcounter{qnumber}
+\setcounter{qnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \theqnumber)}
+\stepcounter{qnumber}
+}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\settextfont{XB Niloofar}
+
+\begin{document}
+
+\begin{center}
+\large
+
+به نام او
+
+آزمون پایان ترم سیگنال ها و سیستم ها
+\end{center}
+
+\hrulefill
+
+\large
+
+
+یک سیستم گسسته، حقیقی و پایدار دارای خواص زیر است:
+\begin{itemize}
+\item
+تابع انتقال سیستم ($H(z)$) دارای 4 قطب است و صفر ندارد.
+\item
+پاسخ ضربه زوج است.
+\item
+یکی از قطب های تابع انتقال در 
+$
+z=\frac{1}{2}e^{j\frac{\pi}{4}}
+$
+قرار دارد.
+\end{itemize}
+
+پاسخ این سیستم به ورودی 
+$
+x[n]=2^nu[-n-1]
+$
+ را در حوزه زمان بیابید.
+
+\end{document}

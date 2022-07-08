@@ -1,0 +1,150 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+\usepackage{listings}
+\lstset{language=Python}
+%\lstset{frame=lines}
+%\lstset{caption={Insert code directly in your document}}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\Span}{\text{Span}}
+\newcommand{\NF}{\text{NF}}
+\newcommand{\EDFA}{\text{EDFA}}
+\newcommand{\ASE}{\text{ASE}}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\temp}{{\color{red}{temp}}}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\large
+\begin{center}
+In the name of beauty
+
+The 5th problem set of Optical Networks course
+\hl
+\end{center}
+\Q
+\label{Qu2}
+
+A transmitter uses a Root-Raised-Cosine pulse shaping filter with a symbol rate  of 30GBaud and a roll-off factor of 0.2:
+\pic{Tx_Side.pdf}{160mm}{Tx side of the communication system}
+\pic{OptFib.pdf}{100mm}{Model of an optical fiber}
+\pic{Rx_Side.pdf}{160mm}{Rx side of the communication system}
+\begin{enumerate}[label=\alph*-]
+\item
+Determine the RRC filter band width.
+\item
+How much, at least, should the sampling frequency be to avoid aliasing based on Nyquist's criterion?
+\item
+The transmitter side and receiver side of a communication system are given by figures \ref{Tx side of the communication system} and \ref{Rx side of the communication system}. Find the mathematical relation between signals $Y(t)$ and $S(t)$ assuming a direct connection between transmitter and receiver (where the transmitter is immediately followed by receiver; a scheme that is refer to as back-to-back connection), with no (ASE or NLI) noise and compensated dispersion.
+\item
+Why is the low pass filter important in the receiver side?
+\end{enumerate}
+(Hint: note the red-bolded signals $Y(t)$ and $S(t)$ in the figures. To proceed with the solution, you must consider both the real and imaginary parts of these two signals, hence it is recommended to consider the baseband equivalent instead, from the following baseband-midband conversion equations:
+$$
+\Re\{Z(t)e^{j\omega t}\}=I(t)\cos\omega t-Q(t)\sin\omega t
+$$
+where
+$$
+Z(t)=I(t)+jQ(t)
+$$
+)
+\nl
+\Q
+
+Consider the following 16-QAM constellation formats:
+\pic{Unshaped.eps}{110mm}{Unshaped 16-QAM modulation}
+\begin{enumerate}[label=\alph*-]
+\item
+Calculate the average power of the constellation assuming all the modulation symbols to be equiprobable.
+\item
+In this part, probabilistic shaping has been applied to the constellation as shown in figure \ref{Symbol shells in 16-QAM modulation}. The shells denoted by different colors, are also assigned different probabilites of transmission (e.g. the red one is sent with a probability of $P_1$). Calculate the probabilities $P_1$ to $P_4$ such that the average power of the constellation is reduced by 32\%. Assume $P_1=2P_2=2P_3$.
+
+(Hint: the sub-shell symbols are equiprobable within the same shell, that is, a shell containing four symbols with a total probability of $P_1$, allocates a probability of $P_1\over 4$ to each and every of its constituent symbols.)
+\end{enumerate}
+\pic{Shaped.eps}{110mm}{Symbol shells in 16-QAM modulation}
+\Q
+
+The following block-diagram is designed for a communication system deploying probabilistic shaping, channel encoding/decoding and modulation blocks. Assume a symbol rate of $24$ GBaud and 16-QAM.
+\pic{Q3_PS5.png}{100mm}{Block diagram for a simple typical communication system}
+\begin{enumerate}[label=\alph*-]
+\item
+Without using probabilistc shaping and channel coding (assuming only modulation is performed), calculate the bit rate of transmission through the channel.
+\item
+Assuming that channel coding block with a rate of $3\over 4$ is also used, calculate the bit rate of transmission through the channel, compare the result with that of part a- and justify it.
+\item
+Repeat part b- with channel code rate being $5\over 6$. Also compare the result and justify it.
+\label{partc}
+\item
+Using the same assumptions of part c-, calculate the bit rate for 8-QAM and 32-QAM, compare the results with those in part c- and justify it.
+\item (Extra Mark)
+\label{parte}
+If the probabilistic shaping scheme of Question 2 is used in part \ref{partc} of this question,  calculate the  bit-per-symbol ratio which is, the number of bits required for encoding a single symbol.
+\item (Extra Mark)
+Calculate the bit rate of transmission through the channel for part \ref{parte} with channel code rate equal to $5\over 6$, compare the result with that of part \ref{partc} and justify it.
+\end{enumerate}
+($\text{Hint}_1$: in a block code, a constant number of incoming bits is mapped to a constant number of outgoing bits. The code rate can be calculated as the number of incoming bits to the number of outgoing bits.
+
+$\text{Hint}_2$: the maximum bit-per-symbol ratio provided by an information source of symbols with probabilities of transmission being $P_i$, not regarding error correcting codes, is equal to the entropy of that source and is calculated as follows:
+$$
+H=-\sum_{i=1}^MP_i\log_2 P_i
+$$
+)\nl
+\Q
+
+Assume an optical link consists 10 spans, each of which containing an optical fiber of length 80km and an EDFA with a gain of 40dB and a noise figure of 4dB. Also let the wavelength of the signal passing through the link be 1555nm and a RRC filter with a roll-off factor of 0.2 is used for pulse shaping.
+\begin{enumerate}[label=\alph*-]
+\item
+Calculate the ASE noise power. Use the following information:
+\begin{enumerate}[label=$\bullet$]
+\item
+Symbol Rate = 24 GBaud
+\item
+Planck's constant (h) = $6.626 \times 10 ^ {-34}$ J.s
+\item
+Speed of light (c) = $3\times10 ^ {8}$ m/s    
+\end{enumerate}
+\item
+If the launch power of the transmitted signal equals 9.4 dBm, calculate the SNR.
+\item
+If concatenated error correcting codes, RS and LDPC, are used with the probability of error curves (vs. SNR per symbol for different schemes of LDPC and RS codes) illustrated in figures 9 and 10, specify the parameters of RS and LDPC codes needed and obtain the approximate value of probability of error for a 16-QAM.
+\item (Extra Mark)
+Assuming that the probabilistic shaping of Question 2 is used here, calculate the bit rate of transmission through the channel, compare it with the result of part f- of Question 2 and justify it.
+\end{enumerate}
+\pic{Q4_1.png}{130mm}{A typical scheme for a multi-span link with EDFAs and optical fibers}
+You can refer to references 1 and 2 for more information.\nl
+\picnocapt{Q4_2.png}{150mm}
+\picnocapt{Q4_3.png}{120mm}
+\picnocapt{Q4_4.png}{120mm}
+\newpage
+\textbf{References}
+
+[1] F. Buchali, F. Steiner, G. Böcherer, L. Schmalen, P. Schulte and W. Idler, “Rate   Adaptation and Reach Increase by Probabilistically Shaped 64-QAM: An Experimental Demonstration,” in Journal of Lightwave Technology, vol. 34, no. 7, pp.1599-1609, 1 April1, 2016
+
+[2] G. Gho and J. M. Kahn, "Rate-adaptive modulation and low-density parity-check coding for  optical fiber transmission systems," in IEEE/OSA Journal of Optical Communications and Networking, vol. 4, no. 10, pp. 760-768, Oct. 2012.
+\end{document}

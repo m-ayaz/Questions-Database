@@ -1,0 +1,122 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+%\usepackage{enumitem}
+%\setlist[enumerate,1]{label=(\arabic*)}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{
+سوال \theQuestionNumber)
+}
+\stepcounter{QuestionNumber}
+}
+
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری ششم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q
+
+اگر $x(t)$، سیگنالی با دوره تناوب $T$ و ضرایب سری فوریه‌ی $a_k$ باشد، ضرایب سری فوریه‌ی هر یک از سیگنال های زیر را به دست آورید.
+
+الف) 
+$
+x(t-t_0)+x(t+t_0)
+$
+
+ب) 
+$
+{d^n\over dt^n}x(t)
+$
+
+پ) 
+$
+x(at+b)
+$
+ (به دوره تناوب این سیگنال دقت کنید)
+
+ت) سیگنال متناوب $y(t)$ با دوره تناوب $T$ که 
+$$
+y(t)=\begin{cases}
+x(t)&,\quad 0\le t<T_1
+\\0&,\quad T_1\le t<T
+\end{cases}
+$$
+ و $T_1<T$.
+\nl
+\Q
+
+الف) نشان دهید اگر دو سیگنال متناوب $x(t)$ و $y(t)$ با دوره تناوب $T$، به ترتیب دارای ضرایب سری فوریه‌ی $a_k$ و $b_k$ باشند، آنگاه سیگنال $x(t)y(t)$ دارای ضرایب سری فوریه‌ی 
+$
+\sum_{l=-\infty}^{\infty}a_lb_{k-l}
+$
+ است.
+
+(راهنمایی: هر دو سیگنال را بر حسب ضرایب سری فوریه‌ی آنها بسط دهید. سپس با جایگذاری آن ها در رابطه‌ی انتگرالی
+$
+{1\over T}\int_0^T x(t)y(t)e^{-jk{2\pi\over T}t}dt
+$
+ و ساده سازی، عبارت
+$
+\sum_{l=-\infty}^{\infty}a_lb_{k-l}
+$
+ را بسازید.
+)
+\nl
+ب) از قسمت قبل نتیجه بگیرید: 
+$$
+{1\over T}\int_0^T |x(t)|^2\sin {2\pi\over T}tdt=\sum_{k=-\infty}^{\infty} \Im \left\{a_ka^*_{k+1}\right\}
+$$
+که عملگر $\Im$، قسمت موهومی یک عدد مختلط را می دهد.
+%\nl
+%\Q
+% \textbf{(امتیازی)}
+%
+%سیگنال دوبعدی $x(t_1,t_2)$ متناوب با دوره ی $T_1$ نسبت به $t_1$ و متناوب با دوره ی $T_2$ نسبت به $t_2$ گفته می شود هرگاه:
+%$$
+%x(t_1+T_1,t_2+T_2)=x(t_1,t_2)
+%$$
+%برای این سیگنال می توان ضرایب سری فوریه‌ی دوبعدی را به صورت زیر تعریف کرد:
+%$$
+%a_{mn}={1\over T_1T_2}\int_0^{T_1}\int_0^{T_2}x(t_1,t_2) e^{jm{2\pi\over T_1}t_1}e^{jn{2\pi\over T_2}t_2}dt_1dt_2
+%$$
+%در اینصورت ضرایب سری فوریه‌ی سیگنال های زیر را بیابید:
+%
+%الف) 
+%$
+%\cos (2\pi t_1+2t_2)
+%$
+%
+%ب) 
+%$
+%\sin \pi t_1\cos t_2
+%$
+%
+%پ) $x(t)$ سیگنالی متناوب شامل ضربه هایی با مساحت 1 و در مکان های 
+%$
+%(mT_1,nT_2)
+%$
+% است.
+\end{document}

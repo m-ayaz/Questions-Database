@@ -1,0 +1,223 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+\usepackage{listings}
+\lstset{language=Python}
+%\lstset{frame=lines}
+%\lstset{caption={Insert code directly in your document}}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\Span}{\text{Span}}
+\newcommand{\NF}{\text{NF}}
+\newcommand{\EDFA}{\text{EDFA}}
+\newcommand{\ASE}{\text{ASE}}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+%\newcommand{\pic}[2]{
+%\begin{center}
+%\includegraphics[width=#2]{#1}
+%\end{center}
+%}
+\begin{document}
+\large
+\begin{center}
+In the name of beauty
+
+The $1^\text{st}$ simulation assignment of Optical Networks course
+\hl
+\end{center}
+\section{Introduction}
+In this simulation project, we want to investigate one of the mathematical models used to analyze the optical fiber non-linear effect through approximately solving the NLSE.
+
+As we know, NLSE is not solvable in its most general form (i.e. when all fiber impairments are active and effective), hence approximate mathematical models come to play. All of these models accept span and link parameters (such as $\alpha$, $\beta_2$, $\beta_3$, $\gamma$, span amplifier noise figure, a set of occupied WDM channels and transmitted power which will be clarified, and more parameters which will be discussed when they matter) and obtain a real value representing non-linear noise PSD
+\footnote{
+Power Spectral Density
+}
+in one of the WDM channels of our interest, to which we sometimes refer as COI
+\footnote{
+Channel Of Interest
+}
+or CUT
+\footnote{
+Channel Under Test
+}
+.
+
+Based on previous discussions about WDM (which is essentially the same FDM) in the OptNet course, we know that the total spectrum of an optical fiber (over which the midband signals are transmitted) can be divided to distinct channels, each of which possessing a portion of the spectrum, which is refered to as \textbf{channel bandwidth} and a center frequency which is used to convert a baseband signal to an equivalent midband signal to make it ready for transmission over the fiber.
+
+WDM grid may be elastic, in which the channel bandwidths are not or loosely restricted to any rule; they can take on every value. This kind of WDM grid is also known as \textit{flexible grid}. In contrast, \text{fixed WDM grid} or just simply \text{fixed grid} are terms used to refer that all channel bandwidths must be equal to some fixed constant. It is now clear that WDM grid can support multiple concurrent transmission in time, with each WDM channel is allocated to a single user, while preserving degrees of freedom in choosing launch power (the power consumed by a user for transmission over own channel) and modulation format (such as PSK or QAM for converting bit-stream to symbol-stream).
+\section{Roadmap}
+With possibly multiple users having active concurrent transmission on their own channels through an optical fiber, non-linear impairment may occur due to \textit{SPM}, \textit{XPM} and \textit{FWM} which we care about when they occur in COI. SPM is the non-linear effect (crosstalk) of COI on itself, XPM is the non-linear effect of COI and two other channels on COI, and finally, FWM is the non-linear crosstalk of three different channels (other that COI) which happens because of the interaction between them. All of the non-linear effects become more significant as the injected power into the fiber increases (because of the non-linear 3rd-order term, $\gamma P.E$, in the Manakov's equation).
+
+The non-linear effects described above translate to noise commonly refered to as \textit{NLI
+\footnote{
+Non-Linear and Interference
+}
+ noise power}, which, alongside the ASE noise of lumped elements and amplifiers, is added to main transmitted signal and degrade \textit{Signal to Noise and Interference Ratio} accordingly. This simulation project dedicates to account for both the NLI+ASE and approximately calculate the NLI+ASE power spectral density and consequently, the total noise power.
+\section{NLI Power Spectral Density}
+In this section, we technically focus on all the parameters we talked about. The \textit{NLI Power Spectal Density in COI} is calculated through 
+$
+G_{\text{NLI}}^{\text{Rx.}}(f_{\text{CUT}})
+$
+which is given by:
+\picnocapt{eq.png}{170mm}
+
+The latter equations are refered to as CFM equations which may seem more forbidding than what they should, but you will not need to delve into all the details.
+
+The Python code provided with the attachment, actually simulates equation 1, based on equations 2,3,4 and 5, and ASE noise power spectral density. The function headers and parameters are defined below. The term \texttt{active channel} is used to represent a channel over which a single user is transmitting.
+%{\large
+%\texttt{
+%\\
+%\#\#\#\#\# G\_NLI Function Header \#\#\#\#\#
+%\\
+%\\G\_NLI(f\_comb,R\_comb,CUTindex,Power\_dBm,\\alphaSpanvec,beta2Spanvec,gammaSpanvec,\\LengthSpanvec,PhiSpanvec)
+%\\
+%\\
+%\begin{enumerate}
+%\item
+%f\_comb (array) : Array of active channel centers frequencies; its length is equal to the number of active channels
+%\item
+%R\_comb (array) : Array of channel bandwidths of active channels; its length is equal to the number of active channels
+%\item
+%CUTindex (int): Index of CUT center frequency in f\_comb; CUTindex=0 means the first center frequency of f\_comb is the CUT 
+%\item
+%Power\_dBm (array): Array of active channels launch powers; its length is equal to the number of active channels
+%\item
+%alphaSpanvec (array): Array of fiber spans attenuation coefficient ($\alpha$); its length is equal to total number of spans
+%\item
+%beta2Spanvec (array): Array of fiber spans 2nd-order dispersion coefficient ($\beta2$); its length is equal to total number of spans
+%\item
+%gammaSpanvec (array): Array of fiber spans non-linear coefficient ($\gamma$); its length is equal to total number of spans
+%\item
+%LengthSpanvec (array): Array of fiber spans total length; its length is equal to total number of spans
+%\item
+%AmplifierNFvec (array): Array of spans EDFA noise figure; its length is equal to total number of spans
+%\item
+%PhiSpanvec (array): Array of modulation-dependent constants for active users (or channels); its length is equal to the number of active channels
+%\end{enumerate}
+%Parameters ``AmplifierGainvec'' and ``iscompensated'' use their default values and are not important.
+%}
+%}
+%\nl
+\section{Where to start coding}
+In the Python script given to you, the CFM code is provided however only the transmitter and receiver code blocks for SSFM are given. You are supposed to write the NLSE solver on your own by taking help from an attached .m file that simulates the NLSE solver in MATLAB (actually, you must complete the code body of the function \texttt{NLSE\_Solver\_Link} within the lines 1073 to 1081 and use it in the line 1175 of the main code block). Also you must pass suitable parameters (link parameters provided in the code and the input signal). After completing the code of SSFM, you can start simulating both CFM and SSFM to obtain SNR values by passing the input signal to \texttt{NLSE\_Solver\_Link} and returning the impaired link output signal. The modulation format is QPSK.
+\section{Function Headers and Parameters}
+\#\#\#\#\# ASE\_PSD Function Header \#\#\#\#\#
+\\
+\\ASE\_PSD ( NumSpan , AmplifierGain , AmplifierNF )
+%\\
+%%\\
+\\
+\\
+\#\#\#\#\# Parameters \#\#\#\#\#
+\begin{enumerate}
+\item
+NumSpan\ \ \ \ \ \ \ \ \ (int) : Number of spans in link
+\item
+AmplifierGain (float) : Amplifier gain calculated through $e^{\alpha L}$
+\item
+AmplifierNF\ \ \  (float) : Amplifier noise figure in dB scale
+\end{enumerate}
+%\nl
+(Single Channel Transmission)
+
+Assume only a single user transmits data over a channel with center frequency of 32.5G and a channel bandwidth of 32.5G. The transmission takes place within a link consisting $N_{\Span}$ spans, each of which containing an optical fiber followed by an EDFA. The optical fibers and EDFAs have the following typical parameters:
+\begin{enumerate}
+\item
+$\alpha_{\text{dB}}=0.22 $ dB/km
+\item
+$D=17$ ps/(nm.km)
+\item
+$\gamma=1.3 W^{-1}\cdot km^{-1}$
+\item
+$L_\Span=140$ km
+\item
+$\NF_{\EDFA}=5.5$ dB
+\end{enumerate}
+In the following questions, you are assigned to run both SSFM and CFM functions using proper inputs to obtain SNR values. 
+
+%\newpage
+\Q 
+
+Assume $\gamma=0$ for all optical fibers in spans (i.e. the optical fiber has no non-linear impairment). Each span consists an optical fiber followed by an EDFA with $\NF=5.5 $dB. The other parameters have their typical values.
+\begin{enumerate}[label=\alph*-]
+\item
+Find $\alpha$ and $\beta_2$ from $\alpha_{\text{dB}}$ and $D$ by using the following formulas:
+$$
+\alpha_{\text{dB}}=4.343e3\times\alpha
+$$
+$$
+D=-{2\pi c\over\lambda^2}\beta_2
+$$
+\item
+Calculate the ASE noise variance from the following formula:
+$$
+\sigma^2_{\ASE}=h\nu\cdot N_{\Span}\cdot {(F\cdot G-1)\over 2}\cdot \text{BW}
+$$
+for four values of $N_\Span=1,7,15,25$.
+The parameters are $h$ as Planck's constant, $\nu=196.07840$THz, $F$ as a single EDFA's noise factor (the linear scale of noise figure) and $G$ as the EDFA power amplification gain, which is equal to $e^{\alpha L}$ with $\alpha$ and $L$ being the optical fiber attenuation and total length, respectively. Also, BW is the receiver's channel bandwidth which is equal to 33.15G.
+\item
+Run the function \texttt{ASE\_PSD} passing proper parameters for $N_\Span$ being the same as the previous part. Refer to the \texttt{ASE\_PSD Function Header} and \texttt{Parameters} for hints. Do not forget to multiply the output of the function in $BW$. Compare the result with that of part a.
+\item 
+Sketch a plot for SNR in dB scale with launch power varying from -5dBm to 10dBm with steps 0.5dBm and $N_\Span=1,5,10,25$ for both CFM and SSFM. The CFM SNR is calculated automatically given proper parameters, but you should embed \texttt{NLSE\_Solver\_Link} function in the main code as described before and in the main code script. Use \texttt{numpy.arange} function for this. Also for plotting, you can use \texttt{matplotlib.pyplot.plot} which is the same \texttt{plot} function in MATLAB; you can pass two vectors \texttt{x} and \texttt{y} to it, e.g. the following code block
+\begin{lstlisting}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.arange(-1,1,0.001)
+plt.plot(x,x**2)
+\end{lstlisting}
+plots the $x^2$ curve in $[-1,1]$ with step=0.001.
+
+(Remark: for plotting multiple figures, you can add new figures using 
+$$
+\texttt{plt.figure()}
+$$
+)
+\end{enumerate}
+\Q
+
+Now let $\gamma=1.3\times 10^{-3}$ and all the parameters have their typical values.
+\begin{enumerate}[label=\alph*-]
+%\item
+%Use the function \texttt{G\_NLI} to calculate the total NLI noise power in the COI when the launch power is equal to 0 dBm, $N_\Span=1,7,15,25$ and QPSK modulation is used. Do not forget to multiply the output of the function in BW. How does the total NLI noise variance change with $N_\Span$ for a fixed launch power? For QPSK, the array \texttt{PhiSpanvec} has length equal to the number of channels (which is 1 here since single channel transmission is assumed) with all its entries equal to 1.
+\item
+Sketch the SNR plot in dB scale with launch power varying from -5dBm to 10dBm with steps 0.5dBm and $N_\Span=1,5,10,25$ for both SSFM and CFM.
+%To obtain the total noise power, sum up ASE noise variance and NLI noise variance at different launch power values.
+Compare the plot with that you obtained in part d of quesion 1 and mention the major differences with reasons.
+\item
+Sketch scatter plots of the transmitted and received modulation symbols for $N_\Span=25$ through the SSFM simulation for launch power = $-5 , 0 ,5, 10$ dBm. How does the scatter plot change versus launch power?
+
+(Hint: to obtain the scatter plot of a quantity, namely \texttt{var}, use the command $$\texttt{plt.plot(numpy.real(var),numpy.imag(var),'.')}$$
+)
+\end{enumerate}
+\Q
+
+As accumulated dispersion appears in the received signal, an EDC block is considered to remove it totally, yielding a dispersion-free signal. The received symbols can then be obtained by regularly resampling the signal and the QPSK constellation can be observed in the receiver. By removing EDC, we expect the received constellation to be messy with undistinguishable symbols. To test this theory, obtain scatter plots removing the EDC block from detection process (by passing beta2=0 to its function) for $N_\Span=25$ and launch power = $5$ dBm. Compare the received constellation in this case with that obtained from part b of question 2 and mention the major differences.
+\end{document}

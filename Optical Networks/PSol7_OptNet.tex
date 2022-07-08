@@ -1,0 +1,286 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem,caption}
+\usepackage{listings}
+\lstset{language=Python}
+%\lstset{frame=lines}
+%\lstset{caption={Insert code directly in your document}}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\Span}{\text{Span}}
+\newcommand{\NF}{\text{NF}}
+\newcommand{\EDFA}{\text{EDFA}}
+\newcommand{\ASE}{\text{ASE}}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\temp}{{\color{red}{temp}}}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\large
+\begin{center}
+In the name of beauty
+
+The 7th problem set of Optical Networks course
+\hl
+\end{center}
+
+\Q
+
+\begin{enumerate}[label=\alph*-]
+\item
+Fiber birefringence is the phenomenon of periodic alteration of signal polarization (e.g. between linear and circular polarizations). The minimum length of fiber at which a full birefringence takes place and signal initial polarization is recovered is referred to as beat length.
+\item
+The RMSA (or more notably, the RMLSA) is the problem of joint allocation of path (as a sequence of nodes and links), spectrum (or wavelength) and modulation level to demands in network. This process can be performed phyiscal-layer-impairment-aware (PLI-aware), where the impairments of network components (such as optical fiber or switches) are considered as parameters of design.
+\item
+Dispersion is known to decrease the power peaks of signal thereby spreading signal in time. From a non-linear point of view, this behavior leads to non-linear mitigation to some extent, which is desirable. The advent of signal processing has made it much easier to perform dispersion compensation on signal.
+\end{enumerate}
+
+\Q
+
+\begin{enumerate}[label=\alph*-]
+\item
+The netgains of links and spans are set to 1 through a full compensation of fiber loss with amplifiers. This compensation yields two results. First, the signal power remains unchanged throughout the transmission. Second, noises of active elements and of non-linear source accumulate (i.e. sum up) linearly at the end of transmission. So, if we denote the signal power by $P$ and noise variance at the end of the $i$th link and all the links by $\sigma^2_i$ and $\sigma^2_\text{total}$ respectively, we end up with
+$$
+\sigma^2=\sum_{i=1}^{N_l}\sigma^2_i,
+$$
+where dividing both sides on $P$, yields the expected result.
+\item
+The SNR of a signal with power $P$ can be expressed as
+$$
+\text{SNR}=\frac{P}{\sigma^2_\text{ASE}+\eta_\text{NLI}P^3},
+$$
+where the optimum SNR takes place at power $P^*$ at which
+$$
+\frac{d\text{SNR}}{dP}\Big|_{P=P^*}=0.
+$$
+A bit of calculus yields
+$$
+P^*=\sqrt[3]{\frac{\sigma^2_\text{ASE}}{2\eta_\text{NLI}}}
+$$
+and
+$$
+\text{SNR}_\text{opt}=\frac{2}{3}\frac{1}{\sqrt[3]{2\eta_\text{NLI}\sigma^4_\text{ASE}}}.
+$$
+\end{enumerate}
+
+\Q (Linear solution of Manakov equation)
+
+\begin{enumerate}[label=\alph*-]
+\item
+The Fourier transform of Manakov equation gives
+$$
+\frac{\partial A(z,\omega)}{\partial z}
+=
+\Gamma(\omega) A(z,\omega)
+-
+j\frac{8}{9}\gamma
+(A_x(z,\omega)*A_x^*(z,-\omega)+A_y(z,\omega)*A_y^*(z,-\omega))*A(z,t)
+,
+$$
+where
+$$
+\Gamma(\omega)=-\alpha-j\frac{\omega^2}{2}\beta_2
+.
+$$
+\item
+The Manakov equation after setting $\gamma=0$, gives a first-order linear differential equation as
+$$
+\frac{\partial A(z,\omega)}{\partial z}
+=
+\Gamma(\omega) A(z,\omega)
+$$
+with the following answer
+$$
+A(z,\omega)=C(\omega)e^{z\Gamma(\omega)},
+$$
+where setting $z=0$ we obtain $C(\omega)=A(0,\omega)$ and finally
+$$
+A(z,\omega)
+=
+A(0,\omega)
+e^{z\Gamma(\omega)}
+.
+$$
+By replacing $A(0,\omega)=(A_x(0,\omega),A_y(0,\omega))$, we obtain
+$$
+A(z,\omega)
+=
+e^{z\Gamma(\omega)}
+\sum_i c_i\delta(f-f_i)
+=
+\sum_i c_ie^{z\Gamma(f_i)}\delta(f-f_i)
+=
+\sum_i d_i(z)\delta(f-f_i)
+,
+$$
+where $d_i(z)=(d_{x,i}(z),d_{y,i}(z))$ and
+$$
+d_{x,i}(z)=c_{x,i}e^{z\Gamma(f_i)}
+\quad,
+\quad
+d_{y,i}(z)=c_{y,i}e^{z\Gamma(f_i)}.
+$$
+\end{enumerate}
+
+\Q (Non-linear solution of Manakov equation; perturbation approach)
+
+\[\begin{split}
+\text{Fourier transform of }
+j\frac{8}{9}\gamma |A_\text{LIN}(z,t)|^2A_\text{LIN}(z,t)
+\end{split}\]
+
+
+\begin{enumerate}[label=\alph*-]
+\item
+\[\begin{split}
+\text{Fourier transform of }
+&
+j\frac{8}{9}\gamma |A_\text{LIN}(z,t)|^2A_\text{LIN}(z,t)
+\\&=
+j\frac{8}{9}\gamma
+\left[A_x(z,\omega)*A_x^*(z,-\omega)+A_y(z,\omega)*A_y^*(z,-\omega)\right]A(z,t)
+\\&=
+j\frac{8}{9}\gamma
+\big[\sum_i d_{x,i}(z)\delta(f-f_i)*\sum_i d_{x,i}(z)^*\delta(f+f_i)
+\\&+\sum_i d_{y,i}(z)\delta(f-f_i)*\sum_i d_{y,i}^*(z)\delta(f+f_i)\big]*\sum_i d_i(z)\delta(f-f_i)
+\\&=
+j\frac{8}{9}\gamma
+\big[
+\sum_{i,j} d_{x,i}(z)d^*_{x,j}(z)\delta(f-f_i+f_j)
+\\&+
+\sum_{i,j} d_{y,i}(z)d^*_{y,j}(z)\delta(f-f_i+f_j)
+\big]*\sum_i d_i(z)\delta(f-f_i)
+\\&=
+j\frac{8}{9}\gamma
+\big[
+\sum_{i,j,k} d_{x,i}(z)d^*_{x,j}(z)d_k(z)\delta(f-f_i+f_j-f_k)
+\\&+
+\sum_{i,j,k} d_{y,i}(z)d^*_{y,j}(z)d_k(z)\delta(f-f_i+f_j-f_k)
+\big]
+\\&=
+j\frac{8}{9}\gamma
+\sum_{i,j,k} \big[d_{x,i}(z)d^*_{x,j}(z)d_k(z)
+\\&+
+d_{y,i}(z)d^*_{y,j}(z)d_k(z)\big]\delta(f-f_i+f_j-f_k).
+\end{split}\]
+By defining 
+$
+g_{i,j,k}(z)\triangleq
+-j\frac{8}{9}\gamma
+d_{x,i}(z)d^*_{x,j}(z)d_k(z)
++
+d_{y,i}(z)d^*_{y,j}(z)d_k(z)
+$
+we can write
+\[\begin{split}
+\text{Fourier transform of }
+&
+j\frac{8}{9}\gamma |A_\text{LIN}(z,t)|^2A_\text{LIN}(z,t)
+\\&=
+-
+\sum_{i,j,k} g_{i,j,k}(z)\delta(f-f_i+f_j-f_k).
+\end{split}\]
+\item
+After evaluating the non-linear part of Manakov equation, we can write it in the following form:
+$$
+\frac{\partial A(z,\omega)}{\partial z}
+=
+\Gamma(\omega) A(z,\omega)
++Q_\text{NLI}(z,\omega),
+$$
+where
+$$
+Q_\text{NLI}(z,\omega)=
+\sum_{i,j,k} g_{i,j,k}(z)\delta(f-f_i+f_j-f_k)
+,
+$$
+therefore
+\[\begin{split}
+&
+\frac{\partial A_\text{NLI}(z,\omega)}{\partial z}
+=
+\Gamma(\omega) A_\text{NLI}(z,\omega)
++Q_\text{NLI}(z,\omega)
+\implies\\&
+e^{-z\Gamma(\omega)}\frac{\partial A_\text{NLI}(z,\omega)}{\partial z}
+-
+\Gamma(\omega)e^{-z\Gamma(\omega)} A_\text{NLI}(z,\omega)
+=e^{-z\Gamma(\omega)}Q_\text{NLI}(z,\omega)
+\implies\\&
+\frac{\partial}{\partial z}\left[e^{-z\Gamma(\omega)}A_\text{NLI}(z,\omega)\right]
+=e^{-z\Gamma(\omega)}Q_\text{NLI}(z,\omega)
+\implies
+\\&
+e^{-z\Gamma(\omega)}A_\text{NLI}(z,\omega)=
+C(f)+
+\int_0^z e^{-u\Gamma(\omega)}Q_\text{NLI}(u,\omega)du
+\implies
+\\&
+e^{-z\Gamma(\omega)}A_\text{NLI}(z,\omega)=
+A_\text{NLI}(0,\omega)+
+\int_0^z e^{-u\Gamma(\omega)}Q_\text{NLI}(u,\omega)du
+\\&
+A_\text{NLI}(z,\omega)=
+e^{z\Gamma(\omega)}\int_0^z e^{-u\Gamma(\omega)}Q_\text{NLI}(u,\omega)du
+.
+\end{split}\]
+The last implication comes from the fact that we have no non-linear electrical field at the beginning of an optical fiber and hence $A_\text{NLI}(0,\omega)=0$.
+
+By substituting the result of part (a) in the above equation we finally obtain
+\[\begin{split}
+A_\text{NLI}(z,\omega)&=
+e^{z\Gamma(\omega)}\int_0^z e^{-u\Gamma(\omega)}Q_\text{NLI}(u,\omega)du
+\\&=
+e^{z\Gamma(\omega)}\int_0^z e^{-u\Gamma(\omega)}\sum_{i,j,k} g_{i,j,k}(u)\delta(f-f_i+f_j-f_k)du
+\\&=
+e^{z\Gamma(\omega)}
+\sum_{i,j,k}
+\int_0^z e^{-u\Gamma(\omega)}g_{i,j,k}(u)\delta(f-f_i+f_j-f_k)du
+\\&=
+e^{z\Gamma(\omega)}
+\sum_{i,j,k}
+\int_0^z e^{-u\Gamma(f_i-f_j+f_k)}g_{i,j,k}(u)\delta(f-f_i+f_j-f_k)du
+\\&=
+\sum_{i,j,k}
+\left[\int_0^z e^{-u\Gamma(f_i-f_j+f_k)}g_{i,j,k}(u)du\right]
+e^{z\Gamma(\omega)}\delta(f-f_i+f_j-f_k)
+\\&=
+\sum_{i,j,k}
+\left[\int_0^z e^{-u\Gamma(f_i-f_j+f_k)}g_{i,j,k}(u)du\right]
+e^{z\Gamma(f_i-f_j+f_k)}\delta(f-f_i+f_j-f_k),
+\end{split}\]
+from which by defining $h_{i,j,k}(z)\triangleq \left[\int_0^z e^{-u\Gamma(f_i-f_j+f_k)}g_{i,j,k}(u)du\right]
+e^{z\Gamma(f_i-f_j+f_k)}$ we obtain
+$$
+A_\text{NLI}(z,f)=\sum_{i,j,k} h_{i,j,k}(z)\delta(f-f_i+f_j-f_k)
+.
+$$
+This above equation introduces the concept of FWM, where a set of frequency components of signal lead to emerging residual frequencies of from $f_i-f_j+f_k$.
+\end{enumerate}
+
+\end{document}

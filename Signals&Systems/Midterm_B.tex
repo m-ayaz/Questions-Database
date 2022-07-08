@@ -1,0 +1,149 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,graphicx,geometry,enumitem}
+\usepackage{xepersian}
+
+\newcounter{qnumber}
+\setcounter{qnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \theqnumber)}
+\stepcounter{qnumber}
+}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\settextfont{XB Niloofar}
+
+\begin{document}
+
+\begin{center}
+\Large
+
+به نام او
+
+آزمون میان ترم سیگنال ها و سیستم ها
+\end{center}
+
+\hrulefill
+
+\large
+
+\Q
+با بیان دلایل کافی، بررسی کنید هر یک از سیستم های پیوسته‌ی زیر، کدام ویژگی های علی بودن، خطی بودن، پایدار بودن، مستقل از زمان بودن و معکوس پذیری را دارا هستند (در هر یک از این سیستمها، $x(t)$ ورودی و $y(t)$ خروجی سیستم است).
+
+الف) 
+$
+y(t)=x^2(-3t)
+$
+
+ب) 
+$
+y(t)=\int_0^T x(t-\tau+T)-x(t-\tau)d\tau
+$
+که $T$ یک عدد حقیقی مثبت است.
+
+پ)
+$
+y(t)=\begin{cases}
+\sin x(t)&,\quad x(t)<0\\
+x(1+t)+x(t)&,\quad x(t)\ge 0
+\end{cases}
+$
+
+ت)
+$
+y(t)=\begin{cases}
+x(|t|)&,\quad t<0\\
+\frac{x(t)}{2+\sin x(t)}&,\quad t\ge 0
+\end{cases}
+$
+
+\Q
+
+اگر سیگنال $x(t)$ به شکل زیر باشد و تبدیل فوریه آن را با 
+$
+X(j\omega)
+$
+نشان دهیم، بدون محاسبه مستقیم $X(j\omega)$ موارد زیر را بیابید.
+
+الف)
+$X(j0)$
+
+ب)
+$\int_{-\infty}^\infty X(j\omega) \frac{\sin \omega}{\omega} e^{j\omega}d\omega$
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=80mm]{x12(t)}
+\end{figure}
+
+\Q
+
+به یک سیستم LTI با تابع انتقال 
+$$
+H(j\omega)=\begin{cases}
+3|\omega|&,\quad |\omega|<4\\
+0&,\quad \text{سایر جاها}
+\end{cases}
+،
+$$
+ورودی متناوب $x(t)$ مطابق شکل زیر داده می‌شود. خروجی این سیستم را بیابید.
+\begin{figure}[h]
+\centering
+\includegraphics[width=75mm]{x2(t)}
+\end{figure}
+
+\Q
+پاسخ یک سیستم LTI به ورودی 
+$
+x(t)=e^{5t}u(t+3)
+$
+برابر 
+$
+y(t)
+$
+و پاسخ آن به ورودی 
+$
+\frac{dx(t)}{dt}
+$
+برابر 
+$
+5y(t)+\sin 2tu(t)
+$
+است. پاسخ ضربه این سیستم را بیابید.
+
+\Q
+اطلاعات زیر در مورد یک سیستم زمان-پیوسته‌ی LTI داده شده است:
+
+\begin{enumerate}
+\item
+پاسخ ضربه سیستم، $h(t)$، حقیقی و فرد است.
+\item
+تبدیل لاپلاس سیستم دارای چهار قطب و یک صفر بوده که یک قطب آن در $s=-2$ است.
+\item
+پاسخ این سیستم به ورودی 
+$
+x(t)=\cos t
+$
+برابر 
+$
+-\frac{1}{50}
+\sin t
+$
+ است.
+\item
+$\lim_{s\to 0}\frac{H(s)}{s}=-\frac{1}{36}$
+\end{enumerate}
+
+پاسخ ضربه این سیستم را بیابید.
+
+\Q
+به سیستم پایداری با تابع انتقال
+$
+H(s)=\frac{s-4}{s-1}
+$،
+ورودی
+$x(t)=e^{-3|t|}$
+داده می شود. در این صورت، خروجی این سیستم را در حوزه زمان بیابید.
+\end{document}

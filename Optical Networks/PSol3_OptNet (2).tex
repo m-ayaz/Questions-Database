@@ -1,0 +1,237 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 3rd problem set solution of Optical Networks course
+\hl
+\end{center}
+%\theQuestionNumber
+%\stepcounter{QuestionNumber}
+%\theQuestionNumber
+%\Q
+%
+%A fiber optical communication system employs a 1.3$\mu$m 1$n$GaAsP semiconductor as the transmitter. To minimize dispersion, a single-mode fiber is used.
+%\begin{enumerate}[label=\alph*.]
+%\item
+%Determine the largest possible core diameter for the fiber with a core refractive index of $1.500$ and a cladding refractive index of $1.495$.
+%\item
+%How many modes can propagate in the fiber if the transmitter is replaced with an AlGaAs semiconductor laser with an emission wavelength of 0.85 $\mu $m or a HeNe-laser with an emission wavelength of 0.63 $\mu$m?
+%\end{enumerate}
+%For waveguide dispersion, make the (realistic) assumption that the material dispersion can be neglected ($d n\over d\omega$=0).
+%\nl
+%\Q
+%
+%A $1$ km long polarization-maintaining single-mode fiber exhibits a birefringence of $\Delta n =6\times 10^{-4}$. Calculate the differential group delay (DGD) for this fiber at $1.55\mu m$ assuming that the average mode index $\bar n = 1.45$ and ${d\bar n\over d\lambda}=-0.01 \mu m^{-1}$ at this wavelength.
+%\nl
+\Q
+
+\begin{enumerate}[label=\alph*.]
+\item
+Note that
+$$
+D={\lambda\over c}{d^2n\over d\lambda^2}=-{2\pi c \over\lambda^2}\beta_2
+$$
+hence
+$$
+D=83 \text{ ps}/(\text{nm}\cdot\text{km})
+$$
+and 
+$$
+\beta_2=-28.29 \text{ ps}^2/\text{km}
+$$
+\item
+\qn{
+&\gamma=2.63 {\text{W}^{-1}\over \text{km}}
+\\& L_{\text{eff}}=18.27 \text{km}
+\\& \phi_{\text{NL}}=\pi
+}
+therefore
+$$
+P=65.38 \text{mW}\equiv 18.15 \text{dBm}
+$$
+%\item
+%A 1.55-$\mu m$ continuous-wave signal with 6-dBm power is launched into a fiber with 50-$\mu m^2$ effective mode area ($A_\text{eff}$). After what fiber length would the nonlinear phase shift induced by SPM become $2\pi$? Assume $\bar n_2= 2.6 \times 10^{-20} m^2/W$ and neglect fiber losses.
+\end{enumerate}
+
+\Q
+
+For full dispersion compensation we must have
+$$
+25L_\text{Fiber}=16L_\text{DCF}
+$$
+and due to attenuation we must have
+$$
+L_\text{Fiber}+L_\text{DCF}=20\text{dB}/0.21\text{dB/km}=95.24\text{km},
+$$
+hence
+$
+L_\text{Fiber}=37.17\text{km}\quad,\quad
+L_\text{DCF}=58.07\text{km}
+.
+$
+
+\Q
+
+\qn{
+& L=10\text{ km}
+\\&\sigma_\lambda=30\text{ nm}
+\\& D=-80 \text{ ps}/(\text{nm}\cdot\text{km})
+}
+therefore
+$$
+B_{\max}=10.42MHz
+$$
+
+\Q
+
+%Consider the following form of NLSE
+%\footnote{
+%Non-Linear Shr\o dinger equation
+%}
+% with $\gamma=0$:
+%$$
+%{\partial A\over \partial z}+{\alpha\over 2}A-j{\beta_2\over 2}\cdot{\partial^2 A\over \partial t^2}=n(t)
+%$$
+%where $n(t)$ denotes the noise process at the input of the optical fiber.
+\begin{enumerate}[label=\alph*.]
+\item
+\eqn{
+{\partial A(z,\omega)\over \partial z}&=-{\alpha\over 2}A(z,\omega)-j{\beta_2\over 2}\omega^2A(z,\omega)
+\\&=[-{\alpha\over 2}-j{\beta_2\over 2}\omega^2]A(z,\omega)
+}{}
+which has the following solution
+\eqn{
+A(z,\omega)=C_1e^{-{\alpha\over 2}z-j{\beta_2\over 2}\omega^2z}
+=A(0,\omega)e^{-{\alpha\over 2}z-j{\beta_2\over 2}\omega^2z}
+}{}
+\item
+By defining $\Gamma(\omega)={\alpha\over 2}z+j{\beta_2\over 2}\omega^2$ and $B(z,\omega)=e^{-z\Gamma(\omega)}A(z,\omega)$ we obtain
+$$
+A_z(z,\omega)=\Gamma(\omega)A(z,\omega)+N(\omega)
+$$
+and consequently
+$$
+B_z(z,\omega)=e^{-z\Gamma(\omega)}N(\omega),
+$$
+hence
+$$
+B(z,\omega)=C_1(\omega)-e^{-z\Gamma(\omega)}\frac{N(\omega)}{\Gamma(\omega)}.
+$$
+Since $B(0,\omega)=A(0,\omega)$, we have
+$$
+B(z,\omega)=A(0,\omega)+(1-e^{-z\Gamma(\omega)})\frac{N(\omega)}{\Gamma(\omega)},
+$$
+which yields
+$$
+A(z,\omega)=A(0,\omega)e^{z\Gamma(\omega)}+(e^{z\Gamma(\omega)}-1)\frac{N(\omega)}{\Gamma(\omega)}.
+$$
+It is finally concluded that
+$$
+F(z,\omega)=
+(e^{z\Gamma(\omega)}-1)\frac{N(\omega)}{\Gamma(\omega)}
+.
+$$
+%Find $1\over e$-intensity spectral half width $\Delta \omega_0$ ($\Delta \omega_0$ should be measured where the intensity of the frequency domain $A(0,\omega)$ reaches $1\over e$ of its maximum, hence first try to find the Fourier transform of $A(0,t)$).
+\end{enumerate}
+
+\Q
+
+a.
+\qn{
+&\text{Fiber 1 : }\beta_2=-31.87 \text{ps}^2/\text{km}
+\\&\text{Fiber 2 : }\beta_3=0.0992 \text{ps}^3/\text{km}
+}
+
+\qn{
+&\text{Transmitter 1 , Fiber 1 : }L_\text{Dispersion}=19.9 \text{ km}
+\\&\text{Transmitter 1 , Fiber 2 : }L_\text{Dispersion}=17502 \text{ km}
+\\&\text{Transmitter 2 , Fiber 1 : }L_\text{Dispersion}=3486 \text{ km}
+\\&\text{Transmitter 2 , Fiber 2 : }L_\text{Dispersion}=812717419\text{ km}
+}
+
+b.
+
+\qn{
+&\text{Transmitter 1 , Fiber 1 : }L_\text{Attenuation}=95.24 \text{ km}
+\\&\text{Transmitter 1 , Fiber 2 : }L_\text{Attenuation}=86.96 \text{ km}
+\\&\text{Transmitter 2 , Fiber 1 : }L_\text{Attenuation}=95.24 \text{ km}
+\\&\text{Transmitter 2 , Fiber 2 : }L_\text{Attenuation}=86.96\text{ km}
+}
+
+c.
+
+The combinations
+\qn{
+&\text{Transmitter 1 , Fiber 2}
+\\&\text{Transmitter 2 , Fiber 2}
+}
+lead to maximum optical reach due to both attenuation and dispersion, i.e, when fiber 2 is used.
+
+\Q
+
+
+\begin{enumerate}[label=\alph*.]
+\item
+$$
+A(f)=\sum_{m=1}^2 s(f-mR).
+$$
+\item
+Since the total bandwidth over which the signal spectrum takes on non-zero values is $2R$, the sampling frequency must be at least as much as this amount to avoid aliasing.
+\item
+$$
+\hat A_1[k]=
+\sum_{m=1}^2 b_{m,0}s(k/R)e^{\imath 2\pi mR k/R}
+=
+\sum_{m=1}^2 b_{m,0}s(k/R)
+=
+[b_{1,0}+b_{2,0}]s(k/R)
+$$
+$$
+\hat A_2[k]=
+\sum_{m=1}^2 b_{m,0}s(k/2R)e^{\imath 2\pi mR k/(2R)}
+=
+\sum_{m=1}^2 b_{m,0}s(k/2R)(-1)^{mk},
+$$
+hence
+$$
+\hat A_1(f)=2[b_{1,0}+b_{2,0}]
+$$
+and
+$$
+\hat A_2(f)=2Rb_{1,0}\sum_k S(2Rf-(2k+1)R)
++
+2Rb_{2,0}\sum_k S(2Rf-2kR)
+$$
+\end{enumerate}
+
+\end{document}

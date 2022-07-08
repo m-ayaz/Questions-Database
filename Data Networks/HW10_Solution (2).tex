@@ -1,0 +1,93 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{amsmath,amssymb,geometry,graphicx,color}
+\usepackage{enumitem}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parskip}{3mm}
+\setlength{\parindent}{0mm}
+\newcommand{\wid}{0.49\textwidth}
+\newcommand{\widone}{60mm}
+\newcommand{\qn}[1]{
+\begin{equation}
+\begin{split}
+#1
+\end{split}
+\end{equation}
+}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+10th problem set of ComNet course
+
+\hrulefill
+\end{center}
+Q1)
+\begin{enumerate}[label=\alph*-]
+\item
+False. It may also happen due to signal degradation which is not removable that easy!
+\item
+True. For a given modulation scheme, SNR is a figure of merit to show how good a transmission is done. It would then be obvious that bit error rate denotes a better transmission.
+\item
+False. {\color{blue}Un}like Ethernet, ARQ techniques are used in link-layer of a wireless network for coping with high bit error rates.
+\item
+False. Rather than the simplicity of impementation of this solution, the scalability is a drawback, specifically, when many mobile nodes reside in the network.
+\end{enumerate}
+
+Q2) The first reason is service continuity. A mobile node on an ongoing call would be unhappy if the transmission is suddenly brought down, while being able to move freely between base stations. The second reason is quite similar to the first, except it is a base station congestion matter this time. A hand-off may also occur when an access point cannot handle too many requests and will softly (and gently!) hand it over to some one (AP) else.
+
+Q3)
+\begin{enumerate}[label=\alph*-]
+\item
+\qn{
+&Z_{1,m}^1=(-1,1,-1,1,-1,1,-1,1)
+\\&Z_{0,m}^1=(1,-1,1,-1,1,-1,1,-1)
+\\&Z_{1,m}^2=(1,1,1,1,-1,-1,-1,-1)
+\\&Z_{0,m}^2=(1,1,1,1,-1,-1,-1,-1)
+\\&Z_{1,m}^*=(0,2,0,2,-2,0,-2,0)
+\\&Z_{0,m}^*=(2,0,2,0,0,-2,0,-2)
+}
+\item
+Assuming that receiver 1 wishes to recover the two bits of sender 1, find $d_1^1$ and $d_0^1$.
+\qn{
+&d_0^1={\sum_{m=1}^8Z^*_{0,m}c_m^1\over 8}
+\\&={\sum_{m=1}^8(2,0,2,0,0,-2,0,-2)\cdot(1,-1,1,-1,1,-1,1,-1)\over 8}
+\\&={\sum_{m=1}^8(2,0,2,0,0,2,0,2)\over 8}
+\\&=1
+}
+\qn{
+&d_1^1={\sum_{m=1}^8Z^*_{1,m}c_m^1\over 8}
+\\&={\sum_{m=1}^8(0,2,0,2,-2,0,-2,0)\cdot(1,-1,1,-1,1,-1,1,-1)\over 8}
+\\&={\sum_{m=1}^8(0,-2,0,-2,-2,0,-2,0)\over 8}
+\\&=-1
+}
+\end{enumerate}
+Q4) \textit{(Extra Points)}
+
+a) There are two important reasons for this:
+\begin{itemize}
+\item
+The ability to detect collisions requires the ability to send (the station’s own signal) and receive (to determine whether another station is also transmitting) at the same time. Because the strength of the received signal is typically very small compared to the strength of the transmitted signal at the 802.11 adapter, it is costly to build hardware that can detect a collision.
+\item
+More importantly, even if the adapter could transmit and listen at the same time (and presumably abort transmission when it senses a busy channel), the adapter would still not be able to detect all collisions, due to the hidden terminal problem and fading.
+\end{itemize}
+
+b) The nodes A and B collide if they choose \textit{equal} amounts of back-off times (randomly). Since A and B choose their back-off times from $\{0,1,2,\cdots 2^{n_A}-1\}$ and $\{0,1,2,\cdots 2^{n_B}-1\}$ respectively, the collision probability due to equal back-off times is
+\qn{
+\begin{cases}
+{2^{n_A}\over2^{n_A+n_B}}&,\quad n_A\le n_B\\
+{2^{n_B}\over2^{n_A+n_B}}&,\quad n_B\le n_A
+\end{cases},
+}
+and the desired probability would be
+$$
+1-{1\over 2^{\max\{n_A,n_B\}}}
+.
+$$
+
+Q5) \textit{(Extra Points)}
+
+The nodes will receive this packet and send back an ACK (or they don't less probably, which of course doesn't make much difference). Since H1 is only waiting for CTS as ACK, it would drop any other kinds of ACK and would send the RTS after a while. The AP can reset the reserved time of channel use for H1 and send back the CTS (again) to H1. The rest of the process is straightforward and comprises a bunch of packet crossfire!
+
+\end{document}

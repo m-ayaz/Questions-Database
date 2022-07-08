@@ -1,0 +1,227 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,graphicx,geometry,enumitem}
+\usepackage{xepersian}
+
+\newcounter{qnumber}
+\setcounter{qnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \theqnumber)}
+\stepcounter{qnumber}
+}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\settextfont{XB Niloofar}
+
+\begin{document}
+
+\begin{center}
+\Large
+
+به نام او
+
+تمرینات سری 9
+
+نمونه برداری و سری فوریه گسسته
+\end{center}
+
+\hrulefill
+
+\large
+
+\Q
+
+فرض کنید سیگنال 
+$
+x(t)
+$
+با تبدیل فوریه 
+$
+X(j\omega)
+$،
+دارای نرخ نایکوئیست 
+$
+\omega_0
+$
+باشد (نرخ نایکوئیست حداقل فرکانس نمونه برداری است که طیف سیگنال نمونه برداری شده دچار تداخل فرکانسی نمی‌شود). در این صورت، نرخ نایکوئیست سیگنال های زیر را بیابید.
+\begin{enumerate}[label=\alph*)]
+\item
+$
+x(t)+x(t-1)
+$
+\item
+$
+x^2(t)
+$
+\item
+$
+x^2(t)\cos\omega_0 t
+$
+\end{enumerate}
+
+
+\Q
+
+سیگنال پیوسته 
+$
+x(t)=\frac{\sin^2\pi t}{\pi^2t^2}
+$
+داده شده است.
+
+\begin{enumerate}[label=\alph*)]
+\item
+تبدیل فوریه $x(t)$ را به دست آورده و ترسیم کنید.
+
+\item
+از روی تبدیل فوریه $x(t)$، طیف سیگنال نمونه برداری شده 
+$
+\hat x[n]=x(\frac{n}{F_s})
+$
+را به ازای
+$
+F_s=2
+$
+و
+$
+F_s=3
+$
+ترسیم کنید.
+\end{enumerate}
+
+\Q
+
+برای سیگنال سوال 1،
+\begin{enumerate}[label=\alph*)]
+\item
+طیف سیگنال نمونه برداری شده 
+$
+\hat x[n]=x(\frac{n}{F_s})
+$
+را به ازای
+$
+F_s=1.5
+$
+ترسیم کنید.
+\item
+سیگنال پیوسته 
+$
+y(t)
+$
+ با تبدیل فوریه 
+$
+Y(j\omega)
+$
+را به گونه ای بیابید که دارای دو خاصیت زیر باشد:
+\begin{equation}\begin{split}
+&
+Y(j\omega)=0\quad,\quad |\omega|>2\pi
+\\&
+\hat y[n]=y(\frac{t}{2})=x(\frac{t}{1.5})
+\end{split}\end{equation}
+(به عبارت دیگر، سیگنال $y(t)$ سیگنالی است که نسخه نمونه برداری شده آن با فرکانس $F_s=2$، برابر نسخه نمونه برداری شده $x(t)$ با فرکانس $F_s=1.5$ باشد.) 
+
+\end{enumerate}
+
+\Q
+
+ضرایب سری فوریه سیگنال های گسسته زیر را بیابید (در هر مورد ابتدا ببینید آیا سیگنال متناوب است یا خیر).
+
+\begin{enumerate}[label=\alph*)]
+\item
+$
+x[n]=\sin\frac{4\pi}{3}n+\cos\frac{8\pi}{3}n
+$
+\item
+$
+x[n]=\cos 3n
+$
+\item
+$x[n]$
+متناوب با دوره تناوب 4 است که در یک دوره تناوب به صورت زیر است:
+
+$
+x[n]=\begin{cases}
+1&,\quad n=0\\
+-1&,\quad n=1\\
+2&,\quad n=2\\
+3&,\quad n=3\\
+\end{cases}
+$
+\item
+$
+x[n]=\sin \frac{2\pi}{3}n^2
+$
+\end{enumerate}
+
+\Q
+
+فرض کنید سیگنال $x[n]$ با دوره تناوب $N$ متناوب و دارای ضرایب سری فوریه $a_k$ باشد. در این صورت ضرایب سری فوریه سیگنال 
+$
+(-1)^nx[n]
+$
+را هنگامی که
+\begin{enumerate}[label=\alph*)]
+\item
+$
+N
+$
+زوج باشد،
+\item
+$
+N
+$
+فرد باشد (به دوره تناوب سیگنال حاصله توجه کنید)،
+\end{enumerate}
+بیابید.
+
+\Q
+
+اطلاعات زیر در خصوص سیگنال گسسته
+$
+x[n]
+$
+داده شده است:
+\begin{enumerate}
+\item
+سیگنال 
+$
+x[n]
+$
+متناوب با دوره تناوب 6 و ضرایب سری فوریه $a_k$ است.
+\item
+$
+\sum_{n=0}^{5} (-1)^nx[n]=2
+$
+\item
+$
+a_0=a_5=1
+$
+\item
+$
+\sum _{n=0}^5|x[n]|^2=\frac{38}{3}
+$
+\end{enumerate}
+سیگنال $x[n]$ را بیابید.
+
+\Q
+
+به سیستمی گسسته ای با پاسخ ضربه 
+$
+h[n]=(\frac{1}{3})^nu[n]
+$
+،
+ورودی متناوب $x[n]$ با دوره 4 که در یک تناوب به صورت زیر است، اعمال می شود:
+$$
+x[n]=
+\begin{cases}
+1&,\quad n=0\\
+2&,\quad n=1\\
+0&,\quad n=-1,2
+\end{cases}
+.
+$$
+در این صورت، ضرایب سری فوریه گسسته خروجی سیستم را بیابید.
+
+\end{document}

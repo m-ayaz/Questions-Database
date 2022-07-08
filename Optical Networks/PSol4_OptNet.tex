@@ -1,0 +1,157 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcounter{QuestionNumber}
+\setcounter{QuestionNumber}{1}
+
+\newcommand{\Q}{
+\textbf{Question \theQuestionNumber)}
+\stepcounter{QuestionNumber}
+}
+
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 4th problem set solution of Optical Networks course
+\hl
+\end{center}
+\Q
+
+a.
+ Given $n$ distinct frequencies $f_1,f_2,\cdots ,f_n$, the FWM frequencies may be produced through the relation $f_1+f_2-f_3$ when all $f_1$, $f_2$ and $f_3$ are not simultaneously equal. Picking up two distinct frequencies $f_1$ and $f_2$ from the set in $\binom{n}{2}$ ways, the possible FWM cases are
+\qn{
+&2f_1-f_2
+\\&2f_2-f_1
+}
+which yields $2\binom{n}{2}$ different cases. When all the three frequencies are different in $\binom{n}{3}$, we obtain the following cases for FWM:
+\qn{
+&f_1+f_2-f_3
+\\&f_1+f_3-f_2
+\\&f_3+f_2-f_1
+}
+with a total of $3\binom{n}{3}$ different cases. Summing up, leaves us with $2\binom{n}{2}+3\binom{n}{3}={n^2(n-1)\over 2}$ total possible FWM frequency components.
+
+b. 
+\qn{
+&f_1=193.2THz\quad f_2=193.2THz\quad f_3=193.1THz\quad:\quad f_{\text{FWM}}=193.3THz
+\\&f_1=193.2THz\quad f_2=193.2THz\quad f_3=193.0THz\quad:\quad f_{\text{FWM}}=193.4THz
+\\&f_1=193.1THz\quad f_2=193.2THz\quad f_3=193.0THz\quad:\quad f_{\text{FWM}}=193.3THz
+\\&f_1=193.1THz\quad f_2=193.1THz\quad f_3=193.2THz\quad:\quad f_{\text{FWM}}=193.0THz
+\\&f_1=193.1THz\quad f_2=193.1THz\quad f_3=193.0THz\quad:\quad f_{\text{FWM}}=193.2THz
+\\&f_1=193.0THz\quad f_2=193.2THz\quad f_3=193.1THz\quad:\quad f_{\text{FWM}}=193.1THz
+\\&f_1=193.0THz\quad f_2=193.1THz\quad f_3=193.2THz\quad:\quad f_{\text{FWM}}=192.9THz
+\\&f_1=193.0THz\quad f_2=193.0THz\quad f_3=193.2THz\quad:\quad f_{\text{FWM}}=192.8THz
+\\&f_1=193.0THz\quad f_2=193.0THz\quad f_3=193.1THz\quad:\quad f_{\text{FWM}}=192.9THz
+}
+\Q
+
+a. By multiplying the first equation in $A_x^*$, the second one in $A_y^*$ and considering their complex conjugates, we obtain four equations:
+
+\qn{
+&A_x^H{\partial A_x\over \partial z}+{\alpha\over 2}A_x^HA_x-j\gamma PA_x^HA_x=0
+\\
+&A_x^T{\partial A_x^*\over \partial z}+{\alpha\over 2}A_x^TA_x^*+j\gamma PA_x^TA_x^*=0
+\\
+&A_y^H{\partial A_y\over \partial z}+{\alpha\over 2}A_y^HA_y-j\gamma PA_y^HA_y=0
+\\
+&A_y^T{\partial A_y^*\over \partial z}+{\alpha\over 2}A_y^TA_y^*+j\gamma PA_y^TA_y^*=0
+}
+where $(\cdot)^T$ and $(\cdot)^H$ denote the transpose and Hermitian (transpose+complex conjugate) operators.
+
+By summing up all the equations and substituting $P=|A_x|^2+|A_y|^2$, the imaginary parts of the PDEs vanish and we finally obtain what we want:
+$$
+{\partial P\over \partial z}=-\alpha P
+$$
+with the following solution:
+$$
+P=P(z,t)=P(0,t)e^{-\alpha z}
+$$
+
+b. The PDE can be re-written as
+\qn{
+&{\partial A_x\over A_x\cdot \partial z}+{\alpha\over 2}-j\gamma P(0,t)e^{-\alpha z} =0
+\\&{\partial A_y\over A_y\cdot \partial z}+{\alpha\over 2}-j\gamma P(0,t)e^{-\alpha z} =0
+}
+which by integration w.r.t. $x$ and $y$ respectively yields
+\qn{
+&
+\ln A_x+{\alpha\over 2}z+j{\gamma\over \alpha} P(0,t)e^{-\alpha z}+C_1=0
+\\&
+\ln A_y+{\alpha\over 2}z+j{\gamma\over \alpha} P(0,t)e^{-\alpha z}+C_2=0
+}
+or equivalently
+\qn{
+&
+A_x=e^{-{\alpha\over 2}z-j{\gamma\over \alpha} P(0,t)e^{-\alpha z}+C_1}
+\\&
+A_y=e^{-{\alpha\over 2}z-j{\gamma\over \alpha} P(0,t)e^{-\alpha z}+C_2}
+}
+Substituting $z=0$ leads to 
+\qn{
+&
+A_x(0,t)=e^{-j{\gamma\over \alpha} P(0,t)+C_1}
+\\&
+A_y(0,t)=e^{-j{\gamma\over \alpha} P(0,t)+C_2}
+}
+By finding and replacing the constants $C_1$ and $C_2$, the result is immediately concluded $\blacksquare$.
+\nl
+\Q
+
+The linear value of $\alpha$ is given by
+$$
+\alpha_\text{Linear}={\alpha_{dB}\over 4.343}=4.61\times 10^{-5} {1\over \text{m}}
+$$
+hence
+\qn{
+L_{\text{eff}}={1-\exp(-\alpha L)\over \alpha}=14.85 \text{km}
+}
+and by substituting, we obtain
+\qn{
+\phi_{\text{NL}}=\gamma L_{\text{eff}}P=0.59\text{rad}=34.03^\circ
+}
+\nl
+\Q
+
+a.
+\qn{
+&\gamma=2.63 {\text{W}^{-1}\over \text{km}}
+\\& L_{\text{eff}}=18.27 \text{km}
+\\& \phi_{\text{NL}}=\pi
+}
+therefore
+$$
+P=65.38 \text{mW}\equiv 18.15 \text{dBm}
+$$
+
+b.
+\qn{
+&\gamma=2.11 {\text{W}^{-1}\over \text{km}}
+\\& L_{\text{eff}}=L
+\\& \phi_{\text{NL}}=2\pi
+\\&P=6\text{dBm}\equiv 3.98\text{mW}
+}
+which yield
+$$
+L=748\text{km}
+$$
+\end{document}

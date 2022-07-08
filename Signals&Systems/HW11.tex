@@ -1,0 +1,121 @@
+\documentclass[50pt]{article}
+\RequirePackage{pdfpages}
+\renewcommand{\baselinestretch}{1.4}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage{color}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\RequirePackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\RequirePackage{xepersian}
+\RequirePackage{MnSymbol}
+\RequirePackage{graphicx}
+\newcommand{\wid}{1.8in}
+\newtheorem{theorem}{Theorem}
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\newenvironment{amatrix}[1]{%
+\left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+\end{array}\right]
+}
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+
+\begin{document}
+\setLTR 
+
+
+
+
+\begin{RTL}
+\Large{
+
+
+
+
+
+
+
+
+\begin{center}
+به نام خدا
+
+تمرینات سری یازدهم (پایانی) درس سیگنالها و سیستمها
+
+دکتر لطف الله بیگی
+\end{center}
+
+\hl
+\begin{latin}
+Chapter 1:
+
+$45,46$
+
+Chapter 2:
+
+$66$
+
+Chapter 3:
+
+$65$
+
+Chapter 4:
+
+$53\_\Big\{a,b,c\_\{i,v\},d,e\Big\}$
+
+Chapter 5:
+
+$53$
+
+Chapter 6:
+
+$65$
+
+Chapter 7:
+
+$52$
+
+Chapter 9:
+
+$63$
+
+Chapter 10:
+
+$63,64$
+
+
+\end{latin}
+به علاوه سوالات زیر را حل کنید:
+\newline
+(1) یک سیستم \text{\lr{FIR}} (زمان گسسته) به سیستم \text{\lr{LTI}} ای گفته می شود که پاسخ ضربه‌ی آن ($h[n]$)، دارای دوره‌ی زمانی محدود باشد؛ به عبارت دیگر:
+\[
+h[n]=0\quad,\quad N_1<n<N_2
+\]
+ثابت کنید تمامی قطب های این سیستم (در صورت وجود)، در صفر قرار دارند؛ اگر و تنها اگر سیستم علی باشد.
+\newline
+(2) سیستم حقیقی،زمان گسسته و پایدار $h[n]$ با تبدیل $z$ زیر توصیف می شود:
+\[
+H(z)={1-az^{-1}\over (1-2z^{-1})\left(1-{1\over 2}z^{-1}\right)}
+\]
+الف) آیا می توان با تغییر مقادیر $a$، سیستم را علی نمود؟ ضد-علی چطور؟
+\newline
+ب) محدوده‌ی مقادیری از $a$ را بیابید که سیستم، وارون علی و پایدار داشته باشد.
+\newline
+ج) نمودار صفر و قطب سیستم وارون را رسم کنید.
+
+
+
+}
+
+
+
+
+
+\end{RTL}
+
+
+
+\end{document}
+
+

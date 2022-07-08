@@ -1,0 +1,112 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\Q}[1]{\textbf{
+سوال #1)
+}}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام زیبایی
+
+تمرینات سری سوم سیگنال ها و سیستم ها
+\hl
+\end{center}
+\Q1
+
+یک سیستم LTI و سیگنال 
+$
+x(t)=e^{-5t}u(t-2)
+$
+ مفروض است. اگر
+$$
+x(t)\to y(t)
+$$
+ و 
+$$
+{dx(t)\over dt}\to -5y(t)+{1\over 1+t^2}u(t)
+$$
+در اینصورت پاسخ ضربه‌ی این سیستم را بیابید.
+\nl
+\Q2
+
+یک سیستم LTI دارای جفت ورودی-خروجی زیر است:
+\[
+\includegraphics[width=60mm]{PS3_Q2_1.eps}
+\longrightarrow
+\includegraphics[width=60mm]{PS3_Q2_2.eps}
+\]
+پاسخ این سیستم به ورودی زیر
+\pic{PS3_Q2_3.eps}{60mm}
+چیست؟
+\nl
+\Q3
+
+الف) اگر تابع $f(t)$، تابعی یک مرتبه مشتق پذیر با ریشه های 
+$
+r_1,r_2,\cdots,r_n
+$
+ باشد به گونه ای که 
+$
+f'(r_i)\ne 0
+$
+. در این صورت نشان دهید
+$$
+\delta(f(t))=\sum_{i=1}^{n} {1\over |f'(r_i)|}\delta(t-r_i)
+$$
+ب) مقادیر انتگرال های زیر را محاسبه کنید.
+
+1) 
+$
+\int_{-\infty}^\infty \delta(t^2)dt
+$
+
+2)  
+$
+\int_0^\infty \delta\left(\sin{1\over t}\right)dt
+$
+
+3)
+ $
+\int_{-1}^3 \sin \pi t\delta(t^2-t)dt
+$
+
+4)
+ $
+\int_{-1}^3 \delta^2(t)dt
+$
+
+(راهنمایی: برای اثبات الف، سیگنال $u(f(t))$ را در نظر گرفته و با مشتق گیری از آن، به تابع $\delta(f(t))$ برسید. این مشتق را در نزدیکی هر $r_i$ تحلیل کنید.)
+\nl
+\Q4
+
+الف) هر یک از گزاره‌های زیر را برای یک سیستم LTI تعیین درستی کنید.
+
+\begin{enumerate}
+\item
+معکوس هر سیستم علی و LTI ، همواره علی است.
+\item
+اگر یک سیستم LTI زمان گسسته دارای پاسخ ضربه ای با دوره‌ی زمانی محدود باشد، آنگاه پایدار است.
+\end{enumerate}
+
+ب) فرض کنید یک سیستم LTI گسسته، دارای پاسخ ضربه‌ی $h[n]$ باشد؛ به گونه ای که 
+$$
+\sum_{n=-\infty}^\infty |h[n]|=\infty
+$$
+ورودی کرانداری بیابید که پاسخ این سیستم به چنین ورودی ای، بیکران شود و از آنجا نتیجه بگیرید که سیستم ناپایدار است.
+\end{document}

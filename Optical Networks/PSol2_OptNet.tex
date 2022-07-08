@@ -1,0 +1,163 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{tikz}
+\usepackage{tools}
+\usepackage{enumitem}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+
+\newcommand{\bns}{\textit{broadcast-and-select}  architecture}
+\newcommand{\Bns}{\textit{Broadcast-and-select} architecture}
+
+\newcommand{\rns}{\textit{route-and-select} architecture}
+\newcommand{\Rns}{\textit{Route-and-select} architecture}
+
+\newcommand{\Q}[1]{\textbf{Question #1)}}
+\newcommand{\EX}{\Bbb E}
+\newcommand{\nl}{\newline\newline}
+
+\begin{document}
+\Large
+\begin{center}
+In the name of beauty
+
+The 2nd problem set solution of Optical Networks course
+\hl
+\end{center}
+\Q1
+\begin{enumerate}[label=\alph*)]
+\item
+Yes it does. The broadcast-and-select architecture readily supports multicast
+in the optical domain, with multiple configurations possible.
+
+First, a signal
+entering the node from an input network fiber can be sent to multiple output network
+fibers; e.g., a signal can be multicast from the East link to both the West and
+South links.
+
+Second, a signal entering the node from an input network fiber can be
+sent to both a drop port and one or more output network fibers; e.g., a signal can be
+multicast from the East link to both the West link and a transponder.
+
+Third, a signal from an add port
+can be directed to multiple output network fibers; e.g., a signal can be multicast
+from a transponder to both the East and South links.
+
+Finally,
+a signal on an input network fiber can be directed to multiple transponders
+\item
+These
+types of loopback may be useful for testing purposes. Additionally, there may be
+instances where traffic is routed along a path that loops back on itself due to equipment
+limitations or a link failure.
+\item
+Since the signal integrity is more important to be maintained on its way through a node, it is more efficient to allocate more power for signal transmission through the node than for droping.
+\end{enumerate}
+\Q2
+\begin{enumerate}[label=\alph*)]
+\item
+No because WSSs do not typically support multicast despite the splitters.
+
+\item
+The advantages are eliminating splitter loss and reducing noise and crosstalk. The disadvantages are doubling the implementation cost and losing multicast support.
+
+\item
+The advantages are supporting limited multicast from add modules to any output terminal and reducing the cost. A drawback is that a signal must pass at least once through a splitter at the source node.
+\end{enumerate}
+\Q3
+All three of the ROADM architectures illustrated in Fig. 2.12–2.14 are directionless. You can redirect any added signal to any output link.
+
+Both \rns and \bns are non contentionless. This is because WSSs cannot redirect a wavelength repeated on two input terminals. For example, in both these architectures, if two of a wavelength arrive at two transponder, the transponder WSS blocks one of them. This problem is removed in a Wavelength-Selective architecture where each transponder is directly connected to a switch.
+\nl
+\Q4
+\begin{enumerate}[label=\alph*)]
+\item
+Fix some specific node, say node 1. Since there are $N$ nodes in the topology in total, there are $N-1$ connections that drop in node 1. To obtain the number of connections that traverse node 1, note that the source and destination of that connection must lie on the two sides of node 1. This means that if a shortest path between two nodes contains $k$ nodes (regarding the endpoints), node 1 must lie inside this shortest path in $k-2$ different ways. This happens only if $k<{N+1\over 2}$ unless the path is traversed from the other side of the ring that does not contain node 1. Since a connection is bidirectionally routed on the same path, the total number of connections that traverse node 1 becomes
+$$
+2\sum_{k=3}^{{N+1\over 2}}k-2=2\sum_{k=1}^{{N+1\over 2}-2}k=\left({N-1\over 2}\right)\left({N-1\over 2}-1\right)
+$$
+and the desired ratio becomes
+\eqn{
+r&={N-1\over N-1+\left({N-1\over 2}\right)\left({N-1\over 2}-1\right)}
+\\&={1\over 1+{N-3\over 4}}
+\\&={4\over N+1}
+}{}
+\item
+The number of drops is again $N-1$ and the connection traversals happen when the two endpoints fall in the two sides of the center node. Hence the number of connections that traverse node 1 is
+\eqn{
+2\left({N-1\over 2}\right)^2={(N-1)^2\over 2}
+}{}
+and the ratio becomes
+\eqn{
+r&={N-1\over N-1+{(N-1)^2\over 2}}
+\\&={1\over 1+{N-1\over 2}}
+\\&={2\over N+1}
+}{}
+\item
+The following topology, sketches this network for $N=21$:
+\picnocapt{p3.eps}{150mm}
+First off, the number of drops in the center node is $N^2-1$ for obvious reasons. After then, considering the center node, it is impossible that a connection traverses it if both of the source and the destination fall in the colorful (non-black)  nodes, as otherwise, the center node will become an inner node of the connection path combined with its reversal. It must happen that at least one of the endpoints of the connection, falls in the black nodes.
+
+If exactly one of the endpoints is assumed to be black (and the other as colorful), the center node will lie on exactly one connection between the two nodes (not on both the connection and its reversal, since the paths are quite different and have no intermediate nodes in common).
+
+Because of the square symmetry, we only need to calculate the total number of connection for a half row/column containing the center node and multiply it in $4$. In this manner, we are sure that no traversing connection is considered more than once. So, we start with half row left to the center node.
+
+There are $N-1\over 2$ nodes on this half row, each of which hosting a bunch of connections to the other nodes! Clearly, the connections from these black nodes to either green or purple nodes does not traverse the center node, therefore the destination to these connections can be either red or blue in $2\left({N-1\over 2}\right)^2$, leading to a total cases of $2\left({N-1\over 2}\right)^3$. By multiplying this number in $4$, the total cases for which exactly one endpoints happens to be black, becomes $(N-1)^3$.
+
+This time, we assume both endpoints to be black. All of the possible cases of connection that traverses the center node are
+\begin{enumerate}[label=\roman*. ]
+\item
+Source: left half row , Destination: right half row
+\item
+Source: right half row , Destination: left half row
+\item
+Source: upper half column , Destination: lower half column
+\item
+Source: lower half column , Destination: upper half column
+\item
+Source: left half row , Destination: full column containing the center node, except the center node itself
+\item
+Source: right half row , Destination: full column containing the center node, except the center node itself
+\end{enumerate}
+(Note that the reversal connection for cases (v) and (vi) is provided first along a row) Each of the first four cases, has a total number of $\left({N-1\over 2}\right)^2$ possible connections. The cases of (v) and (vi) have a total number of ${(N-1)^2\over 2}$ and $(N-1)^2\over 2$ possible connections, respectively. Putting them all together, the total number of connections that traverse the center node becomes
+$$
+(N-1)^3+(N-1)^2+(N-1)^2=(N-1)(N^2-1)
+$$
+and the ratio becomes
+\eqn{
+r&={N^2-1\over N^2-1+(N-1)(N^2-1)}
+\\&={1\over N}
+}{}
+\end{enumerate}
+\Q5
+
+\begin{enumerate}[label=\alph*.]
+\item
+Each adding wavelength is binded to one and only one link, because the ROADM architecture is non-directionless. Therefore the probability of blocking is $10^{-4}$ which must be a supremum to the probability of arrival of maximum number of requests, i.e.
+$$
+\sum_{k=n+1}^{\infty} {e^{-20}\cdot20^k\over k!}< 1-10^{-4}
+$$
+Calculations show $n=40$.
+\item
+Since the ROADM architecture is directionless, the blocking probability reduces by an order of 2 to $0.5\times 10^{-5}$ since each request experiences blocking only if both links fail to accept it, i.e.
+$$
+\sum_{k=n+1}^{\infty} {e^{-20}\cdot20^k\over k!}< 0.5\times 10^{-5}
+$$
+Calculations show $n=39$.
+\end{enumerate}
+%assume that a connection with wavelength $\lambda_1$ wants to traverse the node from East link to West link. The splitter on the East link broadcasts $\lambda_1$ to all of the WSSs, even to those to which $\lambda_1$ is not meant to be redirected. If a transponder adds another request with wavelength $\lambda_1$ to e.g. South link, the conflict at the corresponding WSS simply causes blocking.
+
+
+%What are the advantages and shortcomings of using Wavelength-Selective Switch (WSS) in place of Array Wave-guide Grating (AWG)?
+%\nl
+%\Q5
+%
+%\{Question 2.1 of the main textbook\}
+%\nl
+%\Q5 
+\end{document}

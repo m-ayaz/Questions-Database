@@ -1,0 +1,161 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,geometry,tikz}
+\usepackage{xepersian}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+
+\newcommand{\Q}{
+\textbf{سوال \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+
+\newcommand{\eqn}[1]{
+\begin{equation}\begin{split}
+#1
+\end{split}\end{equation}
+}
+
+\begin{document}
+\LARGE
+\begin{center}
+\settextfont{IranNastaliq}
+
+به نام زیبایی
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=30mm]{kntu_logo.eps}
+%\end{figure}
+
+تمرینات سری نهم درس احتمال مهندسی
+
+\end{center}
+\hrulefill
+\large
+
+\Q
+
+با استفاده از قضیه‌ی تقریب پواسن، کمیت های
+$
+\binom{n}{k}p^k(1-p)^{n-k}
+$
+و
+$
+e^{-np}\frac{(np)^k}{k!}
+$
+را به ازای مقادیر مختلف داده شده برای
+$
+n
+$،
+$
+p
+$
+و
+$
+k
+$
+محاسبه کرده و خطای نسبی را در هر مورد به دست آورید. از مقایسه‌ی خطاهای نسبی چه نتیجه‌ای می‌گیرید؟
+
+الف)
+$
+n=300\quad,\quad p=0.01\quad,\quad k=3
+$
+
+ب)
+$
+n=30\quad,\quad p=0.8\quad,\quad k=24
+$
+
+\Q
+
+برای هر یک از توابع زیر، محدوده مقادیر $k$ را به گونه ای تعیین کنید که تابع مورد نظر، یک تابع توزیع انباشته باشد. سپس، چگالی احتمال را بیابید.
+
+الف)
+$
+F(x)=\frac{1}{e^{-kx}+1}
+$
+
+ب)
+$
+F(x)=\begin{cases}
+0&,\quad x<0\\
+1-e^{-x-k\sin x}&,\quad x\ge0
+\end{cases}
+$
+
+پ)
+$
+F(x)=\begin{cases}
+0&,\quad x<0\\
+1+xe^{-kx}&,\quad x\ge 0
+\end{cases}
+$
+
+ت)
+$
+F(x)=\begin{cases}
+0&,\quad x<0\\
+\frac{1}{2}&,\quad 0\le x<1\\
+1-\frac{1}{2}e^{k-kx}&,\quad x\ge 1
+\end{cases}
+$
+
+\Q
+
+برای بخش های الف و ت سوال پیش، مقادیر میانه، صدکهای 25ام و 75ام و همچنین احتمال‌های
+$
+\Pr\{X=0\}
+$
+و
+$
+\Pr\{0< X\le 2\}
+$
+را بیابید.
+
+\Q
+
+یک تاس را پرتاب می‌کنیم. اگر زوج آمد، عدد آن را یادداشت می‌کنیم و اگر فرد آمد، عددی را به تصادف از بازه‌ی 
+$
+[1,6]
+$
+انتخاب کرده و آن را یادداشت می‌کنیم. اگر متغیر تصادفی 
+$
+X
+$،
+نشان دهنده‌ی عدد یادداشت شده باشد، چگالی احتمال و تابع توزیع انباشته‌ی آن را به دست آورده و مقدار 
+$
+\Pr\{1\le X\le 3\}
+$
+را بیابید.
+
+\Q
+
+یک تابع چگالی احتمال 
+$
+f(x)
+$،
+همواره مثبت بوده و به ازای عدد حقیقی و داده‌شده‌ی $a$، دارای خاصیت زیر است:
+$$
+f(x)=f(a-x).
+$$
+در این صورت، میانه‌ی آن را بیابید.
+
+%\lr{
+%\begin{table}[h]
+%\LARGE
+%\begin{tabular}{|c|c|c|c|}
+%1&2&3&4\\\hline
+%\end{tabular}
+%\begin{tabular}{|c|c|}
+%1&2\\\hline
+%1&2\\\hline
+%\end{tabular}
+%\end{table}
+%}
+
+\end{document}

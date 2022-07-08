@@ -1,0 +1,168 @@
+\documentclass[10pt,letterpaper]{article} 
+%\usepackage{tikz}
+%\usepackage{tools}
+\usepackage{amsmath,amssymb,geometry,graphicx,enumitem}
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+%\usepackage{lipsum}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+%\newcommand{\pf}{$\blacksquare$}
+\newcounter{questionnumber}
+\setcounter{questionnumber}{1}
+\newcommand{\Q}{
+\textbf{Question \thequestionnumber)}
+\stepcounter{questionnumber}
+}
+%\newcommand{\EX}{\Bbb E}
+%\newcommand{\nl}{\newline\newline}
+
+
+\begin{document}
+\large
+\begin{center}
+In the name of beauty
+
+The 2nd problem set of Optical Networks course
+
+\hrulefill
+\end{center}
+
+\Q
+
+A $1.3 \mu m$ lightwave system uses a 50-km fiber link and requires at least $0.3 \mu W$
+at the receiver. The fiber loss is 0.5 dB/km. Fiber is spliced every 5 km and has
+two connectors of 1-dB loss at both ends. Splice loss is only 0.2 dB. Determine
+the minimum power that must be launched into the fiber.
+
+(Hint: splices and connectors only impose attenuation to the signal power and have no other impairments, so they can be treated in a similar manner to amplifiers without noise.)
+
+\Q
+
+\begin{enumerate}[label=\alph*.]
+\item
+Calculate the power launched into a 40-km-long single-mode fiber for which
+the SPM-induced nonlinear phase shift becomes 180°. Assume $\lambda=1.55\mu m$,
+$A_\text{eff} = 40 \mu m^2$, $\alpha = 0.2$ dB/km, and $\bar n_2 = 2.6 \times 10^{-20} m^2/W$.
+\item
+A 1.55-$\mu m$ continuous-wave signal with 6-dBm power is launched into a fiber with 50-$\mu m^2$ effective mode area ($A_\text{eff}$). After what fiber length would the nonlinear phase shift induced by SPM become $2\pi$? Assume $\bar n_2= 2.6 \times 10^{-20} m^2/W$ and neglect fiber losses.
+\end{enumerate}
+
+(The nonlinear phase shift induced by SPM ($\phi_\text{NL}$) can be obtained from $\phi_\text{NL}=\gamma P_\text{in}L_\text{eff}$, where $\gamma={2\pi \bar n_2\over A_\text{eff}\cdot \lambda}$.)
+
+\Q
+
+Assume that we use a single-mode fiber (SMF) with $D_\mathrm{SMF}=25 ps/(nm\cdot km)$, length $L_\mathrm{SMF}$ and attenuation $\alpha_\mathrm{SMF}=0.21$ dB/km for transmission. To compensate dispersion at receiver, we make use of a non-zero dispersion-shifting fiber (NZ-DSF) with dispersion parameter $D_\mathrm{NZ-DSF}=16 ps/(nm\cdot km)$, attenuation $\alpha_\mathrm{NZ-DSF}=0.21$ dB/km and length $L_\mathrm{NZ-DSF}$ which is employed after fiber the SMF. The NZ-DSF compensates the dispersion completely, hence 
+$$
+D_\mathrm{SMF}\cdot L_\mathrm{SMF}+D_\mathrm{NZ-DSF}\cdot L_\mathrm{NZ-DSF}=0.
+$$
+Once again, the signal is allowed to drop $20\text{dB}$ before it is amplified.
+\begin{enumerate}[label=\alph*.]
+\item
+Calculate the attenuation-limited transmission length, without amplifiers (Note that the total length over which the signal is attenuated is $L_\text{tot}=L_\text{NZ-DSF}+L_\text{SMF}$).
+\item
+Given the fiber lengths in part a, assume that we also use an EDFA
+\footnote{
+Erbium-doped fiber amplifier
+}
+with noise factor 5.5 dB to fully compensate the total fiber attenuation. How much is the ASE
+\footnote{
+Amplified spontaneous emission
+}
+ noise power added to the signal by the EDFA?
+\end{enumerate}
+
+\Q
+
+Assume that a system has a hybrid two-stage amplifier, where the first stage is
+Raman based, with a maximum gain of 18 dB, and the second stage is EDFA
+based, with a maximum gain of 7 dB. Assume that the amplifier is placed at
+the end of a span that has a total loss of 20 dB, and assume that the net gain,
+after both stages of amplification, should be 0 dB. The Raman amplification
+is distributed over the fiber span that precedes it (i.e., treat the fiber span and
+the Raman amplifier as one stage). At 13-dB Raman gain, the NF for the first
+stage is 21 dB; assume that the NF decreases linearly by 0.25 dB for every
+1-dB increase in Raman gain. The NF of the EDFA stage is fixed at 6 dB regardless
+of its gain. What should the gain settings be for the Raman and EDFA
+portions of the amplifier to minimize the overall NF, and what is the overall
+NF of the two-stage amplifier?
+
+\Q
+
+\begin{enumerate}[label=\alph*-]
+\item
+In an optical system, all the links comprise spans of unity net gain, that is, amplifiers are set to full span attenuation compensation. In can then be implied that the signal power of a connection is equal at the input of the links. Each link can then be modelled as a communication channel with AWGN, such that the input $x(t)$ and the output $y(t)$ have the following relation
+$$
+y(t)=x(t)+n(t),
+$$
+where $n(t)$ is the additive noise process added to signal. Prove that the SNR of a connection undergoing $N_l$ links can be given by
+$$
+\frac{1}{\text{SNR}_\text{total}}=\sum_{i=1}^{N_l}
+\frac{1}{\text{SNR}_i},
+$$
+where $\text{SNR}_\text{total}$ and $\text{SNR}_i$ are the signal-to-noise ratios at receiver and at the end of the $i$-th link, respectively.
+\item
+A typical optical link is modelled as a media with unity gain and AWGN, similar to part a. An optical signal with power $P$ has been injected into this link and the AWGN has the following variance $$\sigma^2=\sigma^2_\text{ASE}+\eta_\text{NLI}P^3,$$ where $\sigma^2_\text{ASE}$ and $\eta_\text{NLI}$ are constant. Find the optimum power $P_\text{opt}$ at which SNR is maximized.
+\end{enumerate}
+
+\Q (Optional; extra point)
+
+Consider the following Manakov equation:
+$$
+{\partial A\over \partial z}+{\alpha\over 2}A+j{\beta_2\over 2}\cdot{\partial^2 A\over \partial t^2}-j\gamma P\cdot A=0
+,
+$$
+where $A=\begin{bmatrix}A_x\\A_y\end{bmatrix}$ is the dual-polarized propagated signal and $P=|A_x|^2+|A_y|^2$.
+
+\begin{enumerate}[label=\alph*.]
+\item
+Show that the general solution to this differential equation for $\gamma=0$ in frequency domain is
+$$
+A(z,\omega)=A(0,\omega)\exp\left(\left[-{\alpha\over 2}+j{\beta_2\over 2}\omega^2\right]z\right)
+.
+$$
+(Hint: consider the frequency domain of the NLSE)
+\item
+For $\beta_2=0$, this equation can be splitted to two scalar equations:
+\[\begin{split}
+&
+{\partial A_x\over \partial z}+{\alpha\over 2}A_x-j\gamma P\cdot A_x=0
+,
+\\&
+{\partial A_y\over \partial z}+{\alpha\over 2}A_y-j\gamma P\cdot A_y=0
+.
+\end{split}\]
+
+Show that the total power $P$, follows from a 1st-order differential equation as
+$$
+{\partial P\over \partial z}=-\alpha P
+,
+$$
+which has the following general solution:
+$$
+P=P(z,t)=P(0,t)e^{-\alpha z}.
+$$
+(Hint: for this part, proceed  by multiplying the two scalar differential equations in $E_x$ and $E_y$, respectively. Consider the two resulted differential equations with their conjugates)
+\item
+By substituting the general solution of part b in the Manakov equation, the differential equation can be re-written as
+$$
+{\partial A\over \partial z}+{\alpha\over 2}A-j\gamma P(0,t)e^{-\alpha z} A=0
+,
+$$
+which is a 1st-order differential equation. Show that the general solution to this equation at the end of a fiber of length $L$ (thereby substituting $z=L$ in the general solution) is
+$$
+A(z,t)=A(0,t)\exp\left[-{\alpha\over 2}L+j\gamma P(0,t)L_{\text{eff}}\right]
+,
+$$
+where $L_{\text{eff}}={1-e^{-\alpha L}\over \alpha}$. The quantity $\gamma P(0,t)L_{\text{eff}}$ stands for the non-linear phase shift.
+%\item
+%Assume a chirped Gaussian input signal as 
+%$$
+%A(0,t)=A_0\exp\left[-{1\over 2}(1+jC)\left({t\over T_0}\right)^2\right]
+%$$
+%Find $1\over e$-intensity spectral half width $\Delta \omega_0$ ($\Delta \omega_0$ should be measured where the intensity of the frequency domain $A(0,\omega)$ reaches $1\over e$ of its maximum, hence first try to find the Fourier transform of $A(0,t)$).
+\end{enumerate}
+
+\end{document}

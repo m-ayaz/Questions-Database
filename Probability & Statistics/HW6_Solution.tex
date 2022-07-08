@@ -1,0 +1,227 @@
+\documentclass[10pt,letterpaper]{article} 
+\usepackage{toolsper}
+%\usepackage{graphicx}‎‎
+%\usefonttheme{serif}‎
+%\usepackage{ptext}‎
+\usepackage{xepersian}
+\settextfont{B Nazanin}
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\newcommand{\pf}{$\blacksquare$}
+\newcommand{\pic}[2]{
+\begin{center}
+\includegraphics[width=#2]{#1}
+\end{center}
+}
+\begin{document}
+\Large
+\begin{center}
+به نام خدا
+
+پاسخ تمرینات سری ششم درس آمار و احتمال
+\hl
+\end{center}
+سوال 1) الف)
+\qn{
+E\{X\}&=\int_{-\infty}^{\infty}{xf(x)}dx
+\\&=
+\int_{a}^{b}{x\over b-a}dx
+\\&=
+{1\over b-a}{b^2-a^2\over 2}
+\\&=
+{b+a\over 2}
+}{}
+هم چنین
+\qn{
+\sigma_X^2=E\{X^2\}-E^2\{X\}
+}{}
+و
+\qn{
+E\{X^2\}&=\int_{-\infty}^{\infty}{x^2f(x)}dx
+\\&=
+\int_{a}^{b}{x^2\over b-a}dx
+\\&=
+{1\over b-a}{b^3-a^3\over 3}
+\\&=
+{b^2+a^2+ab\over 3}
+}{}
+در نتیجه
+\qn{
+\sigma_X^2&={b^2+a^2+ab\over 3}-{b^2+a^2+2ab\over 4}
+\\&
+={1\over 12}(4a^2+4b^2+4ab-3a^2-3b^2-6ab)
+\\&
+={(b-a)^2\over 12}
+}{}
+ب)
+\qn{
+E\{X\}&=\int_0^\infty {x\over \lambda}e^{-{x\over \lambda}}dx
+\\&=
+\lambda\int_0^\infty xe^{-x}dx
+\\&=
+\lambda\left[-xe^{-x}\Big|_0^\infty+\int_0^\infty e^{-x}dx\right]
+\\&=
+\lambda
+}{}
+همچنین به کمک انتگرال جزء به جزء
+\qn{
+E\{X^2\}&=\int_0^\infty {x^2\over \lambda}e^{-{x\over \lambda}}dx
+\\&=
+\lambda^2\int_0^\infty x^2e^{-x}dx
+\\&=
+\lambda^2\left[-x^2e^{-x}\Big|_0^\infty+2\int_0^\infty xe^{-x}dx\right]
+\\&=
+2\lambda^2
+}{}
+بنابراین
+\qn{
+\sigma_X^2=\lambda^2
+}{}
+پ)
+\qn{
+E\{X\}=\sum nf(n)=p\times 0+(1-p)\times 1=1-p
+}{}
+هم چنین
+\qn{
+E\{X^2\}=\sum n^2f(n)=p\times 0^2+(1-p)\times 1^2=1-p
+}{}
+بنابراین
+$$\sigma_X^2=p(1-p)$$
+ت) ابتدا می دانیم
+$$
+\sum_{n=0}^\infty e^{-\lambda}{\lambda^n\over n!}=1
+$$
+بنابراین
+\qn{
+E\{X\}&=
+\sum_{n=0}^\infty n\cdot e^{-\lambda}{\lambda^n\over n!}
+\\&=
+\sum_{n=1}^\infty n\cdot e^{-\lambda}{\lambda^n\over n!}
+\\&=
+\sum_{n=1}^\infty e^{-\lambda}{\lambda^n\over (n-1)!}
+\\&=
+\sum_{n=0}^\infty e^{-\lambda}{\lambda^{n+1}\over n!}
+\\&=
+\lambda\sum_{n=0}^\infty e^{-\lambda}{\lambda^{n}\over n!}
+\\&=\lambda
+}{}
+هم چنین
+\qn{
+E\{X^2\}&=
+\sum_{n=0}^\infty n^2\cdot e^{-\lambda}{\lambda^n\over n!}
+\\&=
+\sum_{n=1}^\infty n^2\cdot e^{-\lambda}{\lambda^n\over n!}
+\\&=
+\sum_{n=1}^\infty n\cdot e^{-\lambda}{\lambda^n\over (n-1)!}
+\\&=
+\sum_{n=1}^\infty (n-1+1)\cdot e^{-\lambda}{\lambda^n\over (n-1)!}
+\\&=
+\sum_{n=1}^\infty (n-1)\cdot e^{-\lambda}{\lambda^n\over (n-1)!}
++
+\sum_{n=1}^\infty e^{-\lambda}{\lambda^n\over (n-1)!}
+\\&=
+\sum_{n=2}^\infty (n-1)\cdot e^{-\lambda}{\lambda^n\over (n-1)!}
++
+\lambda
+\\&=
+\sum_{n=2}^\infty e^{-\lambda}{\lambda^n\over (n-2)!}
++
+\lambda
+\\&=
+\lambda^2\sum_{n=0}^\infty e^{-\lambda}{\lambda^n\over n!}
++
+\lambda
+\\&=
+\lambda+\lambda^2
+}{}
+بنابراین
+\qn{
+\sigma_X^2=\mu_X=\lambda
+}{}
+\hl
+سوال 2) فرض کنیم متغیر تصادفی $X$، تعداد پرتاب ها تا رخداد $k$ امین موفقیت  باشد. بنابراین پیشامد $X=n$ معادل است با اینکه بگوییم در $n$ امین پرتاب، به $k$ امین موفقیت می رسیم. همچنین می توان گفت که در $n-1$ پرتاب قبلی، دقیقا به $k-1$ موفقیت دست یافته ایم که این، طبق توزیع دو جمله ای با احتمال 
+$
+\binom{n-1}{k-1}p^{k-1}(1-p)^{n-k}
+$
+ رخ می دهد. چون احتمال موفقیت در پرتاب $n$ ام نیز برابر $p$ است، داریم
+\qn{
+\Pr\{X=n\}=\binom{n-1}{k-1}p^{k}(1-p)^{n-k}\quad,\quad n\ge k
+}{}
+اکنون متوسط تعداد پرتاب ها را حساب می کنیم.
+
+الف) $k=1$
+\qn{
+\Pr\{X=n\}=p(1-p)^{n-1}\quad,\quad n\ge 1
+}{}
+از یک اتحاد ساده استفاده می کنیم (که به کمک مشتق می توان آن را نشان داد. در اینجا آن را بدون اثبات رها می کنیم)
+\qn{
+\sum_{n=1}^\infty n\cdot u^{n-1}={1\over (1-u)^2}
+}{}
+بنابراین
+\qn{
+E\{X\}=\sum_{n=1}^\infty np(1-p)^{n-1}={1\over p}
+}{}
+ب) $k=2$
+\qn{
+\Pr\{X=n\}=(n-1)p^2(1-p)^{n-2}\quad,\quad n\ge 2
+}{}
+این بار به کمک اتحاد زیر (با مشتق گیری از اتحاد قبلی!)
+\qn{
+\sum_{n=2}^\infty n(n-1)\cdot u^{n-2}={2\over (1-u)^3}
+}{}
+خواهیم داشت
+\qn{
+E\{X\}=\sum_{n=2}^\infty n(n-1)p^2(1-p)^{n-2}={2\over p}
+}{}
+\hl
+سوال 3) هنگامی که به طور متوسط از معیارهای کمی برای ارزیابی یک جامعه ی بزرگ استفاده می شود، می توان گفت که میانگین، مهم ترین معیار کمی ارزیابی است؛ به عبارت دیگر اگر به هریک از افراد یک جامعه، نمره‌ی مخصوصی داده شود، ارزیابی کلی جامعه مستلزم محاسبه کرد میانگین نمرات تکی افراد است. البته که میانگین، تنها کمیت ارزیابی مهم نیست و به طور مثال واریانس نیز معیار بسیار مهم دیگری به شمار می رود. به طور شهودی میانگین، میزان برتری نسبی یک جامعه را به دیگری نشان می دهد. واریانس، نشان دهنده ی میزان یکنواختی افراد جامعه است. طبق این توضیحات، 
+\textbf{
+افراد جامعه ای با متوسط نمرات 73 به لحاظ سطح علمی بالاترند؛ اما جامعه ای با میانگین 59 و واریانس 9، دارای افراد هم سطح تری است.
+}
+\hl
+سوال 4) الف) مسلما دامنه‌ی تعریف چنین چگالی احتمالی متقارن است و داریم
+$$
+\forall x\in D\quad,\quad f(-x)=-f(x)
+$$
+چون تابع چگالی احتمال نامنفی است، در نتیجه باید الزاما داشته باشیم
+$$
+\forall x\in D\quad,\quad f(x)=0
+$$
+می توان گفت چنین توزیعی وجود ندارد؛ اما در بسیاری از متون ریاضی، از آن به عنوان 
+\textbf{
+توزیع گوسی با واریانس بینهایت
+}
+ نام می برند.
+
+ب)
+\qn{
+E\{X^n\}&=\int_{-\infty}^\infty {x^n}f(x)dx
+\\&=\int_{a}^b {x^n\over b-a}dx
+\\&={b^{n+1}-a^{n+1}\over nb-na}
+}{}
+\hl
+سوال 5)
+ الف) بررسی درستی این موضوع کار ساده ای است؛ زیرا پیشامد های 
+$
+e^{sX}\ge e^{sa}
+$
+ و 
+$
+X\ge a
+$
+ معادلند؛ به عبارت دیگر از هر یک می توان دیگری را نتیجه گرفت.
+
+ب) طبق فرایند مارکوف برای یک متغیر تصادفی مثبت $Y$ و $b>0$
+$$
+\Pr\{Y\ge b\}\le{E\{Y\}\over b}
+$$
+بنابراین با تعریف $Y=e^{sX}$ و $b=e^{sa}$ خواهیم داشت:
+$$
+\Pr\{X\ge a\}=\Pr\{e^{sX}\ge e^{sa}\}\le{E\{e^{sX}\}\over e^{sa}}
+$$
+به کمک تعریف تابع مولد گشتاور به صورت 
+$
+\phi_X(s)\triangleq E\{e^{sX}\}
+$،
+ نتیجه ی مورد نظر فورا حاصل می شود.
+\end{document}

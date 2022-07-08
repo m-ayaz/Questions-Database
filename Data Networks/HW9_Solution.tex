@@ -1,0 +1,81 @@
+\documentclass[10pt,letterpaper]{article}
+\RequirePackage{amsthm,amssymb,amsmath,graphicx}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=false,colorlinks,linkcolor=black,citecolor=magenta]{hyperref}
+\RequirePackage{MnSymbol}
+\newcommand{\eqn}[2]{
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+}
+%%%%%%%%%%%%%
+
+%       \eqn{
+%       x=x^2
+%       }{label}
+
+%%%%%%%%%%%%%
+\newcommand{\feqn}[2]{
+\begin{tcolorbox}[width=7in, colback=white]
+\begin{equation}
+\begin{split}
+#1
+\label{#2}
+\end{split}
+\end{equation}
+\end{tcolorbox}
+}
+%%%%%%%%%%%%%%%
+\newcommand{\hl}{
+\begin{center}
+\line(1,0){450}
+\end{center}}
+\setlength{\parindent}{0pt}
+\newcommand{\nl}{\newline\newline}
+\newcommand{\pic}[1]{
+\begin{center}
+\includegraphics[width=130mm]{#1}
+\end{center}
+}
+%\settextfont{B Nazanin}
+\usepackage{lipsum}
+\begin{document}
+\Large
+\begin{center}
+The solution of assignment \#9 of the \textbf{ComNet} course
+\end{center}
+Q1) a. In wired networks, the hidden terminal problem does not happen since hosts are directly connected through the physical wires.
+\newline\newline
+b. Since the bit error rates of wireless channels are relatively high,
+802.11 (unlike Ethernet) uses a link-layer acknowledgment/retransmission (ARQ) scheme.
+\newline\newline
+Q2) a. Unlike the
+802.3 Ethernet protocol, the 802.11 MAC protocol does not implement collision
+detection. There are two important reasons for this:
+\begin{enumerate}
+\item
+The ability to detect collisions requires the ability to send (the station’s own signal)
+and receive (to determine whether another station is also transmitting) at the
+same time. Because the strength of the received signal is typically very small
+compared to the strength of the transmitted signal at the 802.11 adapter, it is
+costly to build hardware that can detect a collision.
+\item
+More importantly, even if the adapter could transmit and listen at the same time
+(and presumably abort transmission when it senses a busy channel), the adapter
+would still not be able to detect all collisions, due to the hidden terminal problem
+and fading.
+\end{enumerate}
+b. Without loss of generality, we assume $n_A\ge n_B$. Since $A$ chooses from $\{0,1,2,\cdots , 2^{n_A}-1\}$ and $B$ chooses from $\{0,1,2,\cdots , 2^{n_B}-1\}$, the probability that they both choose a same number is
+\eqn{
+P&={\Pr\{(0,0)\text{ or }(1,1)\text{ or }(2,2)\text{ or }\cdots \text{ or }(2^{n_B}-1,2^{n_B}-1)\}\over 2^{n_A}2^{n_B}}
+\\&={2^{n_B}\over 2^{n_A}2^{n_B}}={1\over 2^{n_A}}
+}{}
+Hence the general answer for the requested probability is $1-{1\over 2^{\max\{n_A,n_B\}}}$.
+\newline\newline
+Q3) Since H1 does not receive the CTS, it waits as much as a TIMEOUT and resends the RTS. The AP receives the RTS, believing it is the DATA and sends in to all other nodes. The DATA is not understood by the receivers and as a result, no ACK is echoed back to H1. This process continues until H1 successfully sends the RTS to the AP and the AP sends CTS to all the nodes. After then, the data transmission takes place.
+\end{document}
