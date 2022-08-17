@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.27)  17 AUG 2022 18:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.27)  17 AUG 2022 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,19 +1092,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [3] [4]
 File: Q2.pdf Graphic file (type pdf)
 <use Q2.pdf>
- [5]
-File: figure_1.eps Graphic file (type eps)
-<figure_1.eps>
- [6] [7] [8] [9] [10] [11]
-Overfull \hbox (0.99677pt too wide) in paragraph at lines 499--500
+ [5] [6] [7] [8] [9] [10]
+Overfull \hbox (0.99677pt too wide) in paragraph at lines 502--503
 []\TU/XKamran(0)/m/n/14.4 برداشتن دو توپ غیرهمرنگ، با مقدار بدست آمده در قسمت ا
 لف تفاوت می‌کند؟ توضیح[]
  []
 
+[11]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] [13] [14]
+[12]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13] [14]
 فصل 2.
 [15
 
@@ -1112,10 +1114,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 751.
+(amsmath)                 on input line 754.
 
 [18] [19] [20]
-Overfull \hbox (2.29382pt too wide) in paragraph at lines 891--901
+Overfull \hbox (2.29382pt too wide) in paragraph at lines 894--904
 [][]\TU/XKamran(0)/b/n/14.4 سوال ۷۰)  \TU/XKamran(0)/m/n/14.4 یک آزمایش برنولی 
 را که احتمال موفقیت در آن برابر $[]$ است، $\OML/cmm/m/it/14.4 n$ \TU/XKamran(0)
 /m/n/14.4 بار تکرار می‌کنیم.[]
@@ -1124,7 +1126,7 @@ Overfull \hbox (2.29382pt too wide) in paragraph at lines 891--901
 [21]
 فصل 3.
 
-Overfull \hbox (7.95903pt too wide) detected at line 954
+Overfull \hbox (7.95903pt too wide) detected at line 957
 []
  []
 
@@ -1133,10 +1135,10 @@ Overfull \hbox (7.95903pt too wide) detected at line 954
 ]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 980.
+ on input line 983.
 
 [23] [24] [25] [26] [27] [28]
-Overfull \hbox (13.107pt too wide) in paragraph at lines 1380--1386
+Overfull \hbox (13.107pt too wide) in paragraph at lines 1383--1389
 []\TU/XKamran(0)/m/n/14.4 یک متغیر تصادفی باشد. سپس برای هر چگالی احتمال، مقادی
 ر $[]\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X \OT1/cmr/m/n/14.4 = 1\OMS/cmsy/m/
 n/14.4 g$ \TU/XKamran(0)/m/n/14.4 و $[] []$[]
@@ -1145,7 +1147,7 @@ n/14.4 g$ \TU/XKamran(0)/m/n/14.4 و $[] []$[]
 [29] [30] [31] [32] [33] [34]
 فصل 4.
 
-Overfull \hbox (3.7324pt too wide) in paragraph at lines 1872--1874
+Overfull \hbox (3.7324pt too wide) in paragraph at lines 1875--1877
 []\TU/XKamran(0)/m/n/14.4 الف) چگالی های احتمال حاشیه ای $\OML/cmm/m/it/14.4 X$
  \TU/XKamran(0)/m/n/14.4 و $\OML/cmm/m/it/14.4 Y$ \TU/XKamran(0)/m/n/14.4 را به
  دست آورید. همچنین ناهمبستگی، استقلال[]
@@ -1158,20 +1160,20 @@ Overfull \hbox (3.7324pt too wide) in paragraph at lines 1872--1874
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [39]
-Overfull \hbox (11.27489pt too wide) in paragraph at lines 2136--2141
+Overfull \hbox (11.27489pt too wide) in paragraph at lines 2139--2144
 []\TU/XKamran(0)/m/n/14.4 نشان دهید و اگر چنین نیست، مثالی برای مقادیر $\OML/cm
 m/m/it/14.4 p[]; p[]; p[]; p[]$ \TU/XKamran(0)/m/n/14.4 بزنید که ناهمبستگی، است
 قلال[]
  []
 
 [40] [41] [42] [43]
-Overfull \hbox (6.53764pt too wide) in paragraph at lines 2356--2365
+Overfull \hbox (6.53764pt too wide) in paragraph at lines 2359--2368
 [][]\TU/XKamran(0)/m/n/14.4 ب) $\OML/cmm/m/it/14.4 f[]\OT1/cmr/m/n/14.4 (\OML/c
 mm/m/it/14.4 x; y\OT1/cmr/m/n/14.4 ) = []$ []
  []
 
 
-Overfull \hbox (0.37321pt too wide) in paragraph at lines 2384--2403
+Overfull \hbox (0.37321pt too wide) in paragraph at lines 2387--2406
 [][]\TU/XKamran(0)/b/n/14.4 سوال ۱۴۰)  \TU/XKamran(0)/m/n/14.4 برای چگالی احتما
 ل توأم زیر، مقادیر $\OML/cmm/m/it/14.4 ^^[[]$\TU/XKamran(0)/m/n/14.4 ، $\OML/cm
 m/m/it/14.4 ^^[[]$\TU/XKamran(0)/m/n/14.4 ، $\OT1/cmr/m/n/14.4 ^^H[](\OML/cmm/m
@@ -1202,10 +1204,10 @@ not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 25862 strings out of 476180
- 532614 string characters out of 5813082
+ 25803 strings out of 476180
+ 531814 string characters out of 5813082
  1010282 words of memory out of 5000000
- 46075 multiletter control sequences out of 15000+600000
+ 46035 multiletter control sequences out of 15000+600000
  477143 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  88i,23n,91p,1339b,773s stack positions out of 5000i,500n,10000p,200000b,80000s
