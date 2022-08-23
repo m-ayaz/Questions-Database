@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.27)  23 AUG 2022 16:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.27)  23 AUG 2022 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1026,32 +1026,32 @@ ex-text;"
 (./Probability and Statistics - Answers.aux)
 \openout1 = `"Probability and Statistics - Answers.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-7.
+9.
 
 (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1090,7 +1090,7 @@ LaTeX Font Info:    ... okay on input line 37.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 39.
 (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1102,9 +1102,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count383
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (./Probability and Statistics - Answers.out)
 (./Probability and Statistics - Answers.out)
@@ -1121,12 +1121,12 @@ LaTeX Info: Redefining \nameref on input line 37.
 
 ]
 فصل 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
 
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1137,10 +1137,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 258.
+(amsmath)                 on input line 262.
 
 [6]
-Overfull \hbox (27.6316pt too wide) detected at line 313
+Overfull \hbox (27.6316pt too wide) detected at line 317
 \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
 .4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
 4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
@@ -1155,7 +1155,7 @@ mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
  []
 
 [7] [8] [9] [10]
-Overfull \hbox (27.6316pt too wide) detected at line 465
+Overfull \hbox (27.6316pt too wide) detected at line 469
 \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
 .4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
 4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
@@ -1173,12 +1173,12 @@ mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
 File: HW2_Q.pdf Graphic file (type pdf)
 <use HW2_Q.pdf>
 
-Overfull \hbox (3.61432pt too wide) in paragraph at lines 672--673
+Overfull \hbox (3.61432pt too wide) in paragraph at lines 676--677
  [][][][][] 
  []
 
 [16] [17] [18] [19]
-Overfull \hbox (1.23586pt too wide) in paragraph at lines 816--817
+Overfull \hbox (1.23586pt too wide) in paragraph at lines 820--821
 [][] \TU/XKamran(0)/b/n/14.4 پیشامد اینکه $[]$، ۱۵ حالت متفاوت دارد. چون هر گلو
 له[]
  []
@@ -1187,18 +1187,18 @@ Overfull \hbox (1.23586pt too wide) in paragraph at lines 816--817
 File: HW3_Q6.eps Graphic file (type eps)
 <HW3_Q6.eps>
 
-Overfull \hbox (3.61537pt too wide) in paragraph at lines 1068--1069
+Overfull \hbox (3.61537pt too wide) in paragraph at lines 1072--1073
  [][][][][] 
  []
 
 [27] [28]
-Overfull \hbox (5.40587pt too wide) detected at line 1107
+Overfull \hbox (5.40587pt too wide) detected at line 1111
 []\OMS/cmsy/m/n/14.4 f[]j[]g \OT1/cmr/m/n/14.4 = [] = [] = [] \OMS/cmsy/m/n/14.
 4 ^^Y \OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 22
  []
 
 [29]
-Overfull \hbox (2.79034pt too wide) in paragraph at lines 1148--1154
+Overfull \hbox (2.79034pt too wide) in paragraph at lines 1152--1158
 []\TU/XKamran(0)/m/n/14.4 معلوم الحال را (یعنی $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/
 n/14.4 1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m
 /n/14.4 3\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 4\OML/cmm/m/it/14.4 ; \OT1/cmr/
@@ -1208,28 +1208,331 @@ m/n/14.4 5\OMS/cmsy/m/n/14.4 g$\TU/XKamran(0)/m/n/14.4 ) در نظر بگیری�
  []
 
 [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
-Overfull \hbox (15.26318pt too wide) in paragraph at lines 1678--1682
+Overfull \hbox (15.26318pt too wide) in paragraph at lines 1682--1686
 [][]\TU/XKamran(0)/m/n/14.4 پ) حسابدار به دو حالت کنار مدیرعامل می‌نشیند و تمام
  اعضای هیئت مدیره (به جز مدیرعامل)[]
  []
 
-[42]
-! Undefined control sequence.
-l.1764 \Q
-         
-? 
-! Emergency stop.
-l.1764 \Q
-         
-End of file on the terminal!
+[42] [43] [44]
 
- 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[45] [46] [47] [48]
+Overfull \hbox (24.42963pt too wide) detected at line 2394
+[]
+ []
+
+[49] [50]
+Missing character: There is no ؛ ("61B) in font cmr12!
+[51] [52]
+فصل 2.
+[53
+
+]
+Overfull \hbox (39.1979pt too wide) detected at line 2610
+[]
+ []
+
+[54] [55] [56]
+Overfull \hbox (37.86pt too wide) detected at line 2748
+[]
+ []
+
+
+Overfull \hbox (32.4178pt too wide) detected at line 2790
+[]
+ []
+
+[57]
+File: Q2A.eps Graphic file (type eps)
+<Q2A.eps>
+File: Q2B.eps Graphic file (type eps)
+<Q2B.eps>
+ [58]
+File: Q2C.eps Graphic file (type eps)
+<Q2C.eps>
+ [59] [60] [61] [62] [63] [64] [65]
+فصل 3.
+
+Overfull \hbox (30.85725pt too wide) detected at line 3127
+[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
+it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 2668 \O
+ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
+/14.4 1490 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 44\OML/cmm/m/it/14.4 :\
+OT1/cmr/m/n/14.4 16%
+ []
+
+
+Overfull \hbox (30.85725pt too wide) detected at line 3132
+[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
+it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 1573 \O
+ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
+/14.4 1318 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 16\OML/cmm/m/it/14.4 :\
+OT1/cmr/m/n/14.4 23%
+ []
+
+
+Overfull \hbox (5.79091pt too wide) detected at line 3137
+[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
+it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 3716 \O
+ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
+/14.4 3679 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 1%
+ []
+
+[66
+
+]
+Overfull \hbox (4.79077pt too wide) in paragraph at lines 3178--3183
+[][]\TU/XKamran(0)/m/n/14.4 ب) متغیر تصادفی X فقط ۵ مقدار $\OMS/cmsy/m/n/14.4 f
+\OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 ;
+ \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 3\OML/cmm/m/it/14.4 
+; \OT1/cmr/m/n/14.4 4\OMS/cmsy/m/n/14.4 g$ \TU/XKamran(0)/m/n/14.4 را با احتمال
+ غیرصفر اختیار می کند؛ بنابراین []
+ []
+
+[67] [68] [69] [70] [71]
+Overfull \hbox (2.53664pt too wide) in paragraph at lines 3356--3360
+[][]\TU/XKamran(0)/m/n/14.4 سوال ۳) هنگامی که به طور متوسط از معیارهای کمی برای
+ ارزیابی یک جامعه ی بزرگ استفاده[]
+ []
+
+[72] [73]
+Overfull \hbox (28.98322pt too wide) detected at line 3466
+\OT1/cmr/m/n/14.4 0 \OML/cmm/m/it/14.4 < x < []  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy
+/m/n/14.4 )  \OML/cmm/m/it/14.4 x \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 x[]
+[]  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 e[][]  \OT1/c
+mr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OT1/cmr/m/n/14.4 1 \OMS/cmsy/m/n/14.4 ^^@
+ \OML/cmm/m/it/14.4 e[][]
+ []
+
+[74]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
+ on input line 3497.
+
+[75] [76] [77] [78]
+File: CDF_HW9.eps Graphic file (type eps)
+<CDF_HW9.eps>
+ [79]
+Overfull \hbox (29.96152pt too wide) detected at line 3802
+[]
+ []
+
+[80] [81]
+Overfull \hbox (26.17145pt too wide) detected at line 3909
+[]
+ []
+
+[82] [83] [84]
+Overfull \hbox (36.04822pt too wide) detected at line 4061
+\U/msb/m/n/14.4 E\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X[]\OMS/cmsy/m/n/14.4 g
+ \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 ^^^[]\OT1/cmr/m/n/14.4 (0) = []\OMS/cms
+y/m/n/14.4 j[] \OT1/cmr/m/n/14.4 = 5
+ []
+
+[85] [86] [87] [88] [89] [90]
+Overfull \hbox (8.49113pt too wide) detected at line 4418
+[]
+ []
+
+[91]
+Overfull \hbox (1.89458pt too wide) detected at line 4430
+[]
+ []
+
+
+Overfull \hbox (33.54495pt too wide) detected at line 4442
+[]
+ []
+
+
+Overfull \hbox (83.98987pt too wide) detected at line 4454
+[]
+ []
+
+[92]
+Overfull \hbox (35.35687pt too wide) detected at line 4487
+[]\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 1 \OMS/cmsy/m/n/14.4 ^^T \OML/cmm/m/it/
+14.4 X \OMS/cmsy/m/n/14.4 ^^T \OT1/cmr/m/n/14.4 3\OMS/cmsy/m/n/14.4 g \OT1/cmr/
+m/n/14.4 = []\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X \OMS/cmsy/m/n/14.4 ^^T \O
+T1/cmr/m/n/14.4 3\OMS/cmsy/m/n/14.4 g ^^@ []f\OML/cmm/m/it/14.4 X < \OT1/cmr/m/
+n/14.4 1\OMS/cmsy/m/n/14.4 g \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 F\OT1/cmr/m
+/n/14.4 (3) \OMS/cmsy/m/n/14.4 ^^@ [] \OML/cmm/m/it/14.4 F\OT1/cmr/m/n/14.4 (\O
+ML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) = [] + [] = []
+ []
+
+[93]
+Overfull \hbox (61.7231pt too wide) detected at line 4543
+[]
+ []
+
+[94]
+Overfull \hbox (38.23943pt too wide) detected at line 4611
+[]
+ []
+
+[95] [96]
+Overfull \hbox (39.413pt too wide) detected at line 4703
+[]
+ []
+
+[97] [98]
+Overfull \vbox (52.16751pt too high) has occurred while \output is active []
+
+
+[99]
+Overfull \hbox (3.534pt too wide) detected at line 4776
+[]
+ []
+
+[100]
+فصل 4.
+[101
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4828--4832
+[][]
+ []
+
+[102]
+Underfull \hbox (badness 10000) in paragraph at lines 4833--4840
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4860--4865
+[][]
+ []
+
+[103] [104] [105]
+Underfull \hbox (badness 10000) in paragraph at lines 4947--4953
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5005--5020
+[][]
+ []
+
+[106]
+Overfull \hbox (0.90846pt too wide) detected at line 5035
+[]
+ []
+
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 5052--5071
+[][]
+ []
+
+
+Overfull \hbox (11.06177pt too wide) detected at line 5071
+[]
+ []
+
+[108] [109] [110] [111] [112] [113]
+Underfull \hbox (badness 10000) in paragraph at lines 5259--5278
+[][]
+ []
+
+[114]
+Overfull \hbox (70.93134pt too wide) detected at line 5300
+[]
+ []
+
+[115] [116] [117] [118]
+Overfull \hbox (24.83173pt too wide) detected at line 5432
+[]
+ []
+
+[119] [120] [121]
+Overfull \hbox (67.21663pt too wide) detected at line 5596
+[]
+ []
+
+[122] [123] [124] [125] [126] [127]
+Missing character: There is no ؛ ("61B) in font cmr12!
+Missing character: There is no ؛ ("61B) in font cmr12!
+[128] [129] [130] [131]
+فصل 5.
+[132
+
+]
+Overfull \hbox (106.14218pt too wide) detected at line 6021
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6032--6037
+[][]
+ []
+
+[133]
+Underfull \hbox (badness 10000) in paragraph at lines 6048--6052
+[][]
+ []
+
+[134]
+Underfull \hbox (badness 10000) in paragraph at lines 6065--6069
+[][]
+ []
+
+[135] [136] [137] [138]
+File: ibp_hw11.png Graphic file (type bmp)
+<ibp_hw11.png>
+ [139]
+File: hw11_pmf.png Graphic file (type bmp)
+<hw11_pmf.png>
+ [140]
+Underfull \hbox (badness 10000) in paragraph at lines 6289--6304
+[][]
+ []
+
+[141]
+Overfull \hbox (0.90846pt too wide) detected at line 6319
+[]
+ []
+
+[142] [143] [144] [145] [146] [147]
+Overfull \hbox (4.8379pt too wide) in paragraph at lines 6545--6558
+[][]\TU/XKamran(0)/m/n/14.4 بسادگی از محاسبات (و همچنین شهود) می توان نتیجه گرف
+ت که چون $\OML/cmm/m/it/14.4 X$ \TU/XKamran(0)/m/n/14.4 دارای توزیع یکنواخت[]
+ []
+
+[148] [149] [150] [151] [152] [153] [154] [155] [156]
+Overfull \hbox (30.42473pt too wide) detected at line 6789
+[]
+ []
+
+[157] [158]
+Overfull \hbox (16.53577pt too wide) detected at line 6894
+[]
+ []
+
+[159] [160] [161] [162]
+Overfull \hbox (7.31084pt too wide) in paragraph at lines 7061--7070
+[]\TU/XKamran(0)/m/n/14.4 کانال ارسال می‌شوند و نویزی با چگالی احتمال نمایی دوط
+رفه، با سیگنال ارسالی جمع می‌شود.[]
+ []
+
+[163]
+فصل 6.
+[164
+
+] (./Probability and Statistics - Answers.aux)
+Package rerunfilecheck Info: File `"Probability and Statistics - Answers".out' 
+has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+ ) 
 Here is how much of TeX's memory you used:
- 27095 strings out of 476180
- 557391 string characters out of 5813082
- 1026954 words of memory out of 5000000
- 47305 multiletter control sequences out of 15000+600000
+ 27182 strings out of 476180
+ 559179 string characters out of 5813082
+ 1033954 words of memory out of 5000000
+ 47382 multiletter control sequences out of 15000+600000
  476357 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,23n,91p,1343b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on Probability and Statistics - Answers.pdf (42 pages).
+ 88i,28n,91p,1343b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Probability and Statistics - Answers.pdf (164 pages).

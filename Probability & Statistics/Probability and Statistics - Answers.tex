@@ -28,6 +28,8 @@
 
 \settextfont{X Kamran}
 
+%\settextfont{X Tabassom}
+
 %\settextfont{X Morvarid}
 
 %\settextfont{B Nazanin}
@@ -191,6 +193,8 @@ P(S_2\cap N|F)&=
 
 
 }
+
+\newpage
 
 \%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%
 \%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%
@@ -1761,7 +1765,7 @@ $
 
 ت) خیر. دلیل مشابه است؛ زیرا متمایز بودن توپها جزو مطلوبات مسئله نبوده است.
 
-\Q
+\QA
 
 مربع زیر را در نظر بگیرید:
 \begin{figure}[h]
@@ -1782,7 +1786,7 @@ $
 خواهد بود.
 
 
-\Q
+\QA
 
 الف) با قرار دادن رخ سفید، دقیقا 
 $
@@ -2174,7 +2178,7 @@ $
 
 \newpage
 
-\Q
+\QA
 
 هر مجموعه‌ی $n$ عضوی، 
 $
@@ -2235,6 +2239,256 @@ $$
 }
 $$
 )
+
+\QA
+
+از آنجا که هر رخداد سکه (پشت یا رو) معادل با پرتاب یک یا دو تاس است، پیشامد های زیر را تعریف می‌کنیم:
+\eqn{
+&
+A=\text{
+پیشامد رو آمدن سکه (پرتاب 1 تاس)
+}
+\\&
+B=\text{
+پیشامد پشت آمدن سکه (پرتاب 2 تاس)
+}
+\\&
+C_n=\text{
+پیشامد رو آمدن عدد $n$
+}
+}{}
+می‌دانیم
+$$
+P(A)=P(B)=0.5.
+$$
+از طرفی
+\eqn{
+&
+P(C_n|A)=\begin{cases}
+\frac{1}{6}&,\quad n=1,2,\cdots,6\\
+0&,\quad n=7,8,\cdots,12
+\end{cases}
+}{}
+و
+\eqn{
+&
+P(C_n|B)=\begin{cases}
+0&,\quad n=1\\
+\frac{6-|n-7|}{36}&,\quad n=2,\cdots,12
+\end{cases}
+}{}
+مطلوبست $P(C_n)$. در نتیجه طبق قاعده‌ی احتمال کل
+\eqn{
+P(C_n)&=P(A)P(C_n|A)+P(B)P(C_n|B)
+\\&=\frac{1}{2}P(C_n|A)+\frac{1}{2}P(C_n|B)
+\\&=
+\begin{cases}
+\frac{1}{12}&,\quad n=1,2,\cdots,6\\
+0&,\quad n=7,8,\cdots,12
+\end{cases}
+\\&+
+\begin{cases}
+0&,\quad n=1\\
+\frac{6-|n-7|}{72}&,\quad n=2,\cdots,12
+\end{cases}
+}{}
+
+با ساده سازی خواهیم داشت
+$$
+P(C_n)=
+\begin{cases}
+\frac{1}{12}&,\quad n=1\\
+\frac{5+n}{72}&,\quad n=2,\cdots,6\\
+\frac{13-n}{72}&,\quad n=7,\cdots,12
+\end{cases}
+$$
+\QA
+
+راه اول)
+
+پیشامدهای زیر را تعریف می‌کنیم:
+\eqn{
+&
+A_n=\text{
+پیشامد سیاه بودن $n$ توپ از 3 توپ بیرون آمده در بار اول
+}
+\\&
+B=\text{
+پیشامد سفید بودن توپ انتخابی از 3 توپ بیرون آمده در بار اول
+}
+}{}
+در نتیجه
+\eqn{
+P(A_n)=\frac{\binom{10}{3-n}\binom{7}{n}}{\binom{17}{3}}
+}{}
+همچنین
+\eqn{
+P(B|A_n)=\frac{3-n}{3}
+}{}
+
+مطلوبست
+$
+P(B|A_1\cup A_2\cup A_3)
+$.
+در نتیجه
+\eqn{
+&
+P(B|A_1\cup A_2\cup A_3)
+=
+\frac{
+P(B\cap[A_1\cup A_2\cup A_3])
+}{
+P(A_1\cup A_2\cup A_3)
+}
+\\&=
+\frac{
+P(B\cap A_1)+P(B\cap A_2)+P(B\cap A_3)
+}{
+P(A_1)+P(A_2)+P(A_3)
+}
+\\&=
+\frac{
+P(B|A_1)P(A_1)+P(B|A_2)P(A_2)+P(B|A_3)P(A_3)
+}{
+1-P(A_0)
+}
+\\&=
+\frac{
+\frac{2}{3}\times \frac{\binom{10}{2}\binom{7}{1}}{\binom{17}{3}}+
+\frac{1}{3}\times \frac{\binom{10}{1}\binom{7}{2}}{\binom{17}{3}}+0\times P(A_3)
+}{
+1-\frac{\binom{10}{3}}{\binom{17}{3}}
+}
+\\&=\frac{1}{2}
+}{}
+
+راه دوم)
+
+پیشامدهای زیر را تعریف می‌کنیم:
+\eqn{
+&
+A=\text{
+پیشامد سیاه بودن دست کم یک توپ از 3 توپ بیرون آمده در بار اول
+}
+\\&
+B=\text{
+پیشامد سفید بودن توپ انتخابی از 3 توپ بیرون آمده در بار اول
+}
+}{}
+
+در نتیجه
+\eqn{
+&P(A)=1-P(A')=P(\text{
+پیشامد سیاه بودن هیچ توپ از 3 توپ بیرون آمده در بار اول
+})
+\\&=
+P(\text{
+پیشامد سفید بودن هر سه توپ بیرون آمده در بار اول
+})
+\\&=
+1-\frac{\binom{10}{3}}{\binom{17}{3}}
+\\&=
+1-\frac{10\times 9\times 8}{17\times 16\times 15}
+\\&=
+\frac{14}{17}
+}{}
+مطلوبست
+$
+P(B|A)
+$
+. در نتیجه
+\eqn{
+P(B|A)&=\frac{P(B\cap A)}{P(A)}
+\\&=\frac{P(B\cap A)+P(B\cap A')-P(B\cap A')}{P(A)}
+\\&=\frac{P(B)-P(B|A')P(A')}{P(A)}
+\\&=\frac{P(B)-P(A')}{P(A)}
+}{}
+از طرفی، پیشامد $B$ معادل با این است که توپی از کیسه برداریم و سفید باشد (به عبارت دیگر، از 3 توپ برداشته شده‌ی مرحله‌ی قبل، به طور مثال با بستن چشم بی خبر باشیم). در نتیجه
+$$
+P(B)=\frac{10}{17}
+$$
+و با جایگذاری خواهیم داشت
+\eqn{
+P(B|A)=\frac{P(B)-P(A')}{P(A)}
+=\frac{\frac{10}{17}-\frac{3}{17}}{\frac{14}{17}}=\frac{1}{2}.
+}{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\QA
+
+پیشامدهای زیر را تعریف می‌کنیم:
+\eqn{
+&
+A=\text{
+پیشامد انتخاب کیسه‌ی 1
+}
+\\&
+B=\text{
+پیشامد انتخاب کیسه‌ی 2
+}
+\\&
+C=\text{
+پیشامد سفید نبودن توپ انتخابی
+}
+}{}
+در نتیجه خواهیم داشت
+\eqn{
+P(A)=P(B)=0.5
+}{}
+و
+\eqn{
+P(C|A)=\frac{7}{17}\quad,\quad P(C|B)=\frac{7}{9}
+}{}
+مطلوب است 
+$P(B|C)$
+. در نتیجه طبق قاعده‌ی احتمال بیز
+\eqn{
+P(B|C)&=\frac{P(C|B)P(B)}{P(C|A)P(A)+P(C|B)P(B)}
+\\&=
+\frac{
+\frac{7}{9}\times \frac{1}{2}
+}{
+\frac{7}{9}\times \frac{1}{2}
++
+\frac{7}{17}\times \frac{1}{2}
+}=\frac{17}{26}
+}{}
+
+مکمل پیشامد مطلوب آن است که خانواده، دارای هیچ فرزند پسر یا هیچ فرزند دختری نباشد. احتمال پیشامد اخیر برابر است با
+$$
+(\frac{1}{2})^n+(\frac{1}{2})^n=(\frac{1}{2})^{n-1}؛
+$$
+در نتیجه، احتمال مطلوب برابر است با
+$$
+1-(\frac{1}{2})^{n-1}
+$$
+که باید بیشتر از یا مساوی با $0.95$ باشد. در نتیجه
+\eqn{
+&1-(\frac{1}{2})^{n-1}\ge 0.95
+\\&\implies
+(\frac{1}{2})^{n-1}\le 0.05
+\\&\implies
+2^{n-1}\ge 20
+\\&\implies
+n-1\ge \log_220
+\\&\implies
+n\ge 6
+}{}
+
+
 
 \chapter{آزمایش های تکراری}
 
@@ -2676,6 +2930,194 @@ G\left({-0.01n\over\sqrt{n\over 4}}\right)
 $$
 G\left({0.02\sqrt n}\right)>0.975
 $$
+
+\QA
+
+دو حالت در نظر می‌گیریم:
+
+حالت 1) لینک DZ خراب باشد. در این صورت، احتمال وجود مسیر بین A و Z برابر است با
+$$
+p[1-(1-p)(1-p^2)^2]=p-p(1-p)(1-p^2)^2
+$$
+
+حالت 2) لینک DZ سالم باشد. در این صورت، می‌توان نودهای D و Z را یکی در نظر گرفت (چرا که رسیدن به D، رسیدن به Z را نتیجه می‌دهد). در این صورت، احتمال وجود مسیر بین A و Z برابر است با
+\eqn{
+&1-(1-p)\left\{1-\left[1-(1-p)^2\right]\left[1-(1-p)(1-p^2)\right]\right\}
+\\&=1-(1-p)\left\{1-(2p-p^2)(p+p^2-p^3)\right\}
+\\&=p+p^2(1-p)(2-p)(1+p-p^2)
+}{}
+در نتیجه، احتمال وجود داشتن مسیر از A تا Z برابر است با
+\eqn{
+&
+(1-p)[p+p^2(1-p)(2-p)(1+p-p^2)]+p^2+p^3(1-p)(2-p)^2
+\\&=
+p+p^2(1-p)^2(2-p)(1+p-p^2)+p^3(1-p)(2-p)^2
+}{}
+
+%حالت 1) لینک CD خراب باشد. در این صورت، احتمال وجود مسیر بین A و Z برابر است با
+%$$
+%1-(1-p^2)\left[1-p(1-p)(1-p^2)\right]
+%$$
+%
+%اگر هر دو لینک CZ و DZ خراب باشند، مسیری از A تا Z وجود ندارد. در نتیجه، باید حداقل یک لینک از این 2 لینک سالم باشد. سه حالت ممکن است:
+%
+%1) لینک CZ سالم و لینک DZ خراب باشد.
+%
+%2) لینک CZ خراب و لینک DZ سالم باشد.
+%
+%3) لینک CZ سالم و لینک DZ سالم باشد.
+%
+%در حالت اول، پیشامد وجود داشتن مسیر از A تا Z، معادل با وجود داشتن مسیر از A تا C است. مکمل پیشامد اخیر، وجود نداشتن مسیر از A تا C است. چون از A تا C سه مسیر وجود دارد، هر سه باید خراب باشند. خراب بودن هر مسیر، مکمل سالم بودن آن است که سالم بودن هر مسیر نیز، سالم بودن تمام لینک‌های آن را می‌طلبد. با توضیحات پیش، برای محاسبه‌ی احتمال وجود داشتن مسیر از A تا C، مشروط بر اینکه لینک CZ سالم و لینک DZ خراب باشد، برابر است با
+%$$
+%1-(1-p^2)(1-p)(1-p^2).
+%$$
+%
+%در حالت دوم، پیشامد وجود داشتن مسیر از A تا Z، معادل با وجود داشتن مسیر از A تا D است. احتمال این پیشامد، به طریق مشابه برابر است با
+%$$
+%1-(1-p)\left\{1-p\left[1-(1-p)(1-p^2)\right]\right\}.
+%$$
+%
+%حالت سوم، معادل این است که دو نود C و D را به هم بچسبانیم (و لینک CD را از بین ببریم). در این صورت، احتمال وجود مسیر از A تا نود C (که همان D است) برابر است با
+%$$
+%1-(1-p)^2(1-p^2).
+%$$
+%
+%در نتیجه، احتمال وجود مسیر از A تا Z به صورت زیر است:
+%\eqn{
+%p(1-p)[1-(1-p^2)(1-p)(1-p^2)+1-(1-p)\left\{1-p\left[1-(1-p)(1-p^2)\right]\right\}]
+%}{}
+%
+%ابتدا باید تمام پیشامدها (مسیرها)ی ممکن از A تا Z را پیدا کنیم. با شمارش ساده‌ای، این مسیرها عبارتند از:
+%
+%ABCZ
+%
+%ACZ
+%
+%ADCZ
+%
+%ABCDZ
+%
+%ACDZ
+%
+%ADZ
+%
+%احتمال سالم بودن این مسیرها، به ترتیب برابراست با
+%
+%$
+%p^3
+%$
+%
+%$
+%p^2
+%$
+%
+%$
+%p^3
+%$
+%
+%$
+%p^4
+%$
+%
+%$
+%p^3
+%$
+%
+%$
+%p^2
+%$
+%
+%و احتمال مطلوب (معادل با سالم بودن حداقل یک مسیر از )
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=50mm]{PS7_ProbStat_Q1.eps}
+%\end{figure}
+
+\QA
+
+الف)
+$$
+\binom{10}{3}(\frac{1}{2})^3(\frac{1}{2})^7=\frac{120}{1024}
+$$
+
+ب) مکمل پیشامد مطلوب، آن است که دقیقا 1 یا صفر بار خط بیاید. در نتیجه احتمال مطلوب برابر است با
+$$
+1-\binom{10}{0}(\frac{1}{2})^0(\frac{1}{2})^{10}-\binom{10}{1}(\frac{1}{2})^1(\frac{1}{2})^9=1-\frac{1}{1024}-\frac{10}{1024}=\frac{1013}{1024}
+$$
+
+پ) اگر بدانیم در 5 پرتاب اول خط آمده است، احتمال مطلوب، معادل با احتمال رو آمدن دقیقأ دو خط در 5 پرتاب باقیمانده است. در نتیجه احتمال مطلوب برابر است با
+$$
+\binom{5}{2}(\frac{1}{2})^2(\frac{1}{2})^3=\frac{10}{32}
+.
+$$
+از روش احتمال شرطی نیز به همین پاسخ می‌رسیم.
+
+\QA
+
+الف) جمع این 6 پرتاب زمانی 8 می‌شود که یا دقیقأ دو بار 2 و 4 بار 1 یا دقیقا یک بار 3 و 5 بار 1 داشته باشیم. در این صورت، احتمال مطلوب برابر است با
+$$
+\binom{6}{2}(\frac{1}{6})^2(\frac{1}{6})^4
++
+\binom{6}{1}(\frac{1}{6})^1(\frac{1}{6})^5
+=\frac{21}{46656}
+$$
+
+ب)
+$$
+\frac{6!}{6^6}=\frac{5!}{6^5}=\frac{5}{324}
+$$
+
+\QA
+
+احتمال آبی بودن توپ در هر آزمایش، برابر
+$
+0.7
+$
+است. چون توپ در هر مرحله به کیسه باز می‌گردد، آزمایش ها مستقلند و در نتیجه، احتمال مطلوب برابر است با
+$$
+\binom{11}{7}(0.7)^7(0.3)^4
+$$
+
+\QA
+
+چنانچه حداکثر 10 کاربر بخواهند به طور همزمان از کانال استفاده کنند، کمبود پهنای باند نخواهیم داشت. بنابراین احتمال مطلوب برابر است با
+\eqn{
+\sum_{k=0}^{10} \binom{12}{k}(0.6)^k(0.4)^{12-k}&=
+1-\sum_{k=11}^{12} \binom{12}{k}(0.6)^k(0.4)^{12-k}
+\\&=
+1-12(0.6)^{11}(0.4)-(0.6)^{12}
+\\&\approx0.9804
+}
+
+\QA
+
+مطلوب آن است که مقدار 
+$
+P\left\{\frac{97}{300}<\frac{k}{n}<\frac{103}{300}\right\}
+$،
+حداقل $99\%$ باشد. با تقریب دموآور لاپلاس خواهیم داشت:
+$$
+2G(\epsilon\sqrt{\frac{n}{p(1-p)}})-1\ge 0.99
+$$
+که در آن
+$
+\epsilon=0.01
+$
+و
+$
+p=\frac{1}{3}
+$.
+در نتیجه
+\eqn{
+&\quad\quad\quad G(0.01\sqrt{\frac{n}{\frac{2}{9}}})\ge 0.995
+\\&\implies
+0.01\sqrt{\frac{n}{\frac{2}{9}}}\ge G^{-1}(0.995)
+\\&\implies
+0.01\sqrt{\frac{n}{\frac{2}{9}}}\gtrapprox 2.5758
+\\&\implies
+n\ge 14745
+}
 
 \chapter{متغیرهای تصادفی}
 
@@ -3754,6 +4196,591 @@ Y
 $
 مستقل خواهند بود.
 
+\QA
+
+الف)
+\eqn{
+&\text{Exact}=0.2252
+\\&\text{Approx.}=0.2240
+\\&\text{Rel. Error}=0.53\%
+}
+
+ب)
+\eqn{
+&\text{Exact}=0.1795
+\\&\text{Approx}=0.0812
+\\&\text{Rel. Error}=54.76\%
+}
+
+از مقایسه‌ی خطاهای نسبی نتیجه می‌شود که در حالاتی که شرایط قضیه‌ی تقریب پواسون برقرار است، خطای تقریب بسیار کوچک می‌شود.
+
+\QA
+
+تابع توزیع انباشته باید صعودی، در $-\infty$ برابر صفر و در $\infty$ برابر یک باشد. در این صورت:
+
+الف)
+$
+\frac {dF(x)}{dx}=\frac{ke^{-kx}}{(e^{-kx}+1)^2}
+$
+برای نامنفی بودن مشتق باید داشته باشیم $k\ge 0$. از طرفی، به ازای $k=0$ خواهیم داشت 
+$
+F(x)=1
+$
+که نمی‌تواند یک توزیع انباشته باشد. در نتیجه
+$
+k>0
+$
+و
+$$
+f(x)=\frac{ke^{-kx}}{(e^{-kx}+1)^2}.
+$$
+
+ب)
+\eqn{
+f_X(x)=\frac{dF(x)}{dx}=
+\begin{cases}
+0&,\quad x<0\\
+(1+k\cos x)e^{-x-k\sin x}&,\quad x\ge0
+\end{cases}
+}
+در نتیجه باید به ازای هر $x$ داشته باشیم 
+$
+1+k\cos x\ge 0
+$
+که معادل است با
+$
+-1\le k\le 1
+$
+.
+از طرفی، به ازای این مقادیر از $k$، داریم 
+$
+F(-\infty)=0
+$
+و
+$
+F(\infty)=1
+$؛ در نتیجه
+$
+-1\le k\le 1
+$
+.
+%$
+%F(x)=\begin{cases}
+%0&,\quad x<0\\
+%1-e^{-x-k\sin x}&,\quad x\ge0
+%\end{cases}
+%$
+
+پ) داریم
+$
+F(1)=1+e^{-k}>1
+$
+؛ پس این تابع هرگز نمی‌تواند یک توزیع انباشته باشد.
+%$
+%F(x)=\begin{cases}
+%0&,\quad x<0\\
+%1+xe^{-kx}&,\quad x\ge 0
+%\end{cases}
+%$
+
+ت)
+%$
+%F(x)=\begin{cases}
+%0&,\quad x<0\\
+%\frac{1}{2}&,\quad 0\le x<1\\
+%1-\frac{1}{2}e^{k-kx}&,\quad x\ge 1
+%\end{cases}
+%$
+از 
+$
+F(\infty)=1
+$
+نتیجه می‌شود که 
+$
+k>0
+$.
+از طرفی به ازای هر مقدار مثبت از $k$، تابع زیر نامنفی است:
+$$
+f(x)=\frac{dF(x)}{dx}=
+\begin{cases}
+\frac{1}{2}\delta(x)&,\quad x=0\\
+\frac{1}{2}ke^{k-kx}&,\quad x\ge 1
+\end{cases}
+\text{؛}
+$$
+پس محدوده مقادیر مجاز $k$، مقادیر مثبت خواهند بود.
+
+
+\QA
+
+میانه، صدک 50ام است.
+\eqn{
+\text{صدک $a$ ام}=\sup\{x:F(x)\le a\}
+}
+
+الف)
+\eqn{
+&\text{صدک $a$ ام}:
+\\&F(x)=\frac{a}{100}\implies
+\frac{1}{1+\exp(-kx)}=\frac{a}{100}\implies
+\exp(-kx)=\frac{100}{a}-1
+\\&\implies x=-\frac{1}{k}\ln (\frac{100}{a}-1)
+\implies\\&
+x_{25}=-\frac{1}{k}\ln 3
+\quad,\quad
+x_{50}=0
+\quad,\quad
+x_{75}=\frac{1}{k}\ln 3=-x_{25}
+}
+
+\eqn{
+&\Pr\{X=0\}=F(0)-\lim_{x\to 0^-} F(x)=\frac{1}{2}-\frac{1}{2}=0
+\\&\Pr\{0< X\le 2\}=F(2)-F(0)=\frac{1}{1+e^{-2k}}-\frac{1}{2}=\frac{\tanh k}{2}
+}
+
+ت)
+\eqn{
+&\text{صدک $a$ ام}:
+\\&F(x)\le\frac{a}{100}\implies
+\begin{cases}
+0&,\quad x<0\\
+\frac{1}{2}&,\quad 0\le x<1\\
+1-\frac{1}{2}e^{k-kx}&,\quad x\ge 1
+\end{cases}\le\frac{a}{100}
+\\&\implies
+\begin{cases}
+x<0&,\quad a=0\\
+x\le0&,\quad 0<a<50\\
+x\le1&,\quad a=50\\
+x=1-\frac{1}{k}\ln(2-\frac{a}{50})&,\quad 50<a<100\\
+\end{cases}
+\\&
+\implies
+x_{25}=0
+\quad,\quad
+x_{50}=1
+\quad,\quad
+x_{75}=1+\frac{1}{k}\ln 2
+}
+
+\eqn{
+&\Pr\{X=0\}=F(0)-\lim_{x\to 0^-} F(x)=\frac{1}{2}-0=\frac{1}{2}
+\\&\Pr\{0< X\le 2\}=F(2)-F(0)=1-\frac{1}{2}e^{-k}-\frac{1}{2}=\frac{1}{2}(1-e^{-k})
+}
+%برای بخش های الف و ت سوال پیش، مقادیر میانه، صدکهای 25ام و 75ام و همچنین احتمال‌های
+%$
+%\Pr\{X=0\}
+%$
+%و
+%$
+%\Pr\{0< X\le 2\}
+%$
+%را بیابید.
+
+\QA
+
+%یک تاس را پرتاب می‌کنیم. اگر زوج آمد، عدد آن را یادداشت می‌کنیم و اگر فرد آمد، عددی را به تصادف از بازه‌ی 
+%$
+%[1,6]
+%$
+%انتخاب کرده و آن را یادداشت می‌کنیم. اگر متغیر تصادفی 
+%$
+%X
+%$،
+%نشان دهنده‌ی عدد یادداشت شده باشد، چگالی احتمال و تابع توزیع انباشته‌ی آن را به دست آورده و مقدار 
+%$
+%\Pr\{1\le X\le 3\}
+%$
+%را بیابید.
+
+برای این متغیر تصادفی داریم
+\eqn{
+\Pr\{X=2\}&=
+\Pr\{X=2|\text{2 آمدن تاس}\}\Pr\{\text{2 آمدن تاس}\}
+\\&+
+\Pr\{X=2|\text{2 نیامدن تاس}\}\Pr\{\text{2 نیامدن تاس}\}
+\\&=1\times\frac{1}{6}+0\times\frac{5}{6}=\frac{1}{6}
+}
+به طریق مشابه
+$
+\Pr\{X=4\}=\Pr\{X=6\}=\frac{1}{6}
+$.
+اکنون، توزیع انباشته‌ی $X$ را می‌نویسیم:
+\eqn{
+\Pr\{X\le x\}&=
+\Pr\{X\le x|\text{زوج آمدن تاس}\}\Pr\{\text{زوج آمدن تاس}\}
+\\&+
+\Pr\{X\le x|\text{زوج نیامدن تاس}\}\Pr\{\text{زوج نیامدن تاس}\}
+\\&=
+\frac{1}{2}\Pr\{X\le x|\text{زوج آمدن تاس}\}
++
+\frac{1}{2}\Pr\{X\le x|\text{زوج نیامدن تاس}\}
+}
+به ازای 
+$
+x<2
+$
+،
+\eqn{
+\Pr\{X\le x\}&=
+\frac{1}{2}\Pr\{\emptyset|\text{زوج آمدن تاس}\}
++
+\frac{1}{2}\Pr\{1\le X\le x|\text{زوج نیامدن تاس}\}
+\\&=\frac{x-1}{10}.
+}
+به ازای 
+$
+2\le x<4
+$
+،
+\eqn{
+\Pr\{X\le x\}&=
+\frac{1}{2}\Pr\{X=2|\text{زوج آمدن تاس}\}
++
+\frac{1}{2}\Pr\{1\le X\le x|\text{زوج نیامدن تاس}\}
+\\&=\frac{1}{6}+\frac{x-1}{10}.
+}
+به ازای 
+$
+4\le x<6
+$
+،
+\eqn{
+\Pr\{X\le x\}&=
+\frac{1}{2}\Pr\{X=2\text{ یا }X=4|\text{زوج آمدن تاس}\}
++
+\frac{1}{2}\Pr\{1\le X\le x|\text{زوج نیامدن تاس}\}
+\\&=\frac{1}{3}+\frac{x-1}{10}.
+}
+به ازای 
+$
+x=6
+$،
+\eqn{
+\Pr\{X\le x\}&=1
+}
+در نتیجه
+\eqn{
+F(x)=\begin{cases}
+0&,\quad x<1\\
+\frac{x-1}{10}&,\quad 1\le x<2\\
+\frac{1}{6}+\frac{x-1}{10}&,\quad 2\le x<4\\
+\frac{1}{3}+\frac{x-1}{10}&,\quad 4\le x<6\\
+1&,\quad x\ge6\\
+\end{cases}
+}
+و متعاقبأ
+\eqn{
+f_X(x)=\frac{dF(x)}{dx}=\begin{cases}
+\frac{1}{10}&,\quad 1<x<6\\
+\frac{1}{6}\delta(x-2)&,\quad x=2\\
+\frac{1}{6}\delta(x-4)&,\quad x=4\\
+\frac{1}{6}\delta(x-6)&,\quad x=6
+\end{cases}
+\text{؛}
+}
+در نتیجه
+$$
+\Pr\{1\le X\le 3\}=
+\Pr\{X\le 3\}-\Pr\{X<1\}=F(3)-\lim_{x\to 1^-}F(x)
+=\frac{1}{6}+\frac{1}{5}=\frac{11}{30}
+$$
+
+\QA
+
+الف)
+$
+Y=e^X
+$
+به ازای $y>1$،
+\eqn{
+\Pr\{Y\le y\}&=\Pr\{e^X\le y\}
+=\Pr\{X\le \ln y\}
+=1-e^{-\ln y}=1-\frac{1}{y}
+}
+و به ازای $y\le1$،
+\eqn{
+\Pr\{Y\le y\}&=\Pr\{e^X\le y\}
+=0
+}
+در این صورت
+$$
+f_Y(y)=\begin{cases}
+\frac{1}{y^2}&,\quad y>1\\
+0&,\quad y\le 1
+\end{cases}
+$$
+
+ب)
+به ازای $y>0$،
+\eqn{
+\Pr\{Y\le y\}&=\Pr\{X^\alpha \le y\}
+=\Pr\{X\le \sqrt[\alpha]{y}\}
+=1-e^{-\sqrt[\alpha]{y}}
+}
+و به ازای $y\le0$،
+\eqn{
+\Pr\{Y\le y\}=0
+}
+در این صورت
+$$
+f_Y(y)=\begin{cases}
+\frac{1}{\alpha} y^{\frac{1}{\alpha}-1}e^{-\sqrt[\alpha]{y}}&,\quad y>0\\
+0&,\quad y\le 0
+\end{cases}
+$$
+البته به ازای $\alpha=0$ داریم
+$
+\Pr\{Y=1\}=1
+$.
+
+پ) به ازای $y>0$،
+\eqn{
+\Pr\{Y\le y\}&=\Pr\{\lfloor X\rfloor \le y\}
+=\Pr\{\lfloor X\rfloor \le \lfloor y\rfloor\}
+=\Pr\{X<\lfloor y\rfloor+1\}
+=1-e^{-\lfloor y\rfloor-1}
+}
+و به ازای $y\le0$،
+\eqn{
+\Pr\{Y\le y\}=0
+}
+در نتیجه، توزیع تجمعی $Y$ دارای پرشهایی در نقاط صحیح نامنفی $Y$ بوده و چگالی احتمال آن عبارتست از
+\eqn{
+f_Y(y)=\sum_{k=0}^\infty e^{-k}(1-e^{-1})\delta(y-k)
+}
+
+\QA
+
+الف)
+\eqn{
+&\int_{-\infty}^\infty f_X(x)dx=1\implies
+\\&\int_0^1 kxdx+\int_{1^-}^{1^+} \frac{1}{2}\delta(x-1)dx=1\implies
+\\&\frac{k}{2}+\frac{1}{2}=1\implies k=1
+}
+
+ب)
+\eqn{
+&\mathbb{E}\{X\}=\int_{-\infty}^\infty xf_X(x)dx
+\\&=\int_0^1 x^2dx+\int_{1^-}^{1^+} \frac{1}{2}x\delta(x-1)dx
+\\&=\frac{1}{3}+\frac{1}{2}=\frac{5}{6}
+}
+
+پ)
+\eqn{
+&\mathbb{E}\{e^{aX}\}=
+\int_{-\infty}^\infty e^{ax}f_X(x)dx
+\\&=\int_0^1 xe^{ax}dx+\int_{1^-}^{1^+} \frac{1}{2}e^{ax}\delta(x-1)dx
+\\&=(x-\frac{1}{a})e^{ax}\Big|_0^1+\int_{1^-}^{1^+} \frac{1}{2}e^a\delta(x-1)dx
+\\&=(\frac{3}{2}-\frac{1}{a})e^a+\frac{1}{a}
+}
+
+\QA
+
+%متغیر تصادفی $X$ از توزیع زیر پیروی می‌کند:
+%$$
+%f_X(x)=\begin{cases}
+%2xe^{-x^2}&,\quad x>0\\
+%0&,\quad \text{جاهای دیگر}\\
+%\end{cases}
+%$$
+%متغیر تصادفی
+%$
+%Y=X^2
+%$
+%مفروض است.
+
+الف) به ازای $y>0$
+\eqn{
+\Pr\{Y\le y\}&=\Pr\{-\sqrt y\le X\le\sqrt y\}
+=\Pr\{X\le\sqrt{y}\}
+\\&=\int_0^{\sqrt y}2x\exp(-x^2)dx=1-\exp(-y)
+}
+در نتیجه
+\eqn{
+f_Y(y)=\exp(-y)\quad,\quad y>0
+}
+
+ب)
+\eqn{
+&\mathbb{E}\{X\}=\int_0^\infty 2x^2\exp(-x^2)dx=-x\exp(-x^2)\Big|_0^\infty+\int_0^\infty \exp(-x^2)dx
+\\&=\int_0^\infty \exp(-x^2)dx
+=\frac{1}{2}\int_{-\infty}^\infty \exp(-x^2)dx
+=\frac{1}{2}\sqrt\pi\frac{1}{\sqrt\pi}\int_{-\infty}^\infty \exp(-x^2)dx
+=\frac{\sqrt\pi}{2}
+}
+
+پ)
+\eqn{
+&\mathbb{E}\{X^2\}=\int_0^\infty 2x^3\exp(-x^2)dx
+=\int_0^\infty u\exp(-u)du=1
+\\&\mathbb{E}\{Y\}=\int_0^\infty y\exp(-y)dy=1\implies
+\mathbb{E}\{X^2\}=\mathbb{E}\{Y\}
+}
+همانگونه که انتظار می‌رفت، $Y=X^2$ تساوی $\mathbb{E}\{X^2\}=\mathbb{E}\{Y\}$ را نتیجه می‌دهد.
+
+ت)
+\eqn{
+&\Pr\{X<\frac{1}{2}\}=\int_0^{\frac{1}{2}}2x\exp(-x^2)dx
+\\&=-\exp(-x^2)|_{0}^{\frac{1}{2}}=1-\exp(-\frac{1}{4})
+}
+
+\eqn{
+&\Pr\{Y<\frac{1}{4}\}=\int_0^{\frac{1}{4}}\exp(-y)dx
+\\&=-\exp(-y)|_{0}^{\frac{1}{4}}=1-\exp(-\frac{1}{4})
+}
+
+همانگونه که انتظار می‌رفت، $Y=X^2$ به نتیجه‌ی زیر منجر می‌شود:
+$$
+\{X\le\frac{1}{2}\}\equiv \{X^2\le\frac{1}{4}\}\equiv \{Y\le\frac{1}{4}\}.
+$$
+
+\QA
+
+الف)
+\eqn{
+&\Pr\{X\ge \alpha\}=\int_\alpha^\infty \exp(-x)dx=\exp(-\alpha)
+\\&\text{\lr{Markov's Bound}}=\frac{\mathbb{E}\{X\}}{\alpha}=\frac{1}{\alpha}
+}
+
+ب)
+%$
+%f(x)=\frac{1}{\ln 2}\frac{1}{1+e^x}\quad,\quad x>0
+%$
+\eqn{
+&\Pr\{X\ge \alpha\}=
+\int_\alpha^\infty \frac{1}{\ln 2}\frac{1}{1+e^x}dx=\log_2(1+e^{-\alpha})
+\\&\text{\lr{Markov's Bound}}=\frac{\mathbb{E}\{X\}}{\alpha}\approx\frac{1.1866}{\alpha}
+}
+
+پ)
+\eqn{
+&\Pr\{X\ge \alpha\}
+=\int_\alpha^\infty x\exp(-x)dx=(\alpha+1)\exp(-\alpha)
+\\&\text{\lr{Markov's Bound}}=\frac{\mathbb{E}\{X\}}{\alpha}=\frac{2}{\alpha}
+}
+
+\QA
+
+الف)
+\eqn{
+&\mathbb{E}\{X\}=\int_0^\infty xe^{-x}dx=-(x+1)e^{-x}|_0^\infty=1
+\\&\mathbb{E}\{X^2\}=\int_0^\infty x^2e^{-x}dx=-(x^2+2x+2)e^{-x}|_0^\infty=2
+\\&\implies\sigma_X^2=1
+}
+
+پ)
+\eqn{
+&\mathbb{E}\{X\}=\int_0^\infty x^2e^{-x}dx=-(x^2+2x+2)e^{-x}|_0^\infty=2
+\\&\mathbb{E}\{X^2\}=\int_0^\infty x^3e^{-x}dx=-(x^3+3x^2+6x+6)e^{-x}|_0^\infty=6
+\\&\implies\sigma_X^2=2
+}
+
+\QA
+
+الف)
+\eqn{
+&\phi_X(s)
+=\mathbb{E}\{e^{sX}\}
+=\int_{-\infty}^\infty e^{sx}f_X(x)dx
+=\int_{0}^1 (1-x)e^{sx}dx
++
+\int_{1^-}^{1^+} \frac{1}{2}\delta(x-1)e^{sx}dx
+\\&=
+e^{sx}(\frac{1-x}{s}+\frac{1}{s^2})|_0^1
++
+\frac{e^s}{2}
+=
+\frac{e^s-s-1}{s^2}
++
+\frac{e^s}{2}
+=
+\frac{e^s}{2}+\sum_{n=0}^\infty\frac{s^n}{(n+2)!}
+\implies
+\\&
+\mathbb{E}\{X^2\}=\frac{d^2\phi(s)}{ds^2}\Big|_{s=0}
+=\frac{1}{2}+\frac{1}{12}=\frac{7}{12}
+}
+
+ب)
+\eqn{
+&\phi_X(s)
+=\mathbb{E}\{e^{sX}\}
+=\int_0^\frac{\pi}{2} e^{sx}\cos xdx=\frac{e^{\frac{\pi}{2}s}}{s^2+1}
+\implies
+\\&
+\mathbb{E}\{X^2\}=\frac{d^2\phi(s)}{ds^2}\Big|_{s=0}
+=\frac{\pi^2}{4}-2
+}
+
+پ)
+\eqn{
+&\phi_X(s)=\sum_x e^{sx}P(X=x)
+=\sum_{x=1}^\infty \frac{x}{2}(\frac{e^s}{2})^x
+=\frac{e^s}{(e^s-2)^2}
+\implies
+\\&
+\frac{d\phi(s)}{ds}=-e^s\frac{e^s+2}{(e^s-2)^3}
+\implies
+\frac{d^2\phi(s)}{ds^2}=\frac{e^{3s}+8e^{2s}+4e^s}{(e^s-2)^4}
+\implies
+\\&
+\mathbb{E}\{X^2\}=13
+}{}
+
+ت) ابتدا مقادیر تابع جرم احتمال $X$ را می نویسیم:
+\eqn{
+&\Pr\{X=1\}=\frac{1}{36}
+\\&\Pr\{X=2\}=\frac{2}{36}
+\\&\Pr\{X=3\}=\frac{2}{36}
+\\&\Pr\{X=4\}=\frac{3}{36}
+\\&\Pr\{X=5\}=\frac{2}{36}
+\\&\Pr\{X=6\}=\frac{4}{36}
+\\&\Pr\{X=8\}=\frac{2}{36}
+\\&\Pr\{X=9\}=\frac{1}{36}
+\\&\Pr\{X=10\}=\frac{2}{36}
+\\&\Pr\{X=12\}=\frac{4}{36}
+\\&\Pr\{X=15\}=\frac{2}{36}
+\\&\Pr\{X=16\}=\frac{1}{36}
+\\&\Pr\{X=18\}=\frac{2}{36}
+\\&\Pr\{X=20\}=\frac{2}{36}
+\\&\Pr\{X=24\}=\frac{2}{36}
+\\&\Pr\{X=25\}=\frac{1}{36}
+\\&\Pr\{X=30\}=\frac{2}{36}
+\\&\Pr\{X=36\}=\frac{1}{36}
+}{}
+بنابراین
+\eqn{
+\phi_X(s)&=
+\frac{1}{36}[
+e^s+
+2e^{2s}+
+2e^{3s}+
+3e^{4s}+
+2e^{5s}+
+4e^{6s}+
+2e^{8s}+
+e^{9s}+
+2e^{10s}
+\\&+
+4e^{12s}+
+2e^{15s}+
+e^{16s}+
+2e^{18s}+
+2e^{20s}+
+2e^{24s}+
+e^{25s}+
+2e^{30s}+
+e^{36s}
+]
+}{}
+بنابراین
+\eqn{
+\mathbb{E}\{X^2\}&=
+\frac{1}{36}[1+8+18+48+50+144+128+81+200+576\\&+450+256+648+800+1152+625+1800+1296]
+=\frac{8281}{36}
+}{}
+
 \chapter{متغیرهای تصادفی توأم}
 
 سوال 1) الف)
@@ -4453,6 +5480,491 @@ $
 X_1+\cdots+X_n\over \sqrt n
 $
 هستیم، نتیجه می شود که دنباله‌ی فوق، در احتمال به یک توزیع گوسی با میانگین $1\over 2$ و واریانس صفر میل می کند (یعنی توزیعی که فقط مقدار $1\over 2$ را با احتمال 1 می پذیرد).
+
+\QA
+
+الف)
+
+از 
+$
+\iint_{\Bbb R^2}f(x,y)dxdy=1
+$
+نتیجه می شود:
+\eqn{
+&\int_0^1\int_0^1xy+kx+kydxdy=1\implies
+\\&\int_0^1\frac{1}{2}y+k\frac{1}{2}+kydy=1\implies
+\\&\frac{1}{4}+k\frac{1}{2}+k\frac{1}{2}=1\implies
+\\&k=\frac{3}{4}.
+}
+همچنین به ازای این مقدار $k$ داریم
+$
+f(x,y)\ge 0
+$.
+برای محاسبه‌ی توزیع تجمعی توأم، توجه داریم که اگر 
+$
+x<0
+$
+یا 
+$
+y<0
+$
+یا هردو، در این صورت
+$
+F(x,y)=0
+$
+.
+بنابراین 
+$
+x>0,y>0
+$
+و در نتیجه
+\eqn{
+F(x,y)&=
+\int_0^{\min(x,1)}\int_0^{\min(y,1)} uv+\frac{3u}{4}+\frac{3v}{4}dudv
+\\&=
+\frac{\min(x,1)\cdot \min(y,1)}{4}+\frac{3\min(x,1)}{8}+\frac{3\min(y,1)}{8}
+\\&=
+\begin{cases}
+\frac{xy}{4}+\frac{3x+3y}{8}&,\quad 0\le x\le 1,0\le y\le 1\\
+\frac{x}{4}+\frac{3x+3}{8}&,\quad 0\le x\le 1,y\ge 1\\
+\frac{y}{4}+\frac{3y+3}{8}&,\quad x\ge 1,0\le y\le 1\\
+1&,\quad x\ge 1,y\ge 1\\
+0&,\quad \text{سایر جاها}
+\end{cases}
+}
+
+ب)
+
+از 
+$
+\iint_{\Bbb R^2}f(x,y)dxdy=1
+$
+نتیجه می شود:
+\eqn{
+&\int_0^\frac{\pi}{6}\int_0^\frac{\pi}{2}k\sin(x+3y)dxdy=1\implies
+\\&\int_0^\frac{\pi}{6}k\cos(3y)+k\sin(3y)dy=1\implies
+\\&k\frac{1}{3}\sin(3y)\Big|_0^\frac{\pi}{6}-k\frac{1}{3}\cos(3y)\Big|_0^\frac{\pi}{6}=1\implies
+\\&k=\frac{3}{2}
+}
+همچنین به ازای این مقدار $k$ داریم
+$
+f(x,y)\ge 0
+$.
+برای محاسبه‌ی توزیع تجمعی توأم، توجه داریم که اگر 
+$
+x<0
+$
+یا 
+$
+y<0
+$
+یا هردو، در این صورت
+$
+F(x,y)=0
+$
+.
+بنابراین 
+$
+x>0,y>0
+$
+و در نتیجه
+\eqn{
+F(x,y)&=
+\int_0^{\min(y,\frac{\pi}{6})}\int_0^{\min(x,\frac{\pi}{2})} \frac{3}{2}\sin(u+3v)dudv
+\\&=
+\int_0^{\min(y,\frac{\pi}{6})} \frac{3}{2}\cos(u+3v)\Big|_{\min(x,\frac{\pi}{2})}^0dv
+\\&=
+\int_0^{\min(y,\frac{\pi}{6})} \frac{3}{2}\cos(3v)-\frac{3}{2}\cos\left[\min(x,\frac{\pi}{2})+3v\right]dv
+\\&=
+\frac{1}{2}\sin(3v)\Big|_0^{\min(y,\frac{\pi}{6})}-\frac{1}{2}\sin\left[\min(x,\frac{\pi}{2})+3v\right]\Big|_0^{\min(y,\frac{\pi}{6})}
+\\&=
+\frac{1}{2}\sin(\min(3y,\frac{\pi}{2}))-\frac{1}{2}\sin\left[\min(x,\frac{\pi}{2})+\min(3y,\frac{\pi}{2})\right]+
+\frac{1}{2}\sin\left[\min(x,\frac{\pi}{2})\right]
+\\&
+%%%%%%%%%
+\begin{cases}
+\frac{1}{2}\sin(x)+\frac{1}{2}\sin(3y)-\frac{1}{2}\sin(x+3y)
+&,\quad 0\le x\le \frac{\pi}{2},0\le y\le \frac{\pi}{6}\\
+\frac{1}{2}-\frac{1}{2}\cos(x)+\frac{1}{2}\sin(x)
+&,\quad 0\le x\le \frac{\pi}{2},y\ge \frac{\pi}{6}\\
+\frac{1}{2}\sin(3y)-\frac{1}{2}\cos(3y)+\frac{1}{2}
+&,\quad x\ge \frac{\pi}{2},0\le y\le \frac{\pi}{6}\\
+1
+&,\quad x\ge \frac{\pi}{2},y\ge \frac{\pi}{6}\\
+0&,\quad \text{سایر جاها}
+\end{cases}
+}
+
+%$
+%f(x,y)=
+%\begin{cases}
+%k\sin(x+3y)&,\quad 0<x<\frac{\pi}{2},0<y<\frac{\pi}{6}\\
+%0&,\quad \text{سایر جاها}
+%\end{cases}
+%$
+
+%پ) (امتیازی)
+%
+%$
+%f(x,y)=
+%\begin{cases}
+%\frac{1}{2}&,\quad |x|^k+|y|^k<1\\
+%0&,\quad \text{سایر جاها}
+%\end{cases}
+%$
+
+\QA
+
+الف)
+\eqn{
+&
+\Pr\{X\le 4,Y\le -2\}=0
+}
+\eqn{
+\Pr\{X+Y\le 2\}&=
+\int_0^\frac{\pi}{2}\int_0^{\min(\frac{\pi}{2},2-y)}\frac{1}{2}\sin(x+y)dxdy
+\\&=
+\int_0^\frac{\pi}{2}\frac{1}{2}\cos(x+y)\Big|_{\min(\frac{\pi}{2},2-y)}^0dy
+\\&=
+\int_0^\frac{\pi}{2}\frac{1}{2}\cos(y)-\frac{1}{2}\cos\left[\min(\frac{\pi}{2},2-y)+y\right]dy
+\\&=
+\int_0^{2-\frac{\pi}{2}}\frac{1}{2}\cos(y)-\frac{1}{2}\cos\left[\min(\frac{\pi}{2},2-y)+y\right]dy
+\\&+
+\int_{2-\frac{\pi}{2}}^\frac{\pi}{2}\frac{1}{2}\cos(y)-\frac{1}{2}\cos\left[\min(\frac{\pi}{2},2-y)+y\right]dy
+\\&=
+\int_0^{2-\frac{\pi}{2}}\frac{1}{2}\cos(y)-\frac{1}{2}\cos\left[\frac{\pi}{2}+y\right]dy
+\\&+
+\int_{2-\frac{\pi}{2}}^\frac{\pi}{2}\frac{1}{2}\cos(y)-\frac{1}{2}\cos\left[2-y+y\right]dy
+\\&=
+\int_0^{2-\frac{\pi}{2}}\frac{1}{2}\cos(y)+\frac{1}{2}\sin(y)dy
+\\&+
+\int_{2-\frac{\pi}{2}}^\frac{\pi}{2}\frac{1}{2}\cos(y)-\frac{1}{2}\cos(2)dy
+\\&=
+\frac{1}{2}+
+\int_0^{2-\frac{\pi}{2}}\frac{1}{2}\sin(y)dy
+\\&+
+\int_{2-\frac{\pi}{2}}^\frac{\pi}{2}-\frac{1}{2}\cos(2)dy
+\\&=
+1-\frac{1}{2}\sin2 -\frac{\pi-2}{2}\cos2
+}
+\eqn{
+\Pr\{X=4Y\}=0
+}
+احتمال اخیر صفر است؛ زیرا دو متغیر تصادفی، پیوسته بوده و چگالی احتمال توأم آنها، شامل هیچ ضربه ای روی خط $X=4Y$ نیست.
+
+ب)
+\eqn{
+\Pr\{X\le 4,Y\le -2\}=0
+}
+\eqn{
+\Pr\{X+Y\le 2\}=1
+}
+\eqn{
+&\Pr\{X=4Y\}=\Pr\{X=4Y=-4\}\\&=\iint_{\Bbb R^2}\frac{1}{2}\delta\left(\sqrt{(x+4)^2+(y+1)^2}\right)dxdy=\frac{1}{2}
+}
+
+\QA
+
+\eqn{
+E\{X^n\}&=\int_1^\infty\int_1^\infty x^n(xy-1)\exp(1-xy)dxdy
+\\&=
+\int_1^\infty x^n\int_1^\infty (xy-1)\exp(1-xy)dydx
+\\&=
+\int_1^\infty x^n (-y)\exp(1-xy)\Big|_{y=1}^{y=\infty} dx
+\\&=
+\int_1^\infty x^n \exp(1-x)dx
+}
+در نتیجه
+\eqn{
+&E\{X\}=\int_1^\infty x\exp(1-x)dx=2
+\\&E\{X^2\}=\int_1^\infty x^2\exp(1-x)dx=5
+\\&\implies \sigma^2_X= E\{X^2\}-E^2\{X\}=1
+}
+
+همچنین
+\eqn{
+\Phi_X(s)&=E\{\exp(sX)\}=\int_1^\infty\int_1^\infty \exp(sx)(xy-1)\exp(xy-1)dxdy
+\\&=
+\int_1^\infty \exp(sx)\int_1^\infty (xy-1)\exp(xy-1)dydx
+\\&=
+\int_1^\infty \exp(sx)(-y)\exp(1-xy)\Big|_{y=1}^{y=\infty} dx
+\\&=
+\int_1^\infty \exp(sx)\exp(1-x)dx
+\\&=
+\int_1^\infty \exp(1+(s-1)x)dx
+\\&=
+\frac{1}{s-1}\exp(1+(s-1)x)\Big|_1^\infty
+\\&=
+\frac{1}{1-s}\exp(s)\quad,\quad \Re\{s\}<1
+}
+و به دلیل تقارن
+$$
+\sigma^2_X=\sigma^2_Y\quad,\quad \Phi_X(s)=\Phi_Y(s).
+$$
+
+
+\eqn{
+\Pr\{XY\le a\}=\begin{cases}
+\int_1^a \int_1^\frac{a}{y}(xy-1)\exp(1-xy)dxdy&,\quad a\ge 1\\
+0&,\quad a\le 1
+\end{cases}
+}
+بنابراین برای $a\ge 1$ داریم:
+\eqn{
+\Pr\{XY\le a\}&=\int_1^a \int_1^\frac{a}{y}(xy-1)\exp(1-xy)dxdy
+\\&=
+\int_1^a (-x)\exp(1-xy)\Big|_{x=1}^{x=\frac{a}{y}}dy
+\\&=
+\int_1^a \exp(1-y)-\frac{a}{y}\exp(1-a)dy
+\\&=
+\int_1^a \exp(1-y)-\frac{a}{y}\exp(1-a)dy
+\\&=
+1-\exp(1-a)-a\exp(1-a)\ln a
+}
+در نتیجه برای $a\ge 1$:
+$$
+f_{XY}(a)=\begin{cases}
+(a-1)e^{1-a}\ln a&,\quad a\ge 1\\
+0&,\quad a\le 1
+\end{cases}
+.
+$$
+
+\eqn{
+\Pr\{\max\{X,Y\}\le a\}=\Pr\{X\le a,Y\le a\}.
+}
+
+برای $a\le 1$ احتمال فوق برابر صفر است و برای $a\ge 1$ داریم:
+\eqn{
+\Pr\{X\le a,Y\le a\}&=\int_1^a\int_1^a (xy-1)\exp(1-xy)dxdy
+\\&=\int_1^a(-x)\exp(1-xy)\Big|_1^ady
+\\&=\int_1^a\exp(1-y)-a\exp(1-ay)dy
+\\&=1-2\exp(1-a)+\exp(1-a^2)
+}
+در نتیجه
+$$
+f_{\max\{X,Y\}}(a)=\begin{cases}
+2\exp(1-a)-2a\exp(1-a^2)&,\quad a\ge 1\\
+0&,\quad a\le 1
+\end{cases}
+.
+$$
+
+\QA
+
+الف) حجم زیر چگالی احتمال باید 1 باشد؛ پس:
+\eqn{
+&\int_{x^2+y^2\le 1}\alpha+2(\frac{1}{\pi}-\alpha)(x^2+y^2)dxdy=1
+\implies
+\\&
+\int_0^{2\pi}\int_0^1\left[\alpha+2(\frac{1}{\pi}-\alpha)r^2\right]rdrd\phi=1
+\implies
+\\&
+\int_0^{2\pi}\frac{\alpha}{2}+2(\frac{1}{\pi}-\alpha)\frac{1}{4}d\phi=1
+\implies
+\\&
+1=1.
+}
+در نتیجه، به ازای هر مقدار از $\alpha$ حجم زیر، واحد خواهد بود. از طرفی، باید چگالی احتمال همواره نامنفی باشد؛ پس:
+\eqn{
+&
+\forall x,y\quad,\quad f(x,y)\ge 0\iff \min_{x,y}f(x,y)\ge 0
+\\&\implies 
+\begin{cases}
+\alpha+2(\frac{1}{\pi}-\alpha)\ge 0&,\quad \frac{1}{\pi}-\alpha\le 0\\
+\alpha\ge 0&,\quad \frac{1}{\pi}-\alpha\ge 0
+\end{cases}
+\\&\implies 
+\begin{cases}
+\frac{2}{\pi}-\alpha\ge 0&,\quad \frac{1}{\pi}-\alpha\le 0\\
+\alpha\ge 0&,\quad \frac{1}{\pi}-\alpha\ge 0
+\end{cases}
+\\&\implies 
+\begin{cases}
+\frac{1}{\pi}\le \alpha\le \frac{2}{\pi}\\
+0\le \alpha\le \frac{1}{\pi}
+\end{cases}
+}
+
+در نتیجه، محدوده‌ی مقادیر مجاز 
+$
+\alpha
+$
+برابر
+$
+[0,\frac{2}{\pi}]
+$
+خواهد بود.
+
+ب) دو متغیر تصادفی 
+$
+X
+$
+و
+$
+Y
+$
+مستقل اند؛ اگر و تنها اگر
+$$
+f_{X,Y}(x,y)=f_{X}(x)f_{Y}(y).
+$$
+از طرفی،
+\eqn{
+f_X(x)&=\int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}} \alpha+2(\frac{1}{\pi}-\alpha)(x^2+y^2)dy
+\\&=
+\sqrt{1-x^2}\left[
+\frac{8}{3}\left(\frac{1}{\pi}-\alpha\right)x^2+\frac{4}{3\pi}+\frac{2}{3}\alpha
+\right]
+\quad,\quad |x|\le 1.
+}
+به دلیل تقارن،
+\eqn{
+f_Y(y)&=
+\sqrt{1-y^2}\left[
+\frac{8}{3}\left(\frac{1}{\pi}-\alpha\right)y^2+\frac{4}{3\pi}+\frac{2}{3}\alpha
+\right]
+\quad,\quad |y|\le 1؛
+}
+در نتیجه به ازای هر مقدار $\alpha$ داریم
+$
+f_{X,Y}(x,y)\ne f_X(x)f_Y(y)
+$.
+
+برای تحقیق ناهمبستگی، به دلیل تقارن مرکزی،
+\eqn{
+E\{X\}=E\{Y\}=0.
+}
+از طرفی
+\eqn{
+E\{XY\}=&
+\int_{x^2+y^2\le 1}xy[\alpha+2(\frac{1}{\pi}-\alpha)(x^2+y^2)]dxdy
+=
+0
+}
+پس این دو متغیر تصادفی همواره ناهمبسته اند.
+
+پ) اگر $a=b=0$، در اینصورت
+$
+\Pr\{aX+bY\ge 0\}=1
+$
+. در غیر اینصورت، به دلیل تقارن دایروی چگالی احتمال خواهیم داشت:
+\eqn{
+\Pr\{aX+bY\ge 0\}=\Pr\{X\ge 0\}=\frac{1}{2}
+}
+
+همچنین
+\eqn{
+\Pr\{XY\ge 0\}&=\Pr\{X\ge 0,Y\ge 0\text{ or }X\le 0,Y\le 0\}
+\\&=
+\Pr\{X\ge 0,Y\ge 0\}+\Pr\{X\le 0,Y\le 0\}
+\\&=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}
+}
+
+تعریف ضریب همبستگی چنین است:
+$$
+\rho_{X,Y}=\frac{cov(X,Y)}{\sigma_X\sigma_Y}=\frac{E(XY)-E(X)E(Y)}{\sigma_X\sigma_Y}
+$$
+که در این سوال، با توجه به 
+$
+Y=X^2
+$
+خواهیم داشت:
+$$
+cov(X,Y)=E(X^3)-E(X)E(X^2).
+$$
+از طرفی
+\eqn{
+E(X^n)&=\sum_x x^np(X=x)\\&=
+(-1)^n\times 0.3+
+(0)^n\times 0.4+
+(1)^n\times 0.3
+\\&=0.3[1+(-1)^n]
+}{}
+در نتیجه
+\eqn{
+&
+E(X^3)=E(X)=0
+\\&E(X^2)=0.6
+}
+پس خواهیم داشت
+$$
+cov(X,Y)=0.
+$$
+
+از طرفی، برای محاسبه‌ی 
+$
+\sigma_X^2
+$
+و
+$
+\sigma_Y^2
+$
+داریم:
+\eqn{
+\sigma_X^2&=E(X^2)-E^2(X)
+\\&=0.6-0^2=0.6
+}{}
+\eqn{
+\sigma_Y^2&=E(Y^2)-E^2(Y)
+\\&=E(X^4)-E^2(X^2)
+\\&=0.6-(0.6)^2=0.24
+}{}
+در نتیجه
+$$
+\rho_{X,Y}=\frac{0}{\sqrt{0.6\times 0.24}}=0.
+$$
+
+کوئیز 8)
+
+از آنجا که pmf نرمالیزه است، باید داشته باشیم
+\eqn{
+&\sum_{n=0}^\infty p(a_n)+p(b_n)=1
+\implies
+\\&\sum_{n=0}^\infty \frac{2k}{(n+2)(n+3)}=1
+\implies
+\\&2k\sum_{n=0}^\infty \frac{1}{n+2}-\frac{1}{n+3}=1
+\implies k=1
+}
+
+گزینه 1
+
+کوئیز 9)
+
+pdf به طور خودکار نرمالیزه شده است. پس
+\eqn{
+&E\{X\}=\int_0^\frac{1}{c}2c^2x^2dx=\frac{2}{3c}
+\\&
+E\{X^2\}=\int_0^\frac{1}{c}2c^2x^3dx=\frac{1}{2c^2}
+\\&
+\sigma_X^2=E\{X^2\}-E^2\{X\}=\frac{1}{18c^2}=\frac{1}{2}
+}
+در نتیجه
+$
+c=\frac{1}{3}
+$
+.
+
+سوال امتیازی)
+\eqn{
+\Pr\{|X|>3\}=\Pr\{X^2>9\}<\frac{\mathbb{E}\{X^2\}}{9}=\frac{4}{9}
+}
+
+کوئیز 10)
+$
+X
+$
+می تواند مقادیر 0 و 1 و 
+$
+Y
+$
+می تواند مقادیر 0، 2، 4 و 6 را اختیار کند. در نتیجه
+\eqn{
+\Pr\{X=2Y\}&=\Pr\{X=2Y=0\}+\Pr\{X=2Y=1\}
+\\&=\Pr\{X=0,Y=0\}+\Pr\{X=1,Y=\frac{1}{2}\}
+\\&=\Pr\{i<4,i\in\{1,3,5\}\}+0
+\\&=\Pr\{i\in\{1,3\}\}=\frac{1}{3}
+}
+
 
 \chapter{احتمال شرطی در متغیرهای تصادفی}
 
@@ -5240,6 +6752,321 @@ f_Y(y)&=\sum_x f_{X,Y}(x,y)
 $$
 \text{var}(Y)\approx2
 $$
+
+\QA
+
+ابتدا باید 
+$
+f_X(x|X\ge 1)
+$
+را محاسبه کنیم. برای این منظور داریم:
+\eqn{
+\Pr\{X\le x|X\ge 1\}&=\frac{\Pr\{1\le X\le x\}}{\Pr\{X\ge 1\}}
+\\&=\frac{\Pr\{1\le X\le x\}}{\Pr\{X=1\}}
+\\&=\frac{\Pr\{1\le X\le x\}}{\frac{1}{2}}
+\\&=\begin{cases}
+1&,\quad x\ge 1\\
+0&,\quad x< 1
+\end{cases}
+}
+در این صورت
+$$
+f_X(x|X\ge 1)=\delta(x-1)
+$$
+و خواهیم داشت
+\eqn{
+E\{X|X\ge 1\}&=\int_{-\infty}^\infty xf_X(x|X\ge 1)dx
+\\&=\int_{-\infty}^\infty x\delta(x-1)dx=1
+}
+\eqn{
+E\{X^2|X\ge 1\}&=\int_{-\infty}^\infty x^2f_X(x|X\ge 1)dx
+\\&=\int_{-\infty}^\infty x^2\delta(x-1)dx=1
+}
+بنابراین
+\eqn{
+E\{X|X\ge 1\}=1\quad,\quad
+\sigma^2(X|X\ge 1)=E\{X^2|X\ge 1\}-E^2\{X|X\ge 1\}=0
+}
+
+برای چگالی احتمال زیر، مقادیر
+$
+\mathbb{E}\{X|X>1\}
+$
+و
+$
+\sigma_X^2(X|X>1)
+$
+برای محاسبه‌ی
+$
+f(x|X\ne 1)
+$
+داریم
+\eqn{
+\Pr\{X\le x|X\ne 1\}&=\frac{\Pr\{X\le x,X\ne 1\}}{\Pr\{X\ne 1\}}
+\\&=\frac{\Pr\{X\le x,X\ne 1\}}{\frac{1}{2}}
+\\&=
+\begin{cases}
+\frac{\Pr\{X<1\}}{\frac{1}{2}}&,\quad x\ge 1\\
+\frac{\Pr\{X\le x\}}{\frac{1}{2}}&,\quad x<1
+\end{cases}
+\\&=
+\begin{cases}
+1&,\quad x\ge 1\\
+3x^2-2x^3&,\quad 0\le x<1\\
+0&,\quad x<0
+\end{cases}
+}
+در نتیجه
+\eqn{
+f_X(x|X\ne 1)=
+\begin{cases}
+6x-6x^2&,\quad 0<x< 1\\
+0&,\quad \text{سایر جاها}
+\end{cases}
+}
+
+در نهایت، برای محاسبه‌ی 
+$
+f(x|X<\frac{1}{2})
+$
+چنین می‌نویسیم:
+\eqn{
+\Pr\{X\le x|X<\frac{1}{2}\}&=
+\frac{\Pr\{X\le x,X<\frac{1}{2}\}}{\Pr\{X<\frac{1}{2}\}}
+\\&=
+\begin{cases}
+\frac{\Pr\{X<\frac{1}{2}\}}{\Pr\{X<\frac{1}{2}\}}&,\quad x\ge \frac{1}{2}\\
+\frac{\Pr\{X\le x\}}{\Pr\{X<\frac{1}{2}\}}&,\quad x<\frac{1}{2}
+\end{cases}
+\\&=
+\begin{cases}
+1&,\quad x\ge \frac{1}{2}\\
+6x^2-4x^3&,\quad 0\le x<\frac{1}{2}\\
+0&,\quad x<0
+\end{cases}
+}
+پس:
+$$
+f_X(x|X<\frac{1}{2})=
+\begin{cases}
+12x-12x^2&,\quad 0< x<\frac{1}{2}\\
+0&,\quad \text{سایر جاها}
+\end{cases}.
+$$
+
+\QA
+
+الف) 
+
+\eqn{
+\Pr\{\max\{X,Y\}\le u|X\le \frac{1}{2}\}&=
+\Pr\{X\le u,Y\le u|X\le \frac{1}{2}\}
+\\&=
+\frac{\Pr\{X\le u,Y\le u,X\le \frac{1}{2}\}}{\Pr\{X\le \frac{1}{2}\}}
+\\&=
+\begin{cases}
+\frac{\Pr\{Y\le u,X\le \frac{1}{2}\}}{\Pr\{X\le \frac{1}{2}\}}&,\quad u\ge \frac{1}{2}\\
+\frac{\Pr\{X\le u,Y\le u\}}{\Pr\{X\le \frac{1}{2}\}}&,\quad u< \frac{1}{2}
+\end{cases}
+}
+از طرفی
+\eqn{
+\Pr\{X\le \frac{1}{2}\}&=\int_{x^2+y^2\le 1,x\le \frac{1}{2}}
+\frac{1}{\pi}dxdy
+\\&=
+\frac{1}{\pi}\int_{x^2+y^2\le 1,x\le \frac{1}{2}}dxdy
+\\&=\frac{\sqrt 3}{4\pi}+\frac{2}{3}.
+}
+
+همچنین
+\eqn{
+\Pr\{X\le \frac{1}{2},Y\le u\}&=
+\int_{-1}^{\frac{1}{2}}
+\int_{-\sqrt{1-x^2}}^{\min\{\sqrt{1-x^2},u\}}\frac{1}{\pi}dydx
+\\&=
+\frac{1}{\pi}
+\int_{x\in(-1,\frac{1}{2}),u\ge -\sqrt{1-x^2}}
+\min\{\sqrt{1-x^2},u\}+\sqrt{1-x^2}dx
+\\&=
+C_1+\frac{1}{\pi}
+\int_{x\in(-1,\frac{1}{2}),u\ge -\sqrt{1-x^2}}
+\min\{\sqrt{1-x^2},u\}dx
+}
+که در رابطه بالا، 
+$
+C_1=\frac{1}{\pi}
+\int_{-1}^{\frac{1}{2}}
+\sqrt{1-x^2}dx
+$
+(تعیین مقدار دقیق آن اهمیت ندارد؛ زیرا همانطور که بعدا دیده می‌شود، در مشتق گیری حذف خواهد شد.)
+
+با مشتق گیری خواهیم داشت:
+\eqn{
+\frac{d}{du}
+\Pr\{X\le \frac{1}{2},Y\le u\}
+&=
+\frac{1}{\pi}\int_{x\in(-1,\frac{1}{2}),-\sqrt{1-x^2}\le u\le \sqrt{1-x^2}}dx
+\\&=
+\begin{cases}
+\frac{1}{\pi}\int_{x\in(-1,\frac{1}{2}),-\sqrt{1-x^2}\le u}dx&,\quad u\le 0\\
+\frac{1}{\pi}\int_{x\in(-1,\frac{1}{2}),u\le \sqrt{1-x^2}}dx&,\quad u\ge 0
+\end{cases}
+\\&=
+\frac{1}{\pi}\int_{x\in(-1,\frac{1}{2}),-\sqrt{1-u^2}<x<\sqrt{1-u^2}}dx
+\\&=
+\frac{1}{\pi}\min\left\{\sqrt{1-u^2},\frac{1}{2}\right\}+\frac{1}{\pi}\min\{\sqrt{1-u^2},1\}
+}
+
+به طریق مشابه
+
+\eqn{
+\frac{d}{du}
+\Pr\{X\le u,Y\le u\}
+&=
+\frac{1}{\pi}\int_{x\in(-1,u),-\sqrt{1-x^2}\le u\le \sqrt{1-x^2}}dx
+\\&=
+\begin{cases}
+\frac{1}{\pi}\int_{x\in(-1,u),-\sqrt{1-x^2}\le u}dx&,\quad u\le 0\\
+\frac{1}{\pi}\int_{x\in(-1,u),u\le \sqrt{1-x^2}}dx&,\quad u\ge 0
+\end{cases}
+\\&=
+\frac{1}{\pi}\int_{x\in(-1,u),-\sqrt{1-u^2}<x<\sqrt{1-u^2}}dx
+\\&=
+\frac{1}{\pi}\min\left\{\sqrt{1-u^2},u\right\}+\frac{1}{\pi}\min\{\sqrt{1-u^2},1\}
+}
+بنابراین
+%\eqn{
+%\Pr\{X\le u,Y\le u\}&=
+%\int_{-1}^{u}
+%\int_{-\sqrt{1-x^2}}^{\min\{\sqrt{1-x^2},u\}}\frac{1}{\pi}dydx
+%\\&=
+%\frac{1}{\pi}
+%\int_{x\in(-1,u),u\ge -\sqrt{1-x^2}}
+%\min\{\sqrt{1-x^2},u\}+\sqrt{1-x^2}dx
+%\\&=
+%C_1+\frac{1}{\pi}
+%\int_{x\in(-1,u),u\ge -\sqrt{1-x^2}}
+%\min\{\sqrt{1-x^2},u\}dx
+%}
+
+%\eqn{
+%\Pr\{Y\le u\}=
+%\begin{cases}
+%1-\frac{1}{\pi}\cos^{-1}u+\frac{u}{\pi}\sqrt{1-u^2}&,\quad 0\le u\le 1\\
+%\frac{1}{\pi}\cos^{-1}(-u)+\frac{u}{\pi}\sqrt{1-u^2}&,\quad -1\le u\le 0\\
+%0&,\quad\text{سایر جاها}
+%\end{cases}
+%}
+%و
+%\eqn{
+%\Pr\{Y\le u,X\ge \frac{1}{2}\}=
+%\begin{cases}
+%1-\frac{1}{\pi}\cos^{-1}u+\frac{u}{\pi}\sqrt{1-u^2}&,\quad u\ge 0\\
+%\frac{1}{\pi}\cos^{-1}u+\frac{u}{\pi}\sqrt{1-u^2}&,\quad u<0\\
+%\end{cases}
+%}
+
+\eqn{
+f_{\max\{X,Y\}}(u|X\le \frac{1}{2})
+&=
+\begin{cases}
+\frac{1}{\pi}\min\left\{\sqrt{1-u^2},\frac{1}{2}\right\}\\+
+\frac{1}{\pi}\min\left\{\sqrt{1-u^2},u\right\}\\+
+\frac{2}{\pi}\min\{\sqrt{1-u^2},1\}&,\quad |u|\le 1\\
+0&,\quad |u|>1
+\end{cases}
+}
+
+ب)
+
+\eqn{
+&\Pr\{\sqrt{X^2+Y^2}\le u|X+Y\le 1\}=
+\frac{\Pr\{\sqrt{X^2+Y^2}\le u,X+Y\le 1\}}{\Pr\{X+Y\le 1\}}
+\\&=
+\frac{1}{\frac{3}{4}+\frac{1}{2\pi}}
+\Pr\{\sqrt{X^2+Y^2}\le u,X+Y\le 1\}
+\\&=
+\begin{cases}
+1&,\quad u\ge 1\\
+\frac{1}{\frac{3}{4}+\frac{1}{2\pi}}
+\left[(1-\frac{1}{\pi}\cos^{-1}\frac{1}{u\sqrt 2})u^2+\frac{1}{\pi}\sqrt{\frac{u^2}{2}-\frac{1}{4}}\right]&,\quad \frac{1}{\sqrt 2}\le u< 1\\
+\frac{u^2}{\frac{3}{4}+\frac{1}{2\pi}}&,\quad 0\le u< \frac{1}{\sqrt 2}\\
+0&,\quad u\le 0\\
+\end{cases}
+}
+در نتیجه
+\eqn{
+&f_{\sqrt{X^2+Y^2}|X+Y\le 1}(u)=
+\begin{cases}
+\frac{2u}{\frac{3}{4}+\frac{1}{2\pi}}
+(1-\frac{1}{\pi}\cos^{-1}\frac{1}{u\sqrt 2})&,\quad \frac{1}{\sqrt 2}\le u< 1\\
+\frac{2u}{\frac{3}{4}+\frac{1}{2\pi}}&,\quad 0\le u< \frac{1}{\sqrt 2}\\
+0&,\quad \text{سایر جاها}\\
+\end{cases}
+}
+در نتیجه
+\eqn{
+\mathbb{E}\{\sqrt{X^2+Y^2}|X+Y\le 1\}
+&=\int_0^1 uf_{\sqrt{X^2+Y^2}|X+Y\le 1}(u)du
+\\&=
+\int_0^{\frac{1}{\sqrt2}} \frac{2u^2}{\frac{3}{4}+\frac{1}{2\pi}}du
+\\&+
+\int_{\frac{1}{\sqrt2}}^1 \frac{2u^2}{\frac{3}{4}+\frac{1}{2\pi}}
+(1-\frac{1}{\pi}\cos^{-1}\frac{1}{u\sqrt 2})du
+\\&=
+\int_0^1 \frac{2u^2}{\frac{3}{4}+\frac{1}{2\pi}}du
+\\&-
+\frac{2}{\frac{3\pi}{4}+\frac{1}{2}}\int_{\frac{1}{\sqrt2}}^1 u^2\cos^{-1}\frac{1}{u\sqrt 2}du
+\\&=
+\frac{2}{3}+\frac{\sqrt2}{9\pi+6}\ln(1+\sqrt 2)
+%\\&=
+%\frac{1}{\frac{3}{4}+\frac{1}{2\pi}}
+%\left[
+%\frac{1}{2}+\frac{1}{3\pi}+\frac{\sqrt 2}{12\pi}\ln(1+\sqrt 2)
+%\right]
+}
+%
+%
+%
+% مقدار 
+%$
+%\mathbb{E}\{\sqrt{X^2+Y^2}|X+Y\le 1\}
+%$
+%را بیابید.
+
+\QA
+
+الف)
+\eqn{
+\Pr\{Y\le 0|X=1\}&=
+\int_{-\infty}^0 f(y|X=1)dy
+\\&=
+\int_{-\infty}^0 \frac{a}{2}\exp(-a|y-1|)dy
+\\&=
+\int_{-\infty}^0 \frac{a}{2}\exp(a(y-1))dy
+=\frac{e^{-a}}{2}
+}
+و
+\eqn{
+\Pr\{Y\ge 0|X=-1\}&=
+\int_{-\infty}^0 f(y|X=1)dy
+\\&=
+\int_0^\infty \frac{a}{2}\exp(-a|y+1|)dy
+\\&=
+\int_0^\infty \frac{a}{2}\exp(-a(y+1))dy
+=\frac{e^{-a}}{2}
+}
+مشاهده می شود که هر دو احتمال، با افزایش مقدار $a$ افت می‌کنند.
+
+ب) صورت سوال، یک مسئله‌ی مخابراتی را نشان می دهد که در آن، مقادیر $-1$ و $1$ روی کانال ارسال می‌شوند و نویزی با چگالی احتمال نمایی دوطرفه، با سیگنال ارسالی جمع می‌شود. هر چه $a$ بیشتر باشد، واریانس (توان) نویز کاهش می‌یابد و انتظار می‌رود که احتمال خطا در آشکارسازی سمبلهای ارسالی در گیرنده نیز کاهش یابد. این امر، با محاسبه‌ی احتمالهای 
+$
+\Pr\{Y\le 0|X=1\}
+$
+و
+$
+\Pr\{Y\ge 0|X=-1\}
+$
+تحقیق شد.
 
 \chapter{دنباله‌ی متغیرهای تصادفی}
 
