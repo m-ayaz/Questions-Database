@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.27)  21 AUG 2022 19:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.27)  23 AUG 2022 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,27 +1111,36 @@ LaTeX Info: Redefining \nameref on input line 37.
 \@outlinefile=\write4
 \openout4 = `"Probability and Statistics - Answers.out"'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
+(./Probability and Statistics - Answers.toc)
+\tf@toc=\write5
+\openout5 = `"Probability and Statistics - Answers.toc"'.
+
+ [1
+
+
+]
+فصل 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) [2
 
-] [2] [3] [4]
+] [3] [4] [5]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 254.
+(amsmath)                 on input line 258.
 
-[5]
-Overfull \hbox (27.6316pt too wide) detected at line 309
+[6]
+Overfull \hbox (27.6316pt too wide) detected at line 313
 \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
 .4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
 4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
@@ -1145,18 +1154,82 @@ mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
 /cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 )
  []
 
-[6] [7] [8] (./Probability and Statistics - Answers.aux)
-Package rerunfilecheck Info: File `"Probability and Statistics - Answers".out' 
-has not changed.
-(rerunfilecheck)             Checksum: <no file>.
- ) 
-Here is how much of TeX's memory you used:
- 27020 strings out of 476180
- 555683 string characters out of 5813082
- 1022954 words of memory out of 5000000
- 47256 multiletter control sequences out of 15000+600000
- 472524 words of font info for 66 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 88i,22n,91p,1343b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+[7] [8] [9] [10]
+Overfull \hbox (27.6316pt too wide) detected at line 465
+\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
+.4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
+4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
+m/n/14.4 ;  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 P\OT1
+/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 P\O
+T1/cmr/m/n/14.4 ([\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.
+4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 [ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14
+.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ]) = \OML/cmm/m
+/it/14.4 P\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/c
+mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
+/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 )
+ []
 
-Output written on Probability and Statistics - Answers.pdf (8 pages).
+[11] [12] [13] [14] [15]
+File: HW2_Q.pdf Graphic file (type pdf)
+<use HW2_Q.pdf>
+
+Overfull \hbox (3.61432pt too wide) in paragraph at lines 672--673
+ [][][][][] 
+ []
+
+[16] [17] [18] [19]
+Overfull \hbox (1.23586pt too wide) in paragraph at lines 816--817
+[][] \TU/XKamran(0)/b/n/14.4 پیشامد اینکه $[]$، ۱۵ حالت متفاوت دارد. چون هر گلو
+له[]
+ []
+
+[20] [21] [22] [23] [24] [25] [26]
+File: HW3_Q6.eps Graphic file (type eps)
+<HW3_Q6.eps>
+
+Overfull \hbox (3.61537pt too wide) in paragraph at lines 1068--1069
+ [][][][][] 
+ []
+
+[27] [28]
+Overfull \hbox (5.40587pt too wide) detected at line 1107
+[]\OMS/cmsy/m/n/14.4 f[]j[]g \OT1/cmr/m/n/14.4 = [] = [] = [] \OMS/cmsy/m/n/14.
+4 ^^Y \OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 22
+ []
+
+[29]
+Overfull \hbox (2.79034pt too wide) in paragraph at lines 1148--1154
+[]\TU/XKamran(0)/m/n/14.4 معلوم الحال را (یعنی $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/
+n/14.4 1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m
+/n/14.4 3\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 4\OML/cmm/m/it/14.4 ; \OT1/cmr/
+m/n/14.4 5\OMS/cmsy/m/n/14.4 g$\TU/XKamran(0)/m/n/14.4 ) در نظر بگیریم و سپس سا
+یر اعضا را از بین $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 6\OML/cmm/m/it/14.4 ; 
+[]  ; n\OMS/cmsy/m/n/14.4 g$[]
+ []
+
+[30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+Overfull \hbox (15.26318pt too wide) in paragraph at lines 1678--1682
+[][]\TU/XKamran(0)/m/n/14.4 پ) حسابدار به دو حالت کنار مدیرعامل می‌نشیند و تمام
+ اعضای هیئت مدیره (به جز مدیرعامل)[]
+ []
+
+[42]
+! Undefined control sequence.
+l.1764 \Q
+         
+? 
+! Emergency stop.
+l.1764 \Q
+         
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 27095 strings out of 476180
+ 557391 string characters out of 5813082
+ 1026954 words of memory out of 5000000
+ 47305 multiletter control sequences out of 15000+600000
+ 476357 words of font info for 92 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 88i,23n,91p,1343b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on Probability and Statistics - Answers.pdf (42 pages).
