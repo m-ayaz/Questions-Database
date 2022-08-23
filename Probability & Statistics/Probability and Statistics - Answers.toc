@@ -1,6 +1,0 @@
-\contentsline {chapter}{\numberline {1}مبانی احتمال و جبر مجموعه ها}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}آزمایش های تکراری}{53}{chapter.2}%
-\contentsline {chapter}{\numberline {3}متغیرهای تصادفی}{66}{chapter.3}%
-\contentsline {chapter}{\numberline {4}متغیرهای تصادفی توأم}{101}{chapter.4}%
-\contentsline {chapter}{\numberline {5}احتمال شرطی در متغیرهای تصادفی}{132}{chapter.5}%
-\contentsline {chapter}{\numberline {6}دنباله‌ی متغیرهای تصادفی}{164}{chapter.6}%
