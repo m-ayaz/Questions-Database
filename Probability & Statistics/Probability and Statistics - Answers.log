@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  26 APR 2023 17:14
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  26 APR 2023 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Probability and Statistics - Questions.tex"
-(./Probability and Statistics - Questions.tex
+**"Probability and Statistics - Answers.tex"
+(./Probability and Statistics - Answers.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (d:/Software/texlive/2022/texmf-dist/tex/latex/base/report.cls
@@ -660,7 +660,19 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip57
-) (d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian.sty
+) (d:/Software/texlive/2022/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box69
+\UL@hyphenbox=\box70
+\UL@skip=\skip58
+\UL@hook=\toks37
+\UL@height=\dimen294
+\UL@pe=\count312
+\UL@pixel=\dimen295
+\ULC@box=\box71
+Package: ulem 2019/11/18
+\ULdepth=\dimen296
+)
+(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian.sty
 Package: xepersian 2022/02/20 v23.7 Persian typesetting in XeLaTeX
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.sty
@@ -672,14 +684,14 @@ Package: expl3 2022-02-24 L3 programming layer (loader)
 File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
 
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count312
-\l__color_backend_stack_int=\count313
-\g__color_backend_stack_int=\count314
-\g__graphics_track_int=\count315
-\l__pdf_internal_box=\box69
-\g__pdf_backend_object_int=\count316
-\g__pdf_backend_annotation_int=\count317
-\g__pdf_backend_link_int=\count318
+\c__kernel_sys_dvipdfmx_version_int=\count313
+\l__color_backend_stack_int=\count314
+\g__color_backend_stack_int=\count315
+\g__graphics_track_int=\count316
+\l__pdf_internal_box=\box72
+\g__pdf_backend_object_int=\count317
+\g__pdf_backend_annotation_int=\count318
+\g__pdf_backend_link_int=\count319
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
 )
@@ -688,20 +700,20 @@ Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 (d:/Software/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count319
-\l__fontspec_language_int=\count320
-\l__fontspec_strnum_int=\count321
-\l__fontspec_tmp_int=\count322
-\l__fontspec_tmpa_int=\count323
-\l__fontspec_tmpb_int=\count324
-\l__fontspec_tmpc_int=\count325
-\l__fontspec_em_int=\count326
-\l__fontspec_emdef_int=\count327
-\l__fontspec_strong_int=\count328
-\l__fontspec_strongdef_int=\count329
-\l__fontspec_tmpa_dim=\dimen294
-\l__fontspec_tmpb_dim=\dimen295
-\l__fontspec_tmpc_dim=\dimen296
+\l__fontspec_script_int=\count320
+\l__fontspec_language_int=\count321
+\l__fontspec_strnum_int=\count322
+\l__fontspec_tmp_int=\count323
+\l__fontspec_tmpa_int=\count324
+\l__fontspec_tmpb_int=\count325
+\l__fontspec_tmpc_int=\count326
+\l__fontspec_em_int=\count327
+\l__fontspec_emdef_int=\count328
+\l__fontspec_strong_int=\count329
+\l__fontspec_strongdef_int=\count330
+\l__fontspec_tmpa_dim=\dimen297
+\l__fontspec_tmpb_dim=\dimen298
+\l__fontspec_tmpc_dim=\dimen299
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -710,43 +722,43 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal
 .sty
 Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count330
-\XePersian@y=\count331
-\XePersian@m=\count332
-\XePersian@d=\count333
-\XePersian@latini=\count334
-\XePersian@persiani=\count335
-\XePersian@latinii=\count336
-\XePersian@persianii=\count337
-\XePersian@latiniii=\count338
-\XePersian@persianiii=\count339
-\XePersian@latiniv=\count340
-\XePersian@persianiv=\count341
-\XePersian@latinv=\count342
-\XePersian@persianv=\count343
-\XePersian@latinvi=\count344
-\XePersian@persianvi=\count345
-\XePersian@latinvii=\count346
-\XePersian@persianvii=\count347
-\XePersian@latinviii=\count348
-\XePersian@persianviii=\count349
-\XePersian@latinix=\count350
-\XePersian@persianix=\count351
-\XePersian@latinx=\count352
-\XePersian@persianx=\count353
-\XePersian@latinxi=\count354
-\XePersian@persianxi=\count355
-\XePersian@latinxii=\count356
-\XePersian@persianxii=\count357
-\XePersian@persianxiii=\count358
-\XePersian@temp=\count359
-\XePersian@temptwo=\count360
-\XePersian@tempthree=\count361
-\XePersian@yModHundred=\count362
-\XePersian@thirtytwo=\count363
-\XePersian@dn=\count364
-\XePersian@sn=\count365
-\XePersian@mminusone=\count366
+\XePersian@i=\count331
+\XePersian@y=\count332
+\XePersian@m=\count333
+\XePersian@d=\count334
+\XePersian@latini=\count335
+\XePersian@persiani=\count336
+\XePersian@latinii=\count337
+\XePersian@persianii=\count338
+\XePersian@latiniii=\count339
+\XePersian@persianiii=\count340
+\XePersian@latiniv=\count341
+\XePersian@persianiv=\count342
+\XePersian@latinv=\count343
+\XePersian@persianv=\count344
+\XePersian@latinvi=\count345
+\XePersian@persianvi=\count346
+\XePersian@latinvii=\count347
+\XePersian@persianvii=\count348
+\XePersian@latinviii=\count349
+\XePersian@persianviii=\count350
+\XePersian@latinix=\count351
+\XePersian@persianix=\count352
+\XePersian@latinx=\count353
+\XePersian@persianx=\count354
+\XePersian@latinxi=\count355
+\XePersian@persianxi=\count356
+\XePersian@latinxii=\count357
+\XePersian@persianxii=\count358
+\XePersian@persianxiii=\count359
+\XePersian@temp=\count360
+\XePersian@temptwo=\count361
+\XePersian@tempthree=\count362
+\XePersian@yModHundred=\count363
+\XePersian@thirtytwo=\count364
+\XePersian@dn=\count365
+\XePersian@sn=\count366
+\XePersian@mminusone=\count367
 )
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian-mathdigits
 pec.sty
@@ -787,19 +799,19 @@ Package: bidi 2022/02/18 v36.7 Bidirectional typesetting in plain TeX and LaTeX
 ****************************************************
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2022/02/01 v2.1 Programming tools for bidi package
-\@bidi@envbody=\toks37
-\@bidi@emptytoks=\toks38
-\bidi@poscount=\count367
-\bidi@tempcountb=\count368
-\bidi@temptoksa=\toks39
-\bidi@temptoksb=\toks40
-\bidi@dummies=\count369
-\bidi@are@these@correct=\toks41
-\bidi@toks@lista=\toks42
-\bidi@toks@listb=\toks43
-\bidi@stack@length=\count370
-\bidi@empty@stack=\toks44
-\bidi@looprepeat@depth=\count371
+\@bidi@envbody=\toks38
+\@bidi@emptytoks=\toks39
+\bidi@poscount=\count368
+\bidi@tempcountb=\count369
+\bidi@temptoksa=\toks40
+\bidi@temptoksb=\toks41
+\bidi@dummies=\count370
+\bidi@are@these@correct=\toks42
+\bidi@toks@lista=\toks43
+\bidi@toks@listb=\toks44
+\bidi@stack@length=\count371
+\bidi@empty@stack=\toks45
+\bidi@looprepeat@depth=\count372
 )
 ==> First Aid for biditools.sty no longer applied!
     Expected:
@@ -816,7 +828,7 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count372
+\c@abspage=\count373
 Package zref Info: New property: abspage on input line 66.
 )
 (d:/Software/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -824,10 +836,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (d:/Software/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks45
-\XKV@tempa@toks=\toks46
+\XKV@toks=\toks46
+\XKV@tempa@toks=\toks47
 )
-\XKV@depth=\count373
+\XKV@depth=\count374
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \@bidi@copyins@=\insert252
@@ -835,14 +847,14 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2022/02/18 v1.4.0 bidi adaptations for `latex.ltx' f
 or XeTeX engine
-\bidi@n@everypar=\toks47
-\bidi@column@check@number=\count374
+\bidi@n@everypar=\toks48
+\bidi@column@check@number=\count375
 
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count375
-\footdir@toks=\toks48
+\c@footdir@label=\count376
+\footdir@toks=\toks49
 )
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/report-xetex-bidi.def
 File: report-xetex-bidi.def 2017/06/09 v0.8 bidi adaptations for standard repor
@@ -905,7 +917,7 @@ ef
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
  last package loaded
 )
-\bidi@digits=\count376
+\bidi@digits=\count377
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -936,9 +948,9 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
 * Primary author of xepersian package: Vafa Khalighi.
 * 
 ****************************************************
-\xepersian@tcl=\count377
-\xepersian@ilg=\dimen297
-\xepersian@strutilg=\dimen298
+\xepersian@tcl=\count378
+\xepersian@ilg=\dimen300
+\xepersian@strutilg=\dimen301
 
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersi
 an.def
@@ -1015,11 +1027,10 @@ apping=tex-text;"
 Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count378
-\l__lipsum_a_int=\count379
-\l__lipsum_b_int=\count380
+\g__lipsum_par_int=\count379
+\l__lipsum_a_int=\count380
+\l__lipsum_b_int=\count381
  (d:/Software/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-\c@questionnumber=\count381
 \c@questionanswernumber=\count382
 
 Package fontspec Info: Could not resolve font "X Kamran/BI" (it probably
@@ -1047,35 +1058,35 @@ text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-(./Probability and Statistics - Questions.aux)
-\openout1 = `"Probability and Statistics - Questions.aux"'.
+(./Probability and Statistics - Answers.aux)
+\openout1 = `"Probability and Statistics - Answers.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-9.
+1.
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1114,7 +1125,7 @@ LaTeX Font Info:    ... okay on input line 49.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 41.
 (d:/Software/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1127,191 +1138,445 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count383
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
- (./Probability and Statistics - Questions.out)
-(./Probability and Statistics - Questions.out)
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
+ (./Probability and Statistics - Answers.out)
+(./Probability and Statistics - Answers.out)
 \@outlinefile=\write4
-\openout4 = `"Probability and Statistics - Questions.out"'.
+\openout4 = `"Probability and Statistics - Answers.out"'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
+
+LaTeX Font Warning: Font shape `TU/XKamran(0)/b/n' undefined
+(Font)              using `TU/XKamran(0)/m/n' instead on input line 48.
+
+(./Probability and Statistics - Answers.toc)
+\tf@toc=\write5
+\openout5 = `"Probability and Statistics - Answers.toc"'.
+
+ [1
+
+
+]
+فصل 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
 
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) [2
 
-]
-
-LaTeX Font Warning: Font shape `TU/XKamran(0)/b/n' undefined
-(Font)              using `TU/XKamran(0)/m/n' instead on input line 60.
-
-(./Probability and Statistics - Questions.toc)
-\tf@toc=\write5
-\openout5 = `"Probability and Statistics - Questions.toc"'.
-
- [1
-
-]
-فصل 1.
-[2
-
-] [3] [4] [5]
-File: Q2.pdf Graphic file (type pdf)
-<use Q2.pdf>
- [6] [7]
-Overfull \hbox (1.03897pt too wide) in paragraph at lines 291--293
-[][]\TU/XKamran(0)/b/n/14.4 سوال ۲۶)  در یک جامعه‌ی آماری، نسبت جمعیت زنان بزرگ
-سال، مردان بزرگسال و کودکان[]
- []
-
-[8] [9] [10] [11] [12]
-Overfull \hbox (0.99677pt too wide) in paragraph at lines 543--544
-[]\TU/XKamran(0)/b/n/14.4 برداشتن دو توپ غیرهمرنگ، با مقدار بدست آمده در قسمت ا
-لف تفاوت می‌کند؟ توضیح[]
- []
-
-[13] [14] [15]
-فصل 2.
-[16
-
-] [17] [18]
+] [3]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 809.
+(amsmath)                 on input line 193.
 
-[19] [20] [21] [22]
-فصل 3.
+[4] [5]
+Overfull \hbox (27.6316pt too wide) detected at line 248
+\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
+.4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
+4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
+m/n/14.4 ;  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 P\OT1
+/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 P\O
+T1/cmr/m/n/14.4 ([\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.
+4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 [ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14
+.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ]) = \OML/cmm/m
+/it/14.4 P\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/c
+mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
+/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 )
+ []
 
-Overfull \hbox (7.95903pt too wide) detected at line 1020
+[6] [7] [8]
+Overfull \hbox (27.6316pt too wide) detected at line 400
+\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
+.4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
+4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
+m/n/14.4 ;  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 P\OT1
+/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 P\O
+T1/cmr/m/n/14.4 ([\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.
+4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 [ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14
+.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ]) = \OML/cmm/m
+/it/14.4 P\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/c
+mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
+/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 )
+ []
+
+[9] [10] [11] [12] [13]
+File: HW2_Q.pdf Graphic file (type pdf)
+<use HW2_Q.pdf>
+
+Overfull \hbox (3.61432pt too wide) in paragraph at lines 607--608
+ [][][][][] 
+ []
+
+[14] [15] [16] [17]
+
+LaTeX Font Warning: Font shape `TU/XKamran(0)/m/it' undefined
+(Font)              using `TU/XKamran(0)/m/n' instead on input line 759.
+
+[18] [19] [20] [21] [22] [23] [24]
+File: HW3_Q6.eps Graphic file (type eps)
+<HW3_Q6.eps>
+
+Overfull \hbox (3.61537pt too wide) in paragraph at lines 1003--1004
+ [][][][][] 
+ []
+
+[25] [26]
+Overfull \hbox (5.40587pt too wide) detected at line 1042
+[]\OMS/cmsy/m/n/14.4 f[]j[]g \OT1/cmr/m/n/14.4 = [] = [] = [] \OMS/cmsy/m/n/14.
+4 ^^Y \OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 22
+ []
+
+[27]
+Overfull \hbox (2.79034pt too wide) in paragraph at lines 1083--1089
+[]\TU/XKamran(0)/b/n/14.4 معلوم الحال را (یعنی $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/
+n/14.4 1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m
+/n/14.4 3\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 4\OML/cmm/m/it/14.4 ; \OT1/cmr/
+m/n/14.4 5\OMS/cmsy/m/n/14.4 g$\TU/XKamran(0)/b/n/14.4 ) در نظر بگیریم و سپس سا
+یر اعضا را از بین $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 6\OML/cmm/m/it/14.4 ; 
+[]  ; n\OMS/cmsy/m/n/14.4 g$[]
+ []
+
+[28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
+Overfull \hbox (15.26318pt too wide) in paragraph at lines 1613--1617
+[][]\TU/XKamran(0)/b/n/14.4 پ) حسابدار به دو حالت کنار مدیرعامل می‌نشیند و تمام
+ اعضای هیئت مدیره (به جز مدیرعامل)[]
+ []
+
+[40] [41] [42]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43] [44] [45] [46]
+Overfull \hbox (24.42963pt too wide) detected at line 2325
 []
  []
 
-[23
+[47] [48]
+Missing character: There is no ؛ ("61B) in font cmr12!
+[49] [50]
+فصل 2.
+[51
 
 ]
-
-Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 1046.
-
-[24] [25] [26] [27] [28] [29]
-File: pdf_quiz6.png Graphic file (type bmp)
-<pdf_quiz6.png>
-
-Overfull \hbox (16.91742pt too wide) in paragraph at lines 1444--1445
-[][][][][] []
+Overfull \hbox (39.1979pt too wide) detected at line 2541
+[]
  []
 
-File: cdf_quiz6.png Graphic file (type bmp)
-<cdf_quiz6.png>
-
-Overfull \hbox (16.91742pt too wide) in paragraph at lines 1447--1448
-[][][][][] []
- []
-
-[30]
-Overfull \hbox (13.107pt too wide) in paragraph at lines 1544--1550
-[]\TU/XKamran(0)/b/n/14.4 یک متغیر تصادفی باشد. سپس برای هر چگالی احتمال، مقادی
-ر $[]\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X \OT1/cmr/m/n/14.4 = 1\OMS/cmsy/m/
-n/14.4 g$ \TU/XKamran(0)/b/n/14.4 و $[] []$[]
- []
-
-[31] [32] [33] [34] [35] [36] [37]
-فصل 4.
-
-Overfull \hbox (3.7324pt too wide) in paragraph at lines 2082--2084
-[]\TU/XKamran(0)/b/n/14.4 الف) چگالی های احتمال حاشیه ای $\OML/cmm/m/it/14.4 X$
- \TU/XKamran(0)/b/n/14.4 و $\OML/cmm/m/it/14.4 Y$ \TU/XKamran(0)/b/n/14.4 را به
- دست آورید. همچنین ناهمبستگی، استقلال[]
- []
-
-[38
-
-] [39] [40] [41]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[42]
-Overfull \hbox (2.2863pt too wide) in paragraph at lines 2352--2366
-[][]\TU/XKamran(0)/b/n/14.4 سوال ۱۴۵)  در جدول زیر که توزیع احتمال را برای متغی
-ر های تصادفی $\OML/cmm/m/it/14.4 X$ \TU/XKamran(0)/b/n/14.4 و $\OML/cmm/m/it/14
-.4 Y$ \TU/XKamran(0)/b/n/14.4 نشان می‌دهد،[]
+[52] [53] [54]
+Overfull \hbox (37.86pt too wide) detected at line 2679
+[]
  []
 
 
-Overfull \hbox (11.27489pt too wide) in paragraph at lines 2373--2378
-[]\TU/XKamran(0)/b/n/14.4 نشان دهید و اگر چنین نیست، مثالی برای مقادیر $\OML/cm
-m/m/it/14.4 p[]; p[]; p[]; p[]$ \TU/XKamran(0)/b/n/14.4 بزنید که ناهمبستگی، است
-قلال[]
+Overfull \hbox (32.4178pt too wide) detected at line 2721
+[]
  []
 
-[43] [44] [45] [46]
-Overfull \hbox (6.53764pt too wide) in paragraph at lines 2593--2602
-[][]\TU/XKamran(0)/b/n/14.4 ب) $\OML/cmm/m/it/14.4 f[]\OT1/cmr/m/n/14.4 (\OML/c
-mm/m/it/14.4 x; y\OT1/cmr/m/n/14.4 ) = []$ []
+[55]
+File: Q2A.eps Graphic file (type eps)
+<Q2A.eps>
+File: Q2B.eps Graphic file (type eps)
+<Q2B.eps>
+ [56]
+File: Q2C.eps Graphic file (type eps)
+<Q2C.eps>
+ [57] [58] [59] [60] [61] [62] [63]
+فصل 3.
+
+Overfull \hbox (30.85725pt too wide) detected at line 3058
+[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
+it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 2668 \O
+ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
+/14.4 1490 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 44\OML/cmm/m/it/14.4 :\
+OT1/cmr/m/n/14.4 16%
  []
 
-[47] [48] [49]
-Overfull \hbox (18.78583pt too wide) in paragraph at lines 2798--2800
-[][]\TU/XKamran(0)/b/n/14.4 سوال ۱۶۲)  یک امتحان احتمال مهندسی به صورت آنلاین (
-و با رعایت پروتکل های بهداشتی!)[]
+
+Overfull \hbox (30.85725pt too wide) detected at line 3063
+[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
+it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 1573 \O
+ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
+/14.4 1318 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 16\OML/cmm/m/it/14.4 :\
+OT1/cmr/m/n/14.4 23%
  []
 
-[50] [51]
-فصل 5.
-[52
 
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[53] [54] [55] [56]
-فصل 6.
-[57
-
-] [58]
-فصل 7.
-[59
-
-] [60]
-Overfull \hbox (6.9362pt too wide) in paragraph at lines 3252--3269
-[]\TU/lmtt/m/n/14.4 histogram()  \TU/XKamran(0)/b/n/14.4 را به صورت  \TU/lmtt/m
-/n/14.4 histogram(.....,'Normalization','pdf')[]
+Overfull \hbox (5.79091pt too wide) detected at line 3068
+[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
+it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 3716 \O
+ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
+/14.4 3679 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 1%
  []
 
-[61]
-Overfull \hbox (0.35696pt too wide) in paragraph at lines 3326--3327
-[][]\TU/XKamran(0)/b/n/14.4 الف) می‌دانیم که چگالی احتمال یک متغیر تصادفی، میان
-گین تجربی تعداد دفعات رخداد مقادیر[]
- []
-
-[62] [63]
-فصل 8.
 [64
 
-] [65] [66] (./Probability and Statistics - Questions.aux)
+]
+Overfull \hbox (4.79077pt too wide) in paragraph at lines 3109--3114
+[][]\TU/XKamran(0)/b/n/14.4 ب) متغیر تصادفی X فقط ۵ مقدار $\OMS/cmsy/m/n/14.4 f
+\OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 ;
+ \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 3\OML/cmm/m/it/14.4 
+; \OT1/cmr/m/n/14.4 4\OMS/cmsy/m/n/14.4 g$ \TU/XKamran(0)/b/n/14.4 را با احتمال
+ غیرصفر اختیار می کند؛ بنابراین []
+ []
+
+[65] [66] [67] [68] [69]
+Overfull \hbox (2.53664pt too wide) in paragraph at lines 3287--3291
+[][]\TU/XKamran(0)/b/n/14.4 سوال ۳) هنگامی که به طور متوسط از معیارهای کمی برای
+ ارزیابی یک جامعه ی بزرگ استفاده[]
+ []
+
+[70] [71]
+Overfull \hbox (28.98322pt too wide) detected at line 3397
+\OT1/cmr/m/n/14.4 0 \OML/cmm/m/it/14.4 < x < []  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy
+/m/n/14.4 )  \OML/cmm/m/it/14.4 x \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 x[]
+[]  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 e[][]  \OT1/c
+mr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OT1/cmr/m/n/14.4 1 \OMS/cmsy/m/n/14.4 ^^@
+ \OML/cmm/m/it/14.4 e[][]
+ []
+
+[72]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
+ on input line 3428.
+
+[73] [74] [75] [76]
+File: CDF_HW9.eps Graphic file (type eps)
+<CDF_HW9.eps>
+ [77]
+Overfull \hbox (29.96152pt too wide) detected at line 3733
+[]
+ []
+
+[78] [79]
+Overfull \hbox (26.17145pt too wide) detected at line 3840
+[]
+ []
+
+[80] [81] [82]
+Overfull \hbox (36.04822pt too wide) detected at line 3992
+\U/msb/m/n/14.4 E\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X[]\OMS/cmsy/m/n/14.4 g
+ \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 ^^^[]\OT1/cmr/m/n/14.4 (0) = []\OMS/cms
+y/m/n/14.4 j[] \OT1/cmr/m/n/14.4 = 5
+ []
+
+[83] [84] [85] [86] [87] [88]
+Overfull \hbox (8.49113pt too wide) detected at line 4349
+[]
+ []
+
+[89]
+Overfull \hbox (1.89458pt too wide) detected at line 4361
+[]
+ []
+
+
+Overfull \hbox (33.54495pt too wide) detected at line 4373
+[]
+ []
+
+
+Overfull \hbox (83.98987pt too wide) detected at line 4385
+[]
+ []
+
+[90]
+Overfull \hbox (35.35687pt too wide) detected at line 4418
+[]\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 1 \OMS/cmsy/m/n/14.4 ^^T \OML/cmm/m/it/
+14.4 X \OMS/cmsy/m/n/14.4 ^^T \OT1/cmr/m/n/14.4 3\OMS/cmsy/m/n/14.4 g \OT1/cmr/
+m/n/14.4 = []\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X \OMS/cmsy/m/n/14.4 ^^T \O
+T1/cmr/m/n/14.4 3\OMS/cmsy/m/n/14.4 g ^^@ []f\OML/cmm/m/it/14.4 X < \OT1/cmr/m/
+n/14.4 1\OMS/cmsy/m/n/14.4 g \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 F\OT1/cmr/m
+/n/14.4 (3) \OMS/cmsy/m/n/14.4 ^^@ [] \OML/cmm/m/it/14.4 F\OT1/cmr/m/n/14.4 (\O
+ML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) = [] + [] = []
+ []
+
+[91]
+Overfull \hbox (61.7231pt too wide) detected at line 4474
+[]
+ []
+
+[92]
+Overfull \hbox (38.23943pt too wide) detected at line 4542
+[]
+ []
+
+[93] [94]
+Overfull \hbox (39.413pt too wide) detected at line 4634
+[]
+ []
+
+[95] [96]
+Overfull \vbox (52.16751pt too high) has occurred while \output is active []
+
+
+[97]
+Overfull \hbox (3.534pt too wide) detected at line 4707
+[]
+ []
+
+[98]
+فصل 4.
+[99
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4759--4763
+[][]
+ []
+
+[100]
+Underfull \hbox (badness 10000) in paragraph at lines 4764--4771
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4791--4796
+[][]
+ []
+
+[101] [102] [103]
+Underfull \hbox (badness 10000) in paragraph at lines 4878--4884
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4936--4951
+[][]
+ []
+
+[104]
+Overfull \hbox (0.90846pt too wide) detected at line 4966
+[]
+ []
+
+[105]
+Underfull \hbox (badness 10000) in paragraph at lines 4983--5002
+[][]
+ []
+
+
+Overfull \hbox (11.06177pt too wide) detected at line 5002
+[]
+ []
+
+[106] [107] [108] [109] [110] [111]
+Underfull \hbox (badness 10000) in paragraph at lines 5190--5209
+[][]
+ []
+
+[112]
+Overfull \hbox (70.93134pt too wide) detected at line 5231
+[]
+ []
+
+[113] [114] [115] [116]
+Overfull \hbox (24.83173pt too wide) detected at line 5363
+[]
+ []
+
+[117] [118] [119]
+Overfull \hbox (67.21663pt too wide) detected at line 5527
+[]
+ []
+
+[120] [121] [122] [123] [124] [125]
+Missing character: There is no ؛ ("61B) in font cmr12!
+Missing character: There is no ؛ ("61B) in font cmr12!
+[126] [127] [128] [129]
+فصل 5.
+[130
+
+]
+Overfull \hbox (106.14218pt too wide) detected at line 5952
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5963--5968
+[][]
+ []
+
+[131]
+Underfull \hbox (badness 10000) in paragraph at lines 5979--5983
+[][]
+ []
+
+[132]
+Underfull \hbox (badness 10000) in paragraph at lines 5996--6000
+[][]
+ []
+
+[133] [134] [135] [136]
+File: ibp_hw11.png Graphic file (type bmp)
+<ibp_hw11.png>
+ [137]
+File: hw11_pmf.png Graphic file (type bmp)
+<hw11_pmf.png>
+ [138]
+Underfull \hbox (badness 10000) in paragraph at lines 6220--6235
+[][]
+ []
+
+[139]
+Overfull \hbox (0.90846pt too wide) detected at line 6250
+[]
+ []
+
+[140] [141] [142] [143] [144] [145]
+Overfull \hbox (4.8379pt too wide) in paragraph at lines 6476--6489
+[][]\TU/XKamran(0)/b/n/14.4 بسادگی از محاسبات (و همچنین شهود) می توان نتیجه گرف
+ت که چون $\OML/cmm/m/it/14.4 X$ \TU/XKamran(0)/b/n/14.4 دارای توزیع یکنواخت[]
+ []
+
+[146] [147] [148] [149] [150] [151] [152] [153] [154]
+Overfull \hbox (30.42473pt too wide) detected at line 6720
+[]
+ []
+
+[155] [156]
+Overfull \hbox (16.53577pt too wide) detected at line 6825
+[]
+ []
+
+[157] [158] [159] [160]
+Overfull \hbox (7.31084pt too wide) in paragraph at lines 6992--7001
+[]\TU/XKamran(0)/b/n/14.4 کانال ارسال می‌شوند و نویزی با چگالی احتمال نمایی دوط
+رفه، با سیگنال ارسالی جمع می‌شود.[]
+ []
+
+[161]
+فصل 6.
+[162
+
+] (./Probability and Statistics - Answers.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `"Probability and Statistics - Questions".out
-' has not changed.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `"Probability and Statistics - Answers".out' 
+has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 27192 strings out of 476179
- 562530 string characters out of 5809103
- 1033456 words of memory out of 5000000
- 47415 multiletter control sequences out of 15000+600000
- 477079 words of font info for 85 fonts, out of 8000000 for 9000
+ 27155 strings out of 476179
+ 561698 string characters out of 5809103
+ 1032536 words of memory out of 5000000
+ 47366 multiletter control sequences out of 15000+600000
+ 476277 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,23n,91p,1345b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,28n,91p,1343b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Probability and Statistics - Questions.pdf (67 pages).
+Output written on Probability and Statistics - Answers.pdf (162 pages).
