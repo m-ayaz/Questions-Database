@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  26 APR 2023 17:14
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  15 JUN 2023 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1293,11 +1293,7 @@ Overfull \hbox (0.35696pt too wide) in paragraph at lines 3326--3327
 گین تجربی تعداد دفعات رخداد مقادیر[]
  []
 
-[62] [63]
-فصل 8.
-[64
-
-] [65] [66] (./Probability and Statistics - Questions.aux)
+[62] [63] (./Probability and Statistics - Questions.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1314,4 +1310,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  88i,23n,91p,1345b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Probability and Statistics - Questions.pdf (67 pages).
+Output written on Probability and Statistics - Questions.pdf (64 pages).

@@ -5,4 +5,3 @@
 \contentsline {chapter}{\numberline {5}احتمال شرطی در متغیرهای تصادفی}{52}{chapter.5}%
 \contentsline {chapter}{\numberline {6}دنباله‌ی متغیرهای تصادفی}{57}{chapter.6}%
 \contentsline {chapter}{\numberline {7}شبیه سازی ها}{59}{chapter.7}%
-\contentsline {chapter}{\numberline {8}پاسخ سوالات}{64}{chapter.8}%

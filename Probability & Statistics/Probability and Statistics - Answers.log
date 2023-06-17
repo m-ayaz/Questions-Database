@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  26 APR 2023 17:19
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  15 JUN 2023 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,12 +1160,12 @@ LaTeX Font Warning: Font shape `TU/XKamran(0)/b/n' undefined
 
 ]
 فصل 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1173,391 +1173,159 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2
 
 ] [3]
+[4] [5] [6] [7] [8]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 193.
+(amsmath)                 on input line 408.
 
-[4] [5]
-Overfull \hbox (27.6316pt too wide) detected at line 248
-\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
-.4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
-4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
-m/n/14.4 ;  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 P\OT1
-/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 P\O
-T1/cmr/m/n/14.4 ([\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.
-4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 [ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14
-.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ]) = \OML/cmm/m
-/it/14.4 P\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/c
-mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
-/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 )
- []
-
-[6] [7] [8]
-Overfull \hbox (27.6316pt too wide) detected at line 400
-\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14
-.4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 \ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/1
-4.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ] = \OMS/cmsy/
-m/n/14.4 ;  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 P\OT1
-/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 P\O
-T1/cmr/m/n/14.4 ([\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.
-4 B\OT1/cmr/m/n/14.4 ] \OMS/cmsy/m/n/14.4 [ \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14
-.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 ]) = \OML/cmm/m
-/it/14.4 P\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 ^^@ \OML/c
-mm/m/it/14.4 B\OT1/cmr/m/n/14.4 ) + \OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (\OML
-/cmm/m/it/14.4 A \OMS/cmsy/m/n/14.4 \ \OML/cmm/m/it/14.4 B\OT1/cmr/m/n/14.4 )
- []
-
-[9] [10] [11] [12] [13]
+[9] [10] [11] [12] [13] [14] [15] [16]
 File: HW2_Q.pdf Graphic file (type pdf)
 <use HW2_Q.pdf>
 
-Overfull \hbox (3.61432pt too wide) in paragraph at lines 607--608
+Overfull \hbox (3.61432pt too wide) in paragraph at lines 822--823
  [][][][][] 
  []
 
-[14] [15] [16] [17]
+[17] [18] [19]
+Overfull \hbox (3.31764pt too wide) in paragraph at lines 966--967
+[][] \TU/XKamran(0)/b/n/12 پیشامد اینکه $[]$، ۱۵ حالت متفاوت دارد. چون هر گلوله
+ را به ۸ حالت مستقل[]
+ []
+
+[20]
+Overfull \hbox (45.72975pt too wide) in paragraph at lines 968--969
+[]\TU/XKamran(0)/b/n/12 مشکل این استدلال رفع شود، باید پیشامد عکس هم در نظر گرف
+ته شود؛ یعنی حالتی که $[]$[]
+ []
+
 
 LaTeX Font Warning: Font shape `TU/XKamran(0)/m/it' undefined
-(Font)              using `TU/XKamran(0)/m/n' instead on input line 759.
+(Font)              using `TU/XKamran(0)/m/n' instead on input line 974.
 
-[18] [19] [20] [21] [22] [23] [24]
+[21] [22] [23] [24]
 File: HW3_Q6.eps Graphic file (type eps)
 <HW3_Q6.eps>
 
-Overfull \hbox (3.61537pt too wide) in paragraph at lines 1003--1004
+Overfull \hbox (3.61537pt too wide) in paragraph at lines 1156--1157
  [][][][][] 
  []
 
-[25] [26]
-Overfull \hbox (5.40587pt too wide) detected at line 1042
-[]\OMS/cmsy/m/n/14.4 f[]j[]g \OT1/cmr/m/n/14.4 = [] = [] = [] \OMS/cmsy/m/n/14.
-4 ^^Y \OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 22
- []
-
-[27]
-Overfull \hbox (2.79034pt too wide) in paragraph at lines 1083--1089
-[]\TU/XKamran(0)/b/n/14.4 معلوم الحال را (یعنی $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/
-n/14.4 1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m
-/n/14.4 3\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 4\OML/cmm/m/it/14.4 ; \OT1/cmr/
-m/n/14.4 5\OMS/cmsy/m/n/14.4 g$\TU/XKamran(0)/b/n/14.4 ) در نظر بگیریم و سپس سا
-یر اعضا را از بین $\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 6\OML/cmm/m/it/14.4 ; 
-[]  ; n\OMS/cmsy/m/n/14.4 g$[]
- []
-
-[28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
-Overfull \hbox (15.26318pt too wide) in paragraph at lines 1613--1617
-[][]\TU/XKamran(0)/b/n/14.4 پ) حسابدار به دو حالت کنار مدیرعامل می‌نشیند و تمام
- اعضای هیئت مدیره (به جز مدیرعامل)[]
- []
-
-[40] [41] [42]
+[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43] [44] [45] [46]
-Overfull \hbox (24.42963pt too wide) detected at line 2325
-[]
- []
-
-[47] [48]
+[39] [40] [41] [42] [43] [44]
 Missing character: There is no ؛ ("61B) in font cmr12!
-[49] [50]
+[45]
 فصل 2.
-[51
+[46
 
-]
-Overfull \hbox (39.1979pt too wide) detected at line 2541
-[]
- []
-
-[52] [53] [54]
-Overfull \hbox (37.86pt too wide) detected at line 2679
-[]
- []
-
-
-Overfull \hbox (32.4178pt too wide) detected at line 2721
-[]
- []
-
-[55]
+] [47] [48] [49] [50] [51]
 File: Q2A.eps Graphic file (type eps)
 <Q2A.eps>
 File: Q2B.eps Graphic file (type eps)
 <Q2B.eps>
- [56]
+ [52]
 File: Q2C.eps Graphic file (type eps)
 <Q2C.eps>
- [57] [58] [59] [60] [61] [62] [63]
+ [53] [54] [55] [56] [57] [58]
 فصل 3.
+[59
 
-Overfull \hbox (30.85725pt too wide) detected at line 3058
-[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
-it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 2668 \O
-ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
-/14.4 1490 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 44\OML/cmm/m/it/14.4 :\
-OT1/cmr/m/n/14.4 16%
- []
-
-
-Overfull \hbox (30.85725pt too wide) detected at line 3063
-[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
-it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 1573 \O
-ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
-/14.4 1318 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 16\OML/cmm/m/it/14.4 :\
-OT1/cmr/m/n/14.4 23%
- []
-
-
-Overfull \hbox (5.79091pt too wide) detected at line 3068
-[]\OML/cmm/m/it/14.4 p[]\OT1/cmr/m/n/14.4 (1 \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/
-it/14.4 p\OT1/cmr/m/n/14.4 )[] = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 3716 \O
-ML/cmm/m/it/14.4 ;  e[][] \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n
-/14.4 3679 \OML/cmm/m/it/14.4 ;  [] \OT1/cmr/m/n/14.4 = 1%
- []
-
-[64
-
-]
-Overfull \hbox (4.79077pt too wide) in paragraph at lines 3109--3114
-[][]\TU/XKamran(0)/b/n/14.4 ب) متغیر تصادفی X فقط ۵ مقدار $\OMS/cmsy/m/n/14.4 f
-\OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 ;
- \OT1/cmr/m/n/14.4 2\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 3\OML/cmm/m/it/14.4 
-; \OT1/cmr/m/n/14.4 4\OMS/cmsy/m/n/14.4 g$ \TU/XKamran(0)/b/n/14.4 را با احتمال
- غیرصفر اختیار می کند؛ بنابراین []
- []
-
-[65] [66] [67] [68] [69]
-Overfull \hbox (2.53664pt too wide) in paragraph at lines 3287--3291
-[][]\TU/XKamran(0)/b/n/14.4 سوال ۳) هنگامی که به طور متوسط از معیارهای کمی برای
- ارزیابی یک جامعه ی بزرگ استفاده[]
- []
-
-[70] [71]
-Overfull \hbox (28.98322pt too wide) detected at line 3397
-\OT1/cmr/m/n/14.4 0 \OML/cmm/m/it/14.4 < x < []  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy
-/m/n/14.4 )  \OML/cmm/m/it/14.4 x \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 x[]
-[]  \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OML/cmm/m/it/14.4 e[][]  \OT1/c
-mr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  \OT1/cmr/m/n/14.4 1 \OMS/cmsy/m/n/14.4 ^^@
- \OML/cmm/m/it/14.4 e[][]
- []
-
-[72]
+] [60] [61] [62] [63] [64] [65] [66]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 3428.
+ on input line 3651.
 
-[73] [74] [75] [76]
+[67] [68] [69] [70]
 File: CDF_HW9.eps Graphic file (type eps)
 <CDF_HW9.eps>
- [77]
-Overfull \hbox (29.96152pt too wide) detected at line 3733
-[]
- []
+ [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
+[82] [83] [84] [85] [86] [87] [88] [89]
+فصل 4.
+[90
 
-[78] [79]
-Overfull \hbox (26.17145pt too wide) detected at line 3840
-[]
- []
-
-[80] [81] [82]
-Overfull \hbox (36.04822pt too wide) detected at line 3992
-\U/msb/m/n/14.4 E\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X[]\OMS/cmsy/m/n/14.4 g
- \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 ^^^[]\OT1/cmr/m/n/14.4 (0) = []\OMS/cms
-y/m/n/14.4 j[] \OT1/cmr/m/n/14.4 = 5
- []
-
-[83] [84] [85] [86] [87] [88]
-Overfull \hbox (8.49113pt too wide) detected at line 4349
-[]
- []
-
-[89]
-Overfull \hbox (1.89458pt too wide) detected at line 4361
-[]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4982--4986
+[][]
  []
 
 
-Overfull \hbox (33.54495pt too wide) detected at line 4373
-[]
- []
-
-
-Overfull \hbox (83.98987pt too wide) detected at line 4385
-[]
- []
-
-[90]
-Overfull \hbox (35.35687pt too wide) detected at line 4418
-[]\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 1 \OMS/cmsy/m/n/14.4 ^^T \OML/cmm/m/it/
-14.4 X \OMS/cmsy/m/n/14.4 ^^T \OT1/cmr/m/n/14.4 3\OMS/cmsy/m/n/14.4 g \OT1/cmr/
-m/n/14.4 = []\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 X \OMS/cmsy/m/n/14.4 ^^T \O
-T1/cmr/m/n/14.4 3\OMS/cmsy/m/n/14.4 g ^^@ []f\OML/cmm/m/it/14.4 X < \OT1/cmr/m/
-n/14.4 1\OMS/cmsy/m/n/14.4 g \OT1/cmr/m/n/14.4 = \OML/cmm/m/it/14.4 F\OT1/cmr/m
-/n/14.4 (3) \OMS/cmsy/m/n/14.4 ^^@ [] \OML/cmm/m/it/14.4 F\OT1/cmr/m/n/14.4 (\O
-ML/cmm/m/it/14.4 x\OT1/cmr/m/n/14.4 ) = [] + [] = []
+Underfull \hbox (badness 10000) in paragraph at lines 4987--4994
+[][]
  []
 
 [91]
-Overfull \hbox (61.7231pt too wide) detected at line 4474
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 5014--5019
+[][]
  []
 
 [92]
-Overfull \hbox (38.23943pt too wide) detected at line 4542
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 5101--5107
+[][]
  []
 
-[93] [94]
-Overfull \hbox (39.413pt too wide) detected at line 4634
-[]
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 5159--5174
+[][]
  []
 
-[95] [96]
-Overfull \vbox (52.16751pt too high) has occurred while \output is active []
-
-
-[97]
-Overfull \hbox (3.534pt too wide) detected at line 4707
-[]
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 5206--5225
+[][]
  []
 
-[98]
-فصل 4.
-[99
+[95] [96] [97] [98] [99]
+Underfull \hbox (badness 10000) in paragraph at lines 5413--5432
+[][]
+ []
+
+[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+Missing character: There is no ؛ ("61B) in font cmr12!
+Missing character: There is no ؛ ("61B) in font cmr12!
+[112] [113] [114]
+فصل 5.
+[115
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 4759--4763
-[][]
- []
-
-[100]
-Underfull \hbox (badness 10000) in paragraph at lines 4764--4771
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4791--4796
-[][]
- []
-
-[101] [102] [103]
-Underfull \hbox (badness 10000) in paragraph at lines 4878--4884
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4936--4951
-[][]
- []
-
-[104]
-Overfull \hbox (0.90846pt too wide) detected at line 4966
+Overfull \hbox (16.7846pt too wide) detected at line 6175
 []
  []
 
-[105]
-Underfull \hbox (badness 10000) in paragraph at lines 4983--5002
+
+Underfull \hbox (badness 10000) in paragraph at lines 6186--6191
+[][]
+ []
+
+[116]
+Underfull \hbox (badness 10000) in paragraph at lines 6202--6206
 [][]
  []
 
 
-Overfull \hbox (11.06177pt too wide) detected at line 5002
-[]
- []
-
-[106] [107] [108] [109] [110] [111]
-Underfull \hbox (badness 10000) in paragraph at lines 5190--5209
+Underfull \hbox (badness 10000) in paragraph at lines 6219--6223
 [][]
- []
-
-[112]
-Overfull \hbox (70.93134pt too wide) detected at line 5231
-[]
- []
-
-[113] [114] [115] [116]
-Overfull \hbox (24.83173pt too wide) detected at line 5363
-[]
  []
 
 [117] [118] [119]
-Overfull \hbox (67.21663pt too wide) detected at line 5527
-[]
- []
-
-[120] [121] [122] [123] [124] [125]
-Missing character: There is no ؛ ("61B) in font cmr12!
-Missing character: There is no ؛ ("61B) in font cmr12!
-[126] [127] [128] [129]
-فصل 5.
-[130
-
-]
-Overfull \hbox (106.14218pt too wide) detected at line 5952
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5963--5968
-[][]
- []
-
-[131]
-Underfull \hbox (badness 10000) in paragraph at lines 5979--5983
-[][]
- []
-
-[132]
-Underfull \hbox (badness 10000) in paragraph at lines 5996--6000
-[][]
- []
-
-[133] [134] [135] [136]
 File: ibp_hw11.png Graphic file (type bmp)
 <ibp_hw11.png>
- [137]
+ [120]
 File: hw11_pmf.png Graphic file (type bmp)
 <hw11_pmf.png>
- [138]
-Underfull \hbox (badness 10000) in paragraph at lines 6220--6235
+ [121] [122]
+Underfull \hbox (badness 10000) in paragraph at lines 6443--6458
 [][]
  []
 
-[139]
-Overfull \hbox (0.90846pt too wide) detected at line 6250
-[]
- []
-
-[140] [141] [142] [143] [144] [145]
-Overfull \hbox (4.8379pt too wide) in paragraph at lines 6476--6489
-[][]\TU/XKamran(0)/b/n/14.4 بسادگی از محاسبات (و همچنین شهود) می توان نتیجه گرف
-ت که چون $\OML/cmm/m/it/14.4 X$ \TU/XKamran(0)/b/n/14.4 دارای توزیع یکنواخت[]
- []
-
-[146] [147] [148] [149] [150] [151] [152] [153] [154]
-Overfull \hbox (30.42473pt too wide) detected at line 6720
-[]
- []
-
-[155] [156]
-Overfull \hbox (16.53577pt too wide) detected at line 6825
-[]
- []
-
-[157] [158] [159] [160]
-Overfull \hbox (7.31084pt too wide) in paragraph at lines 6992--7001
-[]\TU/XKamran(0)/b/n/14.4 کانال ارسال می‌شوند و نویزی با چگالی احتمال نمایی دوط
-رفه، با سیگنال ارسالی جمع می‌شود.[]
- []
-
-[161]
+[123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
+[135] [136] [137] [138] [139] [140]
 فصل 6.
-[162
+[141
 
 ] (./Probability and Statistics - Answers.aux)
 
@@ -1571,12 +1339,12 @@ has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 27155 strings out of 476179
- 561698 string characters out of 5809103
- 1032536 words of memory out of 5000000
- 47366 multiletter control sequences out of 15000+600000
- 476277 words of font info for 82 fonts, out of 8000000 for 9000
+ 27146 strings out of 476179
+ 561440 string characters out of 5809103
+ 1035536 words of memory out of 5000000
+ 47359 multiletter control sequences out of 15000+600000
+ 475207 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  88i,28n,91p,1343b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Probability and Statistics - Answers.pdf (162 pages).
+Output written on Probability and Statistics - Answers.pdf (141 pages).
