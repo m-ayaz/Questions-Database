@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  25 SEP 2023 14:06
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  25 SEP 2023 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Probability and Statistics - Questions.tex"
-(./Probability and Statistics - Questions.tex
+**FontTest.tex
+(./FontTest.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (d:/Software/texlive/2022/texmf-dist/tex/latex/base/report.cls
@@ -139,38 +139,14 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutvoffset=\dimen157
 \Gm@dimlist=\toks22
 )
-(d:/Software/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-
-(d:/Software/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2022/03/01 v3.6b Customizing captions (AR)
-
-(d:/Software/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen158
-\captionmargin=\dimen159
-\caption@leftmargin=\dimen160
-\caption@rightmargin=\dimen161
-\caption@width=\dimen162
-\caption@indent=\dimen163
-\caption@parindent=\dimen164
-\caption@hangindent=\dimen165
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count271
-\c@continuedfloat=\count272
-)
-\c@subfigure=\count273
-\c@subtable=\count274
-)
 (d:/Software/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (d:/Software/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (d:/Software/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.t
 ex
 \pgfutil@everybye=\toks23
-\pgfutil@tempdima=\dimen166
-\pgfutil@tempdimb=\dimen167
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-l
 ists.tex))
@@ -198,26 +174,26 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 code.tex
 \pgfkeys@tmptoks=\toks26
 ))
-\pgf@x=\dimen168
-\pgf@y=\dimen169
-\pgf@xa=\dimen170
-\pgf@ya=\dimen171
-\pgf@xb=\dimen172
-\pgf@yb=\dimen173
-\pgf@xc=\dimen174
-\pgf@yc=\dimen175
-\pgf@xd=\dimen176
-\pgf@yd=\dimen177
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count275
-\c@pgf@countb=\count276
-\c@pgf@countc=\count277
-\c@pgf@countd=\count278
+\c@pgf@counta=\count271
+\c@pgf@countb=\count272
+\c@pgf@countc=\count273
+\c@pgf@countd=\count274
 \t@pgf@toka=\toks27
 \t@pgf@tokb=\toks28
 \t@pgf@tokc=\toks29
-\pgf@sys@id@count=\count279
+\pgf@sys@id@count=\count275
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
@@ -236,13 +212,13 @@ File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
 pdf.def
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )
-\pgfsys@objnum=\count280
+\pgfsys@objnum=\count276
 )))
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath
 .code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count281
-\pgfsyssoftpath@bigbuffer@items=\count282
+\pgfsyssoftpath@smallbuffer@items=\count277
+\pgfsyssoftpath@bigbuffer@items=\count278
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol
 .code.tex
@@ -272,8 +248,8 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.te
 x
-\pgfmath@dimen=\dimen178
-\pgfmath@count=\count283
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count279
 \pgfmath@box=\box53
 \pgfmath@toks=\toks30
 \pgfmath@stack@operand=\toks31
@@ -298,37 +274,37 @@ d.code.tex)
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.inte
 gerarithmetics.code.tex)))
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count284
+\c@pgfmathroundto@lastzeros=\count280
 )) (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.c
 ode.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen179
-\pgf@picmaxx=\dimen180
-\pgf@picminy=\dimen181
-\pgf@picmaxy=\dimen182
-\pgf@pathminx=\dimen183
-\pgf@pathmaxx=\dimen184
-\pgf@pathminy=\dimen185
-\pgf@pathmaxy=\dimen186
-\pgf@xx=\dimen187
-\pgf@xy=\dimen188
-\pgf@yx=\dimen189
-\pgf@yy=\dimen190
-\pgf@zx=\dimen191
-\pgf@zy=\dimen192
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathcons
 truct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen193
-\pgf@path@lasty=\dimen194
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusag
 e.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen195
-\pgf@shorten@start@additional=\dimen196
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.c
 ode.tex
@@ -336,19 +312,19 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box54
 \pgf@hbox=\box55
 \pgf@layerbox@main=\box56
-\pgf@picture@serial@count=\count285
+\pgf@picture@serial@count=\count281
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphics
 tate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen197
+\pgflinewidth=\dimen189
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransfor
 mations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen198
-\pgf@pt@y=\dimen199
-\pgf@pt@temp=\dimen256
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.co
 de.tex
@@ -365,14 +341,14 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.c
 ode.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen257
+\pgfarrowsep=\dimen193
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.co
 de.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen258
-\pgf@sys@shading@range@num=\count286
-\pgf@shadingcount=\count287
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count282
+\pgf@shadingcount=\count283
 )
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.co
 de.tex
@@ -411,8 +387,8 @@ File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (d:/Software/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-versio
 n-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen259
-\pgf@nodesepend=\dimen260
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
 )
 (d:/Software/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-versio
 n-1-18.sty
@@ -427,8 +403,8 @@ Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen261
-\pgffor@skip=\dimen262
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
 \pgffor@stack=\toks33
 \pgffor@toks=\toks34
 ))
@@ -439,34 +415,34 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotha
 ndlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count288
-\pgfplotmarksize=\dimen263
+\pgf@plot@mark@count=\count284
+\pgfplotmarksize=\dimen199
 )
-\tikz@lastx=\dimen264
-\tikz@lasty=\dimen265
-\tikz@lastxsaved=\dimen266
-\tikz@lastysaved=\dimen267
-\tikz@lastmovetox=\dimen268
-\tikz@lastmovetoy=\dimen269
-\tikzleveldistance=\dimen270
-\tikzsiblingdistance=\dimen271
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
 \tikz@figbox=\box59
 \tikz@figbox@bg=\box60
 \tikz@tempbox=\box61
 \tikz@tempbox@bg=\box62
-\tikztreelevel=\count289
-\tikznumberofchildren=\count290
-\tikznumberofcurrentchild=\count291
-\tikz@fig@count=\count292
+\tikztreelevel=\count285
+\tikznumberofchildren=\count286
+\tikznumberofcurrentchild=\count287
+\tikz@fig@count=\count288
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.co
 de.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count293
-\pgfmatrixcurrentcolumn=\count294
-\pgf@matrix@numberofcolumns=\count295
+\pgfmatrixcurrentrow=\count289
+\pgfmatrixcurrentcolumn=\count290
+\pgf@matrix@numberofcolumns=\count291
 )
-\tikz@expandcount=\count296
+\tikz@expandcount=\count292
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librari
 es/tikzlibrarytopaths.code.tex
@@ -488,33 +464,33 @@ Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
 File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks35
-\@arclen=\dimen272
-\@arcrad=\dimen273
-\pIIe@tempdima=\dimen274
-\pIIe@tempdimb=\dimen275
-\pIIe@tempdimc=\dimen276
-\pIIe@tempdimd=\dimen277
-\pIIe@tempdime=\dimen278
-\pIIe@tempdimf=\dimen279
+\@arclen=\dimen264
+\@arcrad=\dimen265
+\pIIe@tempdima=\dimen266
+\pIIe@tempdimb=\dimen267
+\pIIe@tempdimc=\dimen268
+\pIIe@tempdimd=\dimen269
+\pIIe@tempdime=\dimen270
+\pIIe@tempdimf=\dimen271
 )
 (d:/Software/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count297
-\calc@Bcount=\count298
-\calc@Adimen=\dimen280
-\calc@Bdimen=\dimen281
+\calc@Acount=\count293
+\calc@Bcount=\count294
+\calc@Adimen=\dimen272
+\calc@Bdimen=\dimen273
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count299
+\calc@Ccount=\count295
 \calc@Cskip=\skip54
 )
 (d:/Software/texlive/2022/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen282
+\col@sep=\dimen274
 \ar@mcellbox=\box63
-\extrarowheight=\dimen283
+\extrarowheight=\dimen275
 \NC@list=\toks36
 \extratabsurround=\skip55
 \backup@length=\skip56
@@ -523,12 +499,12 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \diagbox@boxa=\box65
 \diagbox@boxb=\box66
 \diagbox@boxm=\box67
-\diagbox@wd=\dimen284
-\diagbox@ht=\dimen285
-\diagbox@insepl=\dimen286
-\diagbox@insepr=\dimen287
-\diagbox@outsepl=\dimen288
-\diagbox@outsepr=\dimen289
+\diagbox@wd=\dimen276
+\diagbox@ht=\dimen277
+\diagbox@insepl=\dimen278
+\diagbox@insepr=\dimen279
+\diagbox@outsepl=\dimen280
+\diagbox@outsepr=\dimen281
 )
 (d:/Software/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
@@ -567,9 +543,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (d:/Software/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen290
-\Hy@linkcounter=\count300
-\Hy@pagecounter=\count301
+\@linkdim=\dimen282
+\Hy@linkcounter=\count296
+\Hy@pagecounter=\count297
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
@@ -580,7 +556,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (d:/Software/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count302
+\Hy@SavedSpaceFactor=\count298
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
@@ -592,14 +568,14 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count303
+\c@Hy@tempcnt=\count299
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4749.
-\XeTeXLinkMargin=\dimen291
+\XeTeXLinkMargin=\dimen283
 
 (d:/Software/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -608,9 +584,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count304
-\Field@Width=\dimen292
-\Fld@charsize=\dimen293
+\Fld@menulength=\count300
+\Field@Width=\dimen284
+\Fld@charsize=\dimen285
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -625,9 +601,9 @@ LaTeX Info: Redefining \pageref on input line 6101.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count305
-\c@Item=\count306
-\c@Hfootnote=\count307
+\Hy@abspage=\count301
+\c@Item=\count302
+\c@Hfootnote=\count303
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -639,10 +615,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box68
-\c@Hy@AnnotLevel=\count308
-\HyField@AnnotCount=\count309
-\Fld@listcount=\count310
-\c@bookmark@seq@number=\count311
+\c@Hy@AnnotLevel=\count304
+\HyField@AnnotCount=\count305
+\Fld@listcount=\count306
+\c@bookmark@seq@number=\count307
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.st
 y
@@ -672,14 +648,14 @@ Package: expl3 2022-02-24 L3 programming layer (loader)
 File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
 
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count312
-\l__color_backend_stack_int=\count313
-\g__color_backend_stack_int=\count314
-\g__graphics_track_int=\count315
+\c__kernel_sys_dvipdfmx_version_int=\count308
+\l__color_backend_stack_int=\count309
+\g__color_backend_stack_int=\count310
+\g__graphics_track_int=\count311
 \l__pdf_internal_box=\box69
-\g__pdf_backend_object_int=\count316
-\g__pdf_backend_annotation_int=\count317
-\g__pdf_backend_link_int=\count318
+\g__pdf_backend_object_int=\count312
+\g__pdf_backend_annotation_int=\count313
+\g__pdf_backend_link_int=\count314
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
 )
@@ -688,20 +664,20 @@ Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 (d:/Software/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count319
-\l__fontspec_language_int=\count320
-\l__fontspec_strnum_int=\count321
-\l__fontspec_tmp_int=\count322
-\l__fontspec_tmpa_int=\count323
-\l__fontspec_tmpb_int=\count324
-\l__fontspec_tmpc_int=\count325
-\l__fontspec_em_int=\count326
-\l__fontspec_emdef_int=\count327
-\l__fontspec_strong_int=\count328
-\l__fontspec_strongdef_int=\count329
-\l__fontspec_tmpa_dim=\dimen294
-\l__fontspec_tmpb_dim=\dimen295
-\l__fontspec_tmpc_dim=\dimen296
+\l__fontspec_script_int=\count315
+\l__fontspec_language_int=\count316
+\l__fontspec_strnum_int=\count317
+\l__fontspec_tmp_int=\count318
+\l__fontspec_tmpa_int=\count319
+\l__fontspec_tmpb_int=\count320
+\l__fontspec_tmpc_int=\count321
+\l__fontspec_em_int=\count322
+\l__fontspec_emdef_int=\count323
+\l__fontspec_strong_int=\count324
+\l__fontspec_strongdef_int=\count325
+\l__fontspec_tmpa_dim=\dimen286
+\l__fontspec_tmpb_dim=\dimen287
+\l__fontspec_tmpc_dim=\dimen288
 
 (d:/Software/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -710,43 +686,43 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal
 .sty
 Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count330
-\XePersian@y=\count331
-\XePersian@m=\count332
-\XePersian@d=\count333
-\XePersian@latini=\count334
-\XePersian@persiani=\count335
-\XePersian@latinii=\count336
-\XePersian@persianii=\count337
-\XePersian@latiniii=\count338
-\XePersian@persianiii=\count339
-\XePersian@latiniv=\count340
-\XePersian@persianiv=\count341
-\XePersian@latinv=\count342
-\XePersian@persianv=\count343
-\XePersian@latinvi=\count344
-\XePersian@persianvi=\count345
-\XePersian@latinvii=\count346
-\XePersian@persianvii=\count347
-\XePersian@latinviii=\count348
-\XePersian@persianviii=\count349
-\XePersian@latinix=\count350
-\XePersian@persianix=\count351
-\XePersian@latinx=\count352
-\XePersian@persianx=\count353
-\XePersian@latinxi=\count354
-\XePersian@persianxi=\count355
-\XePersian@latinxii=\count356
-\XePersian@persianxii=\count357
-\XePersian@persianxiii=\count358
-\XePersian@temp=\count359
-\XePersian@temptwo=\count360
-\XePersian@tempthree=\count361
-\XePersian@yModHundred=\count362
-\XePersian@thirtytwo=\count363
-\XePersian@dn=\count364
-\XePersian@sn=\count365
-\XePersian@mminusone=\count366
+\XePersian@i=\count326
+\XePersian@y=\count327
+\XePersian@m=\count328
+\XePersian@d=\count329
+\XePersian@latini=\count330
+\XePersian@persiani=\count331
+\XePersian@latinii=\count332
+\XePersian@persianii=\count333
+\XePersian@latiniii=\count334
+\XePersian@persianiii=\count335
+\XePersian@latiniv=\count336
+\XePersian@persianiv=\count337
+\XePersian@latinv=\count338
+\XePersian@persianv=\count339
+\XePersian@latinvi=\count340
+\XePersian@persianvi=\count341
+\XePersian@latinvii=\count342
+\XePersian@persianvii=\count343
+\XePersian@latinviii=\count344
+\XePersian@persianviii=\count345
+\XePersian@latinix=\count346
+\XePersian@persianix=\count347
+\XePersian@latinx=\count348
+\XePersian@persianx=\count349
+\XePersian@latinxi=\count350
+\XePersian@persianxi=\count351
+\XePersian@latinxii=\count352
+\XePersian@persianxii=\count353
+\XePersian@persianxiii=\count354
+\XePersian@temp=\count355
+\XePersian@temptwo=\count356
+\XePersian@tempthree=\count357
+\XePersian@yModHundred=\count358
+\XePersian@thirtytwo=\count359
+\XePersian@dn=\count360
+\XePersian@sn=\count361
+\XePersian@mminusone=\count362
 )
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/xepersian-mathdigits
 pec.sty
@@ -789,17 +765,17 @@ Package: bidi 2022/02/18 v36.7 Bidirectional typesetting in plain TeX and LaTeX
 Package: biditools 2022/02/01 v2.1 Programming tools for bidi package
 \@bidi@envbody=\toks37
 \@bidi@emptytoks=\toks38
-\bidi@poscount=\count367
-\bidi@tempcountb=\count368
+\bidi@poscount=\count363
+\bidi@tempcountb=\count364
 \bidi@temptoksa=\toks39
 \bidi@temptoksb=\toks40
-\bidi@dummies=\count369
+\bidi@dummies=\count365
 \bidi@are@these@correct=\toks41
 \bidi@toks@lista=\toks42
 \bidi@toks@listb=\toks43
-\bidi@stack@length=\count370
+\bidi@stack@length=\count366
 \bidi@empty@stack=\toks44
-\bidi@looprepeat@depth=\count371
+\bidi@looprepeat@depth=\count367
 )
 ==> First Aid for biditools.sty no longer applied!
     Expected:
@@ -816,7 +792,7 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count372
+\c@abspage=\count368
 Package zref Info: New property: abspage on input line 66.
 )
 (d:/Software/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -827,7 +803,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks45
 \XKV@tempa@toks=\toks46
 )
-\XKV@depth=\count373
+\XKV@depth=\count369
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \@bidi@copyins@=\insert252
@@ -836,12 +812,12 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 File: latex-xetex-bidi.def 2022/02/18 v1.4.0 bidi adaptations for `latex.ltx' f
 or XeTeX engine
 \bidi@n@everypar=\toks47
-\bidi@column@check@number=\count374
+\bidi@column@check@number=\count370
 
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count375
+\c@footdir@label=\count371
 \footdir@toks=\toks48
 )
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/report-xetex-bidi.def
@@ -855,14 +831,6 @@ ge for XeTeX engine
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
 File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
 ge for XeTeX engine
-)
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/caption-xetex-bidi.def
-File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
-ge for XeTeX engine
-)
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/caption3-xetex-bidi.def
-File: caption3-xetex-bidi.def 2013/04/01 v0.1 bidi adaptations for caption3 pac
-kage for XeTeX engine
 )
 (d:/Software/texlive/2022/texmf-dist/tex/xelatex/bidi/color-xetex-bidi.def
 File: color-xetex-bidi.def 2013/04/08 v0.2 bidi adaptations for color package f
@@ -905,7 +873,7 @@ ef
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
  last package loaded
 )
-\bidi@digits=\count376
+\bidi@digits=\count372
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -936,69 +904,8 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
 * Primary author of xepersian package: Vafa Khalighi.
 * 
 ****************************************************
-\xepersian@tcl=\count377
-\xepersian@ilg=\dimen297
-\xepersian@strutilg=\dimen298
+\xepersian@tcl=\count373
+\xepersian@ilg=\dimen289
+\xepersian@strutilg=\dimen290
 
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersi
-an.def
-File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is 
-the last package loaded
-)
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/footnote-xepersian.d
-ef
-File: footnote-xepersian.def 2017/08/09 v0.6 footnote macros for xepersian pack
-age
-)
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/hyperref-xepersian.d
-ef
-File: hyperref-xepersian.def 2015/02/02 v0.6 bilingual captions for hyperref pa
-ckage
-)
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/url-xepersian.def
-File: url-xepersian.def 2022/02/18 v0.1 adaptations for url package
-)
-(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/report-xepersian.def
-File: report-xepersian.def 2010/07/25 v0.2 adaptations for standard report clas
-s
-)
-
-Package fontspec Info: Font family 'lmroman10-regular(0)' created for font
-(fontspec)             'lmroman10-regular' with options
-(fontspec)             [Ligatures=TeX,Path,BoldFont={lmroman10-bold},BoldItalic
-Font={lmroman10-bolditalic},ItalicFont={lmroman10-italic},SmallCapsFont={lmroma
-ncaps10-regular},SlantedFont={lmromanslant10-regular},BoldSlantedFont={lmromans
-lant10-bold}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[lmroman10-regular]/OT:script=latn;language=dflt;map
-ping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[lmroman10-bold]/OT:script=latn;language=dflt;mappin
-g=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[lmroman10-italic]/OT:script=latn;language=dflt;mapp
-ing=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
-(fontspec)             <->"[lmromanslant10-regular]/OT:script=latn;language=dfl
-t;mapping=tex-text;"
-(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[lmroman10-bolditalic]/OT:script=latn;language=dflt;
-mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:scri
+(d:/Software/texlive/2022/texmf-dist/tex/xelatex/xepersian/loadingor
