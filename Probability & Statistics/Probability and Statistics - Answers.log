@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  15 JUN 2023 13:08
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.19)  24 NOV 2023 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,16 +1022,137 @@ apping=tex-text;"
 (fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
 ;mapping=tex-text;"
 
-) (d:/Software/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty
+) (d:/Software/texlive/2022/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex
+)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks50
+\t@pgfplots@tokb=\toks51
+\t@pgfplots@tokc=\toks52
+\pgfplots@tmpa=\dimen302
+\c@pgfplots@coordindex=\count379
+\c@pgfplots@scanlineindex=\count380
+
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneri
+c.code.tex))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.
+code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplo
+tsoldpgfsupp_loader.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.co
+de.tex))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.cod
+e.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplot
+sliststructure.code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplot
+sliststructureext.code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplot
+sarray.code.tex
+\c@pgfplotsarray@tmp=\count381
+)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplot
+smatrix.code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstabl
+eshared.code.tex
+\c@pgfplotstable@counta=\count382
+\t@pgfplotstable@a=\toks53
+)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplot
+sdeque.code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.c
+ode.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.d
+ata.code.tex))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.ver
+b.code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplo
+ts.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count383
+
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplot
+s.surfshading.pgfsys-xetex.def
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplot
+s.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count384
+))))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap
+.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.co
+de.tex))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.
+code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.
+code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandl
+er.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage
+.code.tex)))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code
+.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessi
+ng.code.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.co
+de.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code
+.tex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.te
+x)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.t
+ex)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librari
+es/tikzlibrarydecorations.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoratio
+ns.code.tex
+\pgfdecoratedcompleteddistance=\dimen303
+\pgfdecoratedremainingdistance=\dimen304
+\pgfdecoratedinputsegmentcompleteddistance=\dimen305
+\pgfdecoratedinputsegmentremainingdistance=\dimen306
+\pgf@decorate@distancetomove=\dimen307
+\pgf@decorate@repeatstate=\count385
+\pgfdecorationsegmentamplitude=\dimen308
+\pgfdecorationsegmentlength=\dimen309
+)
+\tikz@lib@dec@box=\box73
+)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librari
+es/tikzlibrarydecorations.pathmorphing.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgfl
+ibrarydecorations.pathmorphing.code.tex))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librari
+es/tikzlibrarydecorations.pathreplacing.code.tex
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgfl
+ibrarydecorations.pathreplacing.code.tex))
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfpl
+ots.contourlua.code.tex)
+\pgfplots@numplots=\count386
+\pgfplots@xmin@reg=\dimen310
+\pgfplots@xmax@reg=\dimen311
+\pgfplots@ymin@reg=\dimen312
+\pgfplots@ymax@reg=\dimen313
+\pgfplots@zmin@reg=\dimen314
+\pgfplots@zmax@reg=\dimen315
+)
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librari
+es/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(d:/Software/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotma
+rks.code.tex
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(d:/Software/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty
 (d:/Software/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count379
-\l__lipsum_a_int=\count380
-\l__lipsum_b_int=\count381
+\g__lipsum_par_int=\count387
+\l__lipsum_a_int=\count388
+\l__lipsum_b_int=\count389
  (d:/Software/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-\c@questionanswernumber=\count382
+\c@questionanswernumber=\count390
 
 Package fontspec Info: Could not resolve font "X Kamran/BI" (it probably
 (fontspec)             doesn't exist).
@@ -1136,7 +1257,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count383
+\c@section@level=\count391
 )
 LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
@@ -1146,6 +1267,12 @@ LaTeX Info: Redefining \nameref on input line 41.
 \@outlinefile=\write4
 \openout4 = `"Probability and Statistics - Answers.out"'.
 
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 41.
 
 
 LaTeX Font Warning: Font shape `TU/XKamran(0)/b/n' undefined
@@ -1203,24 +1330,26 @@ Overfull \hbox (45.72975pt too wide) in paragraph at lines 968--969
 LaTeX Font Warning: Font shape `TU/XKamran(0)/m/it' undefined
 (Font)              using `TU/XKamran(0)/m/n' instead on input line 974.
 
-[21] [22] [23] [24]
-File: HW3_Q6.eps Graphic file (type eps)
-<HW3_Q6.eps>
-
-Overfull \hbox (3.61537pt too wide) in paragraph at lines 1156--1157
- [][][][][] 
+[21] [22] [23] [24] (./HW3_Q6.tex
+Overfull \hbox (36.35516pt too wide) in paragraph at lines 14--119
+ [][][][][][] 
  []
 
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+) [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
+(./chess_answer0.tex) (./chess_answer1.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39] [40] [41] [42] [43] [44]
+) (./chess_answer2.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [39] [40] [41] [42] [43]
 Missing character: There is no ؛ ("61B) in font cmr12!
-[45]
+[44] [45]
 فصل 2.
 [46
 
@@ -1232,119 +1361,121 @@ File: Q2B.eps Graphic file (type eps)
  [52]
 File: Q2C.eps Graphic file (type eps)
 <Q2C.eps>
- [53] [54] [55] [56] [57] [58]
+ [53] [54] [55] [56] [57]
+Overfull \hbox (29.04817pt too wide) detected at line 2897
+[]
+ []
+
+[58]
 فصل 3.
 [59
 
-] [60] [61] [62] [63] [64] [65] [66]
+] [60] [61] [62] [63] [64]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 3651.
+ on input line 3255.
 
-[67] [68] [69] [70]
+[65] [66] [67] [68]
 File: CDF_HW9.eps Graphic file (type eps)
 <CDF_HW9.eps>
- [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
-[82] [83] [84] [85] [86] [87] [88] [89]
+ [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]
+[80] [81] [82] [83] [84] [85] [86] [87]
 فصل 4.
-[90
+[88
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 4982--4986
+Underfull \hbox (badness 10000) in paragraph at lines 4585--4589
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4987--4994
+Underfull \hbox (badness 10000) in paragraph at lines 4590--4597
+[][]
+ []
+
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 4617--4622
+[][]
+ []
+
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 4704--4710
 [][]
  []
 
 [91]
-Underfull \hbox (badness 10000) in paragraph at lines 5014--5019
+Underfull \hbox (badness 10000) in paragraph at lines 4762--4777
 [][]
  []
 
 [92]
-Underfull \hbox (badness 10000) in paragraph at lines 5101--5107
+Underfull \hbox (badness 10000) in paragraph at lines 4809--4828
 [][]
  []
 
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 5159--5174
+[93] [94] [95] [96] [97]
+Underfull \hbox (badness 10000) in paragraph at lines 5016--5035
 [][]
  []
 
-[94]
-Underfull \hbox (badness 10000) in paragraph at lines 5206--5225
-[][]
- []
-
-[95] [96] [97] [98] [99]
-Underfull \hbox (badness 10000) in paragraph at lines 5413--5432
-[][]
- []
-
-[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109]
 Missing character: There is no ؛ ("61B) in font cmr12!
 Missing character: There is no ؛ ("61B) in font cmr12!
-[112] [113] [114]
+[110] [111] [112]
 فصل 5.
-[115
+[113
 
 ]
-Overfull \hbox (16.7846pt too wide) detected at line 6175
+Overfull \hbox (16.7846pt too wide) detected at line 5778
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6186--6191
+Underfull \hbox (badness 10000) in paragraph at lines 5789--5794
 [][]
  []
 
-[116]
-Underfull \hbox (badness 10000) in paragraph at lines 6202--6206
+[114]
+Underfull \hbox (badness 10000) in paragraph at lines 5805--5809
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6219--6223
+Underfull \hbox (badness 10000) in paragraph at lines 5822--5826
 [][]
  []
 
-[117] [118] [119]
+[115] [116] [117]
 File: ibp_hw11.png Graphic file (type bmp)
 <ibp_hw11.png>
- [120]
+ [118]
 File: hw11_pmf.png Graphic file (type bmp)
 <hw11_pmf.png>
- [121] [122]
-Underfull \hbox (badness 10000) in paragraph at lines 6443--6458
+ [119] [120]
+Underfull \hbox (badness 10000) in paragraph at lines 6046--6061
 [][]
  []
 
-[123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
-[135] [136] [137] [138] [139] [140]
+[121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]
+[133] [134] [135] [136] [137] [138]
 فصل 6.
-[141
+[139
 
 ] (./Probability and Statistics - Answers.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `"Probability and Statistics - Answers".out' 
 has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 27146 strings out of 476179
- 561440 string characters out of 5809103
- 1035536 words of memory out of 5000000
- 47359 multiletter control sequences out of 15000+600000
- 475207 words of font info for 75 fonts, out of 8000000 for 9000
+ 38024 strings out of 476179
+ 927883 string characters out of 5809103
+ 1528391 words of memory out of 5000000
+ 58089 multiletter control sequences out of 15000+600000
+ 476261 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,28n,91p,1343b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,28n,91p,4139b,2588s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Probability and Statistics - Answers.pdf (141 pages).
+Output written on Probability and Statistics - Answers.pdf (139 pages).
